@@ -11,3 +11,6 @@ cargo build --release
 Copy-Item -Path target/release/spectre_oxi.dll -Destination ../lua/
 Copy-Item -Path target/release/spectre_oxi.dll.lib -Destination ../lua/
 
+Remove-Item -Path "target" -Recurse -Force
+Write-Output "Build Done"
+
