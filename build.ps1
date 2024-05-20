@@ -1,5 +1,5 @@
 # Navigate to the Spectre-oxi directory
-cd "spectre-oxi"
+cd "spectre_oxi"
 
 # Assuming cargo build is run from the root of the project, navigate there if necessary
 # Navigate to the project directory where Cargo.toml is located
@@ -8,6 +8,6 @@ cd "spectre-oxi"
 cargo build --release
 
 # Copy the file `a.txt` from target/release/ to lua/ in your current directory
-Copy-Item -Path target/release/spectre-oxi.dll -Destination ../lua/
-Copy-Item -Path target/release/spectre-oxi.dll.lib -Destination ../lua/
+Copy-Item -Path target/release/spectre_oxi.dll -Destination ../lua/
+Copy-Item -Path target/release/spectre_oxi.dll.lib -Destination ../lua/
 
