@@ -1,4 +1,5 @@
 spectre_oxi/target/
 spectre_oxi/tests/tmp
 lua/spectre_oxi.so
+lua/spectre_oxi.dll*
 doc/tags
