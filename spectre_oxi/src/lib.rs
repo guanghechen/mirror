@@ -1,5 +1,5 @@
-use nvim_oxi::{self as oxi, Dictionary, Function, Object};
 use fancy_regex::Regex;
+use nvim_oxi::{Dictionary, Function, Object};
 use std::{
     fs::File,
     io::{BufRead, BufReader, Write},
@@ -16,14 +16,19 @@ lazy_static! {
     static ref CACHE_REGEX: Mutex<Regex> = Mutex::new(Regex::new(r"").unwrap());
 }
 
-#[oxi::module]
-fn spectre_oxi() -> oxi::Result<Dictionary> {
+#[nvim_oxi::plugin]
+fn spectre_oxi() -> nvim_oxi::Result<Dictionary> {
     Ok(Dictionary::from_iter([
         (
             "replace_file",
             Object::from(Function::from_fn(
                 |(file_path, lnum, search_query, replace_query): (String, i32, String, String)| {
-                    Ok::<bool, nvim_oxi::Error>(replace_file(file_path, lnum, search_query, replace_query))
+                    Ok::<bool, nvim_oxi::Error>(replace_file(
+                        file_path,
+                        lnum,
+                        search_query,
+                        replace_query,
+                    ))
                 },
             )),
         ),
