@@ -1,11 +1,12 @@
 ---@class SpectreQuery
 ---@field search_query string
 ---@field replace_query string
+---@field search_paths string[]
 ---@field path string
 ---@field is_file boolean
 
 ---@class SpectreState
----@field user_config SpectreConfig
+---@field user_config SpectreConfig|nil
 ---@field status_line string
 ---@field cwd string|nil
 ---@field query SpectreQuery
@@ -17,7 +18,7 @@
 ---@field regex any
 ---@field finder_instance any|nil
 ---@field async_id number
----@field target_winid number
+---@field target_winid number|nil
 ---@field target_bufnr number
 local state = {
     -- current config
@@ -26,6 +27,7 @@ local state = {
         search_query = '',
         replace_query = '',
         path = '',
+        search_paths = {},
         is_file = false, -- search in current file
     },
     query_backup = nil,

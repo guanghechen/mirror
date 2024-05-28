@@ -121,6 +121,8 @@ function M.get_visual_selection()
     local start_pos = vim.api.nvim_buf_get_mark(0, '<')
     local end_pos = vim.api.nvim_buf_get_mark(0, '>')
     local lines = vim.fn.getline(start_pos[1], end_pos[1])
+    ---@cast lines string[]
+
     -- add when only select in 1 line
     local plusEnd = 0
     local plusStart = 1
@@ -217,3 +219,4 @@ function M.tbl_remove_dup(tbl)
     return res
 end
 return M
+

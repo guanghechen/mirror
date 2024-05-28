@@ -11,6 +11,10 @@ local M = {}
 ---@param regex RegexEngine
 function M.render_line(bufnr, namespace, text_opts, view_opts, regex)
     local cfg = state.user_config
+    if cfg == nil then
+        return
+    end
+
     local diff = utils.get_hl_line_text({
         search_query = text_opts.search_query,
         replace_query = text_opts.replace_query,
@@ -270,3 +274,4 @@ function M.render_text_query(opts)
 end
 
 return M
+

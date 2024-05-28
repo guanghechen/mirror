@@ -1,5 +1,4 @@
 ---@diagnostic disable: param-type-mismatch
-local flatten = vim.tbl_flatten
 local Job = require('plenary.job')
 local log = require('spectre._log')
 local MAX_LINE_CHARS = 255
@@ -84,10 +83,7 @@ base.on_exit = function(self, value)
 end
 
 base.search = function(self, query)
-    local args = flatten({
-        -- query.search_text,
-        self.state.args,
-    })
+    local args = vim.iter({ self.state.args }):flatten():totable()
     if query.path then
         local args_path = self:get_path_args(scan_paths(query.path))
         table.insert(args, args_path)
@@ -99,7 +95,7 @@ base.search = function(self, query)
 
     -- no more args
     table.insert(args, '--')
-    args = flatten(args)
+    args = vim.iter(args):flatten():totable()
 
     if query.cwd == '' then
         query.cwd = nil

@@ -33,11 +33,7 @@ sed.replace = function(self, value)
         utils.escape_sed(value.search_text),
         utils.escape_sed(value.replace_text)
     )
-    local args = vim.tbl_flatten({
-        self.state.args,
-        t_sed,
-        value.filename,
-    })
+    local args = vim.iter({ self.state.args, t_sed, value.filename }):flatten():totable() ---@type string[]
 
     log.debug('replace cwd ' .. (value.cwd or ''))
     log.debug('replace cmd: ' .. self.state.cmd .. ' ' .. table.concat(args, ' '))
