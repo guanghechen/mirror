@@ -3,10 +3,7 @@ local config = require('spectre.config')
 local state = require('spectre.state')
 local state_utils = require('spectre.state_utils')
 local utils = require('spectre.utils')
-
 local Path = require('plenary.path')
-
-local popup = require('plenary.popup')
 local api = vim.api
 
 local M = {}
@@ -171,7 +168,7 @@ M.show_menu_options = function(title, content)
     local win_width, win_height = vim.lsp.util._make_floating_popup_size(content, {})
 
     local bufnr = vim.api.nvim_create_buf(false, true)
-    api.nvim_buf_set_option(bufnr, 'bufhidden', 'wipe')
+    api.nvim_set_option_value('bufhidden', 'wipe', { buf = bufnr })
     api.nvim_buf_set_lines(bufnr, 0, -1, true, content)
 
     local help_win = vim.api.nvim_open_win(bufnr, false, {
@@ -185,7 +182,7 @@ M.show_menu_options = function(title, content)
         row = 1,
         border = 'rounded',
     })
-    api.nvim_win_set_option(help_win, 'winblend', 0)
+    api.nvim_set_option_value('winblend', 0, { win = help_win })
     api.nvim_buf_set_keymap(
         bufnr,
         'n',

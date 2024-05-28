@@ -70,7 +70,7 @@ M.get_current_entry = function()
     if not state.total_item then
         return
     end
-    local lnum = unpack(vim.api.nvim_win_get_cursor(0))
+    local lnum = table.unpack(vim.api.nvim_win_get_cursor(0))
     local item = state.total_item[lnum]
     if item ~= nil and item.display_lnum == lnum - 1 then
         local t = vim.deepcopy(item)
@@ -215,7 +215,7 @@ M.select_template = function()
     end
     local target_bufnr = state.target_bufnr
     local target_winid = state.target_winid
-    local is_spectre = vim.api.nvim_buf_get_option(0, 'filetype') == 'spectre_panel'
+    local is_spectre = vim.api.nvim_get_option_value('filetype', { buf = 0 }) == 'spectre_panel'
     vim.ui.select(state.user_config.open_template, {
         prompt = 'Select template',
         format_item = function(item)
@@ -232,7 +232,7 @@ end
 
 M.copy_current_line = function()
     local line_text = vim.api.nvim_get_current_line()
-    local row = unpack(vim.api.nvim_win_get_cursor(0))
+    local row = table.unpack(vim.api.nvim_win_get_cursor(0))
     if row > state.user_config.lnum_UI then
         line_text = line_text:sub(#state.user_config.result_padding, #line_text)
     end

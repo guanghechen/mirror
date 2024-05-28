@@ -249,7 +249,8 @@ function M.mapping_buffer(bufnr)
         group = vim.api.nvim_create_augroup('SpectreStateOpened', { clear = true }),
         buffer = 0,
         callback = function()
-            if vim.api.nvim_buf_get_option(vim.api.nvim_get_current_buf(), 'filetype') == 'spectre_panel' then
+            local bufnr0 = vim.api.nvim_get_current_buf() ---@type integer
+            if vim.api.nvim_get_option_value('filetype', { buf = bufnr0 }) == 'spectre_panel' then
                 state.is_open = false
             end
         end,
@@ -261,7 +262,7 @@ function M.mapping_buffer(bufnr)
         -- * If the user enters insert mode on a forbidden line: leave insert mode.
         -- * If the user passes over a forbidden line on insert mode: leave insert mode.
         -- * Disable backspace jumping lines.
-        local backspace = vim.api.nvim_get_option('backspace')
+        local backspace = vim.api.nvim_get_option_value('backspace', {})
         local anti_insert_breakage_group = vim.api.nvim_create_augroup('SpectreAntiInsertBreakage', { clear = true })
         vim.api.nvim_create_autocmd({ 'InsertEnter', 'CursorMovedI' }, {
             group = anti_insert_breakage_group,
@@ -460,8 +461,8 @@ M.change_view = function(reset)
 end
 
 M.toggle_checked = function()
-    local startline = unpack(vim.api.nvim_buf_get_mark(0, '<'))
-    local endline = unpack(vim.api.nvim_buf_get_mark(0, '>'))
+    local startline = table.unpack(vim.api.nvim_buf_get_mark(0, '<'))
+    local endline = table.unpack(vim.api.nvim_buf_get_mark(0, '>'))
     for i = startline, endline, 1 do
         M.toggle_line(i)
     end
@@ -473,7 +474,7 @@ M.toggle_line = function(line_visual)
         vim.cmd([[:normal! ^d$]])
         return false
     end
-    local lnum = line_visual or unpack(vim.api.nvim_win_get_cursor(0))
+    local lnum = line_visual or table.unpack(vim.api.nvim_win_get_cursor(0))
     local item = state.total_item[lnum]
     if item ~= nil and item.display_lnum == lnum - 1 then
         item.disable = not item.disable
