@@ -11,7 +11,7 @@ function M.is_absolute(filepath)
   if util_os.is_windows() then
     return string.match(filepath, '^[%a]:[\\/].*$') ~= nil
   end
-  return string.sub(filepath, 1, 1) == path_sep
+  return string.sub(filepath, 1, 1) == PATHSEP
 end
 
 ---@param filepath string
@@ -51,7 +51,7 @@ function M.parse_paths(path_string)
   local s = 0
   local t = 0
   while i < #path_string do
-    local c = path_string[i]
+    local c = string.sub(path_string, i, i)
     if i == PATH_SEPARATOR then
       if s > 0 and t > 0 then
         local p = string.sub(path_string, s, t)
