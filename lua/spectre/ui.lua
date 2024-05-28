@@ -147,6 +147,13 @@ function M.render_search_ui()
     end
     table.insert(details_ui, { { path_message, state.user_config.highlight.ui } })
 
+    --- search_path
+    if type(state.query.search_paths) == 'table' and #state.query.search_paths > 0 then
+        local content = table.concat(state.query.search_paths, ', ')
+        table.insert(details_ui, { { 'Include: ', state.user_config.highlight.ui } })
+        table.insert(details_ui, { { content, state.user_config.highlight.ui } })
+    end
+
     local c_line = 1
     for _, vt_text in ipairs(details_ui) do
         utils.write_virtual_text(state.bufnr, config.namespace_ui, c_line, vt_text)
