@@ -10,7 +10,7 @@
 if _G._require == nil then
     if _G.__is_dev then
         _G._require = require
-function         _G.require(path)
+        function _G.require(path)
             if string.find(path, '^spectre[^_]*$') ~= nil then
                 package.loaded[path] = nil
             end
@@ -175,7 +175,6 @@ function M.open(opts)
     ui.render_text_query(opts)
 
     state.cwd = opts.cwd
-    state.search_paths = opts.search_paths
     M.change_view('reset')
     ui.render_search_ui()
 
@@ -191,6 +190,7 @@ function M.open(opts)
             search_query = opts.search_text,
             replace_query = opts.replace_text,
             path = opts.path,
+            search_paths = opts.search_paths,
         })
     end
 end
@@ -330,6 +330,7 @@ function M.on_search_change()
         replace_query = '',
         search_query = '',
         path = '',
+        search_paths = '',
     }
 
     for index, line in pairs(lines) do
@@ -339,10 +340,14 @@ function M.on_search_change()
         if index >= 5 and index < 7 and #line > 0 then
             query.replace_query = query.replace_query .. line
         end
-        if index >= 7 and index <= 9 and #line > 0 then
+        if index >= 7 and index < 9 and #line > 0 then
             query.path = query.path .. line
         end
+        if index >= 9 and index < 11 and #line > 0 then
+            query.search_paths = query.search_paths .. line
+        end
     end
+
     local line = vim.fn.getpos('.')
     -- check path to verify search in current file
     if state.target_winid ~= nil then
@@ -644,7 +649,7 @@ function M.search(opts)
         cwd = state.cwd,
         search_text = state.query.search_query,
         path = state.query.path,
-        search_paths = state.search_paths,
+        search_paths = state.query.search_paths,
     })
     M.init_regex()
 end
