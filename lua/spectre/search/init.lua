@@ -1,6 +1,7 @@
 local base = require('spectre.search.base')
 local s = {}
-s.get = function(key)
+
+function s.get(key)
     assert(key ~= nil, 'key no nil')
     local ok, engine = pcall(require, 'spectre.search.' .. key)
     if not ok then
@@ -10,6 +11,7 @@ s.get = function(key)
     engine.name = key
     return base.extend(engine)
 end
+
 return setmetatable(s, {
     __index = function(self, key)
         return self.get(key)

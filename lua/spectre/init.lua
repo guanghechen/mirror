@@ -10,7 +10,7 @@
 if _G._require == nil then
     if _G.__is_dev then
         _G._require = require
-        _G.require = function(path)
+function         _G.require(path)
             if string.find(path, '^spectre[^_]*$') ~= nil then
                 package.loaded[path] = nil
             end
@@ -745,4 +745,3 @@ function M.tab_shift()
 end
 
 return M
-

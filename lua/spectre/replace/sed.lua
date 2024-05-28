@@ -4,7 +4,7 @@ local log = require('spectre._log')
 
 local sed = {}
 
-sed.init = function(_, config)
+function sed.init(_, config)
     config = vim.tbl_extend('force', {
         cmd = 'sed',
         pattern = '%s,%ss/%s/%s/g',
@@ -16,7 +16,7 @@ sed.init = function(_, config)
     return config
 end
 
-sed.replace = function(self, value)
+function sed.replace(self, value)
     local pattern = self.state.pattern
     if self.state.options_value ~= nil then
         for _, v in pairs(self.state.options_value) do

@@ -7,7 +7,7 @@ local rust = {}
 local get_query = function(query)
     return rust.flag .. query
 end
-rust.change_options = function(options_value)
+function rust.change_options(options_value)
     rust.flag = ''
     if options_value then
         for _, v in pairs(options_value) do
@@ -19,7 +19,7 @@ rust.change_options = function(options_value)
     end
 end
 
-rust.matchstr = function(search_text, search_query)
+function rust.matchstr(search_text, search_query)
     local ok, result = pcall(rust_oxi.matchstr, search_text, get_query(search_query))
     if not ok then
         log.debug(search_text)
@@ -29,7 +29,7 @@ rust.matchstr = function(search_text, search_query)
     return result
 end
 
-rust.replace_all = function(search_query, replace_query, text)
+function rust.replace_all(search_query, replace_query, text)
     local ok, result = pcall(rust_oxi.replace_all, get_query(search_query), replace_query, text)
     if not ok then
         log.debug(text)
@@ -41,7 +41,7 @@ end
 
 -- replace text on line number of file
 ---@return boolean
-rust.replace_file = function(filepath, lnum, search_query, replace_query)
+function rust.replace_file(filepath, lnum, search_query, replace_query)
     return rust_oxi.replace_file(filepath, lnum, get_query(search_query), replace_query)
 end
 

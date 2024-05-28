@@ -2,7 +2,7 @@
 local base = {}
 base.__index = base
 
-base.on_error = function(self, value, ref)
+function base.on_error(self, value, ref)
     if value ~= 0 then
         pcall(vim.schedule_wrap(function()
             self.handler.on_error({
@@ -13,7 +13,7 @@ base.on_error = function(self, value, ref)
     end
 end
 
-base.on_done = function(self, value, ref)
+function base.on_done(self, value, ref)
     if value == 0 or value == true then
         pcall(vim.schedule_wrap(function()
             self.handler.on_done({

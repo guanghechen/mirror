@@ -1,6 +1,6 @@
 local ag = {}
 
-ag.init = function(_, config)
+function ag.init(_, config)
     config = vim.tbl_extend('force', {
         cmd = 'ag',
         args = {
@@ -11,7 +11,7 @@ ag.init = function(_, config)
     return config
 end
 
-ag.get_path_args = function(_, paths)
+function ag.get_path_args(_, paths)
     if #paths == 0 then
         return {}
     end

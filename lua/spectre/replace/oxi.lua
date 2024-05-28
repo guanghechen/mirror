@@ -1,11 +1,11 @@
 local oxi = {}
 local Path = require('plenary.path')
 local regex = require('spectre.regex.rust')
-oxi.init = function(_, config)
+function oxi.init(_, config)
     return config
 end
 
-oxi.replace = function(self, value)
+function oxi.replace(self, value)
     local cwd = value.cwd or vim.loop.cwd()
     if not value.filename:match('^%/') then
         value.filename = Path:new(cwd):joinpath(value.filename)

@@ -92,6 +92,9 @@ end)()
 
 function M.render_filename(bufnr, namespace, line, entry)
     local u_config = state.user_config
+    local highlight_filedirectory = u_config and u_config.highlight.filedirectory or ''
+    local highlight_filename = u_config and u_config.highlight.filename or ''
+
     local filename = vim.fn.fnamemodify(entry.filename, ':t')
     local directory = vim.fn.fnamemodify(entry.filename, ':h')
     if directory == '.' then
@@ -110,8 +113,8 @@ function M.render_filename(bufnr, namespace, line, entry)
     local width = vim.api.nvim_strwidth(filename)
     local hl = {
         { { 0, icon_length }, icon_highlight },
-        { { 0, vim.api.nvim_strwidth(directory) }, u_config.highlight.filedirectory },
-        { { 0, width + 1 }, u_config.highlight.filename },
+        { { 0, vim.api.nvim_strwidth(directory) }, highlight_filedirectory },
+        { { 0, width + 1 }, highlight_filename },
     }
     if icon == '' then
         table.remove(hl, 1)
@@ -274,4 +277,3 @@ function M.render_text_query(opts)
 end
 
 return M
-

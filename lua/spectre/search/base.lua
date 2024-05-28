@@ -45,12 +45,12 @@ local function scan_paths(s_path)
     return paths
 end
 
-base.get_path_args = function(self, path)
+function base.get_path_args(self, path)
     print('[spectre] should implement path_args for ', self.state.cmd)
     return { path }
 end
 
-base.on_output = function(self, output_text)
+function base.on_output(self, output_text)
     pcall(vim.schedule_wrap(function()
         if output_text == nil then
             return
@@ -67,7 +67,7 @@ base.on_output = function(self, output_text)
     end))
 end
 
-base.on_error = function(self, output_text)
+function base.on_error(self, output_text)
     if output_text ~= nil then
         log.debug('search error ' .. output_text)
         pcall(vim.schedule_wrap(function()
@@ -76,13 +76,13 @@ base.on_error = function(self, output_text)
     end
 end
 
-base.on_exit = function(self, value)
+function base.on_exit(self, value)
     pcall(vim.schedule_wrap(function()
         self.handler.on_finish(value)
     end))
 end
 
-base.search = function(self, query)
+function base.search(self, query)
     local args = vim.iter({ self.state.args }):flatten():totable()
     if query.path then
         local args_path = self:get_path_args(scan_paths(query.path))
@@ -134,7 +134,7 @@ base.search = function(self, query)
     self.job:start()
 end
 
-base.stop = function(self)
+function base.stop(self)
     if self.job ~= nil and self.job.is_shutdown == nil then
         log.debug('base search stop')
         self.job:shutdown()

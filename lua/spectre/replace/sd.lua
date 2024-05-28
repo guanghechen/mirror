@@ -3,11 +3,11 @@ local log = require('spectre._log')
 
 local sd = {}
 
-sd.init = function(_, config)
+function sd.init(_, config)
     return config
 end
 
-sd.replace = function(self, value)
+function sd.replace(self, value)
     local cwd = value.cwd or vim.loop.cwd()
     if not value.filename:match('^%/') then
         value.filename = Path:new(cwd):joinpath(value.filename):absolute()

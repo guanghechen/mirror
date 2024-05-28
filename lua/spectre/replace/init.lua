@@ -1,6 +1,6 @@
 local base = require('spectre.replace.base')
 local r = {}
-r.get = function(key)
+function r.get(key)
     assert(key ~= nil, 'key no nil')
     local ok, engine = pcall(require, 'spectre.replace.' .. key)
     if not ok then
