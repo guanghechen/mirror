@@ -1,4 +1,4 @@
-local ESCAPE_CHAR = '\\'
+local util_path = require('spectre.util.path')
 
 ---@diagnostic disable: param-type-mismatch
 local Job = require('plenary.job')
@@ -7,43 +7,6 @@ local MAX_LINE_CHARS = 255
 local utils = require('spectre.utils')
 local base = {}
 base.__index = base
-
----Scan a path string and split it into multiple paths.
----@param s_path string
----@return string[]
-local function scan_paths(s_path)
-    local paths = {}
-    local path = ''
-
-    local i = 1
-    while i <= #s_path do
-        local char = s_path:sub(i, i)
-        if char == ESCAPE_CHAR then
-            -- Escape next character
-            if i < #s_path then
-                i = i + 1
-                path = path .. s_path:sub(i, i)
-            end
-        elseif char:match('%s') then
-            -- Unescaped whitespace: split here.
-            if path ~= '' then
-                table.insert(paths, path)
-            end
-            path = ''
-            i = i + s_path:sub(i, -1):match('^%s+()') - 2
-        else
-            path = path .. char
-        end
-
-        i = i + 1
-    end
-
-    if #path > 0 then
-        table.insert(paths, path)
-    end
-
-    return paths
-end
 
 function base.get_path_args(self, path)
     print('[spectre] should implement path_args for ', self.state.cmd)
@@ -85,7 +48,8 @@ end
 function base.search(self, query)
     local args = vim.iter({ self.state.args }):flatten():totable()
     if query.path then
-        local args_path = self:get_path_args(scan_paths(query.path))
+        local args_paths = util_path.parse_paths(query.path) ---@type string[]
+        local args_path = self:get_path_args(args_paths)
         table.insert(args, args_path)
     end
 
