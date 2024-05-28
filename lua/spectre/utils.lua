@@ -7,7 +7,7 @@ local config = require('spectre.config')
 local state = require('spectre.state')
 
 local _regex_file_line = [[([^:]+):(%d+):(%d+):(.*)]]
-M.parse_line_grep = function(query)
+function M.parse_line_grep(query)
     local t = { text = query }
     local _, _, filename, lnum, col, text = string.find(t.text, _regex_file_line)
 
@@ -34,13 +34,13 @@ end
 -- help /ordinary-atom
 -- help non-greedy
 -- escape >=< to \> \= \< but if it dont have \>
-M.escape_vim_magic = function(query)
+function M.escape_vim_magic(query)
     query = string.gsub(query, '@', '\\@')
     local regex = [=[(\\)@<![><=](\\)@!]=]
     return vim.fn.substitute(query, '\\v' .. regex, [[\\\0]], 'g')
 end
 -- escape_chars but don't escape it if have slash before or after !
-M.escape_chars = function(query)
+function M.escape_chars(query)
     local regex = [=[(\\)@<![\^\%\(\)\[\]{\}\.\*\|\"\\\/]([\\\{\}])@!]=]
     return vim.fn.substitute(query, '\\v' .. regex, [[\\\0]], 'g')
 end
@@ -49,7 +49,7 @@ function M.trim(s)
     return (string.gsub(s, '^%s*(.-)%s*$', '%1'))
 end
 
-M.truncate = function(str, len)
+function M.truncate(str, len)
     if not str then
         return ''
     end
@@ -74,18 +74,18 @@ M.truncate = function(str, len)
     return result
 end
 -- only escape slash
-M.escape_slash = function(query)
+function M.escape_slash(query)
     return query:gsub('%\\', '\\\\')
 end
 
 -- escape slash with /
-M.escape_sed = function(query)
+function M.escape_sed(query)
     return query:gsub('[%/]', function(v)
         return [[\]] .. v
     end)
 end
 
-M.run_os_cmd = function(cmd, cwd)
+function M.run_os_cmd(cmd, cwd)
     if type(cmd) ~= 'table' then
         print('cmd has to be a table')
         return {}
@@ -173,7 +173,7 @@ end
 --- @params opts {search_query, replace_query, search_text, padding}
 --- @param regex RegexEngine
 --- @return table { text, search = {}, replace = {}}
-M.get_hl_line_text = function(opts, regex)
+function M.get_hl_line_text(opts, regex)
     local search_match = regex.matchstr(opts.search_text, opts.search_query)
     local result = { search = {}, replace = {}, text = '' }
     opts.replace_query = opts.replace_query or ''
@@ -205,7 +205,7 @@ M.get_hl_line_text = function(opts, regex)
     return result
 end
 --- remove item duplicate on table
-M.tbl_remove_dup = function(tbl)
+function M.tbl_remove_dup(tbl)
     local hash = {}
     local res = {}
     for _, v in ipairs(tbl) do

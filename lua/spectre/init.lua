@@ -32,7 +32,7 @@ local scheduler = async.util.scheduler
 
 local M = {}
 
-M.setup = function(cfg)
+function M.setup(cfg)
     state.user_config = vim.tbl_deep_extend('force', config, cfg or {})
     for _, opt in pairs(state.user_config.default.find.options) do
         state.options[opt] = true
@@ -41,7 +41,7 @@ M.setup = function(cfg)
     M.check_replace_cmd_bins()
 end
 
-M.check_replace_cmd_bins = function()
+function M.check_replace_cmd_bins()
     if state.user_config.default.replace.cmd == 'sed' then
         if vim.loop.os_uname().sysname == 'Darwin' then
             config.replace_engine.sed.cmd = 'gsed'
@@ -64,7 +64,7 @@ M.check_replace_cmd_bins = function()
     end
 end
 
-M.open_visual = function(opts)
+function M.open_visual(opts)
     opts = opts or {}
     if opts.select_word then
         opts.search_text = vim.fn.expand('<cword>')
@@ -74,7 +74,7 @@ M.open_visual = function(opts)
     M.open(opts)
 end
 
-M.open_file_search = function(opts)
+function M.open_file_search(opts)
     opts = opts or {}
     if opts.select_word then
         opts.search_text = vim.fn.expand('<cword>')
@@ -91,7 +91,7 @@ M.open_file_search = function(opts)
     M.open(opts)
 end
 
-M.toggle_file_search = function(opts)
+function M.toggle_file_search(opts)
     opts = opts or {}
     if state.is_open then
         M.close()
@@ -100,7 +100,7 @@ M.toggle_file_search = function(opts)
     end
 end
 
-M.close = function()
+function M.close()
     if state.bufnr ~= nil then
         local wins = vim.fn.win_findbuf(state.bufnr)
         if not wins then
@@ -113,7 +113,7 @@ M.close = function()
     end
 end
 
-M.open = function(opts)
+function M.open(opts)
     log.debug('Start')
     if state.user_config == nil then
         M.setup()
@@ -195,7 +195,7 @@ M.open = function(opts)
     end
 end
 
-M.toggle = function(opts)
+function M.toggle(opts)
     if state.is_open then
         M.close()
     else
@@ -311,7 +311,7 @@ local function can_edit_line()
     return true
 end
 
-M.on_insert_enter = function()
+function M.on_insert_enter()
     if can_edit_line() then
         return
     end
@@ -320,7 +320,7 @@ M.on_insert_enter = function()
     print("You can't make changes in results.")
 end
 
-M.on_search_change = function()
+function M.on_search_change()
     if not can_edit_line() then
         return
     end
@@ -363,28 +363,28 @@ M.on_search_change = function()
     end
 end
 
-M.on_write = function()
+function M.on_write()
     if state.user_config.live_update == true then
         M.search()
     end
 end
 
-M.toggle_live_update = function()
+function M.toggle_live_update()
     state.user_config.live_update = not state.user_config.live_update
     ui.render_header(state.user_config)
 end
 
-M.on_close = function()
+function M.on_close()
     M.stop()
     vim.api.nvim_create_augroup('SpectrePanelWrite', { clear = true })
     state.query_backup = vim.tbl_extend('force', state.query, {})
 end
 
-M.on_leave = function()
+function M.on_leave()
     state.query_backup = vim.tbl_extend('force', state.query, {})
 end
 
-M.resume_last_search = function()
+function M.resume_last_search()
     if not state.query_backup then
         print('No previous search!')
         return
@@ -398,7 +398,7 @@ M.resume_last_search = function()
     M.search(state.query_backup)
 end
 
-M.async_replace = function(query)
+function M.async_replace(query)
     -- clear old search result
     api.nvim_buf_clear_namespace(state.bufnr, config.namespace_result, 0, -1)
     state.async_id = vim.loop.hrtime()
@@ -407,7 +407,7 @@ M.async_replace = function(query)
     end)()
 end
 
-M.do_replace_text = function(opts, async_id)
+function M.do_replace_text(opts, async_id)
     state.query = opts or state.query
     hl_match(state.query)
     local count = 1
@@ -438,7 +438,7 @@ M.do_replace_text = function(opts, async_id)
     end
 end
 
-M.change_view = function(reset)
+function M.change_view(reset)
     if reset then
         state.view.mode = ''
     end
@@ -460,7 +460,7 @@ M.change_view = function(reset)
     end
 end
 
-M.toggle_checked = function()
+function M.toggle_checked()
     local startline = table.unpack(vim.api.nvim_buf_get_mark(0, '<'))
     local endline = table.unpack(vim.api.nvim_buf_get_mark(0, '>'))
     for i = startline, endline, 1 do
@@ -468,7 +468,7 @@ M.toggle_checked = function()
     end
 end
 
-M.toggle_line = function(line_visual)
+function M.toggle_line(line_visual)
     if can_edit_line() then
         -- delete line content
         vim.cmd([[:normal! ^d$]])
@@ -529,7 +529,7 @@ M.toggle_line = function(line_visual)
     end
 end
 
-M.search_handler = function()
+function M.search_handler()
     local c_line = 0
     local total = 0
     local start_time = 0
@@ -614,7 +614,7 @@ M.search_handler = function()
     }
 end
 
-M.stop = function()
+function M.stop()
     state.is_running = false
     log.debug('spectre stop')
     if state.finder_instance ~= nil then
@@ -623,7 +623,7 @@ M.stop = function()
     end
 end
 
-M.search = function(opts)
+function M.search(opts)
     M.stop()
     opts = opts or state.query
     local finder_creator = state_utils.get_finder_creator()
@@ -649,7 +649,7 @@ M.search = function(opts)
     M.init_regex()
 end
 
-M.init_regex = function()
+function M.init_regex()
     local replace_config = state_utils.get_replace_engine_config()
     if replace_config.cmd == 'oxi' then
         state.regex = require('spectre.regex.rust')
@@ -659,11 +659,11 @@ M.init_regex = function()
     state.regex.change_options(replace_config.options_value)
 end
 
-M.show_help = function()
+function M.show_help()
     ui.show_help()
 end
 
-M.change_engine_replace = function(engine_name)
+function M.change_engine_replace(engine_name)
     if state.user_config.replace_engine[engine_name] then
         state.user_config.default.replace.cmd = engine_name
         M.init_regex()
@@ -676,7 +676,7 @@ M.change_engine_replace = function(engine_name)
     end
 end
 
-M.change_options = function(key)
+function M.change_options(key)
     if state.options[key] == nil then
         state.options[key] = false
     end
@@ -691,7 +691,7 @@ M.change_options = function(key)
     end
 end
 
-M.show_options = function()
+function M.show_options()
     local option_cmd = ui.show_options()
     ---@diagnostic disable-next-line: param-type-mismatch
     vim.defer_fn(function()
@@ -702,7 +702,7 @@ M.show_options = function()
     end, 200)
 end
 
-M.get_fold = function(lnum)
+function M.get_fold(lnum)
     if lnum < config.lnum_UI then
         return '0'
     end
@@ -724,7 +724,7 @@ M.get_fold = function(lnum)
     return '0'
 end
 
-M.tab = function()
+function M.tab()
     local line = vim.api.nvim_win_get_cursor(0)[1]
     if line == 3 then
         vim.api.nvim_win_set_cursor(vim.api.nvim_get_current_win(), { 5, 1 })
@@ -734,7 +734,7 @@ M.tab = function()
     end
 end
 
-M.tab_shift = function()
+function M.tab_shift()
     local line = vim.api.nvim_win_get_cursor(0)[1]
     if line == 5 then
         vim.api.nvim_win_set_cursor(vim.api.nvim_get_current_win(), { 3, 1 })

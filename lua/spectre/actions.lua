@@ -38,7 +38,7 @@ local get_file_path = function(filename)
     return vim.fn.expand(state.cwd) .. Path.path.sep .. filename
 end
 
-M.select_entry = function()
+function M.select_entry()
     local t = M.get_current_entry()
     if t == nil then
         return nil
@@ -50,7 +50,7 @@ M.select_entry = function()
     end
 end
 
-M.get_state = function()
+function M.get_state()
     local result = {
         query = state.query,
         cwd = state.cwd,
@@ -59,14 +59,14 @@ M.get_state = function()
     return vim.deepcopy(result)
 end
 
-M.set_entry_finish = function(display_lnum)
+function M.set_entry_finish(display_lnum)
     local item = state.total_item[display_lnum + 1]
     if item then
         item.is_replace_finish = true
     end
 end
 
-M.get_current_entry = function()
+function M.get_current_entry()
     if not state.total_item then
         return
     end
@@ -79,7 +79,7 @@ M.get_current_entry = function()
     end
 end
 
-M.get_all_entries = function()
+function M.get_all_entries()
     local entries = {}
     for _, item in pairs(state.total_item) do
         if not item.disable then
@@ -91,7 +91,7 @@ M.get_all_entries = function()
     return entries
 end
 
-M.send_to_qf = function()
+function M.send_to_qf()
     local entries = M.get_all_entries()
     vim.cmd([[copen]])
     vim.fn.setqflist(entries, 'r')
@@ -102,7 +102,7 @@ M.send_to_qf = function()
 end
 
 -- input that comand to run on vim
-M.replace_cmd = function()
+function M.replace_cmd()
     M.send_to_qf()
     local replace_cmd = ''
     if #state.query.search_query > 2 then
@@ -129,7 +129,7 @@ M.replace_cmd = function()
     end
 end
 
-M.run_current_replace = function()
+function M.run_current_replace()
     local entry = M.get_current_entry()
     if entry then
         M.run_replace({ entry })
@@ -140,7 +140,7 @@ end
 
 local is_running = false
 
-M.run_replace = function(entries)
+function M.run_replace(entries)
     if is_running == true then
         print('it is already running')
         return
@@ -208,7 +208,7 @@ M.run_replace = function(entries)
     vim.cmd.checktime()
 end
 
-M.select_template = function()
+function M.select_template()
     if not state.user_config.open_template or #state.user_config.open_template == 0 then
         vim.notify('You need to set open_template on setup function.')
         return
@@ -230,7 +230,7 @@ M.select_template = function()
     end)
 end
 
-M.copy_current_line = function()
+function M.copy_current_line()
     local line_text = vim.api.nvim_get_current_line()
     local row = table.unpack(vim.api.nvim_win_get_cursor(0))
     if row > state.user_config.lnum_UI then

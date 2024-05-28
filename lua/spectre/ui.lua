@@ -9,7 +9,7 @@ local api = vim.api
 local M = {}
 
 ---@param regex RegexEngine
-M.render_line = function(bufnr, namespace, text_opts, view_opts, regex)
+function M.render_line(bufnr, namespace, text_opts, view_opts, regex)
     local cfg = state.user_config
     local diff = utils.get_hl_line_text({
         search_query = text_opts.search_query,
@@ -86,7 +86,7 @@ local get_devicons = (function()
     end
 end)()
 
-M.render_filename = function(bufnr, namespace, line, entry)
+function M.render_filename(bufnr, namespace, line, entry)
     local u_config = state.user_config
     local filename = vim.fn.fnamemodify(entry.filename, ':t')
     local directory = vim.fn.fnamemodify(entry.filename, ':h')
@@ -164,7 +164,7 @@ function M.render_header(opts)
     )
 end
 
-M.show_menu_options = function(title, content)
+function M.show_menu_options(title, content)
     local win_width, win_height = vim.lsp.util._make_floating_popup_size(content, {})
 
     local bufnr = vim.api.nvim_create_buf(false, true)
@@ -207,7 +207,7 @@ M.show_menu_options = function(title, content)
     })
 end
 
-M.show_help = function()
+function M.show_help()
     local help_msg = {}
     local map_tbl = {}
     for _, map in pairs(state.user_config.mapping) do
@@ -225,7 +225,7 @@ M.show_help = function()
     M.show_menu_options('Mappings', help_msg)
 end
 
-M.show_options = function()
+function M.show_options()
     local cfg = state_utils.get_search_engine_config()
     local help_msg = { ' Press number to select option.' }
     local option_cmd = {}
@@ -241,7 +241,7 @@ M.show_options = function()
     return option_cmd
 end
 
-M.show_find_engine = function()
+function M.show_find_engine()
     local engines = state.user_config.find_engine
 
     local help_msg = { ' Press number to select option.' }
@@ -255,7 +255,7 @@ M.show_find_engine = function()
     end
 end
 
-M.render_text_query = function(opts)
+function M.render_text_query(opts)
     -- set empty line for virtual text
     local lines = {}
     local length = config.lnum_UI

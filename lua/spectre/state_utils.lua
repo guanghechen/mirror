@@ -3,11 +3,11 @@ local search_engine = require('spectre.search')
 local replace_engine = require('spectre.replace')
 local M = {}
 
-M.get_finder_creator = function()
+function M.get_finder_creator()
     return search_engine[state.user_config.default.find.cmd]
 end
 
-M.get_replace_creator = function()
+function M.get_replace_creator()
     return replace_engine[state.user_config.default.replace.cmd]
 end
 
@@ -21,29 +21,29 @@ local get_options = function(cfg)
     return options_value
 end
 
-M.get_replace_engine_config = function()
+function M.get_replace_engine_config()
     local cfg = state.user_config.replace_engine[state.user_config.default.replace.cmd] or {}
     cfg = vim.deepcopy(cfg)
     cfg.options_value = get_options(cfg)
     return cfg
 end
 
-M.get_search_engine_config = function()
+function M.get_search_engine_config()
     local cfg = state.user_config.find_engine[state.user_config.default.find.cmd] or {}
     cfg = vim.deepcopy(cfg)
     cfg.options_value = get_options(cfg)
     return cfg
 end
 
-M.config = function()
+function M.config()
     return state.user_config
 end
 
-M.has_options = function(key)
+function M.has_options(key)
     return state.options[key] == true
 end
 
-M.status_line = function(opt)
+function M.status_line(opt)
     opt = opt or {}
     local slant_right = opt.seprator or ''
     local main_color = opt.main_color or 'black'

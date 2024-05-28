@@ -1,6 +1,6 @@
 local M = {}
 
-M.set_hl = function()
+function M.set_hl()
     vim.api.nvim_set_hl(0, 'SpectreHeader', { link = 'Comment' })
     vim.api.nvim_set_hl(0, 'SpectreBody', { link = 'String' })
     vim.api.nvim_set_hl(0, 'SpectreFile', { link = 'Keyword' })
