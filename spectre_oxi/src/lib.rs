@@ -53,7 +53,7 @@ fn spectre_oxi() -> nvim_oxi::Result<Dictionary> {
 
 fn get_static_regex(pattern: String) -> Result<&'static Mutex<Regex>, String> {
     if pattern != *CACHE_PATTERN.lock().unwrap() {
-        *CACHE_PATTERN.lock().unwrap() = pattern.clone();
+        CACHE_PATTERN.lock().unwrap().clone_from(&pattern);
         let regex = Regex::new(&pattern);
         return if let Ok(r) = regex {
             *CACHE_REGEX.lock().unwrap() = r;
@@ -94,7 +94,7 @@ fn replace_all(search_query: String, replace_query: String, text: String) -> Str
 
 /// Replace text on specify line number of file
 fn replace_file(file_path: String, lnum: i32, search_query: String, replace_query: String) -> bool {
-    if !File::open(&file_path).is_ok() {
+    if File::open(&file_path).is_err() {
         return false;
     }
     let static_regex = get_static_regex(search_query);
@@ -143,7 +143,7 @@ fn replace_file(file_path: String, lnum: i32, search_query: String, replace_quer
 #[cfg(test)]
 mod tests {
     use super::*;
-    use std::io::Read;
+    use std::{fs, io::Read};
 
     #[test]
     fn test_matchstr_date() {
@@ -203,24 +203,27 @@ mod tests {
     #[test]
     fn test_replace_file() {
         let file_path = "./tests/fixture.txt";
+        let tmp_file_dir = "./tests/tmp";
         let tmp_file_path = "./tests/tmp/fixture_tmp.txt";
         //copy file to tmp folder
         let mut file = File::open(file_path).unwrap();
         let mut contents = String::new();
+
+        if !std::path::Path::new(tmp_file_dir).exists() {
+            let _ = fs::create_dir_all(tmp_file_dir);
+        }
+
         Read::read_to_string(&mut file, &mut contents).unwrap();
         let mut file = File::create(tmp_file_path).unwrap();
         file.write_all(contents.as_bytes()).unwrap();
 
-        assert_eq!(
-            replace_file(
-                tmp_file_path.to_string(),
-                10,
-                r"'([^']+)'\s+\((\d{4})\)".to_string(),
-                "spectre $2".to_string(),
-            ),
-            true
-        );
-        let mut file = std::fs::File::open(&tmp_file_path).unwrap();
+        assert!(replace_file(
+            tmp_file_path.to_string(),
+            10,
+            r"'([^']+)'\s+\((\d{4})\)".to_string(),
+            "spectre $2".to_string(),
+        ));
+        let mut file = std::fs::File::open(tmp_file_path).unwrap();
         let mut contents = String::new();
         Read::read_to_string(&mut file, &mut contents).unwrap();
         let mut lines = contents.lines();
