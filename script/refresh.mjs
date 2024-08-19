@@ -7,6 +7,7 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const filepath = path.resolve(__dirname, "resource.json");
 const resources = JSON.parse(fs.readFileSync(filepath, "utf8"));
 const new_data = { ...resources };
+run();
 
 function run_command(cmd, silent, quit_on_error) {
   console.log("", cmd);
@@ -48,11 +49,23 @@ function refresh(localBranchName, item) {
   };
 }
 
-function refresh_all() {
-  for (const [localBranchName, item] of Object.entries(resources)) {
-    refresh(localBranchName, item);
+function run() {
+  const args = process.argv.slice(2);
+  const localBranchNames = args.filter(
+    (localBranchName) => !!resources[localBranchName],
+  );
+  if (localBranchNames.length > 0) {
+    for (const [localBranchName, item] of Object.entries(resources)) {
+      if (localBranchNames.includes(localBranchName)) {
+        refresh(localBranchName, item);
+      }
+    }
+  } else {
+    // refresh all
+    for (const [localBranchName, item] of Object.entries(resources)) {
+      refresh(localBranchName, item);
+    }
   }
-}
 
-refresh_all();
-fs.writeFileSync(filepath, JSON.stringify(new_data, null, 2), "utf8");
+  fs.writeFileSync(filepath, JSON.stringify(new_data, null, 2), "utf8");
+}
