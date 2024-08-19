@@ -31,7 +31,7 @@ function refresh(localBranchName, item) {
     del_branch: `git branch -D ${localBranchName}`,
     add_branch: `git branch ${localBranchName} ${originName}/${remoteBranchName}`,
     push_origin: `git push origin ${localBranchName}`,
-    get_commit_id: `git rev-parse origin/${localBranchName}`,
+    get_commit_id: `git rev-parse ${localBranchName}`,
   };
 
   run_command(cmds.add_remote, true, false);
