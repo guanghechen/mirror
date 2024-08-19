@@ -6,6 +6,7 @@ import url from "node:url";
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const filepath = path.resolve(__dirname, "resource.json");
 const resources = JSON.parse(fs.readFileSync(filepath, "utf8"));
+const new_data = { ...resources };
 
 function run_command(cmd, silent, quit_on_error) {
   console.log("", cmd);
@@ -19,8 +20,7 @@ function run_command(cmd, silent, quit_on_error) {
   }
 }
 
-const data = {};
-for (const [localBranchName, item] of Object.entries(resources)) {
+function refresh(localBranchName, item) {
   const remote = `${item.remote}.git`;
   const remoteBranchName = item.branch;
   const originName = "origin_" + localBranchName;
@@ -41,11 +41,18 @@ for (const [localBranchName, item] of Object.entries(resources)) {
   run_command(cmds.push_origin, true, true);
   const commitId = run_command(cmds.get_commit_id, true, true);
 
-  data[localBranchName] = {
+  new_data[localBranchName] = {
     remote: item.remote,
     branch: item.branch,
     commit: commitId,
   };
 }
 
-fs.writeFileSync(filepath, JSON.stringify(data, null, 2), "utf8");
+function refresh_all() {
+  for (const [localBranchName, item] of Object.entries(resources)) {
+    refresh(localBranchName, item);
+  }
+}
+
+refresh_all();
+fs.writeFileSync(filepath, JSON.stringify(new_data, null, 2), "utf8");
