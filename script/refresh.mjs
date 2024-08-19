@@ -21,7 +21,7 @@ function run_command(cmd, silent, quit_on_error) {
   }
 }
 
-function refresh(localBranchName, item) {
+function refresh(localBranchName, item, pushOnlyWhenChanged) {
   const remote = `${item.remote}.git`;
   const remoteBranchName = item.branch;
   const originName = "origin_" + localBranchName;
@@ -31,16 +31,19 @@ function refresh(localBranchName, item) {
     fetch_remote: `git fetch ${originName} ${remoteBranchName}`,
     del_branch: `git branch -D ${localBranchName}`,
     add_branch: `git branch ${localBranchName} ${originName}/${remoteBranchName}`,
-    push_origin: `git push origin ${localBranchName}`,
     get_commit_id: `git rev-parse ${localBranchName}`,
+    push_origin: `git push origin ${localBranchName}`,
   };
 
   run_command(cmds.add_remote, true, false);
   run_command(cmds.fetch_remote, true, true);
   run_command(cmds.del_branch, true, false);
   run_command(cmds.add_branch, true, true);
-  run_command(cmds.push_origin, true, true);
   const commitId = run_command(cmds.get_commit_id, true, true);
+
+  if (!pushOnlyWhenChanged || commitId !== item.commit) {
+    run_command(cmds.push_origin, true, true);
+  }
 
   new_data[localBranchName] = {
     remote: item.remote,
@@ -51,19 +54,21 @@ function refresh(localBranchName, item) {
 
 function run() {
   const args = process.argv.slice(2);
+  const pushEvenNotChanged = args.includes("--push-even-not-changed");
+  const pushOnlyWhenChanged = !pushEvenNotChanged;
   const localBranchNames = args.filter(
     (localBranchName) => !!resources[localBranchName],
   );
   if (localBranchNames.length > 0) {
     for (const [localBranchName, item] of Object.entries(resources)) {
       if (localBranchNames.includes(localBranchName)) {
-        refresh(localBranchName, item);
+        refresh(localBranchName, item, pushOnlyWhenChanged);
       }
     }
   } else {
     // refresh all
     for (const [localBranchName, item] of Object.entries(resources)) {
-      refresh(localBranchName, item);
+      refresh(localBranchName, item, pushOnlyWhenChanged);
     }
   }
 
