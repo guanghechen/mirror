@@ -39,21 +39,30 @@ function gen_repo_table() {
       : max_n_local_branch_name + 6;
   max_n_remote_branch_name = Math.max(
     16,
-    max_n_remote_branch_name & 1
-      ? max_n_remote_branch_name + 5
-      : max_n_remote_branch_name + 4,
+    2 *
+      (max_n_remote_branch_name & 1
+        ? max_n_remote_branch_name + 3
+        : max_n_remote_branch_name + 2) +
+      max_n_local_branch_name,
   );
   max_n_commit_id = max_n_commit_id + 2;
 
-  const definitions = [];
+  const local_branch_definitions = [];
+  const remote_branch_definitions = [];
   const rows = [];
   for (const [localBranchName, item] of Object.entries(resources)) {
     const remoteBranchName = item.branch;
-    const definition = `[${localBranchName}]: ${item.remote}`;
-    definitions.push(definition);
+    const local_branch_identifier = localBranchName;
+    const remote_branch_identifier = `${localBranchName}#${remoteBranchName}`;
+    const local_branch_definition = `[${local_branch_identifier}]: https://github.com/guanghechen/mirror/tree/${localBranchName}`;
+    const remote_branch_definition = `[${remote_branch_identifier}]: ${item.remote}/tree/${remoteBranchName}`;
+    local_branch_definitions.push(local_branch_definition);
+    remote_branch_definitions.push(remote_branch_definition);
 
     const cell1 = ` [${localBranchName}][]`.padEnd(max_n_local_branch_name);
-    const cell2 = ` ${remoteBranchName}`.padEnd(max_n_remote_branch_name - 1);
+    const cell2 = ` [${remoteBranchName}][${remote_branch_identifier}]`.padEnd(
+      max_n_remote_branch_name - 1,
+    );
     const cell3 = ` ${item.commit}`;
     const row = `${cell1}|${cell2}|${cell3}`;
     rows.push(row);
@@ -76,7 +85,9 @@ function gen_repo_table() {
     "\n" +
     rows.join("\n") +
     "\n\n" +
-    definitions.join("\n");
+    local_branch_definitions.join("\n") +
+    "\n\n" +
+    remote_branch_definitions.join("\n");
   return content;
 }
 
