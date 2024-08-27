@@ -1,58 +1,35 @@
-import { execSync } from "node:child_process";
-import fs from "node:fs";
-import path from "node:path";
-import url from "node:url";
+import { get_resources, set_resources } from "./data/index.mjs";
+import { run_command } from "./util/command.mjs";
+import { get_full_commit_id } from "./util/git.mjs";
 
-const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
-const filepath = path.resolve(__dirname, "resource.json");
-const resources = JSON.parse(fs.readFileSync(filepath, "utf8"));
-const new_data = { ...resources };
-run();
+const resources = get_resources();
+const next_resources = { ...resources };
+await run();
 
-function run_command(cmd, silent, quit_on_error) {
-  console.log("", cmd);
-  try {
-    const stdout = execSync(cmd + " 2>/dev/null", { encoding: "utf8" });
-    return stdout.toString().trim();
-  } catch (error) {
-    if (!silent) console.error("Failed:", error);
-    if (quit_on_error) throw error;
-    return "";
-  }
-}
-
-function refresh(localBranchName, item, pushOnlyWhenChanged) {
-  const remote = `${item.remote}.git`;
-  const remoteBranchName = item.branch;
-  const originName = "origin_" + localBranchName;
-
-  const cmds = {
-    add_remote: `git remote add ${originName} ${remote}`,
-    fetch_remote: `git fetch ${originName} ${remoteBranchName}`,
-    del_branch: `git branch -D ${localBranchName}`,
-    add_branch: `git branch ${localBranchName} ${originName}/${remoteBranchName}`,
-    get_commit_id: `git rev-parse ${localBranchName}`,
-    push_origin: `git push origin ${localBranchName}`,
-  };
-
-  run_command(cmds.add_remote, true, false);
-  run_command(cmds.fetch_remote, true, true);
-  run_command(cmds.del_branch, true, false);
-  run_command(cmds.add_branch, true, true);
-  const commitId = run_command(cmds.get_commit_id, true, true);
-
+/**
+ * @param {string}  localBranchName
+ * @param {string}  item
+ * @param {boolean} pushOnlyWhenChanged
+ * @return {Promise<void>}
+ */
+async function refresh(localBranchName, item, pushOnlyWhenChanged) {
+  const commitId = await get_full_commit_id(localBranchName);
   if (!pushOnlyWhenChanged || commitId !== item.commit) {
-    run_command(cmds.push_origin, true, true);
+    const cmd = `git push origin ${localBranchName}`;
+    await run_command(cmd, true, true, true);
   }
 
-  new_data[localBranchName] = {
+  next_resources[localBranchName] = {
     remote: item.remote,
     branch: item.branch,
     commit: commitId,
   };
 }
 
-function run() {
+/**
+ * @return {Promise<void>}
+ */
+async function run() {
   const args = process.argv.slice(2);
   const pushEvenNotChanged = args.includes("--push-even-not-changed");
   const pushOnlyWhenChanged = !pushEvenNotChanged;
@@ -62,15 +39,15 @@ function run() {
   if (localBranchNames.length > 0) {
     for (const [localBranchName, item] of Object.entries(resources)) {
       if (localBranchNames.includes(localBranchName)) {
-        refresh(localBranchName, item, pushOnlyWhenChanged);
+        await refresh(localBranchName, item, pushOnlyWhenChanged);
       }
     }
   } else {
     // refresh all
     for (const [localBranchName, item] of Object.entries(resources)) {
-      refresh(localBranchName, item, pushOnlyWhenChanged);
+      await refresh(localBranchName, item, pushOnlyWhenChanged);
     }
   }
 
-  fs.writeFileSync(filepath, JSON.stringify(new_data, null, 2), "utf8");
+  set_resources(next_resources);
 }
