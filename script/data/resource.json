@@ -17,7 +17,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "62eba813b7501b39612146cbf29cd07f1d4ac29c"
+    "commit": "0ebe875d9c306f5fc829db38492ffff2a70d8e9d"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -52,17 +52,17 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "80214a857ce512cc64964abddc1d8eb5a3e28396"
+    "commit": "1ef74b546732f185d0f806860fa5404df7614f28"
   },
   "nvim@indent-blankline.nvim": {
     "remote": "https://github.com/lukas-reineke/indent-blankline.nvim",
     "branch": "master",
-    "commit": "db926997af951da38e5004ec7b9fbdc480b48f5d"
+    "commit": "18603eb949eba08300799f64027af11ef922283f"
   },
   "nvim@lazy.nvim": {
     "remote": "https://github.com/folke/lazy.nvim",
     "branch": "main",
-    "commit": "077102c5bfc578693f12377846d427f49bc50076"
+    "commit": "48b52b5cfcf8f88ed0aff8fde573a5cc20b1306d"
   },
   "nvim@mason-lspconfig.nvim": {
     "remote": "https://github.com/williamboman/mason-lspconfig.nvim",
@@ -127,7 +127,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "2a6f00ff66e276ab3289be8bb9f844f7ab385848"
+    "commit": "bdbc65aadc708ce528efb22bca5f82a7cca6b54d"
   },
   "nvim@nvim-notify": {
     "remote": "https://github.com/rcarriga/nvim-notify",
@@ -142,17 +142,17 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "2eb50352c039009cf046f43241b649b162ee5148"
+    "commit": "3826d0c42ac635f560479b5b6ab522f6627a3466"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "0f3332788e0bd37716fbd25f39120dcfd557c90f"
+    "commit": "e6cc783b74606d97ca9eff6494e3f5c2ca603a50"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "master",
-    "commit": "41e3abf6bfd9a9a681eb1f788bdeba91c9004b2b"
+    "commit": "fe3deb7f67ce0cc4ebfe2ea6c1c7ae1c7a939d73"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
@@ -167,7 +167,7 @@
   "nvim@telescope-file-browser.nvim": {
     "remote": "https://github.com/nvim-telescope/telescope-file-browser.nvim",
     "branch": "master",
-    "commit": "a46780830b576049c675680650f773bedfa8677a"
+    "commit": "c5a14e0550699a7db575805cdb9ddc969ba0f1f5"
   },
   "nvim@telescope.nvim": {
     "remote": "https://github.com/nvim-telescope/telescope.nvim",
@@ -187,6 +187,6 @@
   "nvim@which-key.nvim": {
     "remote": "https://github.com/folke/which-key.nvim",
     "branch": "main",
-    "commit": "6c1584eb76b55629702716995cca4ae2798a9cca"
+    "commit": "bfec3d6bc0a9b0b2cb11644642f78c2c3915eef0"
   }
 }
