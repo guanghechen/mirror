@@ -19,7 +19,7 @@ set_readme(readme);
 async function refresh(localBranchName, item, pushOnlyWhenChanged) {
   const commitId = await get_full_commit_id(localBranchName);
   if (!pushOnlyWhenChanged || commitId !== item.commit) {
-    const cmd = `git push origin ${localBranchName}`;
+    const cmd = `git push origin ${localBranchName}:${localBranchName}`;
     await run_command(cmd, true, true, true);
   }
 
