@@ -7,6 +7,21 @@ const resources = get_resources();
  */
 export async function gen_introduction() {
   return `
+### Setup
+
+* Fetch from remote and generate CHANGELOG
+
+  \`\`\`fish
+  node script/fetch.mjs
+  \`\`\`
+
+* Sync changes to the mirror.git and update the README
+
+  \`\`\`fish
+  node script/push.mjs
+  \`\`\`
+
+
 ### Motivation
 
 To backup open source codes.
