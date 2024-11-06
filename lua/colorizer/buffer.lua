@@ -89,8 +89,8 @@ local function create_highlight(rgb_hex, mode)
 end
 
 --- Create highlight and set highlights
----@param bufnr number: buffer number (0 for current)
----@param ns_id number
+---@param bufnr number: Buffer number (0 for current)
+---@param ns_id number: Namespace id, default is "colorizer" created with vim.api.nvim_create_namespace
 ---@param line_start number
 ---@param line_end number
 ---@param data table: table output of `parse_lines`
@@ -135,22 +135,19 @@ end
 --- Highlight the buffer region.
 -- Highlight starting from `line_start` (0-indexed) for each line described by `lines` in the
 -- buffer id `bufnr` and attach it to the namespace id `ns_id`.
----@param bufnr number: buffer number (0 for current)
----@param ns_id number: namespace id.  default is "colorizer", created with vim.api.nvim_create_namespace
+---@param bufnr number: Buffer number, 0 for current
+---@param ns_id number: Namespace id, default is "colorizer" created with vim.api.nvim_create_namespace
 ---@param line_start number: line_start should be 0-indexed
 ---@param line_end number: Last line to highlight
 ---@param options table: Configuration options as described in `setup`
 ---@param options_local table: Buffer local variables
----@return nil|boolean|number,table
+---@return boolean,table
 function buffer.highlight(bufnr, ns_id, line_start, line_end, options, options_local)
-  local returns = { detach = { ns_id = {}, functions = {} } }
-  if bufnr == 0 or bufnr == nil then
-    bufnr = api.nvim_get_current_buf()
-  end
-
-  local lines = buf_get_lines(bufnr, line_start, line_end, false)
-
+  bufnr = (bufnr == 0 or not bufnr) and current_buf() or bufnr
   ns_id = ns_id or buffer.default_namespace
+
+  local returns = { detach = { ns_id = {}, functions = {} } }
+  local lines = buf_get_lines(bufnr, line_start, line_end, false)
 
   -- only update sass varibles when text is changed
   if options_local.__event ~= "WinScrolled" and options.sass and options.sass.enable then
@@ -171,8 +168,8 @@ end
 
 --- Parse the given lines for colors and return a table containing
 -- rgb_hex and range per line
----@param bufnr number: buffer number (0 for current)
----@param lines table: table of lines to parse
+---@param bufnr number: Buffer number (0 for current)
+---@param lines table: Table of lines to parse
 ---@param line_start number: This is the buffer line number, from where to start highlighting
 ---@param options table: Passed in `colorizer.setup`, Only uses `user_default_options`
 ---@return table|nil
@@ -248,19 +245,19 @@ local function getrow(bufnr)
 end
 
 --- Rehighlight the buffer if colorizer is active
----@param bufnr number: buffer number (0 for current)
+---@param bufnr number: Buffer number, (0 for current)
 ---@param options table: Buffer options
 ---@param options_local table|nil: Buffer local variables
 ---@param use_local_lines boolean|nil Whether to use lines num range from options_local
 ---@return nil|boolean|number,table
 function buffer.rehighlight(bufnr, options, options_local, use_local_lines)
-  bufnr = (bufnr == 0 or not bufnr) and current_buf() or bufnr
-
   local ns_id = buffer.default_namespace
 
-  local min, max
+  local min = 0
+  local max = -1
   if use_local_lines and options_local then
-    min, max = options_local.__startline or 0, options_local.__endline or -1
+    min = options_local.__startline or min
+    max = options_local.__endline or max
   else
     min, max = getrow(bufnr)
   end

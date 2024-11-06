@@ -15,6 +15,9 @@ local sass_name_parser = require("colorizer.sass").name_parser
 
 local B_HASH, DOLLAR_HASH = ("#"):byte(), ("$"):byte()
 
+--  TODO: 2024-11-05 - Instead of AARRGGBB vs RRGGBBAA parsers, should we have
+--  0x, # prefix parsers for 0xAARRGGBB, 0xRRGGBB, 0xRGB and #RRGGBBAA, #RRGGBB,
+--  #RGB?
 local parser = {
   ["_0x"] = argb_hex_parser,
   ["_rgb"] = rgb_function_parser,
@@ -32,19 +35,15 @@ local matcher = {}
 function matcher.compile(matchers, matchers_trie)
   local trie = Trie(matchers_trie)
 
-  local function parse_fn(line, i, buf)
+  local function parse_fn(line, i, bufnr)
     -- prefix #
-    if matchers.rgba_hex_parser then
-      if line:byte(i) == B_HASH then
-        return rgba_hex_parser(line, i, matchers.rgba_hex_parser)
-      end
+    if matchers.rgba_hex_parser and line:byte(i) == B_HASH then
+      return rgba_hex_parser(line, i, matchers.rgba_hex_parser)
     end
 
     -- prefix $, SASS Colour names
-    if matchers.sass_name_parser then
-      if line:byte(i) == DOLLAR_HASH then
-        return sass_name_parser(line, i, buf)
-      end
+    if matchers.sass_name_parser and line:byte(i) == DOLLAR_HASH then
+      return sass_name_parser(line, i, bufnr)
     end
 
     -- Prefix 0x, rgba, rgb, hsla, hsl
@@ -112,7 +111,6 @@ function matcher.make(options)
 
   local matchers = {}
   local matchers_prefix = {}
-  matchers.max_prefix_length = 0
 
   if enable_names then
     matchers.color_name_parser = { tailwind = options.tailwind }
@@ -138,6 +136,7 @@ function matcher.make(options)
     matchers.rgba_hex_parser.minlen = minlen
   end
 
+  --  TODO: 2024-11-05 - Add custom prefixes
   if enable_AARRGGBB then
     table.insert(matchers_prefix, "0x")
   end
