@@ -1,23 +1,21 @@
----Helper functions for colorizer to enable required parsers
---@module colorizer.matcher
-local Trie = require "colorizer.trie"
+--- Manages matching and parsing of color patterns in buffers.
+-- This module provides functions for setting up and applying color parsers
+-- for different color formats such as RGB, HSL, hexadecimal, and named colors.
+-- It uses a trie-based structure to optimize prefix-based parsing.
+-- @module colorizer.matcher
+
+local M = {}
+
+local Trie = require("colorizer.trie")
 local min, max = math.min, math.max
 
-local color_name_parser = require "colorizer.parser.names"
-
-local rgb_function_parser = require "colorizer.parser.rgb"
-local hsl_function_parser = require "colorizer.parser.hsl"
-
-local argb_hex_parser = require "colorizer.parser.argb_hex"
-local rgba_hex_parser = require "colorizer.parser.rgba_hex"
-
+local argb_hex_parser = require("colorizer.parser.argb_hex")
+local color_name_parser = require("colorizer.parser.names")
+local hsl_function_parser = require("colorizer.parser.hsl")
+local rgb_function_parser = require("colorizer.parser.rgb")
+local rgba_hex_parser = require("colorizer.parser.rgba_hex")
 local sass_name_parser = require("colorizer.sass").name_parser
 
-local B_HASH, DOLLAR_HASH = ("#"):byte(), ("$"):byte()
-
---  TODO: 2024-11-05 - Instead of AARRGGBB vs RRGGBBAA parsers, should we have
---  0x, # prefix parsers for 0xAARRGGBB, 0xRRGGBB, 0xRGB and #RRGGBBAA, #RRGGBB,
---  #RGB?
 local parser = {
   ["_0x"] = argb_hex_parser,
   ["_rgb"] = rgb_function_parser,
@@ -26,28 +24,29 @@ local parser = {
   ["_hsla"] = hsl_function_parser,
 }
 
-local matcher = {}
-
 ---Form a trie stuct with the given prefixes
 ---@param matchers table: List of prefixes, {"rgb", "hsl"}
 ---@param matchers_trie table: Table containing information regarding non-trie based parsers
 ---@return function: function which will just parse the line for enabled parsers
-function matcher.compile(matchers, matchers_trie)
+local function compile(matchers, matchers_trie)
   local trie = Trie(matchers_trie)
 
   local function parse_fn(line, i, bufnr)
     -- prefix #
-    if matchers.rgba_hex_parser and line:byte(i) == B_HASH then
-      return rgba_hex_parser(line, i, matchers.rgba_hex_parser)
+    if matchers.rgba_hex_parser then
+      if line:byte(i) == ("#"):byte() then
+        return rgba_hex_parser(line, i, matchers.rgba_hex_parser)
+      end
     end
 
-    -- prefix $, SASS Colour names
-    if matchers.sass_name_parser and line:byte(i) == DOLLAR_HASH then
-      return sass_name_parser(line, i, bufnr)
+    -- prefix $, SASS Color names
+    if matchers.sass_name_parser then
+      if line:byte(i) == ("$"):byte() then
+        return sass_name_parser(line, i, buf)
+      end
     end
 
     -- Prefix 0x, rgba, rgb, hsla, hsl
-    ---@diagnostic disable-next-line: undefined-field
     local prefix = trie:longest_prefix(line, i)
     if prefix then
       local fn = "_" .. prefix
@@ -56,7 +55,7 @@ function matcher.compile(matchers, matchers_trie)
       end
     end
 
-    -- Colour names
+    -- Color names
     if matchers.color_name_parser then
       return color_name_parser(line, i, matchers.color_name_parser)
     end
@@ -64,13 +63,13 @@ function matcher.compile(matchers, matchers_trie)
   return parse_fn
 end
 
-local MATCHER_CACHE = {}
+local matcher_cache = {}
 ---Parse the given options and return a function with enabled parsers.
 --if no parsers enabled then return false
 --Do not try make the function again if it is present in the cache
 ---@param options table: options created in `colorizer.setup`
 ---@return function|boolean: function which will just parse the line for enabled parsers
-function matcher.make(options)
+function M.make(options)
   if not options then
     return false
   end
@@ -104,7 +103,7 @@ function matcher.make(options)
     return false
   end
 
-  local loop_parse_fn = MATCHER_CACHE[matcher_key]
+  local loop_parse_fn = matcher_cache[matcher_key]
   if loop_parse_fn then
     return loop_parse_fn
   end
@@ -158,10 +157,10 @@ function matcher.make(options)
     matchers[value] = { prefix = value }
   end
 
-  loop_parse_fn = matcher.compile(matchers, matchers_prefix)
-  MATCHER_CACHE[matcher_key] = loop_parse_fn
+  loop_parse_fn = compile(matchers, matchers_prefix)
+  matcher_cache[matcher_key] = loop_parse_fn
 
   return loop_parse_fn
 end
 
-return matcher
+return M

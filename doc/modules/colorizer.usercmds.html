@@ -50,9 +50,9 @@
   <li><a href="../modules/colorizer.parser.rgb.html">parser.rgb</a></li>
   <li><a href="../modules/colorizer.parser.rgba_hex.html">parser.rgba_hex</a></li>
   <li><a href="../modules/colorizer.sass.html">sass</a></li>
-  <li><strong>tailwind</strong></li>
+  <li><a href="../modules/colorizer.tailwind.html">tailwind</a></li>
   <li><a href="../modules/colorizer.trie.html">trie</a></li>
-  <li><a href="../modules/colorizer.usercmds.html">usercmds</a></li>
+  <li><strong>usercmds</strong></li>
   <li><a href="../modules/colorizer.utils.html">utils</a></li>
 </ul>
 
@@ -60,24 +60,17 @@
 
 <div id="content">
 
-<h1>Module <code>colorizer.tailwind</code></h1>
-<p>Handles Tailwind CSS color highlighting within buffers.</p>
+<h1>Module <code>colorizer.usercmds</code></h1>
+<p>This module provides functions for creating user commands for the Colorizer plugin in Neovim.</p>
 <p>
- This module integrates with the Tailwind CSS Language Server Protocol (LSP) to retrieve and apply
- color highlights for Tailwind classes in a buffer. It manages LSP attachment, autocmds for color updates,
- and maintains state for efficient Tailwind highlighting.</p>
+ It allows the creation of commands to attach, detach, reload, and toggle the Colorizer functionality on buffers.</p>
 
 
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#cleanup">cleanup (bufnr)</a></td>
-	<td class="summary">Cleanup tailwind variables and autocmd</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#setup_lsp_colors">setup_lsp_colors (bufnr, options, options_local, add_highlight)</a></td>
-	<td class="summary">highlight buffer using values returned by tailwindcss
- To see these table information, see |colorizer.buffer|</td>
+	<td class="name" nowrap><a href="#make">make (cmds)</a></td>
+	<td class="summary">Create user commands for Colorizer based on the given command list.</td>
 	</tr>
 </table>
 
@@ -89,47 +82,23 @@
 
     <dl class="function">
     <dt>
-    <a name = "cleanup"></a>
-    <strong>cleanup (bufnr)</strong>
+    <a name = "make"></a>
+    <strong>make (cmds)</strong>
     </dt>
     <dd>
-    Cleanup tailwind variables and autocmd
+    Create user commands for Colorizer based on the given command list.
+ This function defines and registers Colorizer commands based on the provided list.
+ Available commands are:
+ - `ColorizerAttachToBuffer`: Attaches Colorizer to the current buffer
+ - `ColorizerDetachFromBuffer`: Detaches Colorizer from the current buffer
+ - `ColorizerReloadAllBuffers`: Reloads Colorizer for all buffers
+ - `ColorizerToggle`: Toggles Colorizer attachment to the buffer
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">bufnr</span>
-         number: buffer number (0 for current)
-        </li>
-    </ul>
-
-
-
-
-
-</dd>
-    <dt>
-    <a name = "setup_lsp_colors"></a>
-    <strong>setup_lsp_colors (bufnr, options, options_local, add_highlight)</strong>
-    </dt>
-    <dd>
-    highlight buffer using values returned by tailwindcss
- To see these table information, see |colorizer.buffer|
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">bufnr</span>
-         number: buffer number (0 for current)
-        </li>
-        <li><span class="parameter">options</span>
-         table
-        </li>
-        <li><span class="parameter">options_local</span>
-         table
-        </li>
-        <li><span class="parameter">add_highlight</span>
-         function
+        <li><span class="parameter">cmds</span>
+         table|boolean A list of command names to create or `true` to create all available commands
         </li>
     </ul>
 
