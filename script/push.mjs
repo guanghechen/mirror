@@ -11,19 +11,19 @@ const readme = await gen_readme();
 set_readme(readme);
 
 /**
- * @param {string}  localBranchName
+ * @param {string}  branchName
  * @param {string}  item
  * @param {boolean} pushOnlyWhenChanged
  * @return {Promise<void>}
  */
-async function refresh(localBranchName, item, pushOnlyWhenChanged) {
-  const commitId = await get_full_commit_id(localBranchName);
+async function pushItem(branchName, item, pushOnlyWhenChanged) {
+  const commitId = await get_full_commit_id(branchName);
   if (!pushOnlyWhenChanged || commitId !== item.commit) {
-    const cmd = `git push origin ${localBranchName}:${localBranchName}`;
+    const cmd = `git push origin ${branchName}:${branchName}`;
     await run_command(cmd, true, true, true);
   }
 
-  next_resources[localBranchName] = {
+  next_resources[branchName] = {
     remote: item.remote,
     branch: item.branch,
     commit: commitId,
@@ -45,7 +45,7 @@ async function push() {
 
   for (const localBranchName of localBranchNames) {
     const item = resources[localBranchName];
-    await refresh(localBranchName, item, pushOnlyWhenChanged);
+    await pushItem(localBranchName, item, pushOnlyWhenChanged);
   }
 
   set_resources(next_resources);
