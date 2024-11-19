@@ -7,7 +7,6 @@ local color = require("colorizer.color")
 local plugin_name = "colorizer"
 local sass = require("colorizer.sass")
 local tailwind = require("colorizer.tailwind")
-local utils = require("colorizer.utils")
 local make_matcher = require("colorizer.matcher").make
 
 local hl_state = {
@@ -202,12 +201,6 @@ function M.parse_lines(bufnr, lines, line_start, options)
   end
 
   return data
-end
-
---- Clear the highlight cache and reload all buffers.
-function M.clear_highlight_cache()
-  utils.clear_hl_cache()
-  vim.schedule(buffer.reload_all_buffers)
 end
 
 return M

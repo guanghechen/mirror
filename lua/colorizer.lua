@@ -477,15 +477,19 @@ function M.setup(opts)
 
   vim.api.nvim_create_autocmd("ColorScheme", {
     group = colorizer_state.augroup,
-    callback = function()
-      buffer.clear_highlight_cache()
-    end,
+    callback = M.clear_highlight_cache,
   })
 
   parse_opts("filetype", s.filetypes)
   parse_opts("buftype", s.buftypes)
 
   require("colorizer.usercmds").make(s.user_commands)
+end
+
+--- Clears the highlight cache and reloads all buffers.
+function M.clear_highlight_cache()
+  buffer.clear_hl_cache()
+  vim.schedule(M.reload_all_buffers)
 end
 
 return M
