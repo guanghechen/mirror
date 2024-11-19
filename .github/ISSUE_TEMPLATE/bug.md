@@ -12,6 +12,7 @@ A clear and concise description of what the bug is.
 
 **To Reproduce**
 Your configuration and/or a small reproducible test, and/or the steps required to reproduce.
+Use `test/minimal.lua` to produce a minimal config.
 
 **Expected behavior**
 A clear and concise description of what you expected to happen.
