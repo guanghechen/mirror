@@ -20,6 +20,7 @@ To backup open source codes.
 
  Local Branch                         | Remote Branch                                       | Commit                                  
 --------------------------------------|-----------------------------------------------------|------------------------------------------
+ [nvim@aerial.nvim][]                 | [master][nvim@aerial.nvim#master]                   | ddd25f57e5205b36bc2e939c486b47818bef9ec3
  [nvim@cmp-buffer][]                  | [main][nvim@cmp-buffer#main]                        | 3022dbc9166796b644a841a02de8dd1cc1d311fa
  [nvim@cmp-nvim-lsp][]                | [main][nvim@cmp-nvim-lsp#main]                      | 39e2eda76828d88b773cc27a3f61d2ad782c922d
  [nvim@cmp-path][]                    | [main][nvim@cmp-path#main]                          | 91ff86cd9c29299a64f968ebb45846c485725f23
@@ -58,6 +59,7 @@ To backup open source codes.
  [nvim@vim-illuminate][]              | [master][nvim@vim-illuminate#master]                | 5eeb7951fc630682c322e88a9bbdae5c224ff0aa
  [nvim@which-key.nvim][]              | [main][nvim@which-key.nvim#main]                    | 68e37e12913a66b60073906f5d3f14dee0de19f2
 
+[nvim@aerial.nvim]: https://github.com/guanghechen/mirror/tree/nvim@aerial.nvim
 [nvim@cmp-buffer]: https://github.com/guanghechen/mirror/tree/nvim@cmp-buffer
 [nvim@cmp-nvim-lsp]: https://github.com/guanghechen/mirror/tree/nvim@cmp-nvim-lsp
 [nvim@cmp-path]: https://github.com/guanghechen/mirror/tree/nvim@cmp-path
@@ -96,6 +98,7 @@ To backup open source codes.
 [nvim@vim-illuminate]: https://github.com/guanghechen/mirror/tree/nvim@vim-illuminate
 [nvim@which-key.nvim]: https://github.com/guanghechen/mirror/tree/nvim@which-key.nvim
 
+[nvim@aerial.nvim#master]: https://github.com/stevearc/aerial.nvim/tree/master
 [nvim@cmp-buffer#main]: https://github.com/hrsh7th/cmp-buffer/tree/main
 [nvim@cmp-nvim-lsp#main]: https://github.com/hrsh7th/cmp-nvim-lsp/tree/main
 [nvim@cmp-path#main]: https://github.com/hrsh7th/cmp-path/tree/main
