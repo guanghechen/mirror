@@ -91,6 +91,7 @@ local colorizer_state = {
   buffer_lines = {},
   buffer_local = {},
   buffer_options = {},
+  buffer_reload = {},
 }
 
 --- Highlight the buffer region.
@@ -212,36 +213,79 @@ function M.reload_all_buffers()
   end
 end
 
+--- Reload file on save; used for dev, to edit expect.txt and apply highlights from returned setup table
+---@param pattern string: pattern to match file name
+function M.reload_on_save(pattern)
+  local bufnr = utils.bufme()
+  if colorizer_state.buffer_reload[bufnr] then
+    return
+  else
+    colorizer_state.buffer_reload[bufnr] = true
+  end
+  vim.api.nvim_create_autocmd("BufWritePost", {
+    group = vim.api.nvim_create_augroup("ColorizerReload", {}),
+    pattern = pattern,
+    callback = function(evt)
+      vim.schedule(function()
+        local success, opts = pcall(dofile, evt.match)
+        if not success or type(opts) ~= "table" then
+          vim.notify("Failed to load options from " .. evt.match, vim.log.levels.ERROR)
+          return
+        end
+        if opts then
+          local buffer_reload = vim.deepcopy(colorizer_state.buffer_reload)
+          M.setup(opts)
+          -- restore buffer reload state after setup
+          colorizer_state.buffer_reload = buffer_reload
+          M.attach_to_buffer()
+          vim.notify(
+            "Colorizer reloaded with updated options from " .. evt.match,
+            vim.log.levels.INFO
+          )
+        end
+      end)
+    end,
+  })
+end
+
 ---Attach to a buffer and continuously highlight changes.
 ---@param bufnr number|nil: buffer number (0 for current)
 ---@param options table|nil: Configuration options as described in `setup`
 ---@param bo_type 'buftype'|'filetype'|nil: The type of buffer option
 function M.attach_to_buffer(bufnr, options, bo_type)
   bufnr = utils.bufme(bufnr)
-  if not bo_type or not vim.tbl_contains({ "buftype", "filetype" }, bo_type) then
-    bo_type = "buftype"
-  end
   if not vim.api.nvim_buf_is_valid(bufnr) then
     colorizer_state.buffer_local[bufnr], colorizer_state.buffer_options[bufnr] = nil, nil
     return
   end
+  --  TODO: 2024-11-22 - When attaching using user command does this respect buffer settings?
+  options = options or config.setup_options.filetypes[vim.bo.filetype] or {}
+  --  TODO: 2024-11-22 - Why default to "buftype"?
+  bo_type = vim.tbl_contains({ "buftype", "filetype" }, bo_type) and bo_type or "buftype"
 
-  -- set options by grabbing existing or creating new options, then parsing
-  local got_options = get_buffer_options(bufnr)
-  local new_options = config.new_buffer_options(bufnr, bo_type)
-  options = config.parse_buffer_options(options or got_options or new_options)
+  -- check if options is empty table
+  options = next(options) and options
+    -- cached buffer options
+    or get_buffer_options(bufnr)
+    -- new buffer options
+    or config.new_buffer_options(bufnr, bo_type)
+  options = config.parse_buffer_options(options)
 
   if not buffer.highlight_mode_names[options.mode] then
+    local default = "background"
     if options.mode ~= nil then
       local mode = options.mode
       vim.defer_fn(function()
-        -- just notify the user once
         vim.notify_once(
-          string.format("Warning: Invalid mode given to colorizer setup [ %s ]", mode)
+          string.format(
+            "Warning: Invalid mode given to colorizer setup [ %s ], setting to '%s'",
+            mode,
+            default
+          )
         )
       end, 0)
     end
-    options.mode = "background"
+    options.mode = default
   end
 
   colorizer_state.buffer_options[bufnr] = options
@@ -399,13 +443,21 @@ function M.setup(opts)
   end
 
   local s = config.get_settings(opts)
+  colorizer_state = {
+    augroup = vim.api.nvim_create_augroup("ColorizerSetup", { clear = true }),
+    buffer_current = 0,
+    buffer_lines = {},
+    buffer_local = {},
+    buffer_options = {},
+    buffer_reload = {},
+  }
 
+  -- Setup the buffer with the correct options
   local function setup(bo_type)
     local filetype = vim.bo.filetype
     local buftype = vim.bo.buftype
     local bufnr = utils.bufme()
     colorizer_state.buffer_local[bufnr] = colorizer_state.buffer_local[bufnr] or {}
-
     if s.exclusions.filetype[filetype] or s.exclusions.buftype[buftype] then
       -- when a filetype is disabled but buftype is enabled, it can Attach in
       -- some cases, so manually detach
@@ -415,17 +467,11 @@ function M.setup(opts)
       colorizer_state.buffer_local[bufnr].__init = nil
       return
     end
-
-    local fopts, bopts = config.get_options(bo_type, buftype, filetype)
-    -- if buffer and filetype options both are given, then prefer fileoptions
-    local options = bo_type == "filetype" and fopts or (fopts and fopts or bopts)
-
+    local options = config.get_options(bo_type, buftype, filetype)
     if not options and not s.all[bo_type] then
       return
     end
-
     options = options or s.default_options
-
     -- this should ideally be triggered one time per buffer
     -- but BufWinEnter also triggers for split formation
     -- but we don't want that so add a check using local buffer variable
@@ -434,11 +480,21 @@ function M.setup(opts)
     end
   end
 
+  -- Setup highlighting autocmds for filetypes and buftypes
   local events = { buftype = "BufWinEnter", filetype = "FileType" }
-  local function parse_opts(bo_type, tbl)
-    if type(tbl) == "table" then
+  local opt_types = {
+    filetype = s.filetypes,
+    buftype = s.buftypes,
+  }
+  for bo_type, opt_type in pairs(opt_types) do
+    if type(opt_type) ~= "table" then
+      vim.notify_once(
+        string.format("colorizer: Invalid type for %ss %s", bo_type, vim.inspect(opt_type)),
+        4
+      )
+    else
       local list = {}
-      for k, v in pairs(tbl) do
+      for k, v in pairs(opt_type) do
         local value
         local options = s.default_options
         if type(k) == "string" then
@@ -451,7 +507,7 @@ function M.setup(opts)
         else
           value = v
         end
-        -- Exclude
+        -- Exclude or set buffer options
         if value:sub(1, 1) == "!" then
           s.exclusions[bo_type][value:sub(2)] = true
         else
@@ -470,22 +526,16 @@ function M.setup(opts)
           setup(bo_type)
         end,
       })
-    elseif tbl then
-      vim.notify_once(
-        string.format("colorizer: Invalid type for %ss %s", bo_type, vim.inspect(tbl)),
-        4
-      )
     end
   end
 
+  -- Clear highlight cache on colorscheme change
   vim.api.nvim_create_autocmd("ColorScheme", {
     group = colorizer_state.augroup,
     callback = M.clear_highlight_cache,
   })
 
-  parse_opts("filetype", s.filetypes)
-  parse_opts("buftype", s.buftypes)
-
+  --  TODO: 2024-11-23 - Delete user commands first
   require("colorizer.usercmds").make(s.user_commands)
 end
 

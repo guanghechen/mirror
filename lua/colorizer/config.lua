@@ -7,9 +7,9 @@ local utils = require("colorizer.utils")
 --- Defaults for colorizer options
 local function user_defaults()
   return vim.deepcopy({
+    names = true,
     RGB = true,
     RRGGBB = true,
-    names = true,
     RRGGBBAA = false,
     AARRGGBB = false,
     rgb_fn = false,
@@ -77,12 +77,22 @@ end
 --@field always_update boolean
 M.user_default_options = nil
 
+--- Options for colorizer that were passed in to setup function
+---@table setup_options
+--@field exclusions table
+--@field all table
+--@field default_options table
+--@field user_commands boolean
+--@field filetypes table
+--@field buftypes table
+M.setup_options = nil
+
 --- Plugin default options cache from vim.deepcopy
 ---@table default_options
 local plugin_default_options = user_defaults()
 
 -- State for managing buffer and filetype-specific options
-local options_state = { buftype = {}, filetype = {} }
+local options_state
 
 --- Validates user options and sets defaults if necessary.
 local function validate_opts(settings)
@@ -145,6 +155,7 @@ end
 -- @param opts opts User-provided configuration options.
 -- @return table Final settings after merging user and default options.
 function M.get_settings(opts)
+  options_state = { buftype = {}, filetype = {} }
   opts = opts or {}
   local default_opts = {
     filetypes = { "*" },
@@ -167,6 +178,7 @@ function M.get_settings(opts)
     buftypes = opts.buftypes,
   }
   validate_opts(settings)
+  M.setup_options = settings
   M.user_default_options = settings.default_options
   return settings
 end
@@ -179,13 +191,13 @@ function M.new_buffer_options(bufnr, bo_type)
   return options_state.filetype[value] or M.user_default_options
 end
 
---- Retrieve options based on buffer type and file type.
+--- Retrieve options based on buffer type and file type.  Prefer filetype.
 ---@param bo_type 'buftype'|'filetype': The type of buffer option
 ---@param buftype string: Buffer type.
 ---@param filetype string: File type.
----@return table, table
+---@return table
 function M.get_options(bo_type, buftype, filetype)
-  return options_state[bo_type][buftype], options_state[bo_type][filetype]
+  return options_state[bo_type][filetype] or options_state[bo_type][buftype]
 end
 
 --- Set options for a specific buffer or file type.
