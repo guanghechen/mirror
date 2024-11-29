@@ -37,7 +37,7 @@
   "nvim@CopilotChat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
     "branch": "canary",
-    "commit": "3968c25e9418a544d5faa3c242d577526b0710e7"
+    "commit": "41895c519b239e661c80ade301de3be95eff6161"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -77,7 +77,7 @@
   "nvim@mason-lspconfig.nvim": {
     "remote": "https://github.com/williamboman/mason-lspconfig.nvim",
     "branch": "main",
-    "commit": "43894adcf10bb1190c2184bd7c1750e8ea2b3dce"
+    "commit": "8e46de9241d3997927af12196bd8faa0ed08c29a"
   },
   "nvim@mason.nvim": {
     "remote": "https://github.com/williamboman/mason.nvim",
@@ -142,7 +142,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "d651732cecfc77be1b3727512bec0438c22410d1"
+    "commit": "6a5ed22255bbe10104ff9b72c55ec2e233a8e571"
   },
   "nvim@nvim-notify": {
     "remote": "https://github.com/rcarriga/nvim-notify",
@@ -157,7 +157,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "8d4fdc5e47e2a4e00179e43f56221250ce365973"
+    "commit": "4d035005d338e4b1eb71a175bd44974e2f64740f"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -192,6 +192,6 @@
   "nvim@which-key.nvim": {
     "remote": "https://github.com/folke/which-key.nvim",
     "branch": "main",
-    "commit": "b9684c6ec54d8a8452bdcf0d613c7ad0223fc3fe"
+    "commit": "9b365a6428a9633e3eeb34dbef1b791511c54f70"
   }
 }
