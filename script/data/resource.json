@@ -87,7 +87,8 @@
   "nvim@mini.comment": {
     "remote": "https://github.com/echasnovski/mini.comment",
     "branch": "main",
-    "commit": "a56581c40c19fa26f2b39da72504398de3173c5a"
+    "commit": "a56581c40c19fa26f2b39da72504398de3173c5a",
+    "pinned": true
   },
   "nvim@mini.hipatterns": {
     "remote": "https://github.com/echasnovski/mini.hipatterns",
@@ -137,7 +138,8 @@
   "nvim@nvim-colorizer.lua": {
     "remote": "https://github.com/NvChad/nvim-colorizer.lua",
     "branch": "master",
-    "commit": "4acf88d31b3a7a1a7f31e9c30bf2b23c6313abdb"
+    "commit": "4acf88d31b3a7a1a7f31e9c30bf2b23c6313abdb",
+    "pinned": true
   },
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",

@@ -21,6 +21,7 @@ async function fetch() {
 
   for (const localBranchName of localBranchNames) {
     const item = resources[localBranchName];
+    if (item.pinned) continue;
     await fetch_repo(localBranchName, item);
   }
 }
