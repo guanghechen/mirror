@@ -37,7 +37,7 @@
   "nvim@CopilotChat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
     "branch": "canary",
-    "commit": "41895c519b239e661c80ade301de3be95eff6161"
+    "commit": "71459105476cd3652de90fa0490cea044869c9ab"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -57,7 +57,7 @@
   "nvim@friendly-snippets": {
     "remote": "https://github.com/rafamadriz/friendly-snippets",
     "branch": "main",
-    "commit": "de8fce94985873666bd9712ea3e49ee17aadb1ed"
+    "commit": "efff286dd74c22f731cdec26a70b46e5b203c619"
   },
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
@@ -132,7 +132,7 @@
   "nvim@nvim-cmp": {
     "remote": "https://github.com/hrsh7th/nvim-cmp",
     "branch": "main",
-    "commit": "ed31156aa2cc14e3bc066c59357cc91536a2bc01"
+    "commit": "ca4d3330d386e76967e53b85953c170658255ecb"
   },
   "nvim@nvim-colorizer.lua": {
     "remote": "https://github.com/NvChad/nvim-colorizer.lua",
@@ -142,7 +142,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "6a5ed22255bbe10104ff9b72c55ec2e233a8e571"
+    "commit": "f59eba2ec08edda0e09ecf34ec29ad10a429e48d"
   },
   "nvim@nvim-notify": {
     "remote": "https://github.com/rcarriga/nvim-notify",
@@ -157,12 +157,12 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "4d035005d338e4b1eb71a175bd44974e2f64740f"
+    "commit": "70d44dad700512460aa76e9299ed00e0f53f3164"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "6b081ea63a3711243d11540ce28ccdb6f35ecd33"
+    "commit": "920999bf53daa63ddf12efdeb5137a7cea1cc201"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
