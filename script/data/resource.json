@@ -22,7 +22,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "a203480a350b03092e473bf3001733d547160a73"
+    "commit": "7a3d99eb151e636670ce4842ab073d7485f7bc61"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -36,8 +36,8 @@
   },
   "nvim@CopilotChat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
-    "branch": "canary",
-    "commit": "71459105476cd3652de90fa0490cea044869c9ab"
+    "branch": "main",
+    "commit": "86bdee82848955641e14930e0593820cf9b161bf"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -87,13 +87,12 @@
   "nvim@mini.comment": {
     "remote": "https://github.com/echasnovski/mini.comment",
     "branch": "main",
-    "commit": "a56581c40c19fa26f2b39da72504398de3173c5a",
-    "pinned": true
+    "commit": "a56581c40c19fa26f2b39da72504398de3173c5a"
   },
   "nvim@mini.hipatterns": {
     "remote": "https://github.com/echasnovski/mini.hipatterns",
     "branch": "main",
-    "commit": "797cbdc893cdcc2f0fbc05a23b4dae238a1fb0ae"
+    "commit": "f34975103a38b3f608219a1324cdfc58ea660b8b"
   },
   "nvim@mini.icons": {
     "remote": "https://github.com/echasnovski/mini.icons",
@@ -138,13 +137,12 @@
   "nvim@nvim-colorizer.lua": {
     "remote": "https://github.com/NvChad/nvim-colorizer.lua",
     "branch": "master",
-    "commit": "4acf88d31b3a7a1a7f31e9c30bf2b23c6313abdb",
-    "pinned": true
+    "commit": "4acf88d31b3a7a1a7f31e9c30bf2b23c6313abdb"
   },
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "f59eba2ec08edda0e09ecf34ec29ad10a429e48d"
+    "commit": "1aa9f36b6d542dafc0b4a38c48969d036003b00a"
   },
   "nvim@nvim-notify": {
     "remote": "https://github.com/rcarriga/nvim-notify",
@@ -159,7 +157,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "70d44dad700512460aa76e9299ed00e0f53f3164"
+    "commit": "69170c93149ddb71a22bd954514806395c430c02"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
