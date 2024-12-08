@@ -44,7 +44,7 @@ To backup open source codes.
  [nvim@mini.icons][]                  | [main][nvim@mini.icons#main]                        | 54686be7d58807906cb2c8c2216e0bf9c044f19a
  [nvim@mini.indentscope][]            | [main][nvim@mini.indentscope#main]                  | da9af64649e114aa79480c238fd23f6524bc0903
  [nvim@mini.pairs][]                  | [main][nvim@mini.pairs#main]                        | 7e834c5937d95364cc1740e20d673afe2d034cdb
- [nvim@mini.surround][]               | [main][nvim@mini.surround#main]                     | 48a9795c9d352c771e1ab5dedab6063c0a2df037
+ [nvim@mini.surround][]               | [main][nvim@mini.surround#main]                     | aa5e245829dd12d8ff0c96ef11da28681d6049aa
  [nvim@neo-tree.nvim][]               | [main][nvim@neo-tree.nvim#main]                     | 42caaf5c3b7ca346ab278201151bb878006a6031
  [nvim@noice.nvim][]                  | [main][nvim@noice.nvim#main]                        | 7b1960c48078a8b2fb44a89db82f4fa637b2d7c8
  [nvim@nui.nvim][]                    | [main][nvim@nui.nvim#main]                          | b58e2bfda5cea347c9d58b7f11cf3012c7b3953f

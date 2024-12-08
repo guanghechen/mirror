@@ -12,7 +12,8 @@
   "nvim@cmp-luasnip": {
     "remote": "https://github.com/saadparwaiz1/cmp_luasnip",
     "branch": "master",
-    "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90"
+    "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90",
+    "pinned": true
   },
   "nvim@cmp-nvim-lsp": {
     "remote": "https://github.com/hrsh7th/cmp-nvim-lsp",
@@ -82,7 +83,8 @@
   "nvim@luasnip.nvim": {
     "remote": "https://github.com/L3MON4D3/LuaSnip",
     "branch": "master",
-    "commit": "33b06d72d220aa56a7ce80a0dd6f06c70cd82b9d"
+    "commit": "33b06d72d220aa56a7ce80a0dd6f06c70cd82b9d",
+    "pinned": true
   },
   "nvim@mason-lspconfig.nvim": {
     "remote": "https://github.com/williamboman/mason-lspconfig.nvim",
@@ -154,7 +156,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "47f236c058f0511702286a21ba53bbf42abbd8a8"
+    "commit": "fc16fd4f9c5d72b45db0f45ee275db3a9a30481a"
   },
   "nvim@nvim-notify": {
     "remote": "https://github.com/rcarriga/nvim-notify",
@@ -164,8 +166,7 @@
   "nvim@nvim-snippets": {
     "remote": "https://github.com/garymjr/nvim-snippets",
     "branch": "main",
-    "commit": "56b4052f71220144689caaa2e5b66222ba5661eb",
-    "pinned": true
+    "commit": "56b4052f71220144689caaa2e5b66222ba5661eb"
   },
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
