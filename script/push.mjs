@@ -27,6 +27,7 @@ async function pushItem(branchName, item, pushOnlyWhenChanged) {
     remote: item.remote,
     branch: item.branch,
     commit: commitId,
+    pinned: item.pinned,
   };
 }
 
