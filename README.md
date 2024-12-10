@@ -50,7 +50,7 @@ To backup open source codes.
  [nvim@nui.nvim][]                    | [main][nvim@nui.nvim#main]                          | b58e2bfda5cea347c9d58b7f11cf3012c7b3953f
  [nvim@nvim-cmp][]                    | [main][nvim@nvim-cmp#main]                          | ca4d3330d386e76967e53b85953c170658255ecb
  [nvim@nvim-colorizer.lua][]          | [master][nvim@nvim-colorizer.lua#master]            | 4acf88d31b3a7a1a7f31e9c30bf2b23c6313abdb
- [nvim@nvim-lspconfig][]              | [master][nvim@nvim-lspconfig#master]                | 47f236c058f0511702286a21ba53bbf42abbd8a8
+ [nvim@nvim-lspconfig][]              | [master][nvim@nvim-lspconfig#master]                | fc16fd4f9c5d72b45db0f45ee275db3a9a30481a
  [nvim@nvim-notify][]                 | [master][nvim@nvim-notify#master]                   | fbef5d32be8466dd76544a257d3f3dce20082a07
  [nvim@nvim-snippets][]               | [main][nvim@nvim-snippets#main]                     | 56b4052f71220144689caaa2e5b66222ba5661eb
  [nvim@nvim-treesitter][]             | [master][nvim@nvim-treesitter#master]               | 3b8dee4293567b0b9a87360842af14669f60dd13

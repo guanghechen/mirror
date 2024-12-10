@@ -1,7 +1,7 @@
 import { set_changelog } from "./data/index.mjs";
 import { gen_changelog } from "./util/changelog.mjs";
 import { get_resources } from "./data/index.mjs";
-import { fetch_repo } from "./util/fetch.mjs";
+import { fetch_repo, fetch_repo_pinned } from "./util/fetch.mjs";
 
 await fetch();
 const changelog = await gen_changelog();
@@ -21,7 +21,7 @@ async function fetch() {
 
   for (const localBranchName of localBranchNames) {
     const item = resources[localBranchName];
-    if (item.pinned) continue;
-    await fetch_repo(localBranchName, item);
+    if (item.pinned) await fetch_repo_pinned(localBranchName, item);
+    else await fetch_repo(localBranchName, item);
   }
 }

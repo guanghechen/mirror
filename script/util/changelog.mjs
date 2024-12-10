@@ -13,7 +13,7 @@ export async function gen_changelog() {
     const commits = await list_change_commits(
       item.remote,
       item.commit,
-      `origin_${localBranchName}/${item.branch}`,
+      localBranchName,
     );
 
     if (!commits || commits.length < 1) continue;
