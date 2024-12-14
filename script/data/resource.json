@@ -78,7 +78,7 @@
   "nvim@lazy.nvim": {
     "remote": "https://github.com/folke/lazy.nvim",
     "branch": "main",
-    "commit": "7c493713bc2cb392706866eeba53aaef6c8e9fc6"
+    "commit": "7e6c863bc7563efbdd757a310d17ebc95166cef3"
   },
   "nvim@luasnip.nvim": {
     "remote": "https://github.com/L3MON4D3/LuaSnip",
@@ -156,7 +156,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "124be12d782d656b3c75b513a44d9e4728406078"
+    "commit": "3cb6c05779459eb5fe9cddbb47675593594f0415"
   },
   "nvim@nvim-notify": {
     "remote": "https://github.com/rcarriga/nvim-notify",
@@ -171,7 +171,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "2a496fa4e89034014dd054f04c061ba7d6023a0c"
+    "commit": "33d27173876499a0f037cb9edff90d583711b6ae"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
