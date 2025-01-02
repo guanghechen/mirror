@@ -130,7 +130,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "a9f8943b4c31f8460d25c71e0f463d65e9775f1c"
+    "commit": "2a0b2c5d394a280cee9444c9894582ac53098604"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -176,7 +176,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "4b222913486ec0a5983efa82b0649a2ab87cf1f0"
+    "commit": "e947d35bbf919ea88a24c21cb8afa4621e3cf547"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -191,7 +191,8 @@
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
     "branch": "main",
-    "commit": "41cfaa428577c53552200a404ae9b3a0b5719706"
+    "commit": "41cfaa428577c53552200a404ae9b3a0b5719706",
+    "pinned": true
   },
   "nvim@plenary.nvim": {
     "remote": "https://github.com/nvim-lua/plenary.nvim",
