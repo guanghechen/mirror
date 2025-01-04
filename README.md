@@ -45,7 +45,7 @@ To backup open source codes.
  [nvim@mini.indentscope][]            | [main][nvim@mini.indentscope#main]                  | da9af64649e114aa79480c238fd23f6524bc0903
  [nvim@mini.pairs][]                  | [main][nvim@mini.pairs#main]                        | 7e834c5937d95364cc1740e20d673afe2d034cdb
  [nvim@mini.surround][]               | [main][nvim@mini.surround#main]                     | aa5e245829dd12d8ff0c96ef11da28681d6049aa
- [nvim@neo-tree.nvim][]               | [main][nvim@neo-tree.nvim#main]                     | a9f8943b4c31f8460d25c71e0f463d65e9775f1c
+ [nvim@neo-tree.nvim][]               | [main][nvim@neo-tree.nvim#main]                     | 2a0b2c5d394a280cee9444c9894582ac53098604
  [nvim@noice.nvim][]                  | [main][nvim@noice.nvim#main]                        | eaed6cc9c06aa2013b5255349e4f26a6b17ab70f
  [nvim@nui.nvim][]                    | [main][nvim@nui.nvim#main]                          | 53e907ffe5eedebdca1cd503b00aa8692068ca46
  [nvim@nvim-cmp][]                    | [main][nvim@nvim-cmp#main]                          | b555203ce4bd7ff6192e759af3362f9d217e8c89
@@ -54,7 +54,7 @@ To backup open source codes.
  [nvim@nvim-lspconfig][]              | [master][nvim@nvim-lspconfig#master]                | 8b15a1a597a59f4f5306fad9adfe99454feab743
  [nvim@nvim-notify][]                 | [master][nvim@nvim-notify#master]                   | c3797193536711b5d8983975791c4b11dc35ab3a
  [nvim@nvim-snippets][]               | [main][nvim@nvim-snippets#main]                     | 56b4052f71220144689caaa2e5b66222ba5661eb
- [nvim@nvim-treesitter][]             | [master][nvim@nvim-treesitter#master]               | 4b222913486ec0a5983efa82b0649a2ab87cf1f0
+ [nvim@nvim-treesitter][]             | [master][nvim@nvim-treesitter#master]               | e947d35bbf919ea88a24c21cb8afa4621e3cf547
  [nvim@nvim-treesitter-context][]     | [master][nvim@nvim-treesitter-context#master]       | 2bcf700b59bc92850ca83a1c02e86ba832e0fae0
  [nvim@nvim-treesitter-textobjects][] | [master][nvim@nvim-treesitter-textobjects#master]   | ad8f0a472148c3e0ae9851e26a722ee4e29b1595
  [nvim@nvim-window-picker][]          | [main][nvim@nvim-window-picker#main]                | 41cfaa428577c53552200a404ae9b3a0b5719706

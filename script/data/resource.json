@@ -28,7 +28,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "9180320205d250429f0f80e073326c674e2a7149"
+    "commit": "70019124aa4f2e6838be9fbd2007f6d13b27a96d"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -161,12 +161,12 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "8b15a1a597a59f4f5306fad9adfe99454feab743"
+    "commit": "a8ef5e6e497b3ebeaaf35b939c07c211563b2e05"
   },
   "nvim@nvim-notify": {
     "remote": "https://github.com/rcarriga/nvim-notify",
     "branch": "master",
-    "commit": "c3797193536711b5d8983975791c4b11dc35ab3a"
+    "commit": "bd9cd51f9ef2f6326fc2bc9931d0718c1794e247"
   },
   "nvim@nvim-snippets": {
     "remote": "https://github.com/garymjr/nvim-snippets",
@@ -176,7 +176,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "e947d35bbf919ea88a24c21cb8afa4621e3cf547"
+    "commit": "6935286b4ee3d938954e446d657eebee71b4d07a"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
