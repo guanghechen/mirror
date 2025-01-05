@@ -35,10 +35,11 @@ To backup open source codes.
  [nvim@friendly-snippets][]           | [main][nvim@friendly-snippets#main]                 | efff286dd74c22f731cdec26a70b46e5b203c619
  [nvim@gitsigns.nvim][]               | [main][nvim@gitsigns.nvim#main]                     | 5f808b5e4fef30bd8aca1b803b4e555da07fc412
  [nvim@indent-blankline.nvim][]       | [master][nvim@indent-blankline.nvim#master]         | 259357fa4097e232730341fa60988087d189193a
- [nvim@lazy.nvim][]                   | [main][nvim@lazy.nvim#main]                         | 7e6c863bc7563efbdd757a310d17ebc95166cef3
+ [nvim@lazy.nvim][]                   | [main][nvim@lazy.nvim#main]                         | 72aa3a2624be5dc240646084f7b6a38eb99eb2ce
  [nvim@luasnip.nvim][]                | [master][nvim@luasnip.nvim#master]                  | 33b06d72d220aa56a7ce80a0dd6f06c70cd82b9d
- [nvim@mason-lspconfig.nvim][]        | [main][nvim@mason-lspconfig.nvim#main]              | c6c686781f9841d855bf1b926e10aa5e19430a38
  [nvim@mason.nvim][]                  | [main][nvim@mason.nvim#main]                        | e2f7f9044ec30067bc11800a9e266664b88cda22
+ [nvim@mason-lspconfig.nvim][]        | [main][nvim@mason-lspconfig.nvim#main]              | c6c686781f9841d855bf1b926e10aa5e19430a38
+ [nvim@mason-nvim-dap][]              | [main][nvim@mason-nvim-dap#main]                    | 8b9363d83b5d779813cdd2819b8308651cec2a09
  [nvim@mini.comment][]                | [main][nvim@mini.comment#main]                      | a56581c40c19fa26f2b39da72504398de3173c5a
  [nvim@mini.hipatterns][]             | [main][nvim@mini.hipatterns#main]                   | f34975103a38b3f608219a1324cdfc58ea660b8b
  [nvim@mini.icons][]                  | [main][nvim@mini.icons#main]                        | 1c79feb7478ca773fa3dac5cadf43ced9180e861
@@ -50,8 +51,12 @@ To backup open source codes.
  [nvim@nui.nvim][]                    | [main][nvim@nui.nvim#main]                          | 53e907ffe5eedebdca1cd503b00aa8692068ca46
  [nvim@nvim-cmp][]                    | [main][nvim@nvim-cmp#main]                          | b555203ce4bd7ff6192e759af3362f9d217e8c89
  [nvim@nvim-colorizer.lua][]          | [master][nvim@nvim-colorizer.lua#master]            | 4acf88d31b3a7a1a7f31e9c30bf2b23c6313abdb
+ [nvim@nvim-dap][]                    | [master][nvim@nvim-dap#master]                      | 0e673accbb512e1e191dfb4fecea89cc38c1bcdd
+ [nvim@nvim-dap-ui][]                 | [master][nvim@nvim-dap-ui#master]                   | e94d98649dccb6a3884b66aabc2e07beb279e535
+ [nvim@nvim-dap-virtual-text][]       | [master][nvim@nvim-dap-virtual-text#master]         | df66808cd78b5a97576bbaeee95ed5ca385a9750
  [nvim@nvim-lint][]                   | [master][nvim@nvim-lint#master]                     | 1fea92f1d9908eaa5eb8bafe08b4293d7aadaa55
  [nvim@nvim-lspconfig][]              | [master][nvim@nvim-lspconfig#master]                | f4ed656e876e45cf914d7beb972830561178e232
+ [nvim@nvim-nio][]                    | [master][nvim@nvim-nio#master]                      | a428f309119086dc78dd4b19306d2d67be884eee
  [nvim@nvim-notify][]                 | [master][nvim@nvim-notify#master]                   | bd9cd51f9ef2f6326fc2bc9931d0718c1794e247
  [nvim@nvim-snippets][]               | [main][nvim@nvim-snippets#main]                     | 56b4052f71220144689caaa2e5b66222ba5661eb
  [nvim@nvim-treesitter][]             | [master][nvim@nvim-treesitter#master]               | 57713d079c3c2afcc31f3e0650bf8594a2a296ba
@@ -61,7 +66,7 @@ To backup open source codes.
  [nvim@plenary.nvim][]                | [master][nvim@plenary.nvim#master]                  | 2d9b06177a975543726ce5c73fca176cedbffe9d
  [nvim@trouble.nvim][]                | [main][nvim@trouble.nvim#main]                      | 46cf952fc115f4c2b98d4e208ed1e2dce08c9bf6
  [nvim@vim-illuminate][]              | [master][nvim@vim-illuminate#master]                | 5eeb7951fc630682c322e88a9bbdae5c224ff0aa
- [nvim@which-key.nvim][]              | [main][nvim@which-key.nvim#main]                    | 8ab96b38a2530eacba5be717f52e04601eb59326
+ [nvim@which-key.nvim][]              | [main][nvim@which-key.nvim#main]                    | 1f8d414f61e0b05958c342df9b6a4c89ce268766
 
 [nvim@aerial.nvim]: https://github.com/guanghechen/mirror/tree/nvim@aerial.nvim
 [nvim@cmp-buffer]: https://github.com/guanghechen/mirror/tree/nvim@cmp-buffer
@@ -80,8 +85,9 @@ To backup open source codes.
 [nvim@indent-blankline.nvim]: https://github.com/guanghechen/mirror/tree/nvim@indent-blankline.nvim
 [nvim@lazy.nvim]: https://github.com/guanghechen/mirror/tree/nvim@lazy.nvim
 [nvim@luasnip.nvim]: https://github.com/guanghechen/mirror/tree/nvim@luasnip.nvim
-[nvim@mason-lspconfig.nvim]: https://github.com/guanghechen/mirror/tree/nvim@mason-lspconfig.nvim
 [nvim@mason.nvim]: https://github.com/guanghechen/mirror/tree/nvim@mason.nvim
+[nvim@mason-lspconfig.nvim]: https://github.com/guanghechen/mirror/tree/nvim@mason-lspconfig.nvim
+[nvim@mason-nvim-dap]: https://github.com/guanghechen/mirror/tree/nvim@mason-nvim-dap
 [nvim@mini.comment]: https://github.com/guanghechen/mirror/tree/nvim@mini.comment
 [nvim@mini.hipatterns]: https://github.com/guanghechen/mirror/tree/nvim@mini.hipatterns
 [nvim@mini.icons]: https://github.com/guanghechen/mirror/tree/nvim@mini.icons
@@ -93,8 +99,12 @@ To backup open source codes.
 [nvim@nui.nvim]: https://github.com/guanghechen/mirror/tree/nvim@nui.nvim
 [nvim@nvim-cmp]: https://github.com/guanghechen/mirror/tree/nvim@nvim-cmp
 [nvim@nvim-colorizer.lua]: https://github.com/guanghechen/mirror/tree/nvim@nvim-colorizer.lua
+[nvim@nvim-dap]: https://github.com/guanghechen/mirror/tree/nvim@nvim-dap
+[nvim@nvim-dap-ui]: https://github.com/guanghechen/mirror/tree/nvim@nvim-dap-ui
+[nvim@nvim-dap-virtual-text]: https://github.com/guanghechen/mirror/tree/nvim@nvim-dap-virtual-text
 [nvim@nvim-lint]: https://github.com/guanghechen/mirror/tree/nvim@nvim-lint
 [nvim@nvim-lspconfig]: https://github.com/guanghechen/mirror/tree/nvim@nvim-lspconfig
+[nvim@nvim-nio]: https://github.com/guanghechen/mirror/tree/nvim@nvim-nio
 [nvim@nvim-notify]: https://github.com/guanghechen/mirror/tree/nvim@nvim-notify
 [nvim@nvim-snippets]: https://github.com/guanghechen/mirror/tree/nvim@nvim-snippets
 [nvim@nvim-treesitter]: https://github.com/guanghechen/mirror/tree/nvim@nvim-treesitter
@@ -123,8 +133,9 @@ To backup open source codes.
 [nvim@indent-blankline.nvim#master]: https://github.com/lukas-reineke/indent-blankline.nvim/tree/master
 [nvim@lazy.nvim#main]: https://github.com/folke/lazy.nvim/tree/main
 [nvim@luasnip.nvim#master]: https://github.com/L3MON4D3/LuaSnip/tree/master
-[nvim@mason-lspconfig.nvim#main]: https://github.com/williamboman/mason-lspconfig.nvim/tree/main
 [nvim@mason.nvim#main]: https://github.com/williamboman/mason.nvim/tree/main
+[nvim@mason-lspconfig.nvim#main]: https://github.com/williamboman/mason-lspconfig.nvim/tree/main
+[nvim@mason-nvim-dap#main]: https://github.com/jay-babu/mason-nvim-dap.nvim/tree/main
 [nvim@mini.comment#main]: https://github.com/echasnovski/mini.comment/tree/main
 [nvim@mini.hipatterns#main]: https://github.com/echasnovski/mini.hipatterns/tree/main
 [nvim@mini.icons#main]: https://github.com/echasnovski/mini.icons/tree/main
@@ -136,8 +147,12 @@ To backup open source codes.
 [nvim@nui.nvim#main]: https://github.com/MunifTanjim/nui.nvim/tree/main
 [nvim@nvim-cmp#main]: https://github.com/hrsh7th/nvim-cmp/tree/main
 [nvim@nvim-colorizer.lua#master]: https://github.com/NvChad/nvim-colorizer.lua/tree/master
+[nvim@nvim-dap#master]: https://github.com/mfussenegger/nvim-dap/tree/master
+[nvim@nvim-dap-ui#master]: https://github.com/rcarriga/nvim-dap-ui/tree/master
+[nvim@nvim-dap-virtual-text#master]: https://github.com/theHamsta/nvim-dap-virtual-text/tree/master
 [nvim@nvim-lint#master]: https://github.com/mfussenegger/nvim-lint/tree/master
 [nvim@nvim-lspconfig#master]: https://github.com/neovim/nvim-lspconfig/tree/master
+[nvim@nvim-nio#master]: https://github.com/nvim-neotest/nvim-nio/tree/master
 [nvim@nvim-notify#master]: https://github.com/rcarriga/nvim-notify/tree/master
 [nvim@nvim-snippets#main]: https://github.com/garymjr/nvim-snippets/tree/main
 [nvim@nvim-treesitter#master]: https://github.com/nvim-treesitter/nvim-treesitter/tree/master

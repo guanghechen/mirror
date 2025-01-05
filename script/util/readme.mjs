@@ -1,7 +1,5 @@
 import { get_resources } from "../data/index.mjs";
 
-const resources = get_resources();
-
 /**
  * @return {Promise<string>}
  */
@@ -36,6 +34,7 @@ export async function gen_repo_table() {
   let max_n_remote_branch_name = 0;
   let max_n_commit_id = 0;
 
+  const resources = get_resources();
   for (const [localBranchName, item] of Object.entries(resources)) {
     const remoteBranchName = item.branch;
     max_n_local_branch_name = Math.max(
@@ -56,10 +55,10 @@ export async function gen_repo_table() {
   max_n_remote_branch_name = Math.max(
     16,
     2 *
-      (max_n_remote_branch_name & 1
-        ? max_n_remote_branch_name + 3
-        : max_n_remote_branch_name + 2) +
-      max_n_local_branch_name,
+    (max_n_remote_branch_name & 1
+      ? max_n_remote_branch_name + 3
+      : max_n_remote_branch_name + 2) +
+    max_n_local_branch_name,
   );
   max_n_commit_id = max_n_commit_id + 2;
 
