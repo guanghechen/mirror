@@ -2,7 +2,7 @@
   "nvim@aerial.nvim": {
     "remote": "https://github.com/stevearc/aerial.nvim",
     "branch": "master",
-    "commit": "b3ec25ca8c347fafa976484a6cace162239112e1"
+    "commit": "4c959cf65c5420d54b24b61a77b681dcfca0bc57"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -69,6 +69,11 @@
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
     "commit": "68114837e81ca16d06514c3a997c9102d1b25c15"
+  },
+  "nvim@img-clip.nvim": {
+    "remote": "https://github.com/HakonHarnes/img-clip.nvim",
+    "branch": "main",
+    "commit": "5ff183655ad98b5fc50c55c66540375bbd62438c"
   },
   "nvim@indent-blankline.nvim": {
     "remote": "https://github.com/lukas-reineke/indent-blankline.nvim",
@@ -166,7 +171,7 @@
   "nvim@nvim-dap-ui": {
     "remote": "https://github.com/rcarriga/nvim-dap-ui",
     "branch": "master",
-    "commit": "e94d98649dccb6a3884b66aabc2e07beb279e535"
+    "commit": "727c032a8f63899baccb42a1c26f27687e62fc5e"
   },
   "nvim@nvim-dap-virtual-text": {
     "remote": "https://github.com/theHamsta/nvim-dap-virtual-text",
@@ -191,7 +196,7 @@
   "nvim@nvim-notify": {
     "remote": "https://github.com/rcarriga/nvim-notify",
     "branch": "master",
-    "commit": "bd9cd51f9ef2f6326fc2bc9931d0718c1794e247"
+    "commit": "a3020c2cf4dfc4c4f390c4a21e84e35e46cf5d17"
   },
   "nvim@nvim-snippets": {
     "remote": "https://github.com/garymjr/nvim-snippets",
@@ -201,7 +206,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "6df6e80417b58abe377c90f5e3f7fe94cf7dfc55"
+    "commit": "057990eb245d90e6085dcc4d57705a20b34a03ea"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
