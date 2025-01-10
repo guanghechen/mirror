@@ -4,6 +4,11 @@
     "branch": "master",
     "commit": "4c959cf65c5420d54b24b61a77b681dcfca0bc57"
   },
+  "nvim@avante.nvim": {
+    "remote": "https://github.com/yetone/avante.nvim",
+    "branch": "main",
+    "commit": "e14eb002d5839387a9b58e9a7ebc0a2047d1c1e5"
+  },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
     "branch": "main",

@@ -21,6 +21,7 @@ To backup open source codes.
  Local Branch                         | Remote Branch                                       | Commit                                  
 --------------------------------------|-----------------------------------------------------|------------------------------------------
  [nvim@aerial.nvim][]                 | [master][nvim@aerial.nvim#master]                   | 4c959cf65c5420d54b24b61a77b681dcfca0bc57
+ [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | e14eb002d5839387a9b58e9a7ebc0a2047d1c1e5
  [nvim@cmp-buffer][]                  | [main][nvim@cmp-buffer#main]                        | 3022dbc9166796b644a841a02de8dd1cc1d311fa
  [nvim@cmp-luasnip][]                 | [master][nvim@cmp-luasnip#master]                   | 98d9cb5c2c38532bd9bdb481067b20fea8f32e90
  [nvim@cmp-nvim-lsp][]                | [main][nvim@cmp-nvim-lsp#main]                      | 99290b3ec1322070bcfb9e846450a46f6efa50f0
@@ -71,6 +72,7 @@ To backup open source codes.
  [nvim@which-key.nvim][]              | [main][nvim@which-key.nvim#main]                    | 1f8d414f61e0b05958c342df9b6a4c89ce268766
 
 [nvim@aerial.nvim]: https://github.com/guanghechen/mirror/tree/nvim@aerial.nvim
+[nvim@avante.nvim]: https://github.com/guanghechen/mirror/tree/nvim@avante.nvim
 [nvim@cmp-buffer]: https://github.com/guanghechen/mirror/tree/nvim@cmp-buffer
 [nvim@cmp-luasnip]: https://github.com/guanghechen/mirror/tree/nvim@cmp-luasnip
 [nvim@cmp-nvim-lsp]: https://github.com/guanghechen/mirror/tree/nvim@cmp-nvim-lsp
@@ -121,6 +123,7 @@ To backup open source codes.
 [nvim@which-key.nvim]: https://github.com/guanghechen/mirror/tree/nvim@which-key.nvim
 
 [nvim@aerial.nvim#master]: https://github.com/stevearc/aerial.nvim/tree/master
+[nvim@avante.nvim#main]: https://github.com/yetone/avante.nvim/tree/main
 [nvim@cmp-buffer#main]: https://github.com/hrsh7th/cmp-buffer/tree/main
 [nvim@cmp-luasnip#master]: https://github.com/saadparwaiz1/cmp_luasnip/tree/master
 [nvim@cmp-nvim-lsp#main]: https://github.com/hrsh7th/cmp-nvim-lsp/tree/main
