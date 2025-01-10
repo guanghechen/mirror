@@ -60,11 +60,12 @@ To backup open source codes.
  [nvim@nvim-nio][]                    | [master][nvim@nvim-nio#master]                      | a428f309119086dc78dd4b19306d2d67be884eee
  [nvim@nvim-notify][]                 | [master][nvim@nvim-notify#master]                   | a3020c2cf4dfc4c4f390c4a21e84e35e46cf5d17
  [nvim@nvim-snippets][]               | [main][nvim@nvim-snippets#main]                     | 56b4052f71220144689caaa2e5b66222ba5661eb
- [nvim@nvim-treesitter][]             | [master][nvim@nvim-treesitter#master]               | 057990eb245d90e6085dcc4d57705a20b34a03ea
+ [nvim@nvim-treesitter][]             | [master][nvim@nvim-treesitter#master]               | 306dd6e9dc806db1d79568d26e1c9b6c98b95fbc
  [nvim@nvim-treesitter-context][]     | [master][nvim@nvim-treesitter-context#master]       | d0dd7ce5a9d0be1f28086e818e52fdc5c78975df
  [nvim@nvim-treesitter-textobjects][] | [master][nvim@nvim-treesitter-textobjects#master]   | ad8f0a472148c3e0ae9851e26a722ee4e29b1595
  [nvim@nvim-window-picker][]          | [main][nvim@nvim-window-picker#main]                | 41cfaa428577c53552200a404ae9b3a0b5719706
  [nvim@plenary.nvim][]                | [master][nvim@plenary.nvim#master]                  | 2d9b06177a975543726ce5c73fca176cedbffe9d
+ [nvim@render-markdown.nvim][]        | [main][nvim@render-markdown.nvim#main]              | cfe57468a4ab44b745eddfbe90b63b9777ba7223
  [nvim@trouble.nvim][]                | [main][nvim@trouble.nvim#main]                      | 46cf952fc115f4c2b98d4e208ed1e2dce08c9bf6
  [nvim@vim-illuminate][]              | [master][nvim@vim-illuminate#master]                | 5eeb7951fc630682c322e88a9bbdae5c224ff0aa
  [nvim@which-key.nvim][]              | [main][nvim@which-key.nvim#main]                    | 1f8d414f61e0b05958c342df9b6a4c89ce268766
@@ -114,6 +115,7 @@ To backup open source codes.
 [nvim@nvim-treesitter-textobjects]: https://github.com/guanghechen/mirror/tree/nvim@nvim-treesitter-textobjects
 [nvim@nvim-window-picker]: https://github.com/guanghechen/mirror/tree/nvim@nvim-window-picker
 [nvim@plenary.nvim]: https://github.com/guanghechen/mirror/tree/nvim@plenary.nvim
+[nvim@render-markdown.nvim]: https://github.com/guanghechen/mirror/tree/nvim@render-markdown.nvim
 [nvim@trouble.nvim]: https://github.com/guanghechen/mirror/tree/nvim@trouble.nvim
 [nvim@vim-illuminate]: https://github.com/guanghechen/mirror/tree/nvim@vim-illuminate
 [nvim@which-key.nvim]: https://github.com/guanghechen/mirror/tree/nvim@which-key.nvim
@@ -163,6 +165,7 @@ To backup open source codes.
 [nvim@nvim-treesitter-textobjects#master]: https://github.com/nvim-treesitter/nvim-treesitter-textobjects/tree/master
 [nvim@nvim-window-picker#main]: https://github.com/s1n7ax/nvim-window-picker/tree/main
 [nvim@plenary.nvim#master]: https://github.com/nvim-lua/plenary.nvim/tree/master
+[nvim@render-markdown.nvim#main]: https://github.com/MeanderingProgrammer/render-markdown.nvim/tree/main
 [nvim@trouble.nvim#main]: https://github.com/folke/trouble.nvim/tree/main
 [nvim@vim-illuminate#master]: https://github.com/RRethy/vim-illuminate/tree/master
 [nvim@which-key.nvim#main]: https://github.com/folke/which-key.nvim/tree/main

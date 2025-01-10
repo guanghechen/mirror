@@ -206,7 +206,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "057990eb245d90e6085dcc4d57705a20b34a03ea"
+    "commit": "306dd6e9dc806db1d79568d26e1c9b6c98b95fbc"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -228,6 +228,11 @@
     "remote": "https://github.com/nvim-lua/plenary.nvim",
     "branch": "master",
     "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d"
+  },
+  "nvim@render-markdown.nvim": {
+    "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
+    "branch": "main",
+    "commit": "cfe57468a4ab44b745eddfbe90b63b9777ba7223"
   },
   "nvim@trouble.nvim": {
     "remote": "https://github.com/folke/trouble.nvim",
