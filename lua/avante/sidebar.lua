@@ -2087,10 +2087,10 @@ function Sidebar:render(opts)
     self:close()
   end)
 
-  self.result_container:map("n", "<Esc>", function()
-    Llm.cancel_inflight_request()
-    self:close()
-  end)
+  -- self.result_container:map("n", "<Esc>", function()
+  --   Llm.cancel_inflight_request()
+  --   self:close()
+  -- end)
 
   self:create_input_container(opts)
 
