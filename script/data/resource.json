@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "e14eb002d5839387a9b58e9a7ebc0a2047d1c1e5"
+    "commit": "d852a2ce06d1ed19ac9f225af5cb8bfcf0e38cbf"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -73,7 +73,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "68114837e81ca16d06514c3a997c9102d1b25c15"
+    "commit": "abcd00a7d5bc1a9470cb21b023c575acade3e4db"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -83,7 +83,7 @@
   "nvim@indent-blankline.nvim": {
     "remote": "https://github.com/lukas-reineke/indent-blankline.nvim",
     "branch": "master",
-    "commit": "259357fa4097e232730341fa60988087d189193a"
+    "commit": "7a698a1d7ed755af9f5a88733b23ca246ce2df28"
   },
   "nvim@lazy.nvim": {
     "remote": "https://github.com/folke/lazy.nvim",
@@ -145,7 +145,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "e6645ecfcba3e064446a6def1c10d788c9873f51"
+    "commit": "83222b30a1f35ab90ccb8ae87a835301f438816f"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -191,7 +191,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "88157521e890fe7fdf18bee22438875edd6300a6"
+    "commit": "355c565eae59810c1af4cf132938fa0fc251c5a2"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -211,7 +211,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "306dd6e9dc806db1d79568d26e1c9b6c98b95fbc"
+    "commit": "984214ef8e4ca18d77639663319aabdfba89632f"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -232,17 +232,17 @@
   "nvim@plenary.nvim": {
     "remote": "https://github.com/nvim-lua/plenary.nvim",
     "branch": "master",
-    "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d"
+    "commit": "3707cdb1e43f5cea73afb6037e6494e7ce847a66"
   },
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "cfe57468a4ab44b745eddfbe90b63b9777ba7223"
+    "commit": "d7b646f2e6136d963e1bd3abbb9e2ac3fa90837a"
   },
   "nvim@trouble.nvim": {
     "remote": "https://github.com/folke/trouble.nvim",
     "branch": "main",
-    "commit": "46cf952fc115f4c2b98d4e208ed1e2dce08c9bf6"
+    "commit": "4d36b8979287f5facc03fd6d955ace67db667e1d"
   },
   "nvim@vim-illuminate": {
     "remote": "https://github.com/RRethy/vim-illuminate",
