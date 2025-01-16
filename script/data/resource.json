@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "d852a2ce06d1ed19ac9f225af5cb8bfcf0e38cbf"
+    "commit": "81abbdb796d4318d1d54bf0679afc544a44f5fde"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -73,7 +73,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "abcd00a7d5bc1a9470cb21b023c575acade3e4db"
+    "commit": "9541f5e8e24571723cb02a5c2bf078aeacc5a711"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -104,7 +104,7 @@
   "nvim@mason-lspconfig.nvim": {
     "remote": "https://github.com/williamboman/mason-lspconfig.nvim",
     "branch": "main",
-    "commit": "97d9f1d3ad205dece6bcafd1d71cf1507608f3c7"
+    "commit": "e942edf5c85b6a2ab74059ea566cac5b3e1514a4"
   },
   "nvim@mason-nvim-dap": {
     "remote": "https://github.com/jay-babu/mason-nvim-dap.nvim",
@@ -191,7 +191,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "355c565eae59810c1af4cf132938fa0fc251c5a2"
+    "commit": "339ccc81e08793c3af9b83882a6ebd90c9cc0d3b"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -211,7 +211,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "984214ef8e4ca18d77639663319aabdfba89632f"
+    "commit": "f0c928dbe93533b7e35894a8f957f40150d1f663"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -237,12 +237,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "d7b646f2e6136d963e1bd3abbb9e2ac3fa90837a"
+    "commit": "be3e3ab807059ddd247a802e8253b0cd3edef5a3"
   },
   "nvim@trouble.nvim": {
     "remote": "https://github.com/folke/trouble.nvim",
     "branch": "main",
-    "commit": "4d36b8979287f5facc03fd6d955ace67db667e1d"
+    "commit": "50481f414bd3c1a40122c1d759d7e424d5fafe84"
   },
   "nvim@vim-illuminate": {
     "remote": "https://github.com/RRethy/vim-illuminate",
