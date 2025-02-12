@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "cdacfce90134f02a9e63faaa63736ae05223d1b0"
+    "commit": "456f7ccdab6fa977fe10458e02d6226c7f8f33c0"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -48,7 +48,7 @@
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
     "branch": "main",
-    "commit": "dbce8a231d1ac72c68ce00b86b415c9304417102"
+    "commit": "804d9067d1eef0ee21dc39b5bbc86ab9f52287b7"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -74,7 +74,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "4baa13519c2168cc9a7890a3580c50226ed018fb"
+    "commit": "2bc3b472bbc2484214549af4d9f38c127b886a55"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -106,7 +106,7 @@
   "nvim@mason-lspconfig.nvim": {
     "remote": "https://github.com/williamboman/mason-lspconfig.nvim",
     "branch": "main",
-    "commit": "f75e877f5266e87523eb5a18fcde2081820d087b"
+    "commit": "805c31ec6bfb557975143712ecff6956d3227141"
   },
   "nvim@mason-nvim-dap": {
     "remote": "https://github.com/jay-babu/mason-nvim-dap.nvim",
@@ -152,7 +152,7 @@
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
     "branch": "main",
-    "commit": "dbfc5fbab19ff1c3e29a3268ffa5eda4c09c72ce"
+    "commit": "0427460c2d7f673ad60eb02b35f5e9926cf67c59"
   },
   "nvim@nui.nvim": {
     "remote": "https://github.com/MunifTanjim/nui.nvim",
@@ -213,7 +213,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "a840137349fcc35b5ad2c718a9b034b93012fa43"
+    "commit": "6108ba7a135ed37e32276ccb877a348af17fe411"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -234,7 +234,7 @@
   "nvim@plenary.nvim": {
     "remote": "https://github.com/nvim-lua/plenary.nvim",
     "branch": "master",
-    "commit": "3707cdb1e43f5cea73afb6037e6494e7ce847a66"
+    "commit": "857c5ac632080dba10aae49dba902ce3abf91b35"
   },
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
