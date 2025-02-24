@@ -90,7 +90,7 @@
   "nvim@lazy.nvim": {
     "remote": "https://github.com/folke/lazy.nvim",
     "branch": "main",
-    "commit": "e5e9bf48211a13d9ee6c1077c88327c49c1ab4a0"
+    "commit": "a8c6db5da7bd382094606340eed015d14fbb5654"
   },
   "nvim@luasnip.nvim": {
     "remote": "https://github.com/L3MON4D3/LuaSnip",
@@ -218,7 +218,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "f2bd62c6568de54ca1b8fb0a8de04a41442934cb"
+    "commit": "e6d02ec9efd396d294a7793f2066e2527b07b03a"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -245,6 +245,11 @@
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
     "commit": "57fa691b9e374c6539cc0340062dac8f42d4bd8b"
+  },
+  "nvim@schema-store.nvim": {
+    "remote": "https://github.com/b0o/SchemaStore.nvim",
+    "branch": "main",
+    "commit": "503f3221543d4fe897d600f66816cc54c4bf825f"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
