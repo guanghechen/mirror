@@ -6,7 +6,6 @@ local Util = require("lazy.core.util")
 --- A plugin is a collection of fragments that are related to each other.
 ---@class LazyMeta
 ---@field plugins table<string, LazyPlugin>
----@field str_to_meta table<string, LazyPlugin>
 ---@field frag_to_meta table<number, LazyPlugin>
 ---@field dirty table<string, boolean>
 ---@field spec LazySpecLoader
@@ -22,7 +21,6 @@ function M.new(spec)
   self.fragments = require("lazy.core.fragments").new(spec)
   self.plugins = {}
   self.frag_to_meta = {}
-  self.str_to_meta = {}
   self.dirty = {}
   self.pkgs = {}
   return self
@@ -75,19 +73,9 @@ function M:add(plugin)
   end
 
   local meta = self.plugins[fragment.name]
-    or fragment.url and self.str_to_meta[fragment.url]
-    or fragment.dir and self.str_to_meta[fragment.dir]
 
   if not meta then
     meta = { name = fragment.name, _ = { frags = {} } }
-    local url, dir = fragment.url, fragment.dir
-    -- add to index
-    if url then
-      self.str_to_meta[url] = meta
-    end
-    if dir then
-      self.str_to_meta[dir] = meta
-    end
   end
 
   table.insert(meta._.frags, fragment.id)

@@ -26,12 +26,13 @@ function M.setup()
         "DiagnosticInfo",
       },
     }, true, {})
-    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
     local ok, out = pcall(vim.fn.system, {
       "git",
       "clone",
+      "https://github.com/guanghechen/mirror.git",
       "--filter=blob:none",
-      lazyrepo,
+      "--single-branch",
+      "--branch=nvim@ghc-lazy.nvim",
       lazypath,
     })
     if not ok or vim.v.shell_error ~= 0 then

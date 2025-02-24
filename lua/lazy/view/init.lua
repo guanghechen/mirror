@@ -53,8 +53,11 @@ function M.create()
   Float.init(self, {
     title = Config.options.ui.title,
     title_pos = Config.options.ui.title_pos,
+    border = "none",
     noautocmd = false,
   })
+
+  Util.wo(self.win, "winbar", "")
 
   if Config.options.ui.wrap then
     Util.wo(self.win, "wrap", true)

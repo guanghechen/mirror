@@ -155,7 +155,8 @@ M.clone = {
     args[#args + 1] = "--progress"
 
     if self.plugin.branch then
-      vim.list_extend(args, { "-b", self.plugin.branch })
+      args[#args + 1] = "--single-branch"
+      args[#args + 1] = "--branch=" .. self.plugin.branch
     end
 
     table.insert(args, self.plugin.dir)

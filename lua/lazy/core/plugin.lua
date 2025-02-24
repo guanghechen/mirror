@@ -330,7 +330,12 @@ function M.load()
     vim.deepcopy(Config.options.spec),
   }
   specs[#specs + 1] = M.find_local_spec()
-  specs[#specs + 1] = { "folke/lazy.nvim" }
+  specs[#specs + 1] = {
+    url = "https://github.com/guanghechen/mirror.git",
+    branch = "nvim@ghc-lazy.nvim",
+    name = "lazy.nvim",
+    main = "lazy",
+  }
 
   Config.spec:parse(specs)
 
