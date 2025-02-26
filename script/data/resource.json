@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "481a44f041954753e9bd544587c250d7b73ee48e"
+    "commit": "984fe877bfee4cf26e1e5f7e13cc284b6f26bc10"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -48,7 +48,7 @@
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
     "branch": "main",
-    "commit": "a3932a1505a990c238183617b5c5cb239f43f5ec"
+    "commit": "3a562fd17e2fcd14d790a7c0c701b47d6724da60"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -90,7 +90,7 @@
   "nvim@lazy.nvim": {
     "remote": "https://github.com/folke/lazy.nvim",
     "branch": "main",
-    "commit": "a8c6db5da7bd382094606340eed015d14fbb5654"
+    "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a"
   },
   "nvim@luasnip.nvim": {
     "remote": "https://github.com/L3MON4D3/LuaSnip",
@@ -152,7 +152,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "fbc0abef52e4d02c4520efce1318725a21995dc4"
+    "commit": "e6f5b5e044ba9f380e82fc942212e0679d83b6f6"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -198,7 +198,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "9e932edb0af4e20880685ddb96a231669fbe8091"
+    "commit": "99c75820f2606b6b446cad7c75ec2ef7ee8a1317"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -218,7 +218,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "e6d02ec9efd396d294a7793f2066e2527b07b03a"
+    "commit": "93ce9feb4fabbb37b3e7f47d80f27be778f4d956"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -244,12 +244,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "43a971e7da82e5622797b36450424ebd66cc9046"
+    "commit": "1cd546e96cb8520a148610ca86596ed238eeb936"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "776d60cc8fd7e2f450c1756c9491e353c12b16fa"
+    "commit": "acf16353b88d9ebf8ab69e7fd42522bbb277e0ba"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
