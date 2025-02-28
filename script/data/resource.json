@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "9c9fadd256d6138d771e17b9ca68905908e16c17"
+    "commit": "ebadba7420a5f9b85829273b8c9cd2be56d9b074"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -48,7 +48,7 @@
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
     "branch": "main",
-    "commit": "7899a13994720051a5901a35fc1744b64561da05"
+    "commit": "f8d47ce9adace3c1fe9fa7737bc1fde861bb8317"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -152,7 +152,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "e6f5b5e044ba9f380e82fc942212e0679d83b6f6"
+    "commit": "1655119b2057838691467f8a640070462c9b7048"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -198,7 +198,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "5344e00b86d1ea50c39a1da8af9f3d197234bcfe"
+    "commit": "d793c5cb0206d976a38e70e62479a60ba87722ca"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -218,7 +218,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "8f87d28442f7f91347e993661c319135f47729c7"
+    "commit": "8bc635a25f581d42b0a0e5ba8870bd73244dcdea"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -228,7 +228,7 @@
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "master",
-    "commit": "ad8f0a472148c3e0ae9851e26a722ee4e29b1595"
+    "commit": "88fce4e6496950dab867a7c63a819df0ead56751"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
@@ -249,7 +249,7 @@
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "9825b1b28fddb41f580afa5065cf2e87fbc7d739"
+    "commit": "9f548557c1ef2ea24a4e24940cf0011c448112ae"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
