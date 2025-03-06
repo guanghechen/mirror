@@ -48,7 +48,7 @@
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
     "branch": "main",
-    "commit": "9bf4799153c548cafc90af8f0db9845fc26f0c7e"
+    "commit": "67ae3a376730e3740c62943779f8093103372169"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -152,7 +152,8 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "0b44040ec7b8472dfc504bbcec735419347797ad"
+    "commit": "16854ed5559b940f69a6f7138906ebb22c15c553",
+    "pinned": true
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
