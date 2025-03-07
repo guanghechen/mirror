@@ -7,7 +7,8 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "a13e5dca1d631b5e0ccafad9e35bb342a888729c"
+    "commit": "6d39e06f574416c50710dd05c1a62f3496af3f70",
+    "pinned": true
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
