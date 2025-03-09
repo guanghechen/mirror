@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "4766e76a3113bbdcdaf55d33b69ea483066c8ad0"
+    "commit": "02fb470140664316eca75571e89d7b79eb55f7e7"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -48,7 +48,7 @@
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
     "branch": "main",
-    "commit": "1f91783fdf7dcea25c04dffc8e856ccb7a2db13f"
+    "commit": "09d38bed9148553d38d2dc5407293f9fcce491bd"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -152,7 +152,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "2a5c86bd61e6c60ab7c2cb029c5cf619e4ee0b3a"
+    "commit": "40dd57777a96d0728f6758874b141f409466e2da"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -223,7 +223,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "ee8e149a4ff75ebd5f1b065831746ddaf0e480ec"
+    "commit": "ffd284c4706d91c0d94916995f584b22ce89afcb"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -254,7 +254,7 @@
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "50cbf5ebbdf27940a76455bb0fc58a10711d73b1"
+    "commit": "c183ec0ee5847642f3e8a2de881fc9cfebec1536"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
