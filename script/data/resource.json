@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "7c3460628b238c82e2411720c1209d5f3e8df71f"
+    "commit": "de6e3657f18aa60949126af851a6898e62ce0b0e"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -48,7 +48,7 @@
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
     "branch": "main",
-    "commit": "335b3eaf3bcb5446e4d9439b240d12fcd7d2fd13"
+    "commit": "371620e550efda53fa97cf177448b46dbd100c63"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -153,7 +153,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "940063ec5c2c81f455d25dbc7e0b918774f5e924"
+    "commit": "8c6349bceb1d8a863964dd25dc7944d588a56aaa"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -204,7 +204,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "fd26f8626c03b424f7140d454031d1dcb8d23513"
+    "commit": "8a1529e46eef5efc86c34c8d9bdd313abc2ecba0"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -224,7 +224,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "38959800c2439c890e3238af559f0dc3be45e393"
+    "commit": "cf0eabc16cf32d69f7612d0e023ef210d84cdde6"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -250,7 +250,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "b8e26f358215a9bcc35cbf555689024a5222e90c"
+    "commit": "c065031d030955e1d071a7fcdd8c59e0fd2f0343"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
