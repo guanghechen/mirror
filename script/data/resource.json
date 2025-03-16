@@ -48,7 +48,7 @@
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
     "branch": "main",
-    "commit": "3226bc40816c07ba30cd4069a11aebb7fba40dab"
+    "commit": "173a6a869bd14748209c948f4a3f2e8fbb0cccee"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -224,12 +224,12 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "99ea6c5d4389a3278769eb6abb7b3ebefb7d9f2a"
+    "commit": "845356a256ed6ff5868da582cb62a31d762e1804"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "129fcc94fa986692926366e940a46f00d2a4abbe"
+    "commit": "572e534c9f881bb9bf9f388e4c87f360446c72d4"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
