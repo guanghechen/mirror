@@ -22,20 +22,30 @@ export async function get_full_commit_id(branchNameOrCommitId) {
   return result;
 }
 
+export async function get_parent_commit_id(commitId) {
+  try {
+    const cmd = `git rev-parse "${commitId}^"`
+    const result = await run_command(cmd, false, true, true);
+    return result
+  } catch (error) {
+    return get_full_commit_id(commitId)
+  }
+}
+
 /**
- * @param {string}  fromBranchName
- * @param {string}  toBranchName
+ * @param {string}  fromCommitId
+ * @param {string}  toCommitId
  * @return {Promise<string[]>}
  */
 export async function list_change_commits(
   remote,
-  fromBranchName,
-  toBranchName,
+  fromCommitId,
+  toCommitId,
 ) {
-  const isFromBranchExist = await check_branch_or_commit_exist(fromBranchName);
+  const isFromBranchExist = await check_branch_or_commit_exist(fromCommitId);
   const cmd = isFromBranchExist
-    ? `git log --pretty=format:"%h %s" ${fromBranchName}..${toBranchName}`
-    : `git log --pretty=format:"%h %s" ${toBranchName}`;
+    ? `git log --pretty=format:"%h %s" ${fromCommitId}..${toCommitId}`
+    : `git log --pretty=format:"%h %s" ${toCommitId}`;
   const commits = await run_command(cmd, true, false, true);
   const lines = commits.trim().split(/\n/g).filter(Boolean);
   if (lines.length < 1) return "";

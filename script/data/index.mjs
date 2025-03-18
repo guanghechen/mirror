@@ -24,14 +24,18 @@ export const set_resources = (data) => {
   fs.writeFileSync(filepath, content, "utf8");
 };
 
-export const set_changelog = (changelog) => {
+export const get_changelog_filepath = () => {
   const date = new Date();
   const year = String(date.getFullYear());
   const month = String(date.getMonth() + 1).padStart(2, "0");
   const day = String(date.getDate()).padStart(2, "0");
   const name = `${year}-${month}-${day}`;
-
   const filepath = filepaths.changelog(name);
+  return { name, filepath }
+}
+
+export const set_changelog = (changelog) => {
+  const { name, filepath } = get_changelog_filepath();
   const content = `## ${name}\n\n${changelog}`;
   fs.writeFileSync(filepath, content, "utf8");
 };
