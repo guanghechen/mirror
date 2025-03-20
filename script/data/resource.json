@@ -2,12 +2,12 @@
   "nvim@aerial.nvim": {
     "remote": "https://github.com/stevearc/aerial.nvim",
     "branch": "master",
-    "commit": "2204cf08791449a6a2fd2ef187a29112eeefd989"
+    "commit": "9ebc13583cff447f5493a63e99dfca526b3c3088"
   },
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "abca1a4ea3d3a2fa70517d76d252031c8df0c8bf"
+    "commit": "008fe29de8c8630b7db5abd304b2f7c07277361d"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -33,7 +33,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "db8a4a9edb217067b1d7a2e0362c74bfe9cc944d"
+    "commit": "f8929b32acb8712381621b42ef3b0219c3c41efd"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -224,12 +224,12 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "835f5c11b8d4e1ded3576c69a019f717d3754c5a"
+    "commit": "f09a2215b8fed4c2e86f2dd1912e14166958c06a"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "83ded3bbff8bc13abc9704bf1c5e426f3ba343c4"
+    "commit": "93b29a32d5f4be10e39226c6b796f28d68a8b483"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
@@ -255,12 +255,12 @@
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "56d8ed0fa1516242085ba5e95d7f49fad50d5754"
+    "commit": "ad85eb0ce804771a82cbde518f41003a8fd83307"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
     "branch": "main",
-    "commit": "81638007bf7bbe79a78a3bfcbe8c640ec83344c0"
+    "commit": "483ec950ebe77ef92f3e7543945285ffb49093b6"
   },
   "nvim@trouble.nvim": {
     "remote": "https://github.com/folke/trouble.nvim",
