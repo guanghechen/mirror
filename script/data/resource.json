@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "25e9b1c1114a3b25940051c276747a53cf84d3d5"
+    "commit": "8c4244b940e89dc42acc7b3b6b801f1767cf6665"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -250,7 +250,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "f9badfb5907a16c8e0d5f3c157d63bcea2aa555e"
+    "commit": "c21693fb68ebc5bcba9d73d9f81146007d025586"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",

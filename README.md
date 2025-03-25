@@ -21,7 +21,7 @@ To backup open source codes.
  Local Branch                         | Remote Branch                                       | Commit                                  
 --------------------------------------|-----------------------------------------------------|------------------------------------------
  [nvim@aerial.nvim][]                 | [master][nvim@aerial.nvim#master]                   | 9ebc13583cff447f5493a63e99dfca526b3c3088
- [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | 25e9b1c1114a3b25940051c276747a53cf84d3d5
+ [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | 8c4244b940e89dc42acc7b3b6b801f1767cf6665
  [nvim@cmp-buffer][]                  | [main][nvim@cmp-buffer#main]                        | 3022dbc9166796b644a841a02de8dd1cc1d311fa
  [nvim@cmp-luasnip][]                 | [master][nvim@cmp-luasnip#master]                   | 98d9cb5c2c38532bd9bdb481067b20fea8f32e90
  [nvim@cmp-nvim-lsp][]                | [main][nvim@cmp-nvim-lsp#main]                      | 99290b3ec1322070bcfb9e846450a46f6efa50f0
@@ -68,7 +68,7 @@ To backup open source codes.
  [nvim@nvim-treesitter-textobjects][] | [master][nvim@nvim-treesitter-textobjects#master]   | 9937e5e356e5b227ec56d83d0a9d0a0f6bc9cad4
  [nvim@nvim-window-picker][]          | [main][nvim@nvim-window-picker#main]                | 41cfaa428577c53552200a404ae9b3a0b5719706
  [nvim@plenary.nvim][]                | [master][nvim@plenary.nvim#master]                  | 857c5ac632080dba10aae49dba902ce3abf91b35
- [nvim@render-markdown.nvim][]        | [main][nvim@render-markdown.nvim#main]              | f9badfb5907a16c8e0d5f3c157d63bcea2aa555e
+ [nvim@render-markdown.nvim][]        | [main][nvim@render-markdown.nvim#main]              | c21693fb68ebc5bcba9d73d9f81146007d025586
  [nvim@schema-store.nvim][]           | [main][nvim@schema-store.nvim#main]                 | 735e53aa42423239e1f862e3356bdda56a2ba30e
  [nvim@smear-cursor.nvim][]           | [main][nvim@smear-cursor.nvim#main]                 | 01570fdc358979678380ff8704184307e87d8a29
  [nvim@trouble.nvim][]                | [main][nvim@trouble.nvim#main]                      | 85bedb7eb7fa331a2ccbecb9202d8abba64d37b3
