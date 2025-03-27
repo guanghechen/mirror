@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "0b4a493d60da6381678bd6f325c763d9fa0c8ae1"
+    "commit": "a06bb97db6e522f51de1427b72762a1ad0794279"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -43,12 +43,12 @@
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
     "branch": "master",
-    "commit": "b9300fbd5eeeae294eb76ba6c35c44fbd8b71c1b"
+    "commit": "0e3585bb9d482336aeb43811e9d7cd09e33edada"
   },
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
     "branch": "main",
-    "commit": "f84727fd79f726b7e848adf89108d66805638f06"
+    "commit": "df550ff3f9f2d028160946d674db08dad432fdd3"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -199,12 +199,12 @@
   "nvim@nvim-lint": {
     "remote": "https://github.com/mfussenegger/nvim-lint",
     "branch": "master",
-    "commit": "936197073214c26a347fb933c9459c8766376b23"
+    "commit": "93b8040115c9114dac1047311763bef275e752dc"
   },
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "b05812445486100bcbc99d6430233ea02cfddaf3"
+    "commit": "401e50fae626c4707af12114b5ddb7bb9f4236a4"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -250,12 +250,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "84d413b0c432adaeaf3dcaac646638bd99d06aa6"
+    "commit": "b963ce8f68e01099d5b845b42a59d9b36bcb9fdd"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "735e53aa42423239e1f862e3356bdda56a2ba30e"
+    "commit": "d307d291f38678d064cb987112926df6d9134de3"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
