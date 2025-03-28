@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "b6000d5bbcb85e3b11177846220bfd438fc013dd"
+    "commit": "d698dbe17ad94a0efde2355266e5afacb3851163"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -224,7 +224,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "da5825bf70cc2ea7eacd1e60c32c07baf19adeba"
+    "commit": "a3315b8c7f0f1ddaa30b24bcc0af0d31024dfb6a"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -250,7 +250,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "5dcadc76aca61156ff5156cd2d0339e5fbe741c3"
+    "commit": "e6c8081691881fd63b4d72cb472094ac190ac56e"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
