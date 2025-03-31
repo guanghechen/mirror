@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "edf02a7d1fccb65f52d308594401d41134ff4d20"
+    "commit": "c272bcd2ae576e2a8d5d332ff43d019a5b33cc58"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -33,7 +33,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "f9ef25a7ef00267b7d13bfc00b0dea22d78702d5"
+    "commit": "b1a75324ddf96b7bb84963a297b1ed334db087c0"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -74,7 +74,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "7010000889bfb6c26065e0b0f7f1e6aa9163edd9"
+    "commit": "3c76f7fabac723aa682365ef782f88a83ccdb4ac"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -204,7 +204,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "0a1ac55d7d4ec2b2ed9616dfc5406791234d1d2b"
+    "commit": "ff6471d4f837354d8257dfa326b031dd8858b16e"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -224,7 +224,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "aece1062335a9e856636f5da12d8a06c7615ce8a"
+    "commit": "9df671fda41bc4af91b9f7ea3fa1628ba988a77b"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -250,7 +250,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "a1fc4e559252baa128c471adadf0be045abd542d"
+    "commit": "a020c88e9552b50916a78dec9eeb4656c6391e6d"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
