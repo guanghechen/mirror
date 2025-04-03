@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "0828d3234656baf4d5bba69df9a801eeafa30c35"
+    "commit": "89a86f0fc197ec9ffb3663a499432f8df4e4b1e5"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -204,7 +204,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "cd8e5d75332485c59c01399a924f079d41f66b40"
+    "commit": "40f120c10ea4b87311175539a183c3b75eab95a3"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
