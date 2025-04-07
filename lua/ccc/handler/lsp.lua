@@ -71,7 +71,7 @@ function LspHandler:update(bufnr)
   local result_count = 0
   local color_informations = {}
   for _, client in ipairs(clients) do
-    client.request(method, param, function(err, result)
+    client:request(method, param, function(err, result)
       result_count = result_count + 1
       if result and err == nil then
         vim.list_extend(color_informations, result)
