@@ -22,6 +22,7 @@ To backup open source codes.
 --------------------------------------|-----------------------------------------------------|------------------------------------------
  [nvim@aerial.nvim][]                 | [master][nvim@aerial.nvim#master]                   | 44684bf429dc40e97a6d00ffa09043ac3f692186
  [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | 1c36cfc8120681ffe3261cba83f00338630da606
+ [nvim@blink.cmp][]                   | [main][nvim@blink.cmp#main]                         | 9632d20905f2b9b8d874846e50fb2d26367e56eb
  [nvim@cmp-buffer][]                  | [main][nvim@cmp-buffer#main]                        | b74fab3656eea9de20a9b8116afa3cfc4ec09657
  [nvim@cmp-luasnip][]                 | [master][nvim@cmp-luasnip#master]                   | 98d9cb5c2c38532bd9bdb481067b20fea8f32e90
  [nvim@cmp-nvim-lsp][]                | [main][nvim@cmp-nvim-lsp#main]                      | a8912b88ce488f411177fc8aed358b04dc246d7b
@@ -77,6 +78,7 @@ To backup open source codes.
 
 [nvim@aerial.nvim]: https://github.com/guanghechen/mirror/tree/nvim@aerial.nvim
 [nvim@avante.nvim]: https://github.com/guanghechen/mirror/tree/nvim@avante.nvim
+[nvim@blink.cmp]: https://github.com/guanghechen/mirror/tree/nvim@blink.cmp
 [nvim@cmp-buffer]: https://github.com/guanghechen/mirror/tree/nvim@cmp-buffer
 [nvim@cmp-luasnip]: https://github.com/guanghechen/mirror/tree/nvim@cmp-luasnip
 [nvim@cmp-nvim-lsp]: https://github.com/guanghechen/mirror/tree/nvim@cmp-nvim-lsp
@@ -132,6 +134,7 @@ To backup open source codes.
 
 [nvim@aerial.nvim#master]: https://github.com/stevearc/aerial.nvim/tree/master
 [nvim@avante.nvim#main]: https://github.com/yetone/avante.nvim/tree/main
+[nvim@blink.cmp#main]: https://github.com/Saghen/blink.cmp/tree/main
 [nvim@cmp-buffer#main]: https://github.com/hrsh7th/cmp-buffer/tree/main
 [nvim@cmp-luasnip#master]: https://github.com/saadparwaiz1/cmp_luasnip/tree/master
 [nvim@cmp-nvim-lsp#main]: https://github.com/hrsh7th/cmp-nvim-lsp/tree/main
