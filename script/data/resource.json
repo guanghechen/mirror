@@ -14,6 +14,11 @@
     "branch": "main",
     "commit": "9632d20905f2b9b8d874846e50fb2d26367e56eb"
   },
+  "nvim@blink.compat": {
+    "remote": "https://github.com/Saghen/blink.compat",
+    "branch": "main",
+    "commit": "2ed6d9a28b07fa6f3bface818470605f8896408c"
+  },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
     "branch": "main",
