@@ -21,7 +21,7 @@ To backup open source codes.
  Local Branch                         | Remote Branch                                       | Commit                                  
 --------------------------------------|-----------------------------------------------------|------------------------------------------
  [nvim@aerial.nvim][]                 | [master][nvim@aerial.nvim#master]                   | 44684bf429dc40e97a6d00ffa09043ac3f692186
- [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | 04336913b32f66f45b20a6ba2f033dd742f04374
+ [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | 7e31317fbc3061c7fea586b598b0a9865423b976
  [nvim@blink.cmp][]                   | [main][nvim@blink.cmp#main]                         | a662b6644d4857e5266d6a9a1d846e7deac08ae5
  [nvim@blink.compat][]                | [main][nvim@blink.compat#main]                      | 2ed6d9a28b07fa6f3bface818470605f8896408c
  [nvim@cmp-buffer][]                  | [main][nvim@cmp-buffer#main]                        | b74fab3656eea9de20a9b8116afa3cfc4ec09657
@@ -30,7 +30,7 @@ To backup open source codes.
  [nvim@cmp-path][]                    | [main][nvim@cmp-path#main]                          | c6635aae33a50d6010bf1aa756ac2398a2d54c32
  [nvim@conform.nvim][]                | [master][nvim@conform.nvim#master]                  | eebc724d12c5579d733d1f801386e0ceb909d001
  [nvim@copilot-cmp][]                 | [master][nvim@copilot-cmp#master]                   | 15fc12af3d0109fa76b60b5cffa1373697e261d1
- [nvim@copilot.lua][]                 | [master][nvim@copilot.lua#master]                   | d1b6e6ced09fbe15b96741de5fa84e89479f3144
+ [nvim@copilot.lua][]                 | [master][nvim@copilot.lua#master]                   | 2378a40e9cecbf3720b6f4f3d5d6b6d8994bd321
  [nvim@copilot-chat.nvim][]           | [main][nvim@copilot-chat.nvim#main]                 | a89f5f1162b04a0962e5f4c3cdf248a81e7e53cb
  [nvim@diffview.nvim][]               | [main][nvim@diffview.nvim#main]                     | 4516612fe98ff56ae0415a259ff6361a89419b0a
  [nvim@dressing.nvim][]               | [master][nvim@dressing.nvim#master]                 | 3a45525bb182730fe462325c99395529308f431e

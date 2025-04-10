@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "04336913b32f66f45b20a6ba2f033dd742f04374"
+    "commit": "7e31317fbc3061c7fea586b598b0a9865423b976"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
@@ -53,7 +53,7 @@
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
     "branch": "master",
-    "commit": "d1b6e6ced09fbe15b96741de5fa84e89479f3144"
+    "commit": "2378a40e9cecbf3720b6f4f3d5d6b6d8994bd321"
   },
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
