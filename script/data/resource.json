@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "87ea15bb94f0707a5fd154f11f5ed419c17392d1"
+    "commit": "04336913b32f66f45b20a6ba2f033dd742f04374"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
@@ -58,7 +58,7 @@
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
     "branch": "main",
-    "commit": "44fde5a5b14a06f6639e9b98d87fc1a87bf2ab5d"
+    "commit": "a89f5f1162b04a0962e5f4c3cdf248a81e7e53cb"
   },
   "nvim@diffview.nvim": {
     "remote": "https://github.com/sindrets/diffview.nvim",
@@ -163,7 +163,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "73d63376352ac731379892e27ac7b3d9449148e3"
+    "commit": "5224467c6a49a6c77b8a8333f4d9af0abc788e10"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -214,7 +214,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "9ae789e7450995e4c06ed9f8f74629992d5d28a6"
+    "commit": "94dda50b2d9a29d0b76562a9027029538840e2d7"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
