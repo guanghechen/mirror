@@ -4,8 +4,8 @@ import url from "node:url";
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const filepaths = {
-  changelog: (name) => {
-    const filepath = path.join(__dirname, `../../changelog/${name}.md`);
+  changelog: (year, name) => {
+    const filepath = path.join(__dirname, '../../changelog/', year, name + '.md');
     const dirpath = path.dirname(filepath);
     fs.mkdirSync(dirpath, { recursive: true });
     return filepath;
@@ -29,8 +29,8 @@ export const get_changelog_filepath = () => {
   const year = String(date.getFullYear());
   const month = String(date.getMonth() + 1).padStart(2, "0");
   const day = String(date.getDate()).padStart(2, "0");
-  const name = `${year}/${year}-${month}-${day}`;
-  const filepath = filepaths.changelog(name);
+  const name = `${year}-${month}-${day}`;
+  const filepath = filepaths.changelog(year, name);
   return { name, filepath }
 }
 
