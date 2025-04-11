@@ -30,7 +30,7 @@ To backup open source codes.
  [nvim@cmp-path][]                    | [main][nvim@cmp-path#main]                          | c6635aae33a50d6010bf1aa756ac2398a2d54c32
  [nvim@conform.nvim][]                | [master][nvim@conform.nvim#master]                  | eebc724d12c5579d733d1f801386e0ceb909d001
  [nvim@copilot-cmp][]                 | [master][nvim@copilot-cmp#master]                   | 15fc12af3d0109fa76b60b5cffa1373697e261d1
- [nvim@copilot.lua][]                 | [master][nvim@copilot.lua#master]                   | 2378a40e9cecbf3720b6f4f3d5d6b6d8994bd321
+ [nvim@copilot.lua][]                 | [master][nvim@copilot.lua#master]                   | 87f298ac324556a45d502afe54bcec51dacf4e82
  [nvim@copilot-chat.nvim][]           | [main][nvim@copilot-chat.nvim#main]                 | a89f5f1162b04a0962e5f4c3cdf248a81e7e53cb
  [nvim@diffview.nvim][]               | [main][nvim@diffview.nvim#main]                     | 4516612fe98ff56ae0415a259ff6361a89419b0a
  [nvim@dressing.nvim][]               | [master][nvim@dressing.nvim#master]                 | 3a45525bb182730fe462325c99395529308f431e
