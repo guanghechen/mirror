@@ -44,6 +44,7 @@ To backup open source codes.
  [nvim@mason.nvim][]                  | [main][nvim@mason.nvim#main]                        | fc98833b6da5de5a9c5b1446ac541577059555be
  [nvim@mason-lspconfig.nvim][]        | [main][nvim@mason-lspconfig.nvim#main]              | 1a31f824b9cd5bc6f342fc29e9a53b60d74af245
  [nvim@mason-nvim-dap][]              | [main][nvim@mason-nvim-dap#main]                    | 09220b99d63d5363f219daa2785242ee5fddba7f
+ [nvim@mcphub.nvim][]                 | [main][nvim@mcphub.nvim#main]                       | cea60d059f5041ac9b284c9a37bb7ad8c06a8d38
  [nvim@mini.ai][]                     | [main][nvim@mini.ai#main]                           | e139eb1101beb0250fea322f8c07a42f0f175688
  [nvim@mini.comment][]                | [main][nvim@mini.comment#main]                      | a56581c40c19fa26f2b39da72504398de3173c5a
  [nvim@mini.hipatterns][]             | [main][nvim@mini.hipatterns#main]                   | e5083df391171dc9d8172645606f8496d9443374
@@ -101,6 +102,7 @@ To backup open source codes.
 [nvim@mason.nvim]: https://github.com/guanghechen/mirror/tree/nvim@mason.nvim
 [nvim@mason-lspconfig.nvim]: https://github.com/guanghechen/mirror/tree/nvim@mason-lspconfig.nvim
 [nvim@mason-nvim-dap]: https://github.com/guanghechen/mirror/tree/nvim@mason-nvim-dap
+[nvim@mcphub.nvim]: https://github.com/guanghechen/mirror/tree/nvim@mcphub.nvim
 [nvim@mini.ai]: https://github.com/guanghechen/mirror/tree/nvim@mini.ai
 [nvim@mini.comment]: https://github.com/guanghechen/mirror/tree/nvim@mini.comment
 [nvim@mini.hipatterns]: https://github.com/guanghechen/mirror/tree/nvim@mini.hipatterns
@@ -158,6 +160,7 @@ To backup open source codes.
 [nvim@mason.nvim#main]: https://github.com/williamboman/mason.nvim/tree/main
 [nvim@mason-lspconfig.nvim#main]: https://github.com/williamboman/mason-lspconfig.nvim/tree/main
 [nvim@mason-nvim-dap#main]: https://github.com/jay-babu/mason-nvim-dap.nvim/tree/main
+[nvim@mcphub.nvim#main]: https://github.com/ravitemer/mcphub.nvim/tree/main
 [nvim@mini.ai#main]: https://github.com/echasnovski/mini.ai/tree/main
 [nvim@mini.comment#main]: https://github.com/echasnovski/mini.comment/tree/main
 [nvim@mini.hipatterns#main]: https://github.com/echasnovski/mini.hipatterns/tree/main
