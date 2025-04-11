@@ -1,7 +1,5 @@
 import { run_command } from "./command.mjs";
 
-const regex = /(\w+) ([\w\W]+)/;
-
 /**
  * @param {string}  branchNameOrCommitId
  * @return {Promise<boolean>}
@@ -33,9 +31,17 @@ export async function get_parent_commit_id(commitId) {
 }
 
 /**
+ * @typedef {Object} ICommitItem
+ * @property {string} hash    - Short commit hash
+ * @property {string} date    - Commit date
+ * @property {string} message - Commit message
+ * @property {string} url     - URL to the commit on remote repository
+ */
+
+/**
  * @param {string}  fromCommitId
  * @param {string}  toCommitId
- * @return {Promise<string[]>}
+ * @return {Promise<Array<ICommitItem>>}
  */
 export async function list_change_commits(
   remote,
@@ -44,18 +50,22 @@ export async function list_change_commits(
 ) {
   const isFromBranchExist = await check_branch_or_commit_exist(fromCommitId);
   const cmd = isFromBranchExist
-    ? `git log --pretty=format:"%h %s" ${fromCommitId}..${toCommitId}`
-    : `git log --pretty=format:"%h %s" ${toCommitId}`;
+    ? `git log --pretty=format:"%h|%ad|%s" --date=iso ${fromCommitId}..${toCommitId}`
+    : `git log --pretty=format:"%h|%ad|%s" --date=iso ${toCommitId}`;
   const commits = await run_command(cmd, true, false, true);
   const lines = commits.trim().split(/\n/g).filter(Boolean);
-  if (lines.length < 1) return "";
+  if (lines.length < 1) return [];
 
   const results = [];
   for (const line of lines) {
-    const [_, commitId, remainContent] = regex.exec(line);
+    const [commitId, commitDate, message] = line.split('|');
     const fullCommitId = await get_full_commit_id(commitId);
-    const text = `[${commitId}](${remote}/commit/${fullCommitId}) ${remainContent}`;
-    results.push(text);
+    results.push({
+      hash: commitId,
+      date: new Date(commitDate).toISOString(),
+      message: message,
+      url: `${remote}/commit/${fullCommitId}`
+    });
   }
   return results;
 }

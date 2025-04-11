@@ -58,7 +58,9 @@ export async function gen_changelog(old_filepath) {
     sections.push({
       id: localBranchName,
       title: "* " + localBranchName,
-      items: commits.map((line) => "  - " + line),
+      items: commits.map(commit =>
+        `  - ${commit.date} [${commit.hash}](${commit.url}) ${commit.message}`
+      ),
     });
   }
 
