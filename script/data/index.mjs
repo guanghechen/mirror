@@ -29,7 +29,7 @@ export const get_changelog_filepath = () => {
   const year = String(date.getFullYear());
   const month = String(date.getMonth() + 1).padStart(2, "0");
   const day = String(date.getDate()).padStart(2, "0");
-  const name = `${year}-${month}-${day}`;
+  const name = `${year}/${year}-${month}-${day}`;
   const filepath = filepaths.changelog(name);
   return { name, filepath }
 }
