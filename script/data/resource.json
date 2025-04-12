@@ -124,11 +124,6 @@
     "commit": "09220b99d63d5363f219daa2785242ee5fddba7f",
     "pinned": true
   },
-  "nvim@mcphub.nvim": {
-    "remote": "https://github.com/ravitemer/mcphub.nvim",
-    "branch": "main",
-    "commit": "cea60d059f5041ac9b284c9a37bb7ad8c06a8d38"
-  },
   "nvim@mini.ai": {
     "remote": "https://github.com/echasnovski/mini.ai",
     "branch": "main",
