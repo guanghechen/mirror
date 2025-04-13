@@ -12,7 +12,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "2f8dde3013f9f392f4054c3f1827ad4233807f82"
+    "commit": "23a27a1eb21d49a7ca456adc9c927ab951b30990"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -53,7 +53,7 @@
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
     "branch": "master",
-    "commit": "3f106ffda3d6b7823b7b384aea160ff49bc7154e"
+    "commit": "c62a2a7616a9789a7676b6b7a8d9263b1082cdc8"
   },
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
@@ -84,7 +84,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "17ab794b6fce6fce768430ebc925347e349e1d60"
+    "commit": "fcfa7a989cd6fed10abf02d9880dc76d7a38167d"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -178,7 +178,7 @@
   "nvim@nvim-cmp": {
     "remote": "https://github.com/hrsh7th/nvim-cmp",
     "branch": "main",
-    "commit": "059e89495b3ec09395262f16b1ad441a38081d04"
+    "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9"
   },
   "nvim@nvim-colorizer.lua": {
     "remote": "https://github.com/NvChad/nvim-colorizer.lua",
@@ -214,7 +214,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "4ea9083b6d3dff4ddc6da17c51334c3255b7eba5"
+    "commit": "fb02680e755fe789e0999df2d208d9adb8fed676"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -260,7 +260,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "05e6a6d119f90b99829ecb7eb85428a226c0c05f"
+    "commit": "8bb0d4725cc4909a603158d44ff28b6158ad9278"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
