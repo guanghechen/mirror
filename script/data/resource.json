@@ -22,7 +22,8 @@
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
     "branch": "main",
-    "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657"
+    "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
+    "pinned": true
   },
   "nvim@cmp-luasnip": {
     "remote": "https://github.com/saadparwaiz1/cmp_luasnip",
@@ -33,12 +34,14 @@
   "nvim@cmp-nvim-lsp": {
     "remote": "https://github.com/hrsh7th/cmp-nvim-lsp",
     "branch": "main",
-    "commit": "a8912b88ce488f411177fc8aed358b04dc246d7b"
+    "commit": "a8912b88ce488f411177fc8aed358b04dc246d7b",
+    "pinned": true
   },
   "nvim@cmp-path": {
     "remote": "https://github.com/hrsh7th/cmp-path",
     "branch": "main",
-    "commit": "c6635aae33a50d6010bf1aa756ac2398a2d54c32"
+    "commit": "c6635aae33a50d6010bf1aa756ac2398a2d54c32",
+    "pinned": true
   },
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
@@ -48,7 +51,8 @@
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
     "branch": "master",
-    "commit": "15fc12af3d0109fa76b60b5cffa1373697e261d1"
+    "commit": "15fc12af3d0109fa76b60b5cffa1373697e261d1",
+    "pinned": true
   },
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
@@ -178,7 +182,8 @@
   "nvim@nvim-cmp": {
     "remote": "https://github.com/hrsh7th/nvim-cmp",
     "branch": "main",
-    "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9"
+    "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9",
+    "pinned": true
   },
   "nvim@nvim-colorizer.lua": {
     "remote": "https://github.com/NvChad/nvim-colorizer.lua",
@@ -229,7 +234,8 @@
   "nvim@nvim-snippets": {
     "remote": "https://github.com/garymjr/nvim-snippets",
     "branch": "main",
-    "commit": "56b4052f71220144689caaa2e5b66222ba5661eb"
+    "commit": "56b4052f71220144689caaa2e5b66222ba5661eb",
+    "pinned": true
   },
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
