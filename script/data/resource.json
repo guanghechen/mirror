@@ -276,7 +276,8 @@
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
     "branch": "main",
-    "commit": "3879bc2eb4a2a07a8637256fe33cc4484a23a813"
+    "commit": "3879bc2eb4a2a07a8637256fe33cc4484a23a813",
+    "pinned": true
   },
   "nvim@trouble.nvim": {
     "remote": "https://github.com/folke/trouble.nvim",
