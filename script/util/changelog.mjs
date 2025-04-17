@@ -6,7 +6,7 @@ const resources = get_resources();
 
 const regexes = {
   section: /^\*\s+(\S+)$/,
-  commit: /^\s+\-\s+\[(\w+)\]\(/,
+  commit: /^\s+\-[^[]+\[(\w+)\]\(/,
 }
 
 /**
