@@ -2,7 +2,7 @@
   "nvim@aerial.nvim": {
     "remote": "https://github.com/stevearc/aerial.nvim",
     "branch": "master",
-    "commit": "44684bf429dc40e97a6d00ffa09043ac3f692186"
+    "commit": "2e00d1d4248f08dddfceacb8d2996e51e13e00f6"
   },
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
@@ -12,7 +12,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "46c2db88c3efdf5eb99f9073675a874ba91bbc3f"
+    "commit": "3ce61ae041927082f962791f59e3aadc774b206c"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -46,7 +46,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "6632e7d788a85bf8405ea0c812d343fc308b7b8c"
+    "commit": "372fc521f8421b7830ea6db4d6ea3bae1c77548c"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -83,7 +83,7 @@
   "nvim@friendly-snippets": {
     "remote": "https://github.com/rafamadriz/friendly-snippets",
     "branch": "main",
-    "commit": "31f2a2657b6261724313281fe0d8ba6f43f4a4fa"
+    "commit": "16833311a0c51e7ee9a1ce939000f5b20a5d9d2b"
   },
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
