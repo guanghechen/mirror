@@ -242,7 +242,7 @@ function UI:highlight(width)
       local new_value = (j - 0.5) / opts.bar_len * (max - min) + min
       local hex = self.color:hex(i, new_value)
       local hl = { fg = hex }
-      if j == point_idx then
+      if j == point_idx or j == 1 and point_idx == 0 then
         if not opts.empty_point_bg then
           local RGB = self.color:get_rgb()
           local R, G, B = convert.rgb_format(RGB)
@@ -281,7 +281,7 @@ function UI:highlight(width)
       local alpha_ratio = (i - 0.5) / opts.bar_len
       local hex = self.color.alpha:hex(alpha_ratio)
       local hl = { fg = hex }
-      if i == point_idx then
+      if i == point_idx or i == 1 and point_idx == 0 then
         if not opts.empty_point_bg then
           hl = {
             fg = alpha_ratio > 0.5 and opts.point_color_on_dark or opts.point_color_on_light,
