@@ -157,7 +157,8 @@ end
 ---@return integer
 local function adjust2bar(value, min, max)
   local opts = require("ccc.config").options
-  return utils.round((value - min) / (max - min) * opts.bar_len)
+  local raw = utils.round((value - min) / (max - min) * opts.bar_len)
+  return utils.clamp(raw, 1, opts.bar_len)
 end
 
 ---@param value number
@@ -167,9 +168,6 @@ end
 local function create_bar(value, min, max)
   local opts = require("ccc.config").options
   local point_idx = adjust2bar(value, min, max)
-  if point_idx == 0 then
-    return opts.point_char .. opts.bar_char:rep(opts.bar_len - 1)
-  end
   return opts.bar_char:rep(point_idx - 1) .. opts.point_char .. opts.bar_char:rep(opts.bar_len - point_idx)
 end
 
