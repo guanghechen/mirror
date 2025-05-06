@@ -237,10 +237,21 @@
     "commit": "56b4052f71220144689caaa2e5b66222ba5661eb",
     "pinned": true
   },
+  "nvim@telescope.nvim": {
+    "remote": "https://github.com/nvim-telescope/telescope.nvim",
+    "branch": "master",
+    "commit": "a4ed82509cecc56df1c7138920a1aeaf246c0ac5"
+  },
+  "nvim@nvim-tmux-navigation": {
+    "remote": "https://github.com/alexghergh/nvim-tmux-navigation",
+    "branch": "main",
+    "commit": "4898c98702954439233fdaf764c39636681e2861",
+    "pinned": true
+  },
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "94ea4f436d2b59c80f02e293466c374584f03b8c"
+    "commit": "28d480e0624b259095e56f353ec911f9f2a0f404"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",

@@ -65,7 +65,9 @@ To backup open source codes.
  [nvim@nvim-nio][]                    | [master][nvim@nvim-nio#master]                      | 21f5324bfac14e22ba26553caf69ec76ae8a7662
  [nvim@nvim-notify][]                 | [master][nvim@nvim-notify#master]                   | b5825cf9ee881dd8e43309c93374ed5b87b7a896
  [nvim@nvim-snippets][]               | [main][nvim@nvim-snippets#main]                     | 56b4052f71220144689caaa2e5b66222ba5661eb
- [nvim@nvim-treesitter][]             | [master][nvim@nvim-treesitter#master]               | 94ea4f436d2b59c80f02e293466c374584f03b8c
+ [nvim@telescope.nvim][]              | [master][nvim@telescope.nvim#master]                | a4ed82509cecc56df1c7138920a1aeaf246c0ac5
+ [nvim@nvim-tmux-navigation][]        | [main][nvim@nvim-tmux-navigation#main]              | 4898c98702954439233fdaf764c39636681e2861
+ [nvim@nvim-treesitter][]             | [master][nvim@nvim-treesitter#master]               | 28d480e0624b259095e56f353ec911f9f2a0f404
  [nvim@nvim-treesitter-context][]     | [master][nvim@nvim-treesitter-context#master]       | 6daca3ad780f045550b820f262002f35175a6c04
  [nvim@nvim-treesitter-textobjects][] | [master][nvim@nvim-treesitter-textobjects#master]   | ed373482db797bbf71bdff37a15c7555a84dce47
  [nvim@nvim-window-picker][]          | [main][nvim@nvim-window-picker#main]                | 41cfaa428577c53552200a404ae9b3a0b5719706
@@ -122,6 +124,8 @@ To backup open source codes.
 [nvim@nvim-nio]: https://github.com/guanghechen/mirror/tree/nvim@nvim-nio
 [nvim@nvim-notify]: https://github.com/guanghechen/mirror/tree/nvim@nvim-notify
 [nvim@nvim-snippets]: https://github.com/guanghechen/mirror/tree/nvim@nvim-snippets
+[nvim@telescope.nvim]: https://github.com/guanghechen/mirror/tree/nvim@telescope.nvim
+[nvim@nvim-tmux-navigation]: https://github.com/guanghechen/mirror/tree/nvim@nvim-tmux-navigation
 [nvim@nvim-treesitter]: https://github.com/guanghechen/mirror/tree/nvim@nvim-treesitter
 [nvim@nvim-treesitter-context]: https://github.com/guanghechen/mirror/tree/nvim@nvim-treesitter-context
 [nvim@nvim-treesitter-textobjects]: https://github.com/guanghechen/mirror/tree/nvim@nvim-treesitter-textobjects
@@ -179,6 +183,8 @@ To backup open source codes.
 [nvim@nvim-nio#master]: https://github.com/nvim-neotest/nvim-nio/tree/master
 [nvim@nvim-notify#master]: https://github.com/rcarriga/nvim-notify/tree/master
 [nvim@nvim-snippets#main]: https://github.com/garymjr/nvim-snippets/tree/main
+[nvim@telescope.nvim#master]: https://github.com/nvim-telescope/telescope.nvim/tree/master
+[nvim@nvim-tmux-navigation#main]: https://github.com/alexghergh/nvim-tmux-navigation/tree/main
 [nvim@nvim-treesitter#master]: https://github.com/nvim-treesitter/nvim-treesitter/tree/master
 [nvim@nvim-treesitter-context#master]: https://github.com/nvim-treesitter/nvim-treesitter-context/tree/master
 [nvim@nvim-treesitter-textobjects#master]: https://github.com/nvim-treesitter/nvim-treesitter-textobjects/tree/master
