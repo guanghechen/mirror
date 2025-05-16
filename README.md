@@ -159,8 +159,8 @@ To backup open source codes.
 [nvim@indent-blankline.nvim#master]: https://github.com/lukas-reineke/indent-blankline.nvim/tree/master
 [nvim@lazy.nvim#main]: https://github.com/folke/lazy.nvim/tree/main
 [nvim@luasnip.nvim#master]: https://github.com/L3MON4D3/LuaSnip/tree/master
-[nvim@mason.nvim#main]: https://github.com/williamboman/mason.nvim/tree/main
-[nvim@mason-lspconfig.nvim#main]: https://github.com/williamboman/mason-lspconfig.nvim/tree/main
+[nvim@mason.nvim#main]: https://github.com/mason-org/mason.nvim/tree/main
+[nvim@mason-lspconfig.nvim#main]: https://github.com/mason-org/mason-lspconfig.nvim/tree/main
 [nvim@mason-nvim-dap#main]: https://github.com/jay-babu/mason-nvim-dap.nvim/tree/main
 [nvim@mini.ai#main]: https://github.com/echasnovski/mini.ai/tree/main
 [nvim@mini.comment#main]: https://github.com/echasnovski/mini.comment/tree/main

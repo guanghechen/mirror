@@ -113,12 +113,12 @@
     "pinned": true
   },
   "nvim@mason.nvim": {
-    "remote": "https://github.com/williamboman/mason.nvim",
+    "remote": "https://github.com/mason-org/mason.nvim",
     "branch": "main",
     "commit": "888d6ee499d8089a3a4be4309d239d6be1c1e6c0"
   },
   "nvim@mason-lspconfig.nvim": {
-    "remote": "https://github.com/williamboman/mason-lspconfig.nvim",
+    "remote": "https://github.com/mason-org/mason-lspconfig.nvim",
     "branch": "main",
     "commit": "d39a75bbce4b8aad5d627191ea915179c77c100f"
   },
