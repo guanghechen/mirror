@@ -7,12 +7,12 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "87c4c6b4937d1884960759aba4a0e42645688f2f"
+    "commit": "697384f1cbb03899ecf1fab7725d69d398467ec9"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "196711b89a97c953877d6c257c62f18920a970f3"
+    "commit": "7c76cf55214f838845444637dfdafd2d5f227484"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -57,7 +57,7 @@
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
     "branch": "master",
-    "commit": "96e1bb1963f351700bf6737ef3695e8a0b90b12a"
+    "commit": "5f726c8e6bbcd7461ee0b870d4e6c8a973b55b64"
   },
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
@@ -115,12 +115,12 @@
   "nvim@mason.nvim": {
     "remote": "https://github.com/mason-org/mason.nvim",
     "branch": "main",
-    "commit": "9eaedb864cdadc29c6eb7d761a6c0d8aee26c91b"
+    "commit": "8024d64e1330b86044fed4c8494ef3dcd483a67c"
   },
   "nvim@mason-lspconfig.nvim": {
     "remote": "https://github.com/mason-org/mason-lspconfig.nvim",
     "branch": "main",
-    "commit": "3856bbb0da214d1f2f3d5a2dd3fea26591f930f9"
+    "commit": "d3ada78a941ff09d21dd9b4c2ec36f0cf44a4ccb"
   },
   "nvim@mason-nvim-dap": {
     "remote": "https://github.com/jay-babu/mason-nvim-dap.nvim",
@@ -131,7 +131,7 @@
   "nvim@mini.ai": {
     "remote": "https://github.com/echasnovski/mini.ai",
     "branch": "main",
-    "commit": "e139eb1101beb0250fea322f8c07a42f0f175688"
+    "commit": "7f1fe86277f0e977642cf8fe15f004229f61e61a"
   },
   "nvim@mini.comment": {
     "remote": "https://github.com/echasnovski/mini.comment",
@@ -162,12 +162,12 @@
   "nvim@mini.surround": {
     "remote": "https://github.com/echasnovski/mini.surround",
     "branch": "main",
-    "commit": "5aab42fcdcf31fa010f012771eda5631c077840a"
+    "commit": "f4307f935ad87cfe3e570dbaae485b35cce4e5ec"
   },
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "56f383aa157f1ff20a59154907cc5f9fe26e4db9"
+    "commit": "3f1dd2de5045659e00bfbe27c8aca3b52c1fdbde"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -177,7 +177,7 @@
   "nvim@nui.nvim": {
     "remote": "https://github.com/MunifTanjim/nui.nvim",
     "branch": "main",
-    "commit": "f535005e6ad1016383f24e39559833759453564e"
+    "commit": "7cd18e73cfbd70e1546931b7268b3eebaeff9391"
   },
   "nvim@nvim-cmp": {
     "remote": "https://github.com/hrsh7th/nvim-cmp",
@@ -209,7 +209,7 @@
   "nvim@nvim-dap-virtual-text": {
     "remote": "https://github.com/theHamsta/nvim-dap-virtual-text",
     "branch": "master",
-    "commit": "df66808cd78b5a97576bbaeee95ed5ca385a9750"
+    "commit": "fbdb48c2ed45f4a8293d0d483f7730d24467ccb6"
   },
   "nvim@nvim-lint": {
     "remote": "https://github.com/mfussenegger/nvim-lint",
@@ -219,7 +219,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "f610208989e9c03561f9f601db3133f6ae398fcd"
+    "commit": "b8e7957bde4cbb3cb25a13a62548f7c273b026e9"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -251,17 +251,17 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "066fd6505377e3fd4aa219e61ce94c2b8bdb0b79"
+    "commit": "42fc28ba918343ebfd5565147a42a26580579482"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "4976d8b90401cba9b85f6861e4e5a6edef2f2086"
+    "commit": "33b3f5a06ded3f3dcbf5de433d1ea35caa9b14d3"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "master",
-    "commit": "15f945eabde2a293ccf48eb28c214a69b643d6e1"
+    "commit": "0f051e9813a36481f48ca1f833897210dbcfffde"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
@@ -277,12 +277,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "ca5c29f6032338b71bdcae9b3e525d131557d363"
+    "commit": "4a39681990fb515d00dd898de3d7bf2973805f1a"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "386bdbf18abb6ca103495c5bdbab65e46f3c361d"
+    "commit": "a9ba109549de51e3b4594d39a1c07f14b9d0cfa5"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
