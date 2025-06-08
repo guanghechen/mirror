@@ -7,12 +7,12 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "a537945573862fc56c69c57f6b4dde0e2ed1a495"
+    "commit": "d3c93c0dabb4311d0af30940726fb0bff30a9676"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "86239578da58dff5ca43c3ebc992f184ee64354f"
+    "commit": "102db2f5996a46818661845cf283484870b60450"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -131,7 +131,7 @@
   "nvim@mini.ai": {
     "remote": "https://github.com/echasnovski/mini.ai",
     "branch": "main",
-    "commit": "5225f16eacf4dce2cb7204ca345123ef54e209d6"
+    "commit": "95e9d77e58bdf633c4d0c6b8c72892dd10eada51"
   },
   "nvim@mini.comment": {
     "remote": "https://github.com/echasnovski/mini.comment",
@@ -162,7 +162,7 @@
   "nvim@mini.surround": {
     "remote": "https://github.com/echasnovski/mini.surround",
     "branch": "main",
-    "commit": "0d278217ca98ffa5b768701fb57f52a88b1e1f93"
+    "commit": "365f98d842face0876e95f05d6e48fbfcc08e351"
   },
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
@@ -219,7 +219,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "036885e8e5456d3907626b634693234f628afef6"
+    "commit": "a182334ba933e58240c2c45e6ae2d9c7ae313e00"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
