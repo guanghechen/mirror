@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "07319d1bd61e4d7a58d99e2120128e63d8610e0e"
+    "commit": "8d936b738e19155717af6930f2bbd55d69fe89d3"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
@@ -120,7 +120,7 @@
   "nvim@mason-lspconfig.nvim": {
     "remote": "https://github.com/mason-org/mason-lspconfig.nvim",
     "branch": "main",
-    "commit": "bb30c422329e86fcaa4e4920181f6715d634e516"
+    "commit": "be159e939543777bbfe9e1fe5389984c4570afce"
   },
   "nvim@mason-nvim-dap": {
     "remote": "https://github.com/jay-babu/mason-nvim-dap.nvim",
@@ -219,7 +219,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "99d3a0f26bfe402f45257c1398287aef252cbe2d"
+    "commit": "9276b82935bf6b951d08c864eb5ac3f85d6b743b"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
