@@ -7,12 +7,12 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "25be6663771807e0169b4e8ace4b9b0ab7b743a0"
+    "commit": "53c764a258182f13076742a209813108b87df9cc"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "8c53f784b7ff75fb2104fb9418bab0743ef1539f"
+    "commit": "fe7c97455a375259a480c496fe3410c52ac004dc"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -88,7 +88,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "88205953bd748322b49b26e1dfb0389932520dc9"
+    "commit": "1b0350ab707713b2bc6c236151f1a324175347b1"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -167,7 +167,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "e01ca7de8e6dbc6118bcb12c4cbe1f88162a337f"
+    "commit": "7bc06b5efc5554d10f73a8aa508e02c03a83c2a0"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -219,7 +219,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "314b35335cc84bc2a085c84c69da955ba22da163"
+    "commit": "69a1624aff5dc30dddd0c59d99a947b63c80bf2a"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -277,7 +277,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "06a9e753ad542c5e7694543c8563d6c1ed3d2c59"
+    "commit": "0944ba04ea7fc9e9087c1dedc76562d6e0d110cf"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
