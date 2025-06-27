@@ -7,7 +7,7 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "c10e383019280edf6433b422603be45294c9ccf5"
+    "commit": "e2d160aa835d981b6eb833db42cda6dd375501c2"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
