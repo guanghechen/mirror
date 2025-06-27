@@ -7,12 +7,12 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "5b2a0e6118902c9a4494b9a13e73f412d3e75dff"
+    "commit": "c10e383019280edf6433b422603be45294c9ccf5"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "3513b27d1565d09927ccb8c81731ee06dab6c1c7"
+    "commit": "dad68b32bc8b91f04b2efd14abc57dd650c51e7e"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
