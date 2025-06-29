@@ -7,12 +7,12 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "e2d160aa835d981b6eb833db42cda6dd375501c2"
+    "commit": "9669e22ea95289e820cbe7e5294369ddb97ba0ed"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "dad68b32bc8b91f04b2efd14abc57dd650c51e7e"
+    "commit": "e84b7d936eb8de042a5fc7c8dabef609dd8e2386"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -46,7 +46,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "8132ec733eed3bf415b97b76797ca41b59f51d7d"
+    "commit": "42e5a346b97cf3b250e4c88cffb6d3860e491a3c"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -57,7 +57,7 @@
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
     "branch": "master",
-    "commit": "c1bb86abbed1a52a11ab3944ef00c8410520543d"
+    "commit": "46f4b7d026cba9497159dcd3e6aa61a185cb1c48"
   },
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
@@ -197,7 +197,7 @@
   "nvim@nvim-dap": {
     "remote": "https://github.com/mfussenegger/nvim-dap",
     "branch": "master",
-    "commit": "2edd6375692d9ac1053d50acfe415c1eb2ba92d0"
+    "commit": "14fe46ae16eb272629144a93f7738f5279665a4f"
   },
   "nvim@nvim-dap-python": {
     "remote": "https://github.com/mfussenegger/nvim-dap-python",
@@ -261,7 +261,7 @@
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "1a1a7c5d6d75cb49bf64049dafab15ebe294a79f"
+    "commit": "59f318a65d42a5c4037796886a8874fd57f774fc"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
@@ -282,12 +282,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "24aacee83544ca113055564ed22be7852067c342"
+    "commit": "c809fc129f842a7055c672593d24be6346bcc673"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "6af106298a8fd50af775d5281ee39a102556e352"
+    "commit": "e4f80f37cd11ed58a6e914cc30850749f021b6a7"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
