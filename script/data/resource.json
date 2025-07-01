@@ -7,12 +7,12 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "9669e22ea95289e820cbe7e5294369ddb97ba0ed"
+    "commit": "f523710e95bf2837d323005f6eb7300c7e3c4ed0"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "e84b7d936eb8de042a5fc7c8dabef609dd8e2386"
+    "commit": "5b1e2ef94d7bc121a90633c0d0aa19a883782c83"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -46,7 +46,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "42e5a346b97cf3b250e4c88cffb6d3860e491a3c"
+    "commit": "4c9003aab62879612c50136649baa1b8ed36cfa1"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -89,7 +89,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "1b0350ab707713b2bc6c236151f1a324175347b1"
+    "commit": "588264bee92993df92535b6742576f5655c91b1c"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -170,7 +170,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "7bc06b5efc5554d10f73a8aa508e02c03a83c2a0"
+    "commit": "41959d50d49860d776679c030b1235efb0ed634b"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -222,7 +222,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "6bba673aa8993eceec233be17b42ddfb9540794b"
+    "commit": "1cb30b1bafe5a63a5c6ac20dc39f83487df38855"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -282,7 +282,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "c809fc129f842a7055c672593d24be6346bcc673"
+    "commit": "3115ff748d6885fe1af349feb6b73de03eda8e12"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
