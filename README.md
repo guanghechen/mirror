@@ -21,7 +21,7 @@ To backup open source codes.
  Local Branch                         | Remote Branch                                       | Commit                                  
 --------------------------------------|-----------------------------------------------------|------------------------------------------
  [nvim@aerial.nvim][]                 | [master][nvim@aerial.nvim#master]                   | 5c0df1679bf7c814c924dc6646cc5291daca8363
- [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | 6bbf3d2004133252cd0e2d057add5c1431dc8511
+ [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | 46f3e77543a921a5e85bc7f388dea53826b1547f
  [nvim@blink.cmp][]                   | [main][nvim@blink.cmp#main]                         | f31a46e64b846944da046ed0d6f994afd2ceb7b6
  [nvim@blink.compat][]                | [main][nvim@blink.compat#main]                      | 1454f14a8d855a578ceeba77c62538fa1459a67c
  [nvim@cmp-buffer][]                  | [main][nvim@cmp-buffer#main]                        | b74fab3656eea9de20a9b8116afa3cfc4ec09657
