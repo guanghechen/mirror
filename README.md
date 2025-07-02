@@ -21,14 +21,14 @@ To backup open source codes.
  Local Branch                         | Remote Branch                                       | Commit                                  
 --------------------------------------|-----------------------------------------------------|------------------------------------------
  [nvim@aerial.nvim][]                 | [master][nvim@aerial.nvim#master]                   | 5c0df1679bf7c814c924dc6646cc5291daca8363
- [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | f523710e95bf2837d323005f6eb7300c7e3c4ed0
- [nvim@blink.cmp][]                   | [main][nvim@blink.cmp#main]                         | 5b1e2ef94d7bc121a90633c0d0aa19a883782c83
+ [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | 6bbf3d2004133252cd0e2d057add5c1431dc8511
+ [nvim@blink.cmp][]                   | [main][nvim@blink.cmp#main]                         | f31a46e64b846944da046ed0d6f994afd2ceb7b6
  [nvim@blink.compat][]                | [main][nvim@blink.compat#main]                      | 1454f14a8d855a578ceeba77c62538fa1459a67c
  [nvim@cmp-buffer][]                  | [main][nvim@cmp-buffer#main]                        | b74fab3656eea9de20a9b8116afa3cfc4ec09657
  [nvim@cmp-luasnip][]                 | [master][nvim@cmp-luasnip#master]                   | 98d9cb5c2c38532bd9bdb481067b20fea8f32e90
  [nvim@cmp-nvim-lsp][]                | [main][nvim@cmp-nvim-lsp#main]                      | a8912b88ce488f411177fc8aed358b04dc246d7b
  [nvim@cmp-path][]                    | [main][nvim@cmp-path#main]                          | c6635aae33a50d6010bf1aa756ac2398a2d54c32
- [nvim@conform.nvim][]                | [master][nvim@conform.nvim#master]                  | 4c9003aab62879612c50136649baa1b8ed36cfa1
+ [nvim@conform.nvim][]                | [master][nvim@conform.nvim#master]                  | f54259518695178168fbad442468e25f121230d4
  [nvim@copilot-cmp][]                 | [master][nvim@copilot-cmp#master]                   | 15fc12af3d0109fa76b60b5cffa1373697e261d1
  [nvim@copilot.lua][]                 | [master][nvim@copilot.lua#master]                   | 46f4b7d026cba9497159dcd3e6aa61a185cb1c48
  [nvim@copilot-chat.nvim][]           | [main][nvim@copilot-chat.nvim#main]                 | 55f2162c36901224e22ff8424fd60ecef670b8fc
