@@ -7,12 +7,12 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "0c6a8f5688cefb37259d3404f0403075e033a182"
+    "commit": "154e5f578f8925135a9dd23764d4c33a10c7ae36"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "02ee0a164117aa3caf7af80cde3b917ad5effcde"
+    "commit": "586ee87534f5bf65f1c8dea2d1da2a57e8cddd36"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -89,7 +89,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "bbee149e00c404aa9f7a7c248b981cde953b252a"
+    "commit": "d20209a154a8d11710607899b24a0698085b35cf"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -134,7 +134,7 @@
   "nvim@mini.ai": {
     "remote": "https://github.com/echasnovski/mini.ai",
     "branch": "main",
-    "commit": "96cd250fdea1fec929a62c7432de73e0f59788cd"
+    "commit": "6a8e0b151d39b293cfa483cdea785e448c2e0e11"
   },
   "nvim@mini.comment": {
     "remote": "https://github.com/echasnovski/mini.comment",
@@ -165,7 +165,7 @@
   "nvim@mini.surround": {
     "remote": "https://github.com/echasnovski/mini.surround",
     "branch": "main",
-    "commit": "1a2b59c77a0c4713a5bd8972da322f842f4821b1"
+    "commit": "d510a830e81a1b436e821c9a038eefb314b58b5d"
   },
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
@@ -282,12 +282,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "b8c3d474d4da14fa1a5f9a0a18955c6e7db88f65"
+    "commit": "12d951dfe3c884063e874bdfc0b4c86e0843237c"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "36fb914c0defa2274207e670182253508e5569d5"
+    "commit": "d916dcfbc42dae61f8b17618b1e9e87dcbf5404a"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
