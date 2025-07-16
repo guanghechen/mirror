@@ -1,11 +1,6 @@
 {
+  "ignorePaths": ["changelog/"],
   "version": "0.2",
   "language": "en",
-  "words": [
-    "lspconfig",
-    "luasnip",
-    "nvim",
-    "ollama",
-    "statuscolumn"
-  ]
+  "words": ["lspconfig", "luasnip", "nvim", "ollama", "statuscolumn"]
 }
