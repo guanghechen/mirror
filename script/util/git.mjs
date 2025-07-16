@@ -34,6 +34,7 @@ export async function get_parent_commit_id(commitId) {
  * @typedef {Object} ICommitItem
  * @property {string} hash    - Short commit hash
  * @property {string} date    - Commit date
+ * @property {string} author  - Commit author name
  * @property {string} message - Commit message
  * @property {string} url     - URL to the commit on remote repository
  */
@@ -50,19 +51,20 @@ export async function list_change_commits(
 ) {
   const isFromBranchExist = await check_branch_or_commit_exist(fromCommitId);
   const cmd = isFromBranchExist
-    ? `git log --pretty=format:"%h|%ad|%s" --date=iso ${fromCommitId}..${toCommitId}`
-    : `git log --pretty=format:"%h|%ad|%s" --date=iso ${toCommitId}`;
+    ? `git log --pretty=format:"%h|%ad|%an|%s" --date=iso ${fromCommitId}..${toCommitId}`
+    : `git log --pretty=format:"%h|%ad|%an|%s" --date=iso ${toCommitId}`;
   const commits = await run_command(cmd, true, false, true);
   const lines = commits.trim().split(/\n/g).filter(Boolean);
   if (lines.length < 1) return [];
 
   const results = [];
   for (const line of lines) {
-    const [commitId, commitDate, message] = line.split('|');
+    const [commitId, commitDate, author, message] = line.split('|');
     const fullCommitId = await get_full_commit_id(commitId);
     results.push({
       hash: commitId,
       date: new Date(commitDate).toISOString(),
+      author: author,
       message: message,
       url: `${remote}/commit/${fullCommitId}`
     });

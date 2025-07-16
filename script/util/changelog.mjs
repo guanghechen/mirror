@@ -1,4 +1,4 @@
-import fs from 'node:fs'
+import fs from "node:fs";
 import { get_resources } from "../data/index.mjs";
 import { get_parent_commit_id, list_change_commits } from "./git.mjs";
 
@@ -7,31 +7,32 @@ const resources = get_resources();
 const regexes = {
   section: /^\*\s+(\S+)$/,
   commit: /^\s+\-[^[]+\[(\w+)\]\(/,
-}
+};
 
 /**
  * @param {string|undefined} filepath
  * @return {Promise<Record<string, string>>}
  */
 export async function parse_changelog(filepath) {
-  if (!filepath || !fs.existsSync(filepath) || !fs.statSync(filepath).isFile()) return {}
+  if (!filepath || !fs.existsSync(filepath) || !fs.statSync(filepath).isFile())
+    return {};
 
-  const lines = fs.readFileSync(filepath, 'utf-8').split(/\n+/g)
-  const branch_2_commit = {}
-  let branch = null
+  const lines = fs.readFileSync(filepath, "utf-8").split(/\n+/g);
+  const branch_2_commit = {};
+  let branch = null;
   for (const line of lines) {
     if (regexes.section.test(line)) {
-      branch = line.match(regexes.section)[1]
-      branch_2_commit[branch] = ''
-      continue
+      branch = line.match(regexes.section)[1];
+      branch_2_commit[branch] = "";
+      continue;
     }
     if (regexes.commit.test(line)) {
-      const commit = line.match(regexes.commit)[1]
-      branch_2_commit[branch] = commit
-      continue
+      const commit = line.match(regexes.commit)[1];
+      branch_2_commit[branch] = commit;
+      continue;
     }
   }
-  return branch_2_commit
+  return branch_2_commit;
 }
 
 /**
@@ -58,8 +59,9 @@ export async function gen_changelog(old_filepath) {
     sections.push({
       id: localBranchName,
       title: "* " + localBranchName,
-      items: commits.map(commit =>
-        `  - ${commit.date} [${commit.hash}](${commit.url}) ${commit.message}`
+      items: commits.map(
+        (commit) =>
+          `  - ${commit.date} [${commit.hash}](${commit.url}) ${commit.message} (${commit.author})`,
       ),
     });
   }
