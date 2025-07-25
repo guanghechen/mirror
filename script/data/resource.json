@@ -7,12 +7,12 @@
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
     "branch": "main",
-    "commit": "888a49d8c1bf3287c508e809304647894ab5a4dd"
+    "commit": "bd69ae14f6f1f21642e16c16cbd18954f62365aa"
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "796a00e861a0872ad6452bc8a2faf250abf59117"
+    "commit": "bbdc39953ff2dc336129de162fae0833a816bf4b"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -57,7 +57,7 @@
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
     "branch": "master",
-    "commit": "14bf786180b2ca4578915c56989b6d676dddc6f3"
+    "commit": "64422b725c4ae102838f3efe832dafb68be2246d"
   },
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
@@ -150,7 +150,7 @@
   "nvim@mini.icons": {
     "remote": "https://github.com/echasnovski/mini.icons",
     "branch": "main",
-    "commit": "1d91152ae9913e148c3e330ce2c921cf4f36995f"
+    "commit": "b8f6fa6f5a3fd0c56936252edcd691184e5aac0c"
   },
   "nvim@mini.indentscope": {
     "remote": "https://github.com/echasnovski/mini.indentscope",
@@ -222,7 +222,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "169745f176f58becad80363c3f8f2315ed6bb365"
+    "commit": "4d3b3bb8815fbe37bcaf3dbdb12a22382bc11ebe"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
