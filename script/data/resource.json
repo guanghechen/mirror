@@ -13,7 +13,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "1a5607f90c8804cc13ea94a3ec6ea614141609bf"
+    "commit": "1470092eeac5df0f9c296500bcc50720421a02a7"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -58,7 +58,7 @@
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
     "branch": "master",
-    "commit": "4958fb9390f624cb389be2772e3c5e718e94d8b6"
+    "commit": "2d7261daa24e4f52e5525941caad92e614287875"
   },
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
@@ -118,7 +118,7 @@
   "nvim@mason.nvim": {
     "remote": "https://github.com/mason-org/mason.nvim",
     "branch": "main",
-    "commit": "197f6352c276bbc2d25541dfce00ec50d1a4e88f"
+    "commit": "3671ab0d40aa5bd24b1686562bd0a23391ecf76a"
   },
   "nvim@mason-lspconfig.nvim": {
     "remote": "https://github.com/mason-org/mason-lspconfig.nvim",
@@ -283,7 +283,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "5c0e241bdbd208b7ae546009378d6bc93c083ef3"
+    "commit": "9e51b7711c6159511e966dc42fafd58a9db9ad1d"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
