@@ -13,7 +13,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "1470092eeac5df0f9c296500bcc50720421a02a7"
+    "commit": "a0bcedefce8d74179d0f2401d9915eaaf16974ce"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -58,7 +58,7 @@
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
     "branch": "master",
-    "commit": "2d7261daa24e4f52e5525941caad92e614287875"
+    "commit": "55e43020dcd59c6da41cc773971380a003100844"
   },
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
@@ -171,7 +171,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "e858a443813097cba43524a6321e3976b14ec75d"
+    "commit": "46fa0c22ca39e05fe15744102d21feb07fe9a94a"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -223,7 +223,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "4d3b3bb8815fbe37bcaf3dbdb12a22382bc11ebe"
+    "commit": "3db16ceeea947517f0dc1404c24dcb5ab0c91d26"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -262,12 +262,12 @@
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "59f318a65d42a5c4037796886a8874fd57f774fc"
+    "commit": "02fd97c803962108d129cf42e05adc5eff7f89c1"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "master",
-    "commit": "89ebe73cd2836db80a22d9748999ace0241917a5"
+    "commit": "71385f191ec06ffc60e80e6b0c9a9d5daed4824c"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
@@ -288,7 +288,7 @@
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "67d6c391e9a372d2d8701b5b8c9ae89455561fbf"
+    "commit": "3cd1c7267282b4d89618674de36a6d866981347e"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
