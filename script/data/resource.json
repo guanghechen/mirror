@@ -90,7 +90,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "b01433169be710d6c69f7b4ee264d9670698b831"
+    "commit": "cc2e664c7e3cd8a31af34df040d16a75cfcadced"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -218,7 +218,7 @@
   "nvim@nvim-lint": {
     "remote": "https://github.com/mfussenegger/nvim-lint",
     "branch": "master",
-    "commit": "9c6207559297b24f0b7c32829f8e45f7d65b991f"
+    "commit": "7ef127aaede2a4d5ad8df8321e2eb4e567f29594"
   },
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
@@ -262,7 +262,7 @@
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "02fd97c803962108d129cf42e05adc5eff7f89c1"
+    "commit": "6853ecb2cd8b062365da1cdd1a2e6f934ad55ed6"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
@@ -283,7 +283,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "9e51b7711c6159511e966dc42fafd58a9db9ad1d"
+    "commit": "eec00fbfd7273cdfa0a1154dbef0bb983641eaf8"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
