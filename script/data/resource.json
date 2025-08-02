@@ -20,6 +20,11 @@
     "branch": "main",
     "commit": "1454f14a8d855a578ceeba77c62538fa1459a67c"
   },
+  "nvim@blink.pairs": {
+    "remote": "https://github.com/Saghen/blink.pairs",
+    "branch": "main",
+    "commit": "1acae697e5ed31c4f9031b4feda4affe542106ca"
+  },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
     "branch": "main",
@@ -198,7 +203,7 @@
   "nvim@nvim-dap": {
     "remote": "https://github.com/mfussenegger/nvim-dap",
     "branch": "master",
-    "commit": "5dd4d50f2e6a2eaf9e57fad023d294ef371bda35"
+    "commit": "a479e25ed5b5d331fb46ee4b9e160ff02ac64310"
   },
   "nvim@nvim-dap-python": {
     "remote": "https://github.com/mfussenegger/nvim-dap-python",
