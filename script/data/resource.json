@@ -52,7 +52,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "973f3cb73887d510321653044791d7937c7ec0fa"
+    "commit": "26ebdcfb4f3c9d33d6f81c9534037bd5172b6d65"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -228,7 +228,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "612d9fcc652725ce2e3a8043daad6cfc6865c4a7"
+    "commit": "61fdd3a8609071ce44519e405f3424d84ec94d9d"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -288,12 +288,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "e5c3c500d66e9aaf04c116cdfdb0b040d56a1521"
+    "commit": "ec74afa498b6ce3ee686131adf2b3941b713f307"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "64f345511dc43c78170b942ca56bfbaed160cb78"
+    "commit": "e906ac3ed0bd273781759e7635b5b824393c925c"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
