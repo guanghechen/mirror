@@ -20,7 +20,7 @@ To backup open source codes.
 
  Local Branch                         | Remote Branch                                       | Commit                                  
 --------------------------------------|-----------------------------------------------------|------------------------------------------
- [nvim@aerial.nvim][]                 | [master][nvim@aerial.nvim#master]                   | deed64693123b45a4e82590cb9b2eb45ea5fd159
+ [nvim@aerial.nvim][]                 | [master][nvim@aerial.nvim#master]                   | b7baffb30af580f342adf6b82aa341942002dbf3
  [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | bd69ae14f6f1f21642e16c16cbd18954f62365aa
  [nvim@blink.cmp][]                   | [main][nvim@blink.cmp#main]                         | 4e9edba1b1cef1585cc65e54287229e5d34e4df8
  [nvim@blink.compat][]                | [main][nvim@blink.compat#main]                      | 1454f14a8d855a578ceeba77c62538fa1459a67c
@@ -29,9 +29,9 @@ To backup open source codes.
  [nvim@cmp-luasnip][]                 | [master][nvim@cmp-luasnip#master]                   | 98d9cb5c2c38532bd9bdb481067b20fea8f32e90
  [nvim@cmp-nvim-lsp][]                | [main][nvim@cmp-nvim-lsp#main]                      | a8912b88ce488f411177fc8aed358b04dc246d7b
  [nvim@cmp-path][]                    | [main][nvim@cmp-path#main]                          | c6635aae33a50d6010bf1aa756ac2398a2d54c32
- [nvim@conform.nvim][]                | [master][nvim@conform.nvim#master]                  | 3543d000dafbc41cc7761d860cfdb24e82154f75
+ [nvim@conform.nvim][]                | [master][nvim@conform.nvim#master]                  | a0ab60ed666c56b37fd7ed1847d2ac52f2482ce0
  [nvim@copilot-cmp][]                 | [master][nvim@copilot-cmp#master]                   | 15fc12af3d0109fa76b60b5cffa1373697e261d1
- [nvim@copilot.lua][]                 | [master][nvim@copilot.lua#master]                   | d61c0436150ecd60d95cb66e7e5ee12106350c86
+ [nvim@copilot.lua][]                 | [master][nvim@copilot.lua#master]                   | f0c0d981de2737abc50bd7b5bb034ae440826827
  [nvim@copilot-chat.nvim][]           | [main][nvim@copilot-chat.nvim#main]                 | 55f2162c36901224e22ff8424fd60ecef670b8fc
  [nvim@diffview.nvim][]               | [main][nvim@diffview.nvim#main]                     | 4516612fe98ff56ae0415a259ff6361a89419b0a
  [nvim@dressing.nvim][]               | [master][nvim@dressing.nvim#master]                 | 3a45525bb182730fe462325c99395529308f431e
@@ -58,11 +58,11 @@ To backup open source codes.
  [nvim@nvim-cmp][]                    | [main][nvim@nvim-cmp#main]                          | b5311ab3ed9c846b585c0c15b7559be131ec4be9
  [nvim@nvim-colorizer.lua][]          | [master][nvim@nvim-colorizer.lua#master]            | 4acf88d31b3a7a1a7f31e9c30bf2b23c6313abdb
  [nvim@nvim-dap][]                    | [master][nvim@nvim-dap#master]                      | f777d1d20ed50c2f312e286892c062d9c2f1c6fe
- [nvim@nvim-dap-python][]             | [master][nvim@nvim-dap-python#master]               | 679762ea611a37803090b5acb79fcc367a2d35b0
+ [nvim@nvim-dap-python][]             | [master][nvim@nvim-dap-python#master]               | bd771691da93846b0fc7e095512146a150218bfd
  [nvim@nvim-dap-ui][]                 | [master][nvim@nvim-dap-ui#master]                   | cf91d5e2d07c72903d052f5207511bf7ecdb7122
  [nvim@nvim-dap-virtual-text][]       | [master][nvim@nvim-dap-virtual-text#master]         | fbdb48c2ed45f4a8293d0d483f7730d24467ccb6
  [nvim@nvim-lint][]                   | [master][nvim@nvim-lint#master]                     | ee04d481d4e6089892c2fb2ad8924b1a053591e1
- [nvim@nvim-lspconfig][]              | [master][nvim@nvim-lspconfig#master]                | 8373a1b7a7ab7a9972b55182073be5ac2f3bec0a
+ [nvim@nvim-lspconfig][]              | [master][nvim@nvim-lspconfig#master]                | 16878c7a018cba66a6e990286bdb6afc29ca13d3
  [nvim@nvim-nio][]                    | [master][nvim@nvim-nio#master]                      | 21f5324bfac14e22ba26553caf69ec76ae8a7662
  [nvim@nvim-notify][]                 | [master][nvim@nvim-notify#master]                   | a22f5d7ac511c2df2fd3290a9f04c48d5a822e2e
  [nvim@nvim-snippets][]               | [main][nvim@nvim-snippets#main]                     | 56b4052f71220144689caaa2e5b66222ba5661eb
@@ -74,7 +74,7 @@ To backup open source codes.
  [nvim@nvim-window-picker][]          | [main][nvim@nvim-window-picker#main]                | 41cfaa428577c53552200a404ae9b3a0b5719706
  [nvim@plenary.nvim][]                | [master][nvim@plenary.nvim#master]                  | b9fd5226c2f76c951fc8ed5923d85e4de065e509
  [nvim@render-markdown.nvim][]        | [main][nvim@render-markdown.nvim#main]              | c4ff9acddcf0f79b3187393319adb5cac5865bd3
- [nvim@schema-store.nvim][]           | [main][nvim@schema-store.nvim#main]                 | 21a54161a87ab38b85d8b1eb52cc86c973a5fafe
+ [nvim@schema-store.nvim][]           | [main][nvim@schema-store.nvim#main]                 | 433a310de5cbab41f1eb3424332a583e21e39f5c
  [nvim@smear-cursor.nvim][]           | [main][nvim@smear-cursor.nvim#main]                 | 3879bc2eb4a2a07a8637256fe33cc4484a23a813
  [nvim@trouble.nvim][]                | [main][nvim@trouble.nvim#main]                      | 85bedb7eb7fa331a2ccbecb9202d8abba64d37b3
  [nvim@vim-illuminate][]              | [master][nvim@vim-illuminate#master]                | b5713e6ca3f627b46968386d6d3f24d374d3cb17
