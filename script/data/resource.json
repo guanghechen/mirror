@@ -2,7 +2,7 @@
   "nvim@aerial.nvim": {
     "remote": "https://github.com/stevearc/aerial.nvim",
     "branch": "master",
-    "commit": "6ab1a0ce4874d21610fc5a67a6c82c7b943c635b"
+    "commit": "c7cbbad40c2065fccfd1f1863bb2c08180c0533d"
   },
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
@@ -52,7 +52,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "a0ab60ed666c56b37fd7ed1847d2ac52f2482ce0"
+    "commit": "b4aab989db276993ea5dcb78872be494ce546521"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -63,7 +63,7 @@
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
     "branch": "master",
-    "commit": "f0c0d981de2737abc50bd7b5bb034ae440826827"
+    "commit": "2fe9ab1678da4f40be4948a2f30cc8b58da7818a"
   },
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
