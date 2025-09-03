@@ -13,7 +13,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "7770a67c2cd10d036cbd92ced2fd8b36a6fd29d8"
+    "commit": "b6699c516f4d5ed0bdff61130f1af3bd7fc70e01"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -176,7 +176,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "aa27c5cb33d14729d516971f422d3fb7b5513972"
+    "commit": "ed057048a281b418d5318dd5153f9486daa517a3"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -228,7 +228,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "5f550bbb4d58bb2bfbbed4633fc69c3f0eccaf3a"
+    "commit": "060f6b601b8d60d59fb2f6dfb2528c391bcd60a2"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
