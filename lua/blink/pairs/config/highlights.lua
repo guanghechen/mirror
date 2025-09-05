@@ -1,7 +1,7 @@
 --- @class (exact) blink.pairs.HighlightsConfig
 --- @field enabled boolean
 --- @field cmdline boolean Requires `require('vim._extui').enable({})`
---- @field groups string[] Highlight groups for matched pairs, in order that they'll appear based on depth
+--- @field groups string[] | fun(match: blink.pairs.Match): string Highlight groups for matched pairs, in order that they'll appear based on depth, or a function that returns a highlight group for a given match
 --- @field unmatched_group string Highlight group for unmatched pairs
 --- @field priority number
 --- @field ns integer
@@ -41,7 +41,7 @@ function highlights.validate(config)
     enabled = { config.enabled, 'boolean' },
     cmdline = { config.cmdline, 'boolean' },
     unmatched_group = { config.unmatched_group, 'string' },
-    groups = { config.groups, 'table' },
+    groups = { config.groups, { 'table', 'function' } },
     priority = { config.priority, 'number' },
     ns = { config.ns, 'number' },
     matchparen = { config.matchparen, 'table', true },
