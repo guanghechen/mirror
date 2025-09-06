@@ -13,7 +13,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "6323a6ddb191323904557dc9b545f309ea2b0e12"
+    "commit": "fa9e5fa324f8a721a562a7baeba35a0da44ec651"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -23,7 +23,7 @@
   "nvim@blink.pairs": {
     "remote": "https://github.com/Saghen/blink.pairs",
     "branch": "main",
-    "commit": "3cf0b660caf266992d6c62eb1f6049c483b35409"
+    "commit": "c2d4030c10e6628de159cbac79a32a70ad746290"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -63,7 +63,7 @@
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
     "branch": "master",
-    "commit": "c3f2783672b6faea716d971842f25d1dd5603ab6"
+    "commit": "81d289a8ce5d4ee1dea9b1c8ee4ac376b2e27a5f"
   },
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
@@ -228,7 +228,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "3a8d621d74bd9760b9f8dbc4fdfb937bb13d2f49"
+    "commit": "3e89e4973d784e1c966517e528b3a30395403fa7"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
