@@ -262,17 +262,17 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "master",
-    "commit": "42fc28ba918343ebfd5565147a42a26580579482"
+    "commit": "4d9916e477e5d4e3b245845dfd285edf429f3252"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "41847d3dafb5004464708a3db06b14f12bde548a"
+    "commit": "66a9b5fa9e806918b5fe3dba00c6cce7e230abd2"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "master",
-    "commit": "71385f191ec06ffc60e80e6b0c9a9d5daed4824c"
+    "commit": "b54cec389e98c5b0babbe618773acec927437cab"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",

@@ -68,9 +68,9 @@ To backup open source codes.
  [nvim@nvim-snippets][]               | [main][nvim@nvim-snippets#main]                     | 56b4052f71220144689caaa2e5b66222ba5661eb
  [nvim@telescope.nvim][]              | [master][nvim@telescope.nvim#master]                | b4da76be54691e854d3e0e02c36b0245f945c2c7
  [nvim@nvim-tmux-navigation][]        | [main][nvim@nvim-tmux-navigation#main]              | 4898c98702954439233fdaf764c39636681e2861
- [nvim@nvim-treesitter][]             | [master][nvim@nvim-treesitter#master]               | 42fc28ba918343ebfd5565147a42a26580579482
- [nvim@nvim-treesitter-context][]     | [master][nvim@nvim-treesitter-context#master]       | 41847d3dafb5004464708a3db06b14f12bde548a
- [nvim@nvim-treesitter-textobjects][] | [master][nvim@nvim-treesitter-textobjects#master]   | 71385f191ec06ffc60e80e6b0c9a9d5daed4824c
+ [nvim@nvim-treesitter][]             | [master][nvim@nvim-treesitter#master]               | 4d9916e477e5d4e3b245845dfd285edf429f3252
+ [nvim@nvim-treesitter-context][]     | [master][nvim@nvim-treesitter-context#master]       | 66a9b5fa9e806918b5fe3dba00c6cce7e230abd2
+ [nvim@nvim-treesitter-textobjects][] | [master][nvim@nvim-treesitter-textobjects#master]   | b54cec389e98c5b0babbe618773acec927437cab
  [nvim@nvim-window-picker][]          | [main][nvim@nvim-window-picker#main]                | 41cfaa428577c53552200a404ae9b3a0b5719706
  [nvim@plenary.nvim][]                | [master][nvim@plenary.nvim#master]                  | b9fd5226c2f76c951fc8ed5923d85e4de065e509
  [nvim@render-markdown.nvim][]        | [main][nvim@render-markdown.nvim#main]              | b4885a95e5082a6ed164830c581aac257a74f355
