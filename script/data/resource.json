@@ -138,38 +138,38 @@
     "pinned": true
   },
   "nvim@mini.ai": {
-    "remote": "https://github.com/echasnovski/mini.ai",
+    "remote": "https://github.com/nvim-mini/mini.ai",
     "branch": "main",
     "commit": "dcd346a3eda9121e917950680e5eb59f59f78aae"
   },
   "nvim@mini.comment": {
-    "remote": "https://github.com/echasnovski/mini.comment",
+    "remote": "https://github.com/nvim-mini/mini.comment",
     "branch": "main",
     "commit": "a56581c40c19fa26f2b39da72504398de3173c5a",
     "pinned": true
   },
   "nvim@mini.hipatterns": {
-    "remote": "https://github.com/echasnovski/mini.hipatterns",
+    "remote": "https://github.com/nvim-mini/mini.hipatterns",
     "branch": "main",
     "commit": "96d07d32a0db0d8d8a10c83a964ec557cca005e7"
   },
   "nvim@mini.icons": {
-    "remote": "https://github.com/echasnovski/mini.icons",
+    "remote": "https://github.com/nvim-mini/mini.icons",
     "branch": "main",
     "commit": "f9a177c11daa7829389b7b6eaaec8b8a5c47052d"
   },
   "nvim@mini.indentscope": {
-    "remote": "https://github.com/echasnovski/mini.indentscope",
+    "remote": "https://github.com/nvim-mini/mini.indentscope",
     "branch": "main",
     "commit": "9d9490c172a4718d7d1f20eaae668a28f160c2d7"
   },
   "nvim@mini.pairs": {
-    "remote": "https://github.com/echasnovski/mini.pairs",
+    "remote": "https://github.com/nvim-mini/mini.pairs",
     "branch": "main",
     "commit": "3738ea30ff33e0cbf2983dc67319a5468d25b0a9"
   },
   "nvim@mini.surround": {
-    "remote": "https://github.com/echasnovski/mini.surround",
+    "remote": "https://github.com/nvim-mini/mini.surround",
     "branch": "main",
     "commit": "4b92d30fb5e021cced6cbb68698c73018211fbfa"
   },
