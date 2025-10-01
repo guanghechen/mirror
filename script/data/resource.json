@@ -63,7 +63,8 @@
   "nvim@copilot.lua": {
     "remote": "https://github.com/zbirenbaum/copilot.lua",
     "branch": "master",
-    "commit": "3cd5086c28c5769f5db147721f457a3e081de254"
+    "commit": "3cd5086c28c5769f5db147721f457a3e081de254",
+    "pinned": true
   },
   "nvim@copilot-chat.nvim": {
     "remote": "https://github.com/CopilotC-Nvim/CopilotChat.nvim",
