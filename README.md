@@ -75,6 +75,7 @@ To backup open source codes.
  [nvim@plenary.nvim][]                | [master][nvim@plenary.nvim#master]                  | b9fd5226c2f76c951fc8ed5923d85e4de065e509
  [nvim@render-markdown.nvim][]        | [main][nvim@render-markdown.nvim#main]              | d53856423be5ef3c267d26ee261b0981b372f718
  [nvim@schema-store.nvim][]           | [main][nvim@schema-store.nvim#main]                 | caad5439cc80809be7475b625a5e36d1bb06cc7e
+ [nvim@sidekick.nvim][]               | [main][nvim@sidekick.nvim#main]                     | b7085d79df9efb9f8be5ca4a65d771b163d7d34c
  [nvim@smear-cursor.nvim][]           | [main][nvim@smear-cursor.nvim#main]                 | 3879bc2eb4a2a07a8637256fe33cc4484a23a813
  [nvim@trouble.nvim][]                | [main][nvim@trouble.nvim#main]                      | c098362fe603d3922095e7db595961e020bdf2d0
  [nvim@vim-illuminate][]              | [master][nvim@vim-illuminate#master]                | b5713e6ca3f627b46968386d6d3f24d374d3cb17
@@ -135,6 +136,7 @@ To backup open source codes.
 [nvim@plenary.nvim]: https://github.com/guanghechen/mirror/tree/nvim@plenary.nvim
 [nvim@render-markdown.nvim]: https://github.com/guanghechen/mirror/tree/nvim@render-markdown.nvim
 [nvim@schema-store.nvim]: https://github.com/guanghechen/mirror/tree/nvim@schema-store.nvim
+[nvim@sidekick.nvim]: https://github.com/guanghechen/mirror/tree/nvim@sidekick.nvim
 [nvim@smear-cursor.nvim]: https://github.com/guanghechen/mirror/tree/nvim@smear-cursor.nvim
 [nvim@trouble.nvim]: https://github.com/guanghechen/mirror/tree/nvim@trouble.nvim
 [nvim@vim-illuminate]: https://github.com/guanghechen/mirror/tree/nvim@vim-illuminate
@@ -195,6 +197,7 @@ To backup open source codes.
 [nvim@plenary.nvim#master]: https://github.com/nvim-lua/plenary.nvim/tree/master
 [nvim@render-markdown.nvim#main]: https://github.com/MeanderingProgrammer/render-markdown.nvim/tree/main
 [nvim@schema-store.nvim#main]: https://github.com/b0o/SchemaStore.nvim/tree/main
+[nvim@sidekick.nvim#main]: https://github.com/folke/sidekick.nvim/tree/main
 [nvim@smear-cursor.nvim#main]: https://github.com/sphamba/smear-cursor.nvim/tree/main
 [nvim@trouble.nvim#main]: https://github.com/folke/trouble.nvim/tree/main
 [nvim@vim-illuminate#master]: https://github.com/RRethy/vim-illuminate/tree/master

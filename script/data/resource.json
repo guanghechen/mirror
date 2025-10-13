@@ -296,6 +296,11 @@
     "branch": "main",
     "commit": "caad5439cc80809be7475b625a5e36d1bb06cc7e"
   },
+  "nvim@sidekick.nvim": {
+    "remote": "https://github.com/folke/sidekick.nvim",
+    "branch": "main",
+    "commit": "b7085d79df9efb9f8be5ca4a65d771b163d7d34c"
+  },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
     "branch": "main",
