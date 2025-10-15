@@ -13,7 +13,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "ddeab4c4cfc8a282196e74dc7b7f892708320e81"
+    "commit": "5037cfa645a9c4f5d6e2a3f6a44e096df86c8093"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -177,7 +177,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "0d0f98b2aac42321bb8daefcaf374d864e91c3c4"
+    "commit": "c4c168e459395275c552179a1baf9c3d885d6a74"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -289,7 +289,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "d53856423be5ef3c267d26ee261b0981b372f718"
+    "commit": "691651de4e02cbea9ff50c62d7d3a679abc95564"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
@@ -299,7 +299,7 @@
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
     "branch": "main",
-    "commit": "b7085d79df9efb9f8be5ca4a65d771b163d7d34c"
+    "commit": "7185e0863ba9f533b39d699243ee65c2f16062af"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
