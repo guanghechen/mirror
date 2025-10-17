@@ -310,6 +310,7 @@ function M:focus()
   end
   vim.api.nvim_set_current_win(self.win)
   vim.cmd.startinsert()
+  self.normal_mode = false
   return self
 end
 

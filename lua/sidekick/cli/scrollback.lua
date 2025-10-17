@@ -3,6 +3,7 @@ local Util = require("sidekick.util")
 ---@class sidekick.cli.Scrollback
 ---@field terminal {value?:sidekick.cli.Terminal}|fun():sidekick.cli.Terminal?
 ---@field buf? number
+---@field closing? boolean
 local M = {}
 M.__index = M
 
@@ -28,7 +29,7 @@ vim.on_key(function(key, typed)
   local session_id = vim.w[info.winid].sidekick_session_id
   local sb = session_id and M.scrollbacks[session_id]
   if sb then
-    sb:update({ mode = "n", win_pos = key == MOUSE_CLICK and { info.screenrow, info.screencol } or nil })
+    sb:update({ open = true, win_pos = key == MOUSE_CLICK and { info.screenrow, info.screencol } or nil })
   end
 end)
 
@@ -37,10 +38,26 @@ function M.new(terminal)
   local self = setmetatable({}, M)
   self.terminal = Util.ref(terminal)
 
-  vim.api.nvim_create_autocmd({ "TermLeave", "TermEnter" }, {
+  local update = function()
+    self:update()
+  end
+
+  vim.api.nvim_create_autocmd({ "TermEnter" }, {
+    group = terminal.group,
+    callback = update,
+  })
+
+  vim.api.nvim_create_autocmd({ "TermLeave" }, {
+    group = terminal.group,
+    callback = vim.schedule_wrap(update),
+  })
+
+  vim.api.nvim_create_autocmd({ "WinEnter" }, {
     group = terminal.group,
     callback = function()
-      self:update()
+      vim.defer_fn(function()
+        self:update()
+      end, 50)
     end,
   })
 
@@ -58,14 +75,9 @@ function M:is_open()
     and vim.api.nvim_win_get_buf(terminal.win) == self.buf
 end
 
--- Check if the actual terminal is focused
-function M:in_terminal()
+function M:is_focused()
   local terminal = self.terminal()
   return terminal and terminal:is_focused()
-end
-
-function M:is_focused()
-  return vim.api.nvim_get_current_buf() == self.buf
 end
 
 ---@param win_pos? sidekick.Pos
@@ -112,29 +124,50 @@ function M:close()
   if not terminal then
     return
   end
+  if vim.fn.mode() == "t" then
+    -- switch to normal mode first
+    vim.cmd.stopinsert()
+  end
   if terminal:buf_valid() and terminal:win_valid() then
     vim.api.nvim_win_set_buf(terminal.win, terminal.buf)
     terminal:wo()
   end
 end
 
----@param opts? { mode?:string, win_pos?:sidekick.Pos }
+---@param opts? { open?:boolean, win_pos?:sidekick.Pos, reason?:string }
 function M:update(opts)
+  opts = opts or {}
+
   local terminal = self.terminal()
   if not (terminal and terminal:is_open()) then
     return
   end
-  opts = opts or {}
-  local mode = opts.mode or vim.fn.mode()
+
+  local mode = vim.fn.mode()
   local is_open = self:is_open()
-  if mode == "t" and (self:is_focused() or self:in_terminal()) and is_open then
-    vim.cmd.stopinsert()
-    vim.schedule(function()
-      self:close()
-      vim.cmd.startinsert()
-    end)
-  elseif mode ~= "t" and not is_open then
-    self:open(opts.win_pos)
+  local is_focused = self:is_focused()
+
+  if is_open then
+    if mode == "t" and is_focused then
+      -- terminal mode in the scrollback buffer: close it
+      self.closing = true -- prevent TermLeave from reopening
+      vim.cmd.stopinsert()
+      vim.schedule(function()
+        self:close()
+        vim.cmd.startinsert()
+        vim.schedule(function()
+          self.closing = false
+        end)
+      end)
+    end
+  elseif not self.closing then
+    if mode ~= "t" and is_focused then
+      -- normal mode in the terminal buffer: open the scrollback
+      self:open(opts.win_pos)
+    elseif opts.open then
+      -- explicitly requested to open the scrollback (mouse events)
+      self:open(opts.win_pos)
+    end
   end
 end
 
