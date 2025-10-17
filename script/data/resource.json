@@ -263,7 +263,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "63fac0a576bc78a4790cbcce24646cca860bc8c1"
+    "commit": "846d51137b8cbc030ab94edf9dc33968ddcdb195"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -289,7 +289,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "ce7af443ca95fdc9dea2a412b9213c211255a1c0"
+    "commit": "475d3ad8cae486b0df6fc6050cf5b5ea1de42db8"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
@@ -299,7 +299,7 @@
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
     "branch": "main",
-    "commit": "80d1604f7081cb6f72f6985af133dced8db5c5a8"
+    "commit": "4cab26429c01b2225dea7a201dcb94f81767e50b"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
