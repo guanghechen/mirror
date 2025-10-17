@@ -54,10 +54,10 @@ end
 
 ---@param text sidekick.Text[]
 function M:format(text)
-  local ret = table.concat(Text.lines(text), "\n")
+  local ret = Text.to_string(text)
   if type(self.config.format) == "function" then
     local str = self.config.format(text, ret)
-    ret = str or table.concat(Text.lines(text), "\n")
+    ret = str or Text.to_string(text)
   end
   return ret
 end

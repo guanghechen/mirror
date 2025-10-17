@@ -181,7 +181,7 @@ function C:render(opts)
     vim.list_extend(ret, vt)
   end
 
-  return table.concat(Text.lines(ret), "\n"), ret
+  return Text.to_string(ret), ret
 end
 
 ---@param name string

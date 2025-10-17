@@ -176,4 +176,9 @@ function M.transform(text, cb, filter)
   end
 end
 
+---@param text sidekick.Text[]
+function M.to_string(text)
+  return table.concat(M.lines(text), "\n")
+end
+
 return M
