@@ -10,6 +10,7 @@ local M = {}
 ---@class sidekick.cli.Message
 ---@field msg? string
 ---@field prompt? string
+---@field text? sidekick.Text[]
 
 ---@class sidekick.cli.Config
 ---@field cmd string[] Command to run the CLI tool
@@ -18,6 +19,7 @@ local M = {}
 ---@field keys? table<string, sidekick.cli.Keymap|false>
 ---@field is_proc? (fun(self:sidekick.cli.Tool, proc:sidekick.cli.Proc):boolean)|string Regex or function to identity a running process
 ---@field mux_focus? boolean wether the tool needs to be focused in order to receive input
+---@field format? fun(text:sidekick.Text[], str:string):string?
 
 ---@class sidekick.cli.Show
 ---@field name? string
@@ -32,7 +34,6 @@ local M = {}
 
 ---@class sidekick.cli.Send: sidekick.cli.Show,sidekick.cli.Message
 ---@field submit? boolean
----@field render? boolean
 
 --- Keymap options similar to `vim.keymap.set` and `lazy.nvim` mappings
 ---@class sidekick.cli.Keymap: vim.keymap.set.Opts
@@ -57,9 +58,9 @@ end
 function M.prompt(opts)
   opts = opts or {}
   opts = type(opts) == "function" and { cb = opts } or opts --[[@as sidekick.cli.Prompt]]
-  opts.cb = opts.cb or function(msg)
-    if msg then
-      M.send({ msg = msg, render = false })
+  opts.cb = opts.cb or function(_, text)
+    if text then
+      M.send({ text = text })
     end
   end
   require("sidekick.cli.ui.prompt").select(opts)
@@ -174,17 +175,22 @@ function M.send(opts)
     opts.msg = "{selection}"
   end
 
-  local msg = opts.render ~= false and M.render(opts) or opts.msg
-  if msg == "" then
-    Util.warn("Nothing to send.")
-    return
-  elseif msg == "\n" then
-    msg = "" -- allow sending a new line
+  local msg, text = "", opts.text ---@type string?, sidekick.Text[]?
+  if not text then
+    msg, text = M.render(opts)
+    if msg == "" or not text then
+      Util.warn("Nothing to send.")
+      return
+    elseif msg == "\n" then
+      msg = "" -- allow sending a new line
+      text = {}
+    end
   end
 
   State.with(function(state)
     Util.exit_visual_mode()
     vim.schedule(function()
+      msg = state.tool:format(text)
       state.session:send(msg .. "\n")
       if opts.submit then
         state.session:submit()

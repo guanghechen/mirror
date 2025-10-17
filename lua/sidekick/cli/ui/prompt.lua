@@ -6,7 +6,7 @@ local Context = require("sidekick.cli.context")
 local M = {}
 
 ---@class sidekick.cli.Prompt
----@field cb fun(msg?:string)
+---@field cb fun(msg?:string, text?:sidekick.Text[])
 
 ---@param opts sidekick.cli.Prompt
 function M.select(opts)
@@ -60,6 +60,7 @@ function M.select(opts)
       ---@class sidekick.select_prompt.Item: snacks.picker.finder.Item
       items[#items + 1] = {
         text = name,
+        rendered = rendered,
         data = text,
         name = name,
         prompt = prompt,
@@ -104,7 +105,10 @@ function M.select(opts)
 
   ---@param choice? sidekick.select_prompt.Item
   vim.ui.select(items, select_opts, function(choice)
-    return opts.cb(choice and choice.preview.text or nil)
+    if not choice then
+      return opts.cb()
+    end
+    return opts.cb(choice.preview.text, choice.rendered)
   end)
 end
 

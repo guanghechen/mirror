@@ -1,4 +1,5 @@
 local Config = require("sidekick.config")
+local Text = require("sidekick.text")
 
 ---@class sidekick.cli.Tool: sidekick.cli.Config
 ---@field config sidekick.cli.Config
@@ -27,6 +28,7 @@ function M.get(name)
   local self = setmetatable(vim.deepcopy(config), M) --[[@as sidekick.cli.Tool]]
   self.config = config
   self.is_proc = nil
+  self.format = nil
   self.name = name
   return self
 end
@@ -48,6 +50,16 @@ end
 function M:clone(opts)
   local clone = vim.tbl_deep_extend("force", vim.deepcopy(self), opts or {})
   return setmetatable(clone, M) --[[@as sidekick.cli.Tool]]
+end
+
+---@param text sidekick.Text[]
+function M:format(text)
+  local ret = table.concat(Text.lines(text), "\n")
+  if type(self.config.format) == "function" then
+    local str = self.config.format(text, ret)
+    ret = str or table.concat(Text.lines(text), "\n")
+  end
+  return ret
 end
 
 return M

@@ -146,4 +146,34 @@ function M.split(str, pattern)
   return ret
 end
 
+---@param text sidekick.Text[]
+---@param cb fun(str:string, chunk:sidekick.Chunk):string?, integer?
+---@param filter? string[]|string hl to filter by
+function M.transform(text, cb, filter)
+  filter = (filter and type(filter) == "string") and { filter } or filter
+  ---@cast filter string[]?
+
+  ---@param chunk sidekick.Chunk
+  local function want(chunk)
+    if not filter then
+      return true
+    end
+    local hl = type(chunk[2]) == "string" and { chunk[2] } or chunk[2] or {}
+    ---@cast hl string[]
+    for _, f in ipairs(filter) do
+      if vim.tbl_contains(hl, f) then
+        return true
+      end
+    end
+  end
+
+  for _, line in ipairs(text) do
+    for _, t in ipairs(line) do
+      if want(t) then
+        t[1] = cb(t[1], t) or t[1]
+      end
+    end
+  end
+end
+
 return M
