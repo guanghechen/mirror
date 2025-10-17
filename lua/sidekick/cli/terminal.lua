@@ -336,6 +336,7 @@ end
 
 function M:hide()
   if self:is_open() then
+    self:blur()
     pcall(vim.api.nvim_win_close, self.win, true)
     self.win = nil
   end
@@ -351,7 +352,6 @@ function M:close()
     return self
   end
   self.closed = true
-  self:blur()
 
   M.terminals[self.id] = nil
   if vim.tbl_isempty(M.terminals) then
