@@ -629,6 +629,46 @@ current file, selection, diagnostics, and more.
 
 </details>
 
+### Snacks.nvim Picker Integration
+
+If you're using [snacks.nvim](https://github.com/folke/snacks.nvim), you can send picker selections directly to Sidekick's AI CLI tools. This is useful for sending search results, grep matches, or file selections as context.
+
+<details><summary>Example Snacks picker configuration</summary>
+
+```lua
+{
+  "folke/snacks.nvim",
+  optional = true,
+  opts = {
+    picker = {
+      actions = {
+        sidekick_send = function(...)
+          return require("sidekick.cli.snacks").send(...)
+        end,
+      },
+      win = {
+        input = {
+          keys = {
+            ["<a-a>"] = {
+              "sidekick_send",
+              mode = { "n", "i" },
+            },
+          },
+        },
+      },
+    },
+  },
+},
+```
+
+With this configuration, pressing `<a-a>` in any Snacks picker will send the selected items to your current AI CLI session. The integration automatically handles:
+- File selections with full paths
+- Grep results with line numbers and positions
+- Multiple selections (sends all selected items)
+- Position ranges for precise context
+
+</details>
+
 ### CLI Keymaps
 
 You can customize the keymaps for the CLI window by setting the `cli.win.keys` option.
