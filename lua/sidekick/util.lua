@@ -25,8 +25,15 @@ function M.warn(msg)
 end
 
 ---@param msg string|string[]
-function M.debug(msg)
+---@param what? any
+function M.debug(msg, what)
   if require("sidekick.config").debug then
+    if what ~= nil then
+      msg = type(msg) == "table" and msg or { msg } ---@type string[]
+      msg[#msg + 1] = "```lua"
+      msg[#msg + 1] = vim.inspect(what)
+      msg[#msg + 1] = "```"
+    end
     M.warn(msg)
   end
 end
@@ -280,6 +287,17 @@ function M.overlaps(a, b)
     end
   end
   return false
+end
+
+---@param buf number
+---@param pos sidekick.Pos
+---@private
+function M.fix_pos(buf, pos)
+  local last_line = vim.api.nvim_buf_line_count(buf) - 1
+  if pos[1] > last_line then
+    return { last_line, #(vim.api.nvim_buf_get_lines(buf, -2, -1, false)[1] or "") }
+  end
+  return pos
 end
 
 return M

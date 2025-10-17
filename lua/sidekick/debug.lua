@@ -54,7 +54,7 @@ function M.nes_inspect(show)
   if not edit then
     return
   end
-  edit.diff = nil
+  edit._diff = nil
   edit.command = nil
   if show ~= false then
     Snacks.debug.inspect(edit)

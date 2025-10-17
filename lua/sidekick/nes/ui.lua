@@ -7,7 +7,12 @@ local M = {}
 ---@param edit sidekick.NesEdit
 function M.render(edit)
   vim.b[edit.buf].sidekick_nes_ui = true
-  local diff = require("sidekick.nes.diff").diff(edit)
+  local diff = edit:diff()
+
+  if #diff.hunks == 0 then
+    Util.debug("No hunks in edit", edit)
+    return
+  end
 
   local from, to = edit.from, edit.to
 

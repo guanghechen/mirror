@@ -3,20 +3,6 @@ local Util = require("sidekick.util")
 
 local M = {}
 
----@alias sidekick.Pos {[1]:integer, [2]:integer}
-
----@class sidekick.lsp.NesEdit
----@field command lsp.Command
----@field range lsp.Range
----@field text string
----@field textDocument {uri: string, version: integer}
-
----@class sidekick.NesEdit: sidekick.lsp.NesEdit
----@field buf integer
----@field from sidekick.Pos
----@field to sidekick.Pos
----@field diff? sidekick.Diff
-
 M._edits = {} ---@type sidekick.NesEdit[]
 M._requests = {} ---@type table<number, number>
 M.enabled = false
@@ -168,6 +154,9 @@ function M.get(buf)
     if not is_enabled(edit.buf) then
       return false
     end
+    if edit:is_empty() then
+      return false
+    end
     return buf == nil or edit.buf == buf
   end, M._edits)
 end
@@ -205,43 +194,14 @@ function M._handler(err, res, ctx)
 
   res = res or { edits = {} }
 
-  ---@param buf number
-  ---@param p lsp.Position
-  ---@return sidekick.Pos
-  local function pos(buf, p)
-    local line = vim.api.nvim_buf_get_lines(buf, p.line, p.line + 1, false)[1] or ""
-    return { p.line, vim.str_byteindex(line, client.offset_encoding, p.character, false) }
-  end
-
   for _, edit in ipairs(res.edits or {}) do
-    local fname = vim.uri_to_fname(edit.textDocument.uri)
-    local buf = vim.fn.bufnr(fname, false)
-    if
-      buf
-      and vim.api.nvim_buf_is_valid(buf)
-      and is_enabled(buf)
-      and edit.textDocument.version == vim.lsp.util.buf_versions[buf]
-    then
-      ---@cast edit sidekick.NesEdit
-      edit.buf = buf
-      edit.from, edit.to = pos(buf, edit.range.start), pos(buf, edit.range["end"])
-      edit.to = M.fix_pos(buf, edit.to)
-      table.insert(M._edits, edit)
+    local e = require("sidekick.nes.edit").new(client, edit)
+    if e:valid() and is_enabled(e.buf) then
+      table.insert(M._edits, e)
     end
   end
 
   require("sidekick.nes.ui").update()
-end
-
----@param buf number
----@param pos sidekick.Pos
----@private
-function M.fix_pos(buf, pos)
-  local last_line = vim.api.nvim_buf_line_count(buf) - 1
-  if pos[1] > last_line then
-    return { last_line, #(vim.api.nvim_buf_get_lines(buf, -2, -1, false)[1] or "") }
-  end
-  return pos
 end
 
 --- Jump to the start of the active edit
@@ -257,8 +217,11 @@ function M.jump()
     return false
   end
 
-  local diff = require("sidekick.nes.diff").diff(edit)
+  local diff = edit:diff()
   local hunk = vim.deepcopy(diff.hunks[1])
+  if not hunk then
+    return false -- sometimes nes returns an edit with no changes
+  end
   local pos = hunk.pos
 
   return M._jump(pos)
@@ -267,7 +230,7 @@ end
 ---@param pos sidekick.Pos
 function M._jump(pos)
   pos = vim.deepcopy(pos)
-  pos = M.fix_pos(0, pos)
+  pos = Util.fix_pos(0, pos)
 
   local win = vim.api.nvim_get_current_win()
 
@@ -323,7 +286,7 @@ function M.apply()
   end, edits) --[[@as lsp.TextEdit[] ]]
   vim.schedule(function()
     local last = edits[#edits]
-    local diff = require("sidekick.nes.diff").diff(last)
+    local diff = last:diff()
 
     -- apply the edits
     vim.lsp.util.apply_text_edits(text_edits, buf, client.offset_encoding)

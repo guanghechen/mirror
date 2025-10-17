@@ -66,10 +66,6 @@ end
 
 ---@param edit sidekick.NesEdit
 function M.diff(edit)
-  if edit.diff then
-    return edit.diff
-  end
-
   local from_text, to_text = M.parse_edit(edit)
   local to_lines = vim.split(to_text, "\n", { plain = true })
   local from_lines = vim.split(from_text, "\n", { plain = true })
@@ -96,8 +92,6 @@ function M.diff(edit)
   }
 
   M.diff_lines(ret)
-
-  edit.diff = ret
   return ret
 end
 
