@@ -168,8 +168,8 @@ end
 ---@param opts? sidekick.cli.Send
 ---@overload fun(msg:string)
 function M.send(opts)
-  opts = opts or {}
   opts = type(opts) == "string" and { msg = opts } or opts
+  opts = filter_opts(opts)
 
   if not opts.msg and not opts.prompt and Util.visual_mode() then
     opts.msg = "{selection}"
