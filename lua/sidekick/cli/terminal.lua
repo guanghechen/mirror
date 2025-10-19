@@ -154,13 +154,13 @@ function M:start()
   self:open_win()
 
   -- track if we are in normal mode or terminal mode
-  vim.api.nvim_create_autocmd("TermLeave", {
+  vim.api.nvim_create_autocmd("WinLeave", {
     group = self.group,
     callback = function()
-      self.normal_mode = false
-      vim.schedule(function()
-        self.normal_mode = self:is_focused()
-      end)
+      if not self:is_focused() then
+        return
+      end
+      self.normal_mode = vim.fn.mode() ~= "t"
     end,
   })
 
@@ -168,11 +168,14 @@ function M:start()
   vim.api.nvim_create_autocmd("WinEnter", {
     group = self.group,
     callback = function()
-      if self:is_focused() then
-        self.atime = vim.uv.hrtime()
-        if not self.normal_mode then
-          vim.cmd.startinsert()
-        end
+      if not self:is_focused() then
+        return
+      end
+      self.atime = vim.uv.hrtime()
+      if self.normal_mode then
+        vim.cmd.stopinsert()
+      else
+        vim.cmd.startinsert()
       end
     end,
   })
@@ -254,6 +257,9 @@ function M:start()
           vim.api.nvim_buf_call(self.buf, function()
             vim.api.nvim_put(vim.split(next, "\n", { plain = true }), "c", false, true)
           end)
+          if self:is_focused() then
+            vim.cmd.startinsert()
+          end
         end
       end)
     end
