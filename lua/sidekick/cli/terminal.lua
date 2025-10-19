@@ -338,6 +338,20 @@ end
 function M:hide()
   if self:is_open() then
     self:blur()
+    local wins = vim.api.nvim_list_wins()
+    if #wins == 1 and wins[1] == self.win then
+      -- last window, switch to another buffer, or create a new one
+      local buf = vim.tbl_filter(function(b)
+        return vim.bo[b].buflisted
+      end, vim.api.nvim_list_bufs())[1] --[[@as integer?]]
+      if buf then
+        -- switch to another buffer
+        vim.cmd.sbuffer(buf)
+      else
+        -- no other buffers to switch to, create a new empty buffer
+        vim.cmd.enew()
+      end
+    end
     pcall(vim.api.nvim_win_close, self.win, true)
     self.win = nil
   end
