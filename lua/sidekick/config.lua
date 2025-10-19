@@ -61,6 +61,8 @@ local defaults = {
       ---@type table<string, sidekick.cli.Keymap|false>
       -- stylua: ignore
       keys = {
+        buffers       = { "<c-b>", "buffers"   , mode = "nt", desc = "open buffer picker" },
+        files         = { "<c-f>", "files"     , mode = "nt", desc = "open file picker" },
         hide_n        = { "q"    , "hide"      , mode = "n" , desc = "hide the terminal window" },
         hide_ctrl_q   = { "<c-q>", "hide"      , mode = "n" , desc = "hide the terminal window" },
         hide_ctrl_dot = { "<c-.>", "hide"      , mode = "nt", desc = "hide the terminal window" },
@@ -143,6 +145,9 @@ local defaults = {
       ["function"]    = "{function}",
       class           = "{class}",
     },
+    -- preferred picker for selecting files
+    ---@alias sidekick.picker "snacks"|"telescope"|"fzf-lua"
+    picker = "snacks", ---@type sidekick.picker
   },
   copilot = {
     -- track copilot's status with `didChangeStatus`

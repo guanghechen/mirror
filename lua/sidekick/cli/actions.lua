@@ -20,6 +20,22 @@ function M.prompt(t)
   end)
 end
 
+---@param source string
+---@param t sidekick.cli.Terminal
+local function picker(source, t)
+  vim.schedule(function()
+    require("sidekick.cli.picker").open(source, { filter = { session = t.id } })
+  end)
+end
+
+function M.files(t)
+  picker("files", t)
+end
+
+function M.buffers(t)
+  picker("buffers", t)
+end
+
 ---@param dir "h"|"j"|"k"|"l"
 local function nav(dir)
   ---@type sidekick.cli.Action
