@@ -1,7 +1,18 @@
 local M = {}
 
----@param ctx sidekick.context.ctx|{name?: string}
----@param opts? {kind?: "file"|"line"|"position"}
+---@class sidekick.context.Loc
+---@field name? string
+---@field buf? integer
+---@field cwd? string
+---@field row? integer (1-based)
+---@field col? integer (1-based)
+---@field range? sidekick.context.Range
+
+---@class sidekick.context.loc.Opts
+---@field kind? "file"|"line"|"position"
+
+---@param ctx sidekick.context.Loc|sidekick.context.ctx
+---@param opts? sidekick.context.loc.Opts
 ---@return sidekick.Text[]
 function M.get(ctx, opts)
   opts = opts or {}
@@ -12,19 +23,10 @@ function M.get(ctx, opts)
   if not name or name == "" then
     name = "[No Name]"
   else
-    local ok, rel = pcall(vim.fs.relpath, ctx.cwd, name)
+    local cwd = ctx.cwd or vim.fn.getcwd(0)
+    local ok, rel = pcall(vim.fs.relpath, cwd, name)
     if ok and rel and rel ~= "" and rel ~= "." then
       name = rel
-    end
-  end
-
-  local from = ctx.range and ctx.range.from or { ctx.row, ctx.col }
-  local to = ctx.range and ctx.range.to or nil
-
-  -- normalize order
-  if from and to then
-    if from[1] > to[1] or (from[1] == to[1] and from[2] > to[2]) then
-      from, to = to, from
     end
   end
 
@@ -47,6 +49,20 @@ function M.get(ctx, opts)
 
   add("@")
   ret[#ret + 1] = { name, "SidekickLocFile" }
+
+  if not (ctx.row and ctx.col) and not ctx.range then
+    return { ret }
+  end
+
+  local from = ctx.range and ctx.range.from or { ctx.row, ctx.col }
+  local to = ctx.range and ctx.range.to or nil
+
+  -- normalize order
+  if from and to then
+    if from[1] > to[1] or (from[1] == to[1] and from[2] > to[2]) then
+      from, to = to, from
+    end
+  end
 
   if opts.kind == "line" or (ctx.range and ctx.range.kind == "line") then
     add(" ")
