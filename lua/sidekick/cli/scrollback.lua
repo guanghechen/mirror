@@ -1,9 +1,11 @@
+local Config = require("sidekick.config")
 local Util = require("sidekick.util")
 
 ---@class sidekick.cli.Scrollback
 ---@field terminal {value?:sidekick.cli.Terminal}|fun():sidekick.cli.Terminal?
 ---@field buf? number
 ---@field closing? boolean
+---@field term_buf? number
 local M = {}
 M.__index = M
 
@@ -22,9 +24,6 @@ vim.on_key(function(key, typed)
   if key ~= MOUSE_SCROLL_UP and key ~= MOUSE_SCROLL_DOWN and key ~= MOUSE_CLICK then
     return
   end
-  if vim.fn.mode() ~= "t" then
-    return
-  end
   local info = vim.fn.getmousepos()
   local session_id = vim.w[info.winid].sidekick_session_id
   local sb = session_id and M.scrollbacks[session_id]
@@ -38,25 +37,37 @@ function M.new(terminal)
   local self = setmetatable({}, M)
   self.terminal = Util.ref(terminal)
 
-  local update = function()
-    self:update()
-  end
+  vim.api.nvim_create_autocmd({ "TermClose" }, {
+    group = terminal.group,
+    callback = function(ev)
+      -- this will trigger a TermLeave, so update the current term_buf
+      self.term_buf = ev.buf
+    end,
+  })
 
   vim.api.nvim_create_autocmd({ "TermEnter" }, {
     group = terminal.group,
-    callback = update,
+    callback = function()
+      self.term_buf = vim.api.nvim_get_current_buf()
+      self:update({ reason = "TermEnter" })
+    end,
   })
 
   vim.api.nvim_create_autocmd({ "TermLeave" }, {
     group = terminal.group,
-    callback = vim.schedule_wrap(update),
+    callback = function()
+      vim.schedule(function()
+        self:update({ reason = "TermLeave" })
+        self.term_buf = nil
+      end)
+    end,
   })
 
   vim.api.nvim_create_autocmd({ "WinEnter" }, {
     group = terminal.group,
     callback = function()
       vim.defer_fn(function()
-        self:update()
+        self:update({ reason = "WinEnter" })
       end, 50)
     end,
   })
@@ -134,6 +145,20 @@ function M:close()
   end
 end
 
+---@param msg string
+---@param reason? string
+function M:debug(msg, reason)
+  if not Config.debug then
+    return
+  end
+  Util.debug(msg, {
+    reason = reason,
+    mode = vim.fn.mode(true),
+    is_focused = self:is_focused(),
+    is_open = self:is_open(),
+  })
+end
+
 ---@param opts? { open?:boolean, win_pos?:sidekick.Pos, reason?:string }
 function M:update(opts)
   opts = opts or {}
@@ -143,12 +168,13 @@ function M:update(opts)
     return
   end
 
-  local mode = vim.fn.mode()
+  local mode = vim.fn.mode(true)
   local is_open = self:is_open()
   local is_focused = self:is_focused()
 
   if is_open then
     if mode == "t" and is_focused then
+      self:debug("closing", opts.reason)
       -- terminal mode in the scrollback buffer: close it
       self.closing = true -- prevent TermLeave from reopening
       vim.cmd.stopinsert()
@@ -156,16 +182,26 @@ function M:update(opts)
         self:close()
         vim.cmd.startinsert()
         vim.schedule(function()
+          self:debug("closed", opts.reason)
           self.closing = false
         end)
       end)
     end
   elseif not self.closing then
-    if mode ~= "t" and is_focused then
+    if mode == "nt" and is_focused then
+      if self.term_buf and self.term_buf ~= terminal.buf then
+        -- we were in terminal mode and another terminal left terminal mode
+        -- so re-enter terminal mode
+        self:debug("re-entering terminal mode", opts.reason)
+        vim.cmd.startinsert()
+        return
+      end
       -- normal mode in the terminal buffer: open the scrollback
+      self:debug("opening", opts.reason)
       self:open(opts.win_pos)
     elseif opts.open then
       -- explicitly requested to open the scrollback (mouse events)
+      self:debug("open_request", opts.reason)
       self:open(opts.win_pos)
     end
   end
