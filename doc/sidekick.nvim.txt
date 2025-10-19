@@ -586,9 +586,12 @@ Example Snacks picker configuration ~
 
 With this configuration, pressing `<a-a>` in any Snacks picker will send the
 selected items to your current AI CLI session. The integration automatically
-handles: - File selections with full paths - Grep results with line numbers and
-positions - Multiple selections (sends all selected items) - Position ranges
-for precise context
+handles:
+
+- File selections with full paths
+- Grep results with line numbers and positions
+- Multiple selections (sends all selected items)
+- Position ranges for precise context
 
 
 CLI KEYMAPS ~
@@ -759,7 +762,7 @@ Here are some examples of how to use the `:Sidekick` command:
 STATUSLINE INTEGRATION    *sidekick.nvim-sidekick.nvim-statusline-integration*
 
 Using the `require("sidekick.status")` API, you can easily integrate **Copilot
-LSP** in your statusline.
+LSP** and **CLI sessions** in your statusline.
 
 Example for lualine.nvim ~
 
@@ -769,6 +772,8 @@ Example for lualine.nvim ~
       opts = function(_, opts)
         opts.sections = opts.sections or {}
         opts.sections.lualine_c = opts.sections.lualine_c or {}
+    
+        -- Copilot status
         table.insert(opts.sections.lualine_c, {
           function()
             return " "
@@ -782,6 +787,20 @@ Example for lualine.nvim ~
           cond = function()
             local status = require("sidekick.status")
             return status.get() ~= nil
+          end,
+        })
+    
+        -- CLI session status
+        table.insert(opts.sections.lualine_x, 2, {
+          function()
+            local status = require("sidekick.status").cli()
+            return " " .. (#status > 1 and #status or "")
+          end,
+          cond = function()
+            return #require("sidekick.status").cli() > 0
+          end,
+          color = function()
+            return "Special"
           end,
         })
       end,
