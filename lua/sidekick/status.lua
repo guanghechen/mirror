@@ -7,7 +7,14 @@ local M = {}
 ---@field kind "Normal" | "Error" | "Warning" | "Inactive"
 ---@field message? string
 
+---@class sidekick.cli.Status
+---@field id string
+---@field tool string
+---@field cwd string
+
 local status = {} ---@type table<integer, sidekick.lsp.Status>
+local cli_sessions = {} ---@type table<string, sidekick.cli.Status>
+local cli_last_update = 0
 
 local levels = {
   Normal = vim.log.levels.INFO,
@@ -15,6 +22,18 @@ local levels = {
   Error = vim.log.levels.ERROR,
   Inactive = vim.log.levels.WARN,
 }
+
+local function update_cli_status()
+  local Session = require("sidekick.cli.session")
+  cli_sessions = {}
+  for id, session in pairs(Session.attached()) do
+    cli_sessions[id] = {
+      id = session.id,
+      tool = session.tool.name,
+      cwd = session.cwd,
+    }
+  end
+end
 
 ---@param res sidekick.lsp.Status
 ---@type lsp.Handler
@@ -50,18 +69,47 @@ function M.get(buf)
 end
 
 function M.setup()
-  vim.api.nvim_create_autocmd("LspAttach", {
-    group = Config.augroup,
-    callback = function(ev)
-      local client = vim.lsp.get_client_by_id(ev.data.client_id)
-      if client and Config.is_copilot(client) then
-        M.attach(client)
-      end
-    end,
-  })
-  for _, client in ipairs(Config.get_clients()) do
-    M.attach(client)
+  if Config.copilot.status.enabled then
+    vim.api.nvim_create_autocmd("LspAttach", {
+      group = Config.augroup,
+      callback = function(ev)
+        local client = vim.lsp.get_client_by_id(ev.data.client_id)
+        if client and Config.is_copilot(client) then
+          M.attach(client)
+        end
+      end,
+    })
+    for _, client in ipairs(Config.get_clients()) do
+      M.attach(client)
+    end
   end
+
+  vim.api.nvim_create_autocmd("User", {
+    group = Config.augroup,
+    pattern = "SidekickCliAttach",
+    callback = update_cli_status,
+  })
+
+  vim.api.nvim_create_autocmd("User", {
+    group = Config.augroup,
+    pattern = "SidekickCliDetach",
+    callback = update_cli_status,
+  })
+
+  update_cli_status()
+end
+
+--- Get CLI session status
+---@return sidekick.cli.Status[]
+function M.cli()
+  local now = vim.uv.now()
+  if now - cli_last_update > 5000 then
+    -- update periodically to detect sessions where `is_running()` returns false
+    -- can happen when an external process stopped
+    update_cli_status()
+    cli_last_update = now
+  end
+  return vim.tbl_values(cli_sessions)
 end
 
 return M

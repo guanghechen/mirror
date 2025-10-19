@@ -667,6 +667,7 @@ If you're using [snacks.nvim](https://github.com/folke/snacks.nvim), you can sen
 ```
 
 With this configuration, pressing `<a-a>` in any Snacks picker will send the selected items to your current AI CLI session. The integration automatically handles:
+
 - File selections with full paths
 - Grep results with line numbers and positions
 - Multiple selections (sends all selected items)
@@ -837,7 +838,7 @@ Here are some examples of how to use the `:Sidekick` command:
 ## 📟 Statusline Integration
 
 Using the `require("sidekick.status")` API, you can easily integrate **Copilot LSP**
-in your statusline.
+and **CLI sessions** in your statusline.
 
 <details>
 <summary>Example for <a href="https://github.com/nvim-lualine/lualine.nvim">lualine.nvim</a></summary>
@@ -850,6 +851,8 @@ in your statusline.
   opts = function(_, opts)
     opts.sections = opts.sections or {}
     opts.sections.lualine_c = opts.sections.lualine_c or {}
+
+    -- Copilot status
     table.insert(opts.sections.lualine_c, {
       function()
         return " "
@@ -863,6 +866,20 @@ in your statusline.
       cond = function()
         local status = require("sidekick.status")
         return status.get() ~= nil
+      end,
+    })
+
+    -- CLI session status
+    table.insert(opts.sections.lualine_x, 2, {
+      function()
+        local status = require("sidekick.status").cli()
+        return " " .. (#status > 1 and #status or "")
+      end,
+      cond = function()
+        return #require("sidekick.status").cli() > 0
+      end,
+      color = function()
+        return "Special"
       end,
     })
   end,

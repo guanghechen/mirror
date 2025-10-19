@@ -221,9 +221,7 @@ function M.setup(opts)
       require("sidekick.nes").enable()
     end
 
-    if M.copilot.status.enabled then
-      require("sidekick.status").setup()
-    end
+    require("sidekick.status").setup()
 
     M.validate("cli.win.layout", { "float", "left", "bottom", "top", "right" })
     M.validate("cli.mux.backend", { "tmux", "zellij" })
