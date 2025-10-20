@@ -47,7 +47,11 @@ function M.on_status(err, res, ctx)
   if res.message and level >= Config.copilot.status.level then
     local msg = "**Copilot:** " .. res.message
     if msg:find("not signed") then
-      msg = msg .. "\nPlease use `:LspCopilotSignIn` to sign in."
+      if package.loaded.copilot then
+        msg = msg .. "\nPlease use `:Copilot auth` to sign in."
+      else
+        msg = msg .. "\nPlease use `:LspCopilotSignIn` to sign in."
+      end
     end
     require("sidekick.util").notify(msg, res.kind == "Error" and vim.log.levels.ERROR or vim.log.levels.WARN)
   end
