@@ -86,13 +86,7 @@ function M.setup()
 
   vim.api.nvim_create_autocmd("User", {
     group = Config.augroup,
-    pattern = "SidekickCliAttach",
-    callback = update_cli_status,
-  })
-
-  vim.api.nvim_create_autocmd("User", {
-    group = Config.augroup,
-    pattern = "SidekickCliDetach",
+    pattern = { "SidekickCliAttach", "SidekickCliDetach" },
     callback = update_cli_status,
   })
 

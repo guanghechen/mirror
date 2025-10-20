@@ -160,9 +160,11 @@ end
 ---@param session sidekick.cli.Session
 function M.detach(session)
   if M._attached[session.id] then
-    session:detach()
-    Util.emit("SidekickCliDetach", { id = session.id })
     M._attached[session.id] = nil
+    session:detach()
+    vim.schedule(function()
+      Util.emit("SidekickCliDetach", { id = session.id })
+    end)
   end
   return session
 end
