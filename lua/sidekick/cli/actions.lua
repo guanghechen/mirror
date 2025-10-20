@@ -23,8 +23,13 @@ end
 ---@param source string
 ---@param t sidekick.cli.Terminal
 local function picker(source, t)
+  vim.cmd.stopinsert()
   vim.schedule(function()
-    require("sidekick.cli.picker").open(source, { filter = { session = t.id } })
+    require("sidekick.cli.picker").open(source, { filter = { session = t.id } }, {
+      on_show = function()
+        t.normal_mode = false
+      end,
+    })
   end)
 end
 

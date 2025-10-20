@@ -54,9 +54,10 @@ end
 
 ---@param source string
 ---@param opts? sidekick.context.loc.Opts|sidekick.cli.Send
-function M.open(source, opts)
+---@param popts? table
+function M.open(source, opts, popts)
   local picker = M.get()
-  return picker and picker.open(source, M._send_cb(opts))
+  return picker and picker.open(source, M._send_cb(opts), popts)
 end
 
 return M
