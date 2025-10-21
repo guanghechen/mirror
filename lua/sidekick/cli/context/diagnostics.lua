@@ -2,7 +2,7 @@ local Loc = require("sidekick.cli.context.location")
 
 local M = {}
 
----@param ctx? sidekick.context.ctx
+---@param ctx sidekick.context.ctx
 ---@param opts? vim.diagnostic.GetOpts|{all?:boolean}
 function M.get(ctx, opts)
   opts = opts or {}
@@ -26,40 +26,44 @@ function M.get(ctx, opts)
     local end_lnum = (d.end_lnum or d.lnum or 0) + 1
     local end_col = d.end_col or d.col or 0
 
-    local vt = {} ---@type sidekick.Text
-    vt[#vt + 1] = {
-      "[" .. severity .. "]",
-      "DiagnosticVirtualText" .. severity:sub(1, 1):upper() .. severity:sub(2):lower(),
-    }
-    vt[#vt + 1] = { " " }
+    local want = ctx.range == nil or (lnum >= ctx.range.from[1] and lnum <= ctx.range.to[1])
 
-    local msg_text = (d.message or "")
-    local msg = require("sidekick.treesitter").get_virtual_lines(msg_text, { ft = "markdown_inline" })
-    for i, t in ipairs(msg) do
-      if i > 1 then
-        ret[#ret + 1] = vt
-        vt = {}
-      end
-      vim.list_extend(vt, t)
-    end
-
-    local loc = Loc.get({
-      row = lnum,
-      col = col,
-      cwd = ctx and ctx.cwd or vim.fs.normalize(vim.fn.getcwd()),
-      buf = d.bufnr,
-      range = {
-        from = { lnum, col },
-        to = { end_lnum, end_col },
-        kind = "char",
-      },
-    })
-    if loc[1] then
+    if want then
+      local vt = {} ---@type sidekick.Text
+      vt[#vt + 1] = {
+        "[" .. severity .. "]",
+        "DiagnosticVirtualText" .. severity:sub(1, 1):upper() .. severity:sub(2):lower(),
+      }
       vt[#vt + 1] = { " " }
-      vim.list_extend(vt, loc[1])
-    end
 
-    ret[#ret + 1] = vt
+      local msg_text = (d.message or "")
+      local msg = require("sidekick.treesitter").get_virtual_lines(msg_text, { ft = "markdown_inline" })
+      for i, t in ipairs(msg) do
+        if i > 1 then
+          ret[#ret + 1] = vt
+          vt = {}
+        end
+        vim.list_extend(vt, t)
+      end
+
+      local loc = Loc.get({
+        row = lnum,
+        col = col,
+        cwd = ctx and ctx.cwd or vim.fs.normalize(vim.fn.getcwd()),
+        buf = d.bufnr,
+        range = {
+          from = { lnum, col },
+          to = { end_lnum, end_col },
+          kind = "char",
+        },
+      })
+      if loc[1] then
+        vt[#vt + 1] = { " " }
+        vim.list_extend(vt, loc[1])
+      end
+
+      ret[#ret + 1] = vt
+    end
   end
 
   return ret
