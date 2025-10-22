@@ -207,7 +207,9 @@ end
 --- @param rules blink.pairs.Rule[]
 function mappings.enter(rules)
   return function()
-    if not mappings.is_enabled() or vim.api.nvim_get_mode().mode == 'c' then return '<CR>' end
+    -- invalid in cmdline, use <C-]> to expand abbreviations
+    if vim.api.nvim_get_mode().mode == 'c' then return '<C-]><CR>' end
+    if not mappings.is_enabled() then return '<CR>' end
 
     local ctx = require('blink.pairs.context').new()
     local rule, surrounding_space = rule_lib.get_surrounding(ctx, rules, 'enter')
@@ -226,11 +228,19 @@ end
 --- @param rules blink.pairs.Rule[]
 function mappings.space(rules)
   return function()
-    if not mappings.is_enabled() then return '<Space>' end
+    if not mappings.is_enabled() then
+      -- use <C-]> to expand abbreviations
+      if vim.api.nvim_get_mode().mode == 'c' then return '<C-]><Space>' end
+      return '<Space>'
+    end
 
     local ctx = require('blink.pairs.context').new()
     local rule = rule_lib.get_surrounding(ctx, rules, 'space')
-    if rule == nil then return '<Space>' end
+    if rule == nil then
+      -- use <C-]> to expand abbreviations
+      if vim.api.nvim_get_mode().mode == 'c' then return '<C-]><Space>' end
+      return '<Space>'
+    end
 
     -- "(|)" -> "( | )"
     return '<Space><Space>' .. mappings.shift_keycode(-1)
