@@ -3,6 +3,8 @@ local utils = require('blink.pairs.utils')
 local watcher = {
   --- @type table<number, boolean>
   watched_bufnrs = {},
+  --- @type table<number, number>
+  last_changedticks = {},
 }
 
 --- Runs a full parse on the buffer when start_line, old_end_line, and new_end_line are not provided.
@@ -46,30 +48,34 @@ function watcher.attach(bufnr)
   if not did_parse then return false end
 
   watcher.watched_bufnrs[bufnr] = true
+  watcher.last_changedticks[bufnr] = 0
 
-  local last_changedtick = 0
   vim.api.nvim_buf_attach(bufnr, false, {
-    on_detach = function() watcher.watched_bufnrs[bufnr] = nil end,
+    on_detach = function()
+      watcher.watched_bufnrs[bufnr] = nil
+      watcher.last_changedticks[bufnr] = nil
+    end,
 
     -- Full parse
     on_reload = function() parse_buffer(bufnr) end,
     on_changedtick = function(_, _, changedtick)
-      if changedtick == last_changedtick then return end
-      last_changedtick = changedtick
+      if changedtick == watcher.last_changedticks[bufnr] then return end
+      watcher.last_changedticks[bufnr] = changedtick
 
       parse_buffer(bufnr)
     end,
 
     -- Incremental parse
     on_lines = function(_, _, changedtick, start, old_end, new_end)
-      if changedtick == last_changedtick then return end
-      last_changedtick = changedtick
+      if changedtick == watcher.last_changedticks[bufnr] then return end
+      watcher.last_changedticks[bufnr] = changedtick
 
       local did_incremental_parse = parse_buffer(bufnr, start, old_end, new_end)
 
       -- no longer parseable, detach
       if not did_incremental_parse then
         watcher.watched_bufnrs[bufnr] = nil
+        watcher.last_changedticks[bufnr] = nil
         return true
       end
     end,
