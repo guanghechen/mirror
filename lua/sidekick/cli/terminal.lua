@@ -25,7 +25,7 @@ M.__index = M
 M.priority = 100
 M.external = false
 
-local INITIAL_SEND_DELAY = 500 -- ms
+local INITIAL_SEND_DELAY = 2000 -- ms
 local SEND_DELAY = 100 --ms
 local TERM_CLOSE_ERROR_DELAY = 3000 -- ms if the terminal errored, don't close the window
 local TERM_CLOSE_DELAY = 500 -- ms if the terminal closed too quickly, don't close the window
