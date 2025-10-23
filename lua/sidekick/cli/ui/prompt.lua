@@ -75,18 +75,19 @@ function M.select(opts)
   ---@type snacks.picker.ui_select.Opts
   local select_opts = {
     prompt = "Select a prompt",
+    kind = "sidekick_prompt",
     ---@param item sidekick.select_prompt.Item
-    format_item = function(item, is_snacks)
-      if is_snacks then
+    format_item = function(item)
+      return ("[%s] %s"):format(item.name, string.rep(" ", 18 - #item.name) .. item.prompt.msg)
+    end,
+    snacks = {
+      format = function(item)
         local ret = {} ---@type snacks.picker.Highlight[]
         ret[#ret + 1] = { item.name, "Title" }
         ret[#ret + 1] = { string.rep(" ", 18 - #item.name) }
         vim.list_extend(ret, tpl(item.prompt.msg))
         return ret
-      end
-      return ("[%s] %s"):format(item.name, string.rep(" ", 18 - #item.name) .. item.prompt.msg)
-    end,
-    picker = {
+      end,
       preview = "preview",
       layout = {
         preset = "vscode",

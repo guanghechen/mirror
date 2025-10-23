@@ -32,15 +32,15 @@ function M.select(opts)
   ---@type snacks.picker.ui_select.Opts
   local select_opts = {
     prompt = "Select CLI tool:",
-    picker = { format = M.format },
-    kind = "snacks",
+    kind = "sidekick_cli",
     ---@param tool sidekick.cli.State
-    format_item = function(tool, is_snacks)
+    format_item = function(tool)
       local parts = M.format(tool)
-      return is_snacks and parts or table.concat(vim.tbl_map(function(p)
+      return table.concat(vim.tbl_map(function(p)
         return p[1]
       end, parts))
     end,
+    snacks = { format = M.format },
   }
 
   vim.ui.select(tools, select_opts, on_select)
