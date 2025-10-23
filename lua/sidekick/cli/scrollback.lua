@@ -97,6 +97,11 @@ function M:open(win_pos)
   if not terminal then
     return
   end
+
+  if terminal.tool.native_scroll then
+    return
+  end
+
   local text = terminal.parent and terminal.parent:dump() or nil
   if not text then
     return self:scroll(win_pos)
@@ -165,6 +170,9 @@ function M:update(opts)
 
   local terminal = self.terminal()
   if not (terminal and terminal:is_open()) then
+    return
+  end
+  if terminal.tool.native_scroll then
     return
   end
 
