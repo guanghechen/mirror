@@ -25,7 +25,10 @@ M.__index = M
 M.priority = 100
 M.external = false
 
-local INITIAL_SEND_DELAY = 2000 -- ms
+local READY_MAX_WAIT = 5000 -- ms
+local READY_CHECK_INTERVAL = 100 -- ms
+local READY_INIT_DELAY = 500 -- ms
+local READY_INIT_LINES = 5
 local SEND_DELAY = 100 --ms
 local TERM_CLOSE_ERROR_DELAY = 3000 -- ms if the terminal errored, don't close the window
 local TERM_CLOSE_DELAY = 500 -- ms if the terminal closed too quickly, don't close the window
@@ -208,6 +211,53 @@ function M:start()
     end
   end
 
+  local ready = assert(vim.uv.new_timer())
+  local ready_start = vim.uv.hrtime()
+  local ready_init ---@type integer?
+  local ready_lines = 0
+
+  local on_ready = function()
+    if not ready:is_closing() then
+      ready:stop()
+      ready:close()
+    end
+    vim.schedule(function()
+      self:on_ready()
+    end)
+  end
+
+  ready:start(
+    READY_CHECK_INTERVAL,
+    READY_CHECK_INTERVAL,
+    vim.schedule_wrap(function()
+      local elapsed = (vim.uv.hrtime() - ready_start) / 1e6 -- ms
+      if not self:buf_valid() then
+        return
+      end
+      if elapsed > READY_MAX_WAIT then
+        return on_ready() -- timeout
+      end
+      local lines = vim.api.nvim_buf_get_lines(self.buf, 0, -1, false)
+      while #lines > 0 and lines[#lines] == "" do
+        table.remove(lines)
+      end
+      local cursor = vim.api.nvim_win_get_cursor(self.win)
+      if #lines > READY_INIT_LINES and cursor[1] > 3 then
+        ready_init = ready_init or vim.uv.hrtime()
+        if #lines ~= ready_lines then
+          ready_lines = #lines
+          ready_init = vim.uv.hrtime()
+        end
+        local init_elapsed = (vim.uv.hrtime() - ready_init) / 1e6 -- ms
+        if init_elapsed > READY_INIT_DELAY then
+          return on_ready()
+        end
+      end
+    end)
+  )
+
+  self.timer = vim.uv.new_timer()
+
   vim.api.nvim_win_call(self.win, function()
     ---@type table<string, string|false>
     local env = vim.tbl_extend("force", {}, vim.uv.os_environ(), self.tool.config.env or {}, self.tool.env or {}, {
@@ -244,8 +294,13 @@ function M:start()
   self.pids = { vim.fn.jobpid(self.job) }
   self.started = true
 
-  self.timer = vim.uv.new_timer()
-  self.timer:start(INITIAL_SEND_DELAY, SEND_DELAY, function()
+  if Config.cli.watch then
+    require("sidekick.cli.watch").enable()
+  end
+end
+
+function M:on_ready()
+  self.timer:start(0, SEND_DELAY, function()
     local next = table.remove(self.send_queue, 1) ---@type string?
     if next then
       next = next:gsub("\r\n", "\n") -- normalize line endings
@@ -264,9 +319,6 @@ function M:start()
       end)
     end
   end)
-  if Config.cli.watch then
-    require("sidekick.cli.watch").enable()
-  end
 end
 
 function M:open_win()
