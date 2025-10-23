@@ -35,7 +35,7 @@ end)
 
 ---@param terminal sidekick.cli.Terminal
 function M.is_enabled(terminal)
-  return terminal.parent.dump ~= nil and not terminal.tool.native_scroll
+  return terminal.parent and terminal.parent.dump ~= nil and not terminal.tool.native_scroll
 end
 
 ---@param terminal sidekick.cli.Terminal
