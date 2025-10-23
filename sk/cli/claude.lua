@@ -3,6 +3,8 @@ return {
   cmd = { "claude" },
   is_proc = "\\<claude\\>",
   url = "https://github.com/anthropics/claude-code",
+  resume = { "--resume" },
+  continue = { "--continue" },
   format = function(text)
     local Text = require("sidekick.text")
 

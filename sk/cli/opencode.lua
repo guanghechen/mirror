@@ -85,4 +85,5 @@ return {
   },
   is_proc = "\\<opencode\\>",
   url = "https://github.com/sst/opencode",
+  continue = { "--continue" },
 }
