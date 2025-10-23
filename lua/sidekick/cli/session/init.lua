@@ -25,6 +25,7 @@ M._attached = {} ---@type table<string,sidekick.cli.Session>
 ---@field sid string unique id based on tool and cwd
 ---@field tool sidekick.cli.Tool
 ---@field backend string
+---@field dump? fun(self:sidekick.cli.Session):string?
 local B = {}
 B.__index = B
 B.priority = 0
@@ -57,10 +58,6 @@ function B:detach() end
 function B:start()
   error("Backend:start() not implemented")
 end
-
---- Dumps the cli output (if supported by the backend)
----@return string?
-function B:dump() end
 
 --- Check if the session is still running
 --- @return boolean

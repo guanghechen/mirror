@@ -18,7 +18,7 @@ local Util = require("sidekick.util")
 ---@field job? integer
 ---@field buf? integer
 ---@field win? integer
----@field scrollback sidekick.cli.Scrollback
+---@field scrollback? sidekick.cli.Scrollback
 ---@field normal_mode? boolean
 local M = {}
 M.__index = M

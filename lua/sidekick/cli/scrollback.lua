@@ -6,6 +6,7 @@ local Util = require("sidekick.util")
 ---@field buf? number
 ---@field closing? boolean
 ---@field term_buf? number
+---@field cursor? sidekick.Pos
 local M = {}
 M.__index = M
 
@@ -33,7 +34,16 @@ vim.on_key(function(key, typed)
 end)
 
 ---@param terminal sidekick.cli.Terminal
+function M.is_enabled(terminal)
+  return terminal.parent.dump ~= nil and not terminal.tool.native_scroll
+end
+
+---@param terminal sidekick.cli.Terminal
 function M.new(terminal)
+  if not M.is_enabled(terminal) then
+    return
+  end
+
   local self = setmetatable({}, M)
   self.terminal = Util.ref(terminal)
 
@@ -98,9 +108,7 @@ function M:open(win_pos)
     return
   end
 
-  if terminal.tool.native_scroll then
-    return
-  end
+  self.cursor = vim.api.nvim_win_get_cursor(terminal.win)
 
   local text = terminal.parent and terminal.parent:dump() or nil
   if not text then
@@ -114,15 +122,6 @@ function M:open(win_pos)
   vim.bo[self.buf].bufhidden = "wipe"
   vim.api.nvim_win_set_buf(terminal.win, self.buf)
 
-  -- work-around for defaults from |terminal-config|
-  vim.api.nvim_create_autocmd("TermOpen", {
-    once = true,
-    callback = function()
-      terminal:wo({ cursorline = true })
-    end,
-  })
-
-  terminal:wo({ cursorline = true })
   local term = vim.api.nvim_open_term(self.buf, {})
   terminal:keys(self.buf)
 
@@ -172,9 +171,6 @@ function M:update(opts)
   if not (terminal and terminal:is_open()) then
     return
   end
-  if terminal.tool.native_scroll then
-    return
-  end
 
   local mode = vim.fn.mode(true)
   local is_open = self:is_open()
@@ -218,16 +214,18 @@ end
 ---@param win_pos? sidekick.Pos
 function M:scroll(win_pos)
   local terminal = self.terminal()
-  -- NOTE: Not sure why, but on mouse click, we don't need to do anything at all.
-  -- It just works surprisingly. Probably because we quickly swap to
-  -- the scrollback buffer before the mouse event is fully processed.
-  if win_pos or not terminal then
+  if not terminal then
     return
   end
+
+  -- NOTE: win_pos is automatically handled, since we replace the buffer before
+  -- the mouse event is processed
+
   local buf = self.buf or terminal.buf
   if not (buf and vim.api.nvim_buf_is_valid(buf) and terminal:win_valid()) then
     return
   end
+
   local lines = vim.api.nvim_buf_get_lines(buf, 0, -1, false)
   local lnum = #lines
   local col = 0
