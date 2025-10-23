@@ -201,6 +201,15 @@ function M:start()
     end,
   })
 
+  local fix_cursorline = Util.debounce(function()
+    self:fix_cursorline()
+  end, 50)
+
+  vim.api.nvim_create_autocmd({ "TermLeave", "TermEnter", "WinEnter", "WinLeave", "TermOpen" }, {
+    group = self.group,
+    callback = fix_cursorline,
+  })
+
   local norm_cmd = vim.deepcopy(self.tool.cmd) ---@type string|string[]
   if vim.fn.has("win32") == 1 then
     local cmd1 = vim.fn.exepath(norm_cmd[1])
@@ -297,6 +306,13 @@ function M:start()
   if Config.cli.watch then
     require("sidekick.cli.watch").enable()
   end
+end
+
+function M:fix_cursorline()
+  if not self:win_valid() then
+    return
+  end
+  self:wo({ cursorline = vim.fn.mode() ~= "t" and vim.api.nvim_get_current_win() == self.win })
 end
 
 function M:on_ready()
