@@ -566,7 +566,7 @@ Example Snacks picker configuration ~
         picker = {
           actions = {
             sidekick_send = function(...)
-              return require("sidekick.cli.snacks").send(...)
+              return require("sidekick.cli.picker.snacks").send(...)
             end,
           },
           win = {
@@ -581,7 +581,7 @@ Example Snacks picker configuration ~
           },
         },
       },
-    },
+    }
 <
 
 With this configuration, pressing `<a-a>` in any Snacks picker will send the
