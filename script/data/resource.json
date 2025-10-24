@@ -113,7 +113,7 @@
   "nvim@lazy.nvim": {
     "remote": "https://github.com/folke/lazy.nvim",
     "branch": "main",
-    "commit": "1ea3c4085785f460fb0e46d2fe1ee895f5f9e7c1"
+    "commit": "db067881fff0fd4be8c00e5bde7492e0e1c77a2f"
   },
   "nvim@luasnip.nvim": {
     "remote": "https://github.com/L3MON4D3/LuaSnip",
@@ -229,7 +229,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "52a893217b2c12e215c6851bd8813b43204416cd"
+    "commit": "ececa531ecae813422697b5ef627a11cc964c2a7"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -263,7 +263,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "30c466ad571b8b99fd06e3df8b2336e3ae63a53a"
+    "commit": "8fecb462580ec0794a803b1d6ff9e2c4896c3e6f"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -299,7 +299,7 @@
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
     "branch": "main",
-    "commit": "4bfc6cf08f37a4e7792352ff86b13b9a8a02514c"
+    "commit": "dc2710af65a542eb3010136d7664b626633f0229"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
