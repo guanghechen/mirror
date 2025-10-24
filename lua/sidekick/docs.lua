@@ -11,6 +11,7 @@ function M.update()
     setup_custom = Docs.extract("tests/fixtures/readme.lua", "local custom = ({.-\n})"),
     setup_blink = Docs.extract("tests/fixtures/readme.lua", "local blink = ({.-\n})"),
     setup_lualine = Docs.extract("tests/fixtures/readme.lua", "local lualine = ({.-\n})"),
+    snacks_picker = Docs.extract("tests/fixtures/readme.lua", "local snacks_picker = ({.-\n})"),
     api_cli = { content = M.mod("cli") },
     api_nes = { content = M.mod("nes") },
   })

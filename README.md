@@ -640,6 +640,8 @@ If you're using [snacks.nvim](https://github.com/folke/snacks.nvim), you can sen
 
 <details><summary>Example Snacks picker configuration</summary>
 
+<!-- snacks_picker:start -->
+
 ```lua
 {
   "folke/snacks.nvim",
@@ -648,7 +650,7 @@ If you're using [snacks.nvim](https://github.com/folke/snacks.nvim), you can sen
     picker = {
       actions = {
         sidekick_send = function(...)
-          return require("sidekick.cli.snacks").send(...)
+          return require("sidekick.cli.picker.snacks").send(...)
         end,
       },
       win = {
@@ -663,8 +665,10 @@ If you're using [snacks.nvim](https://github.com/folke/snacks.nvim), you can sen
       },
     },
   },
-},
+}
 ```
+
+<!-- snacks_picker:end -->
 
 With this configuration, pressing `<a-a>` in any Snacks picker will send the selected items to your current AI CLI session. The integration automatically handles:
 
