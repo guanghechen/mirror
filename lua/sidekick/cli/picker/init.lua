@@ -37,15 +37,16 @@ function M._send_cb(opts)
   ---@param items sidekick.context.Loc[]
   return function(items)
     local Loc = require("sidekick.cli.context.location")
-    local ret = {} ---@type sidekick.Text[]
+    local ret = { { " " } } ---@type sidekick.Text
     for _, item in ipairs(items) do
       local file = Loc.get(item, { kind = opts.kind or "file" })[1]
       if file then
-        ret[#ret + 1] = file
+        vim.list_extend(ret, file)
+        ret[#ret + 1] = { " " }
       end
     end
     vim.schedule(function()
-      opts = vim.tbl_deep_extend("force", vim.deepcopy(opts or {}), { text = ret })
+      opts = vim.tbl_deep_extend("force", vim.deepcopy(opts or {}), { text = { ret } })
       ---@cast opts sidekick.cli.Send
       require("sidekick.cli").send(opts)
     end)
