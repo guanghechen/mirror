@@ -1,0 +1,16 @@
+{
+  "name": "mirror",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Backup open source codes",
+  "scripts": {
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "eslint": "^9.38.0",
+    "eslint-plugin-editorconfig": "^4.0.3"
+  }
+}
