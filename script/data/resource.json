@@ -310,7 +310,8 @@
   "nvim@trouble.nvim": {
     "remote": "https://github.com/folke/trouble.nvim",
     "branch": "main",
-    "commit": "76030c5542c5d132aeeb467ca0ab370f3f79a697"
+    "commit": "76030c5542c5d132aeeb467ca0ab370f3f79a697",
+    "pinned": true
   },
   "nvim@vim-illuminate": {
     "remote": "https://github.com/RRethy/vim-illuminate",
@@ -324,3 +325,4 @@
     "commit": "b4177e3eaf15fe5eb8357ebac2286d488be1ed00"
   }
 }
+
