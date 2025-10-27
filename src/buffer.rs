@@ -1,4 +1,4 @@
-use crate::parser::{parse_filetype, Kind, Match, MatchWithLine, State, Token};
+use crate::parser::{parse_filetype, supports_filetype, Kind, Match, MatchWithLine, State, Token};
 
 pub struct ParsedBuffer {
     pub matches_by_line: Vec<Vec<Match>>,
@@ -7,6 +7,10 @@ pub struct ParsedBuffer {
 }
 
 impl ParsedBuffer {
+    pub fn supports_filetype(filetype: &str) -> bool {
+        supports_filetype(filetype)
+    }
+
     pub fn parse(filetype: &str, tab_width: u8, lines: &[&str]) -> Option<Self> {
         let mut parsed = parse_filetype(filetype, tab_width, lines, State::Normal)?;
         parsed.calculate_stack_heights(tab_width);

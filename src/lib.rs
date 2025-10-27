@@ -64,6 +64,10 @@ fn parse_buffer(
     }
 }
 
+fn supports_filetype(_lua: &Lua, (filetype,): (String,)) -> LuaResult<bool> {
+    Ok(ParsedBuffer::supports_filetype(&filetype))
+}
+
 fn get_line_matches(
     _lua: &Lua,
     (bufnr, line_number, token_type): (usize, usize, Option<u8>),
@@ -143,6 +147,7 @@ fn get_indent_levels(
 fn blink_pairs(lua: &Lua) -> LuaResult<LuaTable> {
     let exports = lua.create_table()?;
     exports.set("parse_buffer", lua.create_function(parse_buffer)?)?;
+    exports.set("supports_filetype", lua.create_function(supports_filetype)?)?;
     exports.set("get_line_matches", lua.create_function(get_line_matches)?)?;
     exports.set("get_span_at", lua.create_function(get_span_at)?)?;
     exports.set("get_match_at", lua.create_function(get_match_at)?)?;

@@ -14,6 +14,19 @@ pub use tokenize::{tokenize, CharPos};
 use crate::buffer::ParsedBuffer;
 
 #[rustfmt::skip]
+const FILETYPES: &[&str] = &[
+    "c", "clojure", "cpp", "csharp", "dart", "elixir", "erlang", "fsharp", "go", "haskell",
+    "haxe", "java", "javascript", "typescript", "typescriptreact", "javascriptreact", "json",
+    "kotlin", "latex", "tex", "bib", "lean", "lua", "markdown", "nix", "objc", "ocaml", "perl",
+    "php", "python", "r", "ruby", "rust", "scala", "shell", "sql", "swift", "toml", "typst", "vim",
+    "zig"
+];
+
+pub fn supports_filetype(filetype: &str) -> bool {
+    FILETYPES.contains(&filetype)
+}
+
+#[rustfmt::skip]
 pub fn parse_filetype(
     filetype: &str,
     tab_width: u8,

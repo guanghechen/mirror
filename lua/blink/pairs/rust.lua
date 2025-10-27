@@ -18,6 +18,7 @@ package.cpath = package.cpath
 
 --- @class blink.pairs.Parser
 --- @field parse_buffer fun(bufnr: number?, shiftwidth: number, filetype: string, lines: string[], start_line: number?, old_end_line: number?, new_end_line: number?): boolean
+--- @field supports_filetype fun(filetype: string): boolean
 --- @field get_line_matches fun(bufnr: number, line_number: number, token_type: number?): blink.pairs.Match[]
 --- @field get_span_at fun(bufnr: number, row: number, col: number): string?
 --- @field get_match_at fun(bufnr: number, row: number, col: number): blink.pairs.Match?

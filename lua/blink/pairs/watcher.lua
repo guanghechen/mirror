@@ -16,15 +16,29 @@ local watcher = {
 --- @return boolean did_parse
 local function parse_buffer(bufnr, start_line, old_end_line, new_end_line)
   local start_time = vim.uv.hrtime()
+  local rust = require('blink.pairs.rust')
 
   local lines = vim.api.nvim_buf_get_lines(bufnr, start_line or 0, new_end_line or -1, false)
-
-  local rust = require('blink.pairs.rust')
 
   -- TODO: use 'lua' filetype for cmd buffers with := and :lua
   local ft = vim.bo[bufnr].filetype
   -- map cmdline's 'cmd' filetype to 'vim'
   if ft == 'cmd' then ft = 'vim' end
+
+  -- if we don't support the buffer filetype, check if treesitter contains a mapping for it (e.g. codecompanion -> markdown)
+  if not rust.supports_filetype(ft) then
+    local treesitter_lang = vim.treesitter.language.get_lang(vim.bo[bufnr].filetype)
+    if not treesitter_lang then return false end
+
+    local treesitter = require('blink.pairs.context.treesitter')
+    local filetypes = treesitter.get_filetypes(treesitter_lang)
+    for _, filetype in ipairs(filetypes) do
+      if rust.supports_filetype(filetype) then
+        ft = filetype
+        break
+      end
+    end
+  end
 
   local ok, ret =
     pcall(rust.parse_buffer, bufnr, utils.get_tab_width(bufnr), ft, lines, start_line, old_end_line, new_end_line)
