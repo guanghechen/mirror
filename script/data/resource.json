@@ -113,7 +113,7 @@
   "nvim@lazy.nvim": {
     "remote": "https://github.com/folke/lazy.nvim",
     "branch": "main",
-    "commit": "db067881fff0fd4be8c00e5bde7492e0e1c77a2f"
+    "commit": "ed4dc336a73c18da6fea6e1cf7ad6e1b76d281eb"
   },
   "nvim@luasnip.nvim": {
     "remote": "https://github.com/L3MON4D3/LuaSnip",
@@ -177,12 +177,12 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "0d0b29a529216d41173c9c5c8a8f484db5b891ba"
+    "commit": "fa61e064895d6eff509f5fcb7b2b77b195c4291f"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
     "branch": "main",
-    "commit": "c86aea584d98be7ee1167ce4d4ef946fbd7f3ae0"
+    "commit": "d14d02cb709e3bb2da88363c32f8b4250bced52d"
   },
   "nvim@nui.nvim": {
     "remote": "https://github.com/MunifTanjim/nui.nvim",
@@ -263,7 +263,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "400f38cc23d89e1d8e77b11bccf830dfc74ec5fb"
+    "commit": "738d9ced4ce5b4538c3a0e23ceca12c34c8d2e74"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -325,4 +325,3 @@
     "commit": "b4177e3eaf15fe5eb8357ebac2286d488be1ed00"
   }
 }
-
