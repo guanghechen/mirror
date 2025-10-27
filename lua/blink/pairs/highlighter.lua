@@ -9,7 +9,13 @@ function highlighter.register(config)
 
   vim.api.nvim_set_decoration_provider(config.ns, {
     on_win = function(_, _, bufnr)
-      if not config.cmdline and vim.api.nvim_get_mode().mode:match('c') then return false end
+      local is_cmdline_extui_buf = vim.bo[bufnr].filetype == 'cmd'
+      local is_cmdline = vim.api.nvim_get_mode().mode:match('c')
+      if not config.cmdline and is_cmdline_extui_buf and is_cmdline then return false end
+
+      -- when in cmdline mode with :substitute, the text will be updated, without triggering
+      -- nvim_buf_attach or any autocmds, so the parsing state will be outdated
+      if not is_cmdline_extui_buf and is_cmdline then return false end
 
       vim.api.nvim_buf_clear_namespace(bufnr, config.ns, 0, -1)
       return require('blink.pairs.watcher').attach(bufnr)
