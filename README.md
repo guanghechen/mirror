@@ -1,6 +1,6 @@
 # Blink Pairs (blink.pairs)
 
-Rainbow highlighting and auto-pairs for Neovim. Uses a custom parser internally which takes ~2ms to parse a 400k character file, and ~0.15ms for subsequent incremental updates. See [the roadmap](https://github.com/Saghen/blink.pairs/issues/9) for the current status, contributions welcome!
+Rainbow highlighting and auto-pairs for Neovim. Uses a custom parser internally which takes ~2ms to parse a 400k character file, and ~0.15ms for incremental updates. It uses indent-aware matching of delimiters and highlights mismatched pairs. See [the roadmap](https://github.com/Saghen/blink.pairs/issues/9) for the current status, contributions welcome!
 
 ## Behavior
 
@@ -73,7 +73,10 @@ The behavior was inspired by [lexima.vim](https://github.com/cohama/lexima.vim) 
         enabled = true,
         -- known issue where typing won't update matchparen highlight, disabled by default
         cmdline = false,
+        -- also include pairs not on top of the cursor, but surrounding the cursor
+        include_surrounding = false,
         group = 'BlinkPairsMatchParen',
+        priority = 250,
       },
     },
     debug = false,
