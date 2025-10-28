@@ -113,6 +113,16 @@ fn get_match_pair(
         .map(|(open, close)| vec![open, close]))
 }
 
+fn get_surrounding_match_pair(
+    _lua: &Lua,
+    (bufnr, row, col): (usize, usize, usize),
+) -> LuaResult<Option<Vec<MatchWithLine>>> {
+    Ok(get_parsed_buffers()
+        .get(&bufnr)
+        .and_then(|parsed_buffer| parsed_buffer.surrounding_match_pair(row, col))
+        .map(|(open, close)| vec![open, close]))
+}
+
 fn get_unmatched_opening_before(
     _lua: &Lua,
     (bufnr, opening, closing, row, col): (usize, String, String, usize, usize),
@@ -152,6 +162,10 @@ fn blink_pairs(lua: &Lua) -> LuaResult<LuaTable> {
     exports.set("get_span_at", lua.create_function(get_span_at)?)?;
     exports.set("get_match_at", lua.create_function(get_match_at)?)?;
     exports.set("get_match_pair", lua.create_function(get_match_pair)?)?;
+    exports.set(
+        "get_surrounding_match_pair",
+        lua.create_function(get_surrounding_match_pair)?,
+    )?;
     exports.set(
         "get_unmatched_opening_before",
         lua.create_function(get_unmatched_opening_before)?,

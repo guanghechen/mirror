@@ -33,7 +33,9 @@ function M.setup(config)
       local cursor = { ctx.cursor.row, ctx.cursor.col + prompt_len }
       local buf = ctx.bufnr
       -- TODO: returns nil in cmdline mode due to the autocmd running before the watcher
-      local pair = rust.get_match_pair(buf, cursor[1] - 1, cursor[2])
+      local get_pair_func = config.matchparen.include_surrounding and rust.get_surrounding_match_pair
+        or rust.get_match_pair
+      local pair = get_pair_func(buf, cursor[1] - 1, cursor[2])
 
       -- Clear extmarks
       if last_buf and vim.api.nvim_buf_is_valid(last_buf) then vim.api.nvim_buf_clear_namespace(last_buf, ns, 0, -1) end

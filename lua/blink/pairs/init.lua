@@ -44,7 +44,6 @@ function pairs.download_if_available(callback)
 
   downloader.ensure_downloaded({
     -- omit this property to disable downloading
-    -- i.e. https://github.com/Saghen/blink.pairs/releases/download/v0.1.0/x86_64-unknown-linux-gnu.so
     download_url = function(version, system_triple, extension)
       return 'https://github.com/saghen/blink.pairs/releases/download/' .. version .. '/' .. system_triple .. extension
     end,

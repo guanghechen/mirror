@@ -10,6 +10,7 @@
 --- @class (exact) blink.pairs.MatchparenConfig
 --- @field enabled boolean
 --- @field cmdline boolean Requires `require('vim._extui').enable({})`. Disabled by default due to only showing matchparen when moving the cursor, and not when typing.
+--- @field include_surrounding boolean Also include pairs not on top of the cursor, but surrounding the cursor
 --- @field group string Highlight group for the matching pair
 --- @field priority number Priority of the highlight
 
@@ -30,6 +31,7 @@ local highlights = {
     matchparen = {
       enabled = true,
       cmdline = false,
+      include_surrounding = false,
       group = 'MatchParen',
       priority = 250,
     },
@@ -50,6 +52,7 @@ function highlights.validate(config)
   validate('highlights.matchparen', {
     enabled = { config.matchparen.enabled, 'boolean' },
     cmdline = { config.cmdline, 'boolean' },
+    include_surrounding = { config.matchparen.include_surrounding, 'boolean' },
     group = { config.matchparen.group, 'string' },
     priority = { config.matchparen.priority, 'number' },
   }, config.matchparen)

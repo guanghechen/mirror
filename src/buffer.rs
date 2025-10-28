@@ -286,6 +286,7 @@ impl ParsedBuffer {
             .flat_map(move |(current_line, matches)| {
                 matches
                     .iter()
+                    .rev()
                     .filter(move |match_| current_line != line_number || match_.col < col)
                     .map(move |match_| match_.with_line(current_line))
             })
@@ -406,6 +407,31 @@ impl ParsedBuffer {
         } else {
             None
         }
+    }
+
+    pub fn surrounding_match_pair(
+        &self,
+        line_number: usize,
+        col: usize,
+    ) -> Option<(MatchWithLine, MatchWithLine)> {
+        let match_before = self
+            .match_at(line_number, col)
+            .map(|m| m.with_line(line_number))
+            // Find match before cursor, where the ending comes after the cursor
+            .or_else(|| {
+                self.iter_to(line_number, col).find(|match_before| {
+                    match_before.kind == Kind::Opening
+                        && self
+                            .match_pair(match_before.line, match_before.col)
+                            .map(|(_, match_after)| {
+                                match_after.line > line_number
+                                    || (match_after.line == line_number && match_after.col > col)
+                            })
+                            .unwrap_or(false)
+                })
+            })?;
+
+        self.match_pair(match_before.line, match_before.col)
     }
 
     pub fn stack_height_at_forward(&self, line_number: usize, col: usize) -> Option<usize> {

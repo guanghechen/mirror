@@ -23,6 +23,7 @@ package.cpath = package.cpath
 --- @field get_span_at fun(bufnr: number, row: number, col: number): string?
 --- @field get_match_at fun(bufnr: number, row: number, col: number): blink.pairs.Match?
 --- @field get_match_pair fun(bufnr: number, row: number, col: number): blink.pairs.MatchWithLine[]?
+--- @field get_surrounding_match_pair fun(bufnr: number, row: number, col: number): blink.pairs.MatchWithLine[]?
 --- @field get_unmatched_opening_before fun(bufnr: number, opening: string, closing: string, row: number, col: number): blink.pairs.MatchWithLine?
 --- @field get_unmatched_closing_after fun(bufnr: number, opening: string, closing: string, row: number, col: number): blink.pairs.MatchWithLine?
 --- @field get_indent_levels fun(bufnr: number, start_line: number, end_line: number): number[]
@@ -38,4 +39,5 @@ package.cpath = package.cpath
 --- @field line number
 
 --- @type blink.pairs.Parser
-return require('blink_pairs')
+local rust = require('blink_pairs')
+return rust
