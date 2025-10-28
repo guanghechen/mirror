@@ -1,3 +1,51 @@
+## [0.4.0](https://github.com/Saghen/blink.pairs/compare/v0.3.0...v0.4.0) (2025-10-28)
+
+### BREAKING CHANGES
+
+* stdlib, Context, treesitter, injections (#46)
+
+### Features
+
+* `BlinkPairsMatchParen` highlight group, linked to `MatchParen` ([aad41fc](https://github.com/Saghen/blink.pairs/commit/aad41fc3046050c4d415b6aa8187be7908562dcc))
+* `matchparen.include_surrounding` ([e93ccdf](https://github.com/Saghen/blink.pairs/commit/e93ccdfa8042afa52f35e07e678869a7f34c6d34)), closes [#53](https://github.com/Saghen/blink.pairs/issues/53)
+* add `vim.g.blink_pairs` and `vim.b.blink_pairs` support ([f2118c5](https://github.com/Saghen/blink.pairs/commit/f2118c57dc29417c7ef4d040964bd294acfa532d))
+* add sql parser ([0398daf](https://github.com/Saghen/blink.pairs/commit/0398daf94200f2905067677d3ac159b4b305d864))
+* **cmdline:** support cmdline mode ([#48](https://github.com/Saghen/blink.pairs/issues/48)) ([8821738](https://github.com/Saghen/blink.pairs/commit/8821738bbbe6bb63ac0669389e5dce917c2ea166))
+* drop changedtick checks in watcher ([78d3a1f](https://github.com/Saghen/blink.pairs/commit/78d3a1fd3babbf34f3ce20a01350b4fd3cdd8281)), closes [#60](https://github.com/Saghen/blink.pairs/issues/60)
+* fix nix build by disabling tests ([3cf0b66](https://github.com/Saghen/blink.pairs/commit/3cf0b660caf266992d6c62eb1f6049c483b35409))
+* improved erroneous field in config message ([6896d6a](https://github.com/Saghen/blink.pairs/commit/6896d6a7558ce9518d9cc202f4c884c6c5346819))
+* indent aware unmatched openings ([#52](https://github.com/Saghen/blink.pairs/issues/52)) ([565b4d4](https://github.com/Saghen/blink.pairs/commit/565b4d48a9e29d6fb93560c2cc2db6e1307f22f0))
+* indent simd impl ([3def427](https://github.com/Saghen/blink.pairs/commit/3def4273ae9000af9876fb1870c5eb01c813c5b6))
+* **latex:** support `' pair ([#42](https://github.com/Saghen/blink.pairs/issues/42)) ([8a4fc8a](https://github.com/Saghen/blink.pairs/commit/8a4fc8af7f322670de936b52effb2de228f0a4df))
+* nix ([570ac7d](https://github.com/Saghen/blink.pairs/commit/570ac7d0a6a3bfabfde06d54b7c2d7900a2d6eb5))
+* skip mappings on unmatched pair ([6bf7fea](https://github.com/Saghen/blink.pairs/commit/6bf7fea9cbbe0205acc1f5a2b6180f0f210c72df))
+* stdlib, Context, treesitter, injections ([#46](https://github.com/Saghen/blink.pairs/issues/46)) ([be61fe8](https://github.com/Saghen/blink.pairs/commit/be61fe8b9d4a9e089cec07fc1803b841167c9c49))
+* support disabling open/close/open_or_close rules individually ([a9d5c34](https://github.com/Saghen/blink.pairs/commit/a9d5c34c80672c4577bfa4ddb426ca244c11fdc3))
+* support making `highlights.groups` a function ([c2d4030](https://github.com/Saghen/blink.pairs/commit/c2d4030c10e6628de159cbac79a32a70ad746290)), closes [#61](https://github.com/Saghen/blink.pairs/issues/61)
+* support treesitter language mappings ([53327ab](https://github.com/Saghen/blink.pairs/commit/53327ab7aa06287010280ea81068f0690dc825f9)), closes [#59](https://github.com/Saghen/blink.pairs/issues/59)
+* unmatched pair detection ([86247d6](https://github.com/Saghen/blink.pairs/commit/86247d6d489bb26b3a6b793e8110881703378556))
+
+### Bug Fixes
+
+* abbreviations not expanded in insert mode ([64fd515](https://github.com/Saghen/blink.pairs/commit/64fd5154dbe15e4712007df4e3801c2209ec09a0))
+* add disabled_filetypes to partial config ([ad46843](https://github.com/Saghen/blink.pairs/commit/ad468433de0c04d8baf36ee549998c3d4b5ef246))
+* avoid drawing while in cmdline mode ([879fb3d](https://github.com/Saghen/blink.pairs/commit/879fb3d76026efd305a686bab1d34f5be67d93ee)), closes [#50](https://github.com/Saghen/blink.pairs/issues/50)
+* **benches:** make sure indent benches are black boxed properly ([d99d752](https://github.com/Saghen/blink.pairs/commit/d99d752be1f8df50fef777cd89ad02cf9cf69682))
+* disable `'` in latex ([#45](https://github.com/Saghen/blink.pairs/issues/45)) ([7913618](https://github.com/Saghen/blink.pairs/commit/791361857b29163a21af45b85931ca71c9675c71))
+* **highlight:** don't use ephemeral extmarks ([#43](https://github.com/Saghen/blink.pairs/issues/43)) ([95d04ce](https://github.com/Saghen/blink.pairs/commit/95d04ce524501affa98503c4d838b8c3a4f49770)), closes [#41](https://github.com/Saghen/blink.pairs/issues/41)
+* **highlights:** catch errors in parsing ([34e6676](https://github.com/Saghen/blink.pairs/commit/34e667657804518db914810ebe91836cff0885df)), closes [#38](https://github.com/Saghen/blink.pairs/issues/38)
+* ignore `'` after letter in all languages ([f59e6da](https://github.com/Saghen/blink.pairs/commit/f59e6da6a07de4bcdb018038d1c17bbc0ebbd325))
+* s/blink.cmp/blink.pairs ([fb8a7cb](https://github.com/Saghen/blink.pairs/commit/fb8a7cbc7a65a8b6feb293ec678a6f6ed96406b6))
+* try to expand abbreviations in mapping ([#62](https://github.com/Saghen/blink.pairs/issues/62)) ([66e22e0](https://github.com/Saghen/blink.pairs/commit/66e22e00b2f6ed6217abfceb53f6675f75fafe12))
+* **types:** cmdline was not optional ([524bf76](https://github.com/Saghen/blink.pairs/commit/524bf76eae437bf965319bef413ba727729792f4))
+* use `'` mapping when `'` found after cursor ([cb37d8a](https://github.com/Saghen/blink.pairs/commit/cb37d8acfd30031084247a4f97038b05bf8501b6)), closes [#63](https://github.com/Saghen/blink.pairs/issues/63)
+* use per-buffer last_changedticks ([211274c](https://github.com/Saghen/blink.pairs/commit/211274cd88aef4164b7ccd4f6e5ef523f1ee348d)), closes [#60](https://github.com/Saghen/blink.pairs/issues/60)
+
+### Performance Improvements
+
+* **indent:** replace implementation (again) ([9c2ac08](https://github.com/Saghen/blink.pairs/commit/9c2ac08700f9a6950e6fa56cacbebe8bc640d881))
+* **indents:** search for newlines, lane width ([b5ed8c3](https://github.com/Saghen/blink.pairs/commit/b5ed8c31cca3c8a62b12a5c8343752bdf3218d80))
+
 ## [0.3.0](https://github.com/Saghen/blink.pairs/compare/v0.2.0...v0.3.0) (2025-06-13)
 
 ### BREAKING CHANGES
