@@ -13,7 +13,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "87433840b4d8cce053d6b8cd57f3d75a27c8cd8b"
+    "commit": "312097b9e34e45e430d55968cef014b88e6e3549"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -23,7 +23,7 @@
   "nvim@blink.pairs": {
     "remote": "https://github.com/Saghen/blink.pairs",
     "branch": "main",
-    "commit": "66e22e00b2f6ed6217abfceb53f6675f75fafe12"
+    "commit": "53327ab7aa06287010280ea81068f0690dc825f9"
   },
   "nvim@cmp-buffer": {
     "remote": "https://github.com/hrsh7th/cmp-buffer",
@@ -229,7 +229,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "a9b2fb560c4ab22c10728fd5149dbd7b62aa4f69"
+    "commit": "2b52bc2190c8efde2e4de02d829a138666774c7c"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -263,7 +263,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "738d9ced4ce5b4538c3a0e23ceca12c34c8d2e74"
+    "commit": "645f42e85d8665c91a9911c3896afb57d6b8a923"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
