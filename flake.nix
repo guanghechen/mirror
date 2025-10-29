@@ -37,7 +37,7 @@
           # nvim source files
           # all that are not nix, nor rust, nor other ignored files
           nvimFs = fs.difference ./. (fs.unions [ nixFs rustFs ]);
-          version = "0.4.0";
+          version = "0.4.1";
         in {
           blink-pairs-lib = let
             inherit (inputs.fenix.packages.${system}.minimal) toolchain;
