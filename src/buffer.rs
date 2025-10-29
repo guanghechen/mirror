@@ -279,7 +279,7 @@ impl ParsedBuffer {
         line_number: usize,
         col: usize,
     ) -> impl Iterator<Item = MatchWithLine> + '_ {
-        self.matches_by_line[0..=line_number.min(self.matches_by_line.len() - 1)]
+        self.matches_by_line[0..(line_number + 1).min(self.matches_by_line.len())]
             .iter()
             .enumerate()
             .rev()
