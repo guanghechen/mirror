@@ -9,5 +9,5 @@ define_matcher!(Typst {
     ],
     line_comment: ["//"],
     block_comment: ["/*" => "*/"],
-    string: ["\"", "'"]
+    string: ["\""]
 });
