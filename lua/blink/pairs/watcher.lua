@@ -3,6 +3,8 @@ local utils = require('blink.pairs.utils')
 local watcher = {
   --- @type table<number, boolean>
   watched_bufnrs = {},
+  --- @type table<number, number>
+  last_changedticks = {},
 }
 
 --- Runs a full parse on the buffer when start_line, old_end_line, and new_end_line are not provided.
@@ -54,24 +56,42 @@ end
 --- @param bufnr number
 --- @return boolean is_attached Whether the buffer is parseable and attached
 function watcher.attach(bufnr)
-  if watcher.watched_bufnrs[bufnr] then return true end
+  if watcher.watched_bufnrs[bufnr] ~= nil then return true end
 
   local did_parse = parse_buffer(bufnr)
   if not did_parse then return false end
 
   watcher.watched_bufnrs[bufnr] = true
+  watcher.last_changedticks[bufnr] = 0
 
   vim.api.nvim_buf_attach(bufnr, false, {
-    on_detach = function() watcher.watched_bufnrs[bufnr] = nil end,
+    on_detach = function()
+      watcher.watched_bufnrs[bufnr] = nil
+      watcher.last_changedticks[bufnr] = nil
+    end,
 
     -- Full parse
     on_reload = function() parse_buffer(bufnr) end,
-    on_changedtick = function(_, _, _) parse_buffer(bufnr) end,
+    on_changedtick = function(_, _, changedtick)
+      if changedtick == watcher.last_changedticks[bufnr] then return end
+      watcher.last_changedticks[bufnr] = changedtick
+
+      parse_buffer(bufnr)
+    end,
 
     -- Incremental parse
-    on_lines = function(_, _, _, start, old_end, new_end)
-      -- detach if no longer parseable
-      if not parse_buffer(bufnr, start, old_end, new_end) then return true end
+    on_lines = function(_, _, changedtick, start, old_end, new_end)
+      if changedtick == watcher.last_changedticks[bufnr] then return end
+      watcher.last_changedticks[bufnr] = changedtick
+
+      local did_incremental_parse = parse_buffer(bufnr, start, old_end, new_end)
+
+      -- no longer parseable, detach
+      if not did_incremental_parse then
+        watcher.watched_bufnrs[bufnr] = nil
+        watcher.last_changedticks[bufnr] = nil
+        return true
+      end
     end,
   })
 
