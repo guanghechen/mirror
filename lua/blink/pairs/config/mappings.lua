@@ -30,7 +30,20 @@ local mappings = {
     pairs = {
       ['!'] = { { '<!--', '-->', languages = { 'html', 'markdown', 'markdown_inline' } } },
       ['('] = ')',
-      ['['] = ']',
+      ['['] = {
+        {
+          '[',
+          ']',
+          space = function(ctx)
+            return not ctx.ts:is_language('markdown')
+              -- ignore markdown todo items (bullets and numbered)
+              or (
+                not ctx:text_before_cursor():match('^%s*[%*%-+]%s+%[%s*$')
+                and not ctx:text_before_cursor():match('^%s*%d+%.%s+%[%s*$')
+              )
+          end,
+        },
+      },
       ['{'] = '}',
       ["'"] = {
         {
