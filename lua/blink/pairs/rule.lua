@@ -132,7 +132,7 @@ end
 --- @param rule blink.pairs.Rule
 --- @param mode? blink.pairs.Mode
 --- @return boolean
-function M.is_active(ctx, rule, mode) return rule.when(ctx) and (mode == nil or rule[mode]()) end
+function M.is_active(ctx, rule, mode) return rule.when(ctx) and (mode == nil or rule[mode](ctx)) end
 
 --- @param ctx blink.pairs.Context
 --- @param rules blink.pairs.Rule[]
