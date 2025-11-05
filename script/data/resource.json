@@ -13,7 +13,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "2408f14f740f89d603cad33fe8cbd92ab068cc92"
+    "commit": "40380e711b616a28affb0f4086a2f7de2f2a556b"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -289,12 +289,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "a1b2bf029c37397947082f31969b4aec0d1b92bd"
+    "commit": "060c911c62f995a9db4467dde6fafd699cf94d55"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "e5ca2c40986f415398dd5711625f0099b80b28b0"
+    "commit": "03f162c06514111326d07d6d297275642f390f28"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
