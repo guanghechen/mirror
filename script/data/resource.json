@@ -13,7 +13,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "b19413d214068f316c78978b08264ed1c41830ec"
+    "commit": "73ea297bc665c936b51797d5a55599536ffee0d8"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -141,7 +141,7 @@
   "nvim@mini.ai": {
     "remote": "https://github.com/nvim-mini/mini.ai",
     "branch": "main",
-    "commit": "0d3c9cf22e37b86b7a0dfbe7ef129ee7a5f4f93c"
+    "commit": "bfb26d9072670c3aaefab0f53024b2f3729c8083"
   },
   "nvim@mini.comment": {
     "remote": "https://github.com/nvim-mini/mini.comment",
@@ -177,7 +177,7 @@
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
     "branch": "main",
-    "commit": "0bf326c601063a6518aa9a039b71351debb83d2f"
+    "commit": "a981ef287503c668434bffa78071d5b9ff92c12f"
   },
   "nvim@noice.nvim": {
     "remote": "https://github.com/folke/noice.nvim",
@@ -224,12 +224,12 @@
   "nvim@nvim-lint": {
     "remote": "https://github.com/mfussenegger/nvim-lint",
     "branch": "master",
-    "commit": "baf7c91c2b868b12446df511d4cdddc98e9bf66e"
+    "commit": "a0718addcf9b5ba4325eb45441020bb824af9503"
   },
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "d4f77e7a9a4b910622a0bc225e482c4c808e4099"
+    "commit": "e0fae251f8459940331960106d4bd9457cec23de"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -263,7 +263,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "c682a239a9404ce5f90a2d0da34790eff1ed2932"
+    "commit": "bb83a676128d95c865e40ba71376d883bdadec14"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -294,7 +294,7 @@
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "eed1834170f343c14a6768f085b26b3571a55302"
+    "commit": "1d0932eef16b068e65e0c6ceb4461edd774dd521"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
