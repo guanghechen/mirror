@@ -167,7 +167,8 @@
   "nvim@mini.indentscope": {
     "remote": "https://github.com/nvim-mini/mini.indentscope",
     "branch": "main",
-    "commit": "0308f949f31769e509696af5d5f91cebb2159c69"
+    "commit": "0308f949f31769e509696af5d5f91cebb2159c69",
+    "pinned": true
   },
   "nvim@mini.pairs": {
     "remote": "https://github.com/nvim-mini/mini.pairs",
@@ -335,3 +336,4 @@
     "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a"
   }
 }
+
