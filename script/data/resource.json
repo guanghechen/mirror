@@ -20,6 +20,11 @@
     "branch": "main",
     "commit": "1454f14a8d855a578ceeba77c62538fa1459a67c"
   },
+  "nvim@blink.indent": {
+    "remote": "https://github.com/saghen/blink.indent",
+    "branch": "main",
+    "commit": "2f4ac0d1bc642049d97da909cae02a5a5bd0beab"
+  },
   "nvim@blink.pairs": {
     "remote": "https://github.com/Saghen/blink.pairs",
     "branch": "main",
@@ -229,7 +234,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "f1237a8b3c243608a7116fa1ad216c441d7c2264"
+    "commit": "de659c9c0d53df0e6b4747d8d1ef22ba1164291d"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",

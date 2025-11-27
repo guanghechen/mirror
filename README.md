@@ -24,6 +24,7 @@ To backup open source codes.
  [nvim@avante.nvim][]                 | [main][nvim@avante.nvim#main]                       | bd69ae14f6f1f21642e16c16cbd18954f62365aa
  [nvim@blink.cmp][]                   | [main][nvim@blink.cmp#main]                         | f13226770b4947eb7e66befbeb53c3db39f13e25
  [nvim@blink.compat][]                | [main][nvim@blink.compat#main]                      | 1454f14a8d855a578ceeba77c62538fa1459a67c
+ [nvim@blink.indent][]                | [main][nvim@blink.indent#main]                      | 2f4ac0d1bc642049d97da909cae02a5a5bd0beab
  [nvim@blink.pairs][]                 | [main][nvim@blink.pairs#main]                       | 8e935d07ab6a3843565afd6a6d56456678cbf43f
  [nvim@cmp-buffer][]                  | [main][nvim@cmp-buffer#main]                        | b74fab3656eea9de20a9b8116afa3cfc4ec09657
  [nvim@cmp-luasnip][]                 | [master][nvim@cmp-luasnip#master]                   | 98d9cb5c2c38532bd9bdb481067b20fea8f32e90
@@ -62,7 +63,7 @@ To backup open source codes.
  [nvim@nvim-dap-ui][]                 | [master][nvim@nvim-dap-ui#master]                   | cf91d5e2d07c72903d052f5207511bf7ecdb7122
  [nvim@nvim-dap-virtual-text][]       | [master][nvim@nvim-dap-virtual-text#master]         | fbdb48c2ed45f4a8293d0d483f7730d24467ccb6
  [nvim@nvim-lint][]                   | [master][nvim@nvim-lint#master]                     | d1118791070d090777398792a73032a0ca5c79ff
- [nvim@nvim-lspconfig][]              | [master][nvim@nvim-lspconfig#master]                | f1237a8b3c243608a7116fa1ad216c441d7c2264
+ [nvim@nvim-lspconfig][]              | [master][nvim@nvim-lspconfig#master]                | de659c9c0d53df0e6b4747d8d1ef22ba1164291d
  [nvim@nvim-nio][]                    | [master][nvim@nvim-nio#master]                      | 21f5324bfac14e22ba26553caf69ec76ae8a7662
  [nvim@nvim-notify][]                 | [master][nvim@nvim-notify#master]                   | a22f5d7ac511c2df2fd3290a9f04c48d5a822e2e
  [nvim@nvim-snippets][]               | [main][nvim@nvim-snippets#main]                     | 56b4052f71220144689caaa2e5b66222ba5661eb
@@ -85,6 +86,7 @@ To backup open source codes.
 [nvim@avante.nvim]: https://github.com/guanghechen/mirror/tree/nvim@avante.nvim
 [nvim@blink.cmp]: https://github.com/guanghechen/mirror/tree/nvim@blink.cmp
 [nvim@blink.compat]: https://github.com/guanghechen/mirror/tree/nvim@blink.compat
+[nvim@blink.indent]: https://github.com/guanghechen/mirror/tree/nvim@blink.indent
 [nvim@blink.pairs]: https://github.com/guanghechen/mirror/tree/nvim@blink.pairs
 [nvim@cmp-buffer]: https://github.com/guanghechen/mirror/tree/nvim@cmp-buffer
 [nvim@cmp-luasnip]: https://github.com/guanghechen/mirror/tree/nvim@cmp-luasnip
@@ -146,6 +148,7 @@ To backup open source codes.
 [nvim@avante.nvim#main]: https://github.com/yetone/avante.nvim/tree/main
 [nvim@blink.cmp#main]: https://github.com/Saghen/blink.cmp/tree/main
 [nvim@blink.compat#main]: https://github.com/Saghen/blink.compat/tree/main
+[nvim@blink.indent#main]: https://github.com/saghen/blink.indent/tree/main
 [nvim@blink.pairs#main]: https://github.com/Saghen/blink.pairs/tree/main
 [nvim@cmp-buffer#main]: https://github.com/hrsh7th/cmp-buffer/tree/main
 [nvim@cmp-luasnip#master]: https://github.com/saadparwaiz1/cmp_luasnip/tree/master
