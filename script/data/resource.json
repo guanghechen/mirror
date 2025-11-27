@@ -2,7 +2,8 @@
   "nvim@aerial.nvim": {
     "remote": "https://github.com/stevearc/aerial.nvim",
     "branch": "master",
-    "commit": "8bb8697d180681746da41bef5c8691d04443af36"
+    "commit": "8bb8697d180681746da41bef5c8691d04443af36",
+    "pinned": true
   },
   "nvim@avante.nvim": {
     "remote": "https://github.com/yetone/avante.nvim",
@@ -336,4 +337,3 @@
     "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a"
   }
 }
-
