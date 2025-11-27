@@ -19,7 +19,8 @@
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
     "branch": "main",
-    "commit": "1454f14a8d855a578ceeba77c62538fa1459a67c"
+    "commit": "1454f14a8d855a578ceeba77c62538fa1459a67c",
+    "pinned": true
   },
   "nvim@blink.indent": {
     "remote": "https://github.com/saghen/blink.indent",
