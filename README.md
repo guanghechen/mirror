@@ -52,6 +52,7 @@ To backup open source codes.
  [nvim@mini.icons][]                  | [main][nvim@mini.icons#main]                        | ff2e4f1d29f659cc2bad0f9256f2f6195c6b2428
  [nvim@mini.indentscope][]            | [main][nvim@mini.indentscope#main]                  | 0308f949f31769e509696af5d5f91cebb2159c69
  [nvim@mini.pairs][]                  | [main][nvim@mini.pairs#main]                        | b316e68f2d242d5bd010deaab645daa27ed86297
+ [nvim@mini.splitjoin][]              | [main][nvim@mini.splitjoin#main]                    | 9fcd8856efb95a505090c3225726466494076127
  [nvim@mini.surround][]               | [main][nvim@mini.surround#main]                     | 88c52297ed3e69ecf9f8652837888ecc727a28ee
  [nvim@neo-tree.nvim][]               | [main][nvim@neo-tree.nvim#main]                     | a981ef287503c668434bffa78071d5b9ff92c12f
  [nvim@noice.nvim][]                  | [main][nvim@noice.nvim#main]                        | 7bfd942445fb63089b59f97ca487d605e715f155
@@ -69,9 +70,9 @@ To backup open source codes.
  [nvim@nvim-snippets][]               | [main][nvim@nvim-snippets#main]                     | 56b4052f71220144689caaa2e5b66222ba5661eb
  [nvim@telescope.nvim][]              | [master][nvim@telescope.nvim#master]                | b4da76be54691e854d3e0e02c36b0245f945c2c7
  [nvim@nvim-tmux-navigation][]        | [main][nvim@nvim-tmux-navigation#main]              | 4898c98702954439233fdaf764c39636681e2861
- [nvim@nvim-treesitter][]             | [main][nvim@nvim-treesitter#main]                   | c5871d9d870c866fea9f271f1a3b3f29049a4793
+ [nvim@nvim-treesitter][]             | [main][nvim@nvim-treesitter#main]                   | d56ed0f7f90d6492ce422f5e0a9cb36d3169eb96
  [nvim@nvim-treesitter-context][]     | [master][nvim@nvim-treesitter-context#master]       | 660861b1849256398f70450afdf93908d28dc945
- [nvim@nvim-treesitter-textobjects][] | [main][nvim@nvim-treesitter-textobjects#main]       | 227165aaeb07b567fb9c066f224816aa8f3ce63f
+ [nvim@nvim-treesitter-textobjects][] | [main][nvim@nvim-treesitter-textobjects#main]       | 6f2dc7e41a648ec90314f0f94b5f574c75c5c58b
  [nvim@nvim-window-picker][]          | [main][nvim@nvim-window-picker#main]                | 41cfaa428577c53552200a404ae9b3a0b5719706
  [nvim@plenary.nvim][]                | [master][nvim@plenary.nvim#master]                  | b9fd5226c2f76c951fc8ed5923d85e4de065e509
  [nvim@render-markdown.nvim][]        | [main][nvim@render-markdown.nvim#main]              | 6e0e8902dac70fecbdd8ce557d142062a621ec38
@@ -114,6 +115,7 @@ To backup open source codes.
 [nvim@mini.icons]: https://github.com/guanghechen/mirror/tree/nvim@mini.icons
 [nvim@mini.indentscope]: https://github.com/guanghechen/mirror/tree/nvim@mini.indentscope
 [nvim@mini.pairs]: https://github.com/guanghechen/mirror/tree/nvim@mini.pairs
+[nvim@mini.splitjoin]: https://github.com/guanghechen/mirror/tree/nvim@mini.splitjoin
 [nvim@mini.surround]: https://github.com/guanghechen/mirror/tree/nvim@mini.surround
 [nvim@neo-tree.nvim]: https://github.com/guanghechen/mirror/tree/nvim@neo-tree.nvim
 [nvim@noice.nvim]: https://github.com/guanghechen/mirror/tree/nvim@noice.nvim
@@ -176,6 +178,7 @@ To backup open source codes.
 [nvim@mini.icons#main]: https://github.com/nvim-mini/mini.icons/tree/main
 [nvim@mini.indentscope#main]: https://github.com/nvim-mini/mini.indentscope/tree/main
 [nvim@mini.pairs#main]: https://github.com/nvim-mini/mini.pairs/tree/main
+[nvim@mini.splitjoin#main]: https://github.com/nvim-mini/mini.splitjoin/tree/main
 [nvim@mini.surround#main]: https://github.com/nvim-mini/mini.surround/tree/main
 [nvim@neo-tree.nvim#main]: https://github.com/nvim-neo-tree/neo-tree.nvim/tree/main
 [nvim@noice.nvim#main]: https://github.com/folke/noice.nvim/tree/main

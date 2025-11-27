@@ -174,6 +174,11 @@
     "branch": "main",
     "commit": "b316e68f2d242d5bd010deaab645daa27ed86297"
   },
+  "nvim@mini.splitjoin": {
+    "remote": "https://github.com/nvim-mini/mini.splitjoin",
+    "branch": "main",
+    "commit": "9fcd8856efb95a505090c3225726466494076127"
+  },
   "nvim@mini.surround": {
     "remote": "https://github.com/nvim-mini/mini.surround",
     "branch": "main",
@@ -268,7 +273,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "c5871d9d870c866fea9f271f1a3b3f29049a4793"
+    "commit": "d56ed0f7f90d6492ce422f5e0a9cb36d3169eb96"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -278,7 +283,7 @@
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "main",
-    "commit": "227165aaeb07b567fb9c066f224816aa8f3ce63f"
+    "commit": "6f2dc7e41a648ec90314f0f94b5f574c75c5c58b"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
