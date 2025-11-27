@@ -54,6 +54,7 @@ To backup open source codes.
  [nvim@mini.pairs][]                  | [main][nvim@mini.pairs#main]                        | b316e68f2d242d5bd010deaab645daa27ed86297
  [nvim@mini.splitjoin][]              | [main][nvim@mini.splitjoin#main]                    | 9fcd8856efb95a505090c3225726466494076127
  [nvim@mini.surround][]               | [main][nvim@mini.surround#main]                     | 88c52297ed3e69ecf9f8652837888ecc727a28ee
+ [nvim@mini.trailspace][]             | [main][nvim@mini.trailspace#main]                   | f8083ca969e1b2098480c10f3c3c4d2ce3586680
  [nvim@neo-tree.nvim][]               | [main][nvim@neo-tree.nvim#main]                     | a981ef287503c668434bffa78071d5b9ff92c12f
  [nvim@noice.nvim][]                  | [main][nvim@noice.nvim#main]                        | 7bfd942445fb63089b59f97ca487d605e715f155
  [nvim@nui.nvim][]                    | [main][nvim@nui.nvim#main]                          | de740991c12411b663994b2860f1a4fd0937c130
@@ -117,6 +118,7 @@ To backup open source codes.
 [nvim@mini.pairs]: https://github.com/guanghechen/mirror/tree/nvim@mini.pairs
 [nvim@mini.splitjoin]: https://github.com/guanghechen/mirror/tree/nvim@mini.splitjoin
 [nvim@mini.surround]: https://github.com/guanghechen/mirror/tree/nvim@mini.surround
+[nvim@mini.trailspace]: https://github.com/guanghechen/mirror/tree/nvim@mini.trailspace
 [nvim@neo-tree.nvim]: https://github.com/guanghechen/mirror/tree/nvim@neo-tree.nvim
 [nvim@noice.nvim]: https://github.com/guanghechen/mirror/tree/nvim@noice.nvim
 [nvim@nui.nvim]: https://github.com/guanghechen/mirror/tree/nvim@nui.nvim
@@ -180,6 +182,7 @@ To backup open source codes.
 [nvim@mini.pairs#main]: https://github.com/nvim-mini/mini.pairs/tree/main
 [nvim@mini.splitjoin#main]: https://github.com/nvim-mini/mini.splitjoin/tree/main
 [nvim@mini.surround#main]: https://github.com/nvim-mini/mini.surround/tree/main
+[nvim@mini.trailspace#main]: https://github.com/nvim-mini/mini.trailspace/tree/main
 [nvim@neo-tree.nvim#main]: https://github.com/nvim-neo-tree/neo-tree.nvim/tree/main
 [nvim@noice.nvim#main]: https://github.com/folke/noice.nvim/tree/main
 [nvim@nui.nvim#main]: https://github.com/MunifTanjim/nui.nvim/tree/main
