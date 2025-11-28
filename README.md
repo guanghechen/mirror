@@ -26,6 +26,7 @@ To backup open source codes.
  [nvim@blink.compat][]                | [main][nvim@blink.compat#main]                      | 1454f14a8d855a578ceeba77c62538fa1459a67c
  [nvim@blink.indent][]                | [main][nvim@blink.indent#main]                      | 2f4ac0d1bc642049d97da909cae02a5a5bd0beab
  [nvim@blink.pairs][]                 | [main][nvim@blink.pairs#main]                       | 8e935d07ab6a3843565afd6a6d56456678cbf43f
+ [nvim@ccc.nvim][]                    | [main][nvim@ccc.nvim#main]                          | 9d1a256e006decc574789dfc7d628ca11644d4c2
  [nvim@cmp-buffer][]                  | [main][nvim@cmp-buffer#main]                        | b74fab3656eea9de20a9b8116afa3cfc4ec09657
  [nvim@cmp-luasnip][]                 | [master][nvim@cmp-luasnip#master]                   | 98d9cb5c2c38532bd9bdb481067b20fea8f32e90
  [nvim@cmp-nvim-lsp][]                | [main][nvim@cmp-nvim-lsp#main]                      | a8912b88ce488f411177fc8aed358b04dc246d7b
@@ -90,6 +91,7 @@ To backup open source codes.
 [nvim@blink.compat]: https://github.com/guanghechen/mirror/tree/nvim@blink.compat
 [nvim@blink.indent]: https://github.com/guanghechen/mirror/tree/nvim@blink.indent
 [nvim@blink.pairs]: https://github.com/guanghechen/mirror/tree/nvim@blink.pairs
+[nvim@ccc.nvim]: https://github.com/guanghechen/mirror/tree/nvim@ccc.nvim
 [nvim@cmp-buffer]: https://github.com/guanghechen/mirror/tree/nvim@cmp-buffer
 [nvim@cmp-luasnip]: https://github.com/guanghechen/mirror/tree/nvim@cmp-luasnip
 [nvim@cmp-nvim-lsp]: https://github.com/guanghechen/mirror/tree/nvim@cmp-nvim-lsp
@@ -154,6 +156,7 @@ To backup open source codes.
 [nvim@blink.compat#main]: https://github.com/Saghen/blink.compat/tree/main
 [nvim@blink.indent#main]: https://github.com/saghen/blink.indent/tree/main
 [nvim@blink.pairs#main]: https://github.com/Saghen/blink.pairs/tree/main
+[nvim@ccc.nvim#main]: https://github.com/uga-rosa/ccc.nvim/tree/main
 [nvim@cmp-buffer#main]: https://github.com/hrsh7th/cmp-buffer/tree/main
 [nvim@cmp-luasnip#master]: https://github.com/saadparwaiz1/cmp_luasnip/tree/master
 [nvim@cmp-nvim-lsp#main]: https://github.com/hrsh7th/cmp-nvim-lsp/tree/main
