@@ -1,3 +1,14 @@
+## [2.1.0](https://github.com/saghen/blink.indent/compare/v2.0.0..v2.1.0) - 2025-11-20
+
+### Features
+
+- draw whitespace chars on actual whitespace ([587dc25](https://github.com/saghen/blink.indent/commit/587dc2531fbdda936fa5076409dda19678f117e7))
+
+### Bug Fixes
+
+- cache not busted on horizontal_offset change ([69499c0](https://github.com/saghen/blink.indent/commit/69499c0167cc48e8bfc98d3b97a58c14ff8df0a8))
+- only draw variable whitespace chars when less than indent ([2f4ac0d](https://github.com/saghen/blink.indent/commit/2f4ac0d1bc642049d97da909cae02a5a5bd0beab))
+
 ## [2.0.0](https://github.com/saghen/blink.indent/compare/v1.0.0..v2.0.0) - 2025-11-12
 
 ### Breaking Changes
