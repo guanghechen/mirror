@@ -57,7 +57,7 @@
           };
 
           blink-pairs = pkgs.vimUtils.buildVimPlugin {
-            pname = "blink-pairs";
+            pname = "blink.pairs";
             inherit version;
             src = fs.toSource {
               root = ./.;
