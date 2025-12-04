@@ -36,7 +36,7 @@
           ];
           # nvim source files
           # all that are not nix, nor rust, nor other ignored files
-          nvimFs = fs.difference ./. (fs.unions [ nixFs rustFs ]);
+          nvimFs = fs.difference ./. (fs.unions [ nixFs rustFs ./repro.lua ]);
           version = "0.4.1";
         in {
           blink-pairs-lib = let
