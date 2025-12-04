@@ -25,7 +25,7 @@
   "nvim@blink.indent": {
     "remote": "https://github.com/saghen/blink.indent",
     "branch": "main",
-    "commit": "2f4ac0d1bc642049d97da909cae02a5a5bd0beab"
+    "commit": "93ff30292d34116444ff9db5264f6ccd34f3f71f"
   },
   "nvim@blink.pairs": {
     "remote": "https://github.com/Saghen/blink.pairs",
@@ -64,7 +64,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "4993e07fac6679d0a5005aa7499e0bad2bd39f19"
+    "commit": "ffe26e8df8115c9665d24231f8a49fadb2d611ce"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -251,7 +251,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "effe4bf2e1afb881ea67291c648b68dd3dfc927a"
+    "commit": "7757d54716b26280b1b1785d89364a016a29c445"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -285,7 +285,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "00c906abb9550e72bc0c640545b5499b9525bb40"
+    "commit": "857fb97bb65c8a71b0c4a568cfcfef95679854d5"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -295,7 +295,7 @@
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "main",
-    "commit": "63c4dce4a56312ef1bdeafd16bdefa008fcc950a"
+    "commit": "dfbf9596f8aa8b4bed5301647485594ff7252955"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
@@ -311,12 +311,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "6e0e8902dac70fecbdd8ce557d142062a621ec38"
+    "commit": "b2b135347e299ffbf7f4123fb7811899b0c9f4b8"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "5f2299987a1937612c910f00db39156bab6a6b35"
+    "commit": "e9c00ea7813006dfa29f35c174f83f0184d45a93"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
