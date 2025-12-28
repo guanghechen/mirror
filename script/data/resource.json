@@ -14,7 +14,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "d0c5196dae32c53cde1208161554906f5b982de8"
+    "commit": "18712d9d292dd362067de74d3b54eb90ce860ba9"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -108,7 +108,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "5813e4878748805f1518cee7abb50fd7205a3a48"
+    "commit": "bf77caa5da671f5bab16e4792711d5aa288e8db0"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -253,7 +253,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "8973916a3d015d65a8c4614e141f4270a713cf33"
+    "commit": "d696e36d5792daf828f8c8e8d4b9aa90c1a10c2a"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -287,7 +287,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "6e42d823ce0a5a76180c473c119c7677738a09d1"
+    "commit": "36fcb4a4238928f0b627e1ab84ade0acc1facc2c"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -297,7 +297,7 @@
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "main",
-    "commit": "e91c585ac0ee760198dabc1fad2e6227effdcd5e"
+    "commit": "ecd03f5811eb5c66d2fa420b79121b866feecd82"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
@@ -319,7 +319,7 @@
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "8b92ea89835b8e5dbc779a675ebb0e5fcb9a1993"
+    "commit": "60f1b3d1bde39396cdfb1362dd207970ec57e731"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
