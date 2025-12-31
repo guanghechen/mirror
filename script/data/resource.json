@@ -64,7 +64,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "5420c4b5ea0aeb99c09cfbd4fd0b70d257b44f25"
+    "commit": "4b713b9da0061a54750bfed457e190459be28c7b"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -108,7 +108,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "bf77caa5da671f5bab16e4792711d5aa288e8db0"
+    "commit": "130beacf8a51f00aede9c31064c749136679a321"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -169,7 +169,7 @@
   "nvim@mini.icons": {
     "remote": "https://github.com/nvim-mini/mini.icons",
     "branch": "main",
-    "commit": "ff2e4f1d29f659cc2bad0f9256f2f6195c6b2428"
+    "commit": "efc85e42262cd0c9e1fdbf806c25cb0be6de115c"
   },
   "nvim@mini.indentscope": {
     "remote": "https://github.com/nvim-mini/mini.indentscope",
@@ -189,7 +189,7 @@
   "nvim@mini.surround": {
     "remote": "https://github.com/nvim-mini/mini.surround",
     "branch": "main",
-    "commit": "88c52297ed3e69ecf9f8652837888ecc727a28ee"
+    "commit": "cc7b9d0a056b5fa6915ffac1cb91f29bf7c96f69"
   },
   "nvim@mini.trailspace": {
     "remote": "https://github.com/nvim-mini/mini.trailspace",
@@ -253,7 +253,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "d696e36d5792daf828f8c8e8d4b9aa90c1a10c2a"
+    "commit": "41ceb6bba3a40128b7841f5b7f5a9dae7201e823"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -287,7 +287,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "36fcb4a4238928f0b627e1ab84ade0acc1facc2c"
+    "commit": "7efc1b58a8061d29786860006c7257c90a5196dc"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -319,7 +319,7 @@
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "60f1b3d1bde39396cdfb1362dd207970ec57e731"
+    "commit": "1bc1227ee1f5ad02f6796701539e9aaf6c5e77e6"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
