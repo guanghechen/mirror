@@ -287,7 +287,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "737088f8571293f6a1ef8cd6c858d5daf9a38162"
+    "commit": "300b906a9514d5e0ce02911d371445382fe35a31"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -297,7 +297,7 @@
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "main",
-    "commit": "ecd03f5811eb5c66d2fa420b79121b866feecd82"
+    "commit": "28a3494c075ef0f353314f627546537e43c09592"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
@@ -314,7 +314,7 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "acddb80d9a12e33c03ca288de39c9963396f358a"
+    "commit": "da6a7b25471ab23824f3429225973186eb0b62d2"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",

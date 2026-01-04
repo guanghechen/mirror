@@ -72,12 +72,12 @@ To backup open source codes.
  [nvim@nvim-snippets][]               | [main][nvim@nvim-snippets#main]                     | 56b4052f71220144689caaa2e5b66222ba5661eb
  [nvim@telescope.nvim][]              | [master][nvim@telescope.nvim#master]                | b4da76be54691e854d3e0e02c36b0245f945c2c7
  [nvim@nvim-tmux-navigation][]        | [main][nvim@nvim-tmux-navigation#main]              | 4898c98702954439233fdaf764c39636681e2861
- [nvim@nvim-treesitter][]             | [main][nvim@nvim-treesitter#main]                   | 737088f8571293f6a1ef8cd6c858d5daf9a38162
+ [nvim@nvim-treesitter][]             | [main][nvim@nvim-treesitter#main]                   | 300b906a9514d5e0ce02911d371445382fe35a31
  [nvim@nvim-treesitter-context][]     | [master][nvim@nvim-treesitter-context#master]       | 64dd4cf3f6fd0ab17622c5ce15c91fc539c3f24a
- [nvim@nvim-treesitter-textobjects][] | [main][nvim@nvim-treesitter-textobjects#main]       | ecd03f5811eb5c66d2fa420b79121b866feecd82
+ [nvim@nvim-treesitter-textobjects][] | [main][nvim@nvim-treesitter-textobjects#main]       | 28a3494c075ef0f353314f627546537e43c09592
  [nvim@nvim-window-picker][]          | [main][nvim@nvim-window-picker#main]                | 41cfaa428577c53552200a404ae9b3a0b5719706
  [nvim@plenary.nvim][]                | [master][nvim@plenary.nvim#master]                  | b9fd5226c2f76c951fc8ed5923d85e4de065e509
- [nvim@render-markdown.nvim][]        | [main][nvim@render-markdown.nvim#main]              | acddb80d9a12e33c03ca288de39c9963396f358a
+ [nvim@render-markdown.nvim][]        | [main][nvim@render-markdown.nvim#main]              | da6a7b25471ab23824f3429225973186eb0b62d2
  [nvim@schema-store.nvim][]           | [main][nvim@schema-store.nvim#main]                 | fb5f164a28f8fd5a052da512436d4173e06cf71e
  [nvim@sidekick.nvim][]               | [main][nvim@sidekick.nvim#main]                     | c2bdf8cfcd87a6be5f8b84322c1b5052e78e302e
  [nvim@smear-cursor.nvim][]           | [main][nvim@smear-cursor.nvim#main]                 | 3879bc2eb4a2a07a8637256fe33cc4484a23a813
