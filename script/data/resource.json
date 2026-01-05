@@ -14,7 +14,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "10c164bbdf065f9781b6cc2f7d068c016276055b"
+    "commit": "6a4914ca987453464a7dfc7fc237a992adb567d0"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -228,7 +228,7 @@
   "nvim@nvim-dap": {
     "remote": "https://github.com/mfussenegger/nvim-dap",
     "branch": "master",
-    "commit": "7bb46cc612bb127d7b0e3e9ed695267d830824ec"
+    "commit": "03e83f1513264ca694ff35433f361fe993fcb83c"
   },
   "nvim@nvim-dap-python": {
     "remote": "https://github.com/mfussenegger/nvim-dap-python",
@@ -248,12 +248,12 @@
   "nvim@nvim-lint": {
     "remote": "https://github.com/mfussenegger/nvim-lint",
     "branch": "master",
-    "commit": "1f19dacd945a7b1a57f29f32b2d7168384df3d36"
+    "commit": "1e6b2ac034d1a7588d11b0b8e862a7ad89368376"
   },
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "ac04ec3c2af08e9821b4eb64ede86072b9b213bf"
+    "commit": "0b38bc74487e73489624d61396af7805af9cc75f"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -287,7 +287,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "300b906a9514d5e0ce02911d371445382fe35a31"
+    "commit": "99dfc5acefd7728cec4ad0d0a6a9720f2c2896ff"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
