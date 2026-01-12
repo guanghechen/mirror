@@ -63,7 +63,7 @@ function M.get_scope(bufnr, winnr)
   return { start_line = scope_start_line, end_line = scope_end_line, indent_level = scope_indent_level }
 end
 
---- In some raree cases, the cursor line can reside outside of the window's viewport, such as after
+--- In some rare cases, the cursor line can reside outside of the window's viewport, such as after
 --- cancelling a search. As a result, when using the indent levels from a range, we must bound the
 --- cursor line to the bottom/top of the viewport.
 --- See https://github.com/saghen/blink.indent/issues/36#issuecomment-3715378685
