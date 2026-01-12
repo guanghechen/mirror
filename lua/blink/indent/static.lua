@@ -25,7 +25,7 @@ function M.draw(winnr, bufnr, ns, indent_levels, whitespace_lens, range)
 
   local breakindent = utils.get_breakindent(winnr)
   local shiftwidth = utils.get_shiftwidth(bufnr)
-  local space = config.static.whitespace_char or vim.opt.listchars:get().space or ' '
+  local space = config.static.whitespace_char or utils.get_space_listchar(winnr)
   local symbol = config.static.char .. space:rep(shiftwidth - 1)
   local symbol_plain = config.static.char .. (' '):rep(shiftwidth - 1)
 

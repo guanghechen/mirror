@@ -8,6 +8,13 @@ function M.get_shiftwidth(bufnr)
   return math.max(shiftwidth, 2)
 end
 
+function M.get_space_listchar(winnr)
+  local listchars = vim.wo[winnr].listchars or vim.o.listchars
+  local space = listchars:match('space:([^,]*)')
+  if space == nil then return ' ' end
+  return space:sub(1, 1 + vim.str_utf_end(space, 1))
+end
+
 --- @param winnr integer
 --- @return boolean
 function M.get_breakindent(winnr)
