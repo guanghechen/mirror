@@ -14,7 +14,7 @@ local M = {}
 --- @param range blink.indent.ParseRange
 --- @return blink.indent.ScopeRange
 function M.get_scope_partial(bufnr, winnr, indent_levels, range)
-  local cursor_line = vim.api.nvim_win_get_cursor(winnr)[1]
+  local cursor_line = M.get_cursor_line_in_range(winnr, range)
   local scope_search_start_line, scope_indent_level = M.get_scope_start(bufnr, cursor_line, utils.get_shiftwidth(bufnr))
 
   -- move up and down to find the scope
@@ -61,6 +61,18 @@ function M.get_scope(bufnr, winnr)
   end
 
   return { start_line = scope_start_line, end_line = scope_end_line, indent_level = scope_indent_level }
+end
+
+--- In some raree cases, the cursor line can reside outside of the window's viewport, such as after
+--- cancelling a search. As a result, when using the indent levels from a range, we must bound the
+--- cursor line to the bottom/top of the viewport.
+--- See https://github.com/saghen/blink.indent/issues/36#issuecomment-3715378685
+--- @param winnr integer
+--- @param range blink.indent.ParseRange
+--- @return integer
+function M.get_cursor_line_in_range(winnr, range)
+  local cursor_line = vim.api.nvim_win_get_cursor(winnr)[1]
+  return math.max(range.start_line, math.min(range.end_line, cursor_line))
 end
 
 --- @param bufnr integer
