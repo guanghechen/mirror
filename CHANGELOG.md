@@ -1,4 +1,10 @@
-## [2.1.0](https://github.com/saghen/blink.indent/compare/v2.0.0..v2.1.0) - 2025-11-20
+## [2.1.1](https://github.com/saghen/blink.indent/compare/v2.1.0..v2.1.1) - 2026-01-12
+
+### Bug Fixes
+
+- error on cursor outside of viewport ([d73abc2](https://github.com/saghen/blink.indent/commit/d73abc29657e54d58b3f65d95a4cdb452cc8b3c8))
+
+## [2.1.0](https://github.com/saghen/blink.indent/compare/v2.0.0..v2.1.0) - 2025-12-02
 
 ### Features
 
