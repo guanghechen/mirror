@@ -1,3 +1,14 @@
+## [2.1.2](https://github.com/saghen/blink.indent/compare/v2.1.1..v2.1.2) - 2026-01-13
+
+### Bug Fixes
+
+- use window local listchars ([8c0bbe7](https://github.com/saghen/blink.indent/commit/8c0bbe7eb8d74a78d51d1167d9adb276d1188f75))
+- empty lines causing scope outside of viewport bounds ([a55d999](https://github.com/saghen/blink.indent/commit/a55d99956b27077c13f140ccc28fa8157d7fbe08))
+
+### Documentation
+
+- fix typo ([8f77575](https://github.com/saghen/blink.indent/commit/8f77575c4691319dc31dd9d884fad9fa3d56e7da))
+
 ## [2.1.1](https://github.com/saghen/blink.indent/compare/v2.1.0..v2.1.1) - 2026-01-12
 
 ### Bug Fixes
