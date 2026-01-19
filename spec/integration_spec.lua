@@ -768,6 +768,15 @@ describe('request source', function()
   end)
 
   it('can jump to frame if source needs to be fetched', function()
+    api.nvim_create_autocmd("BufReadCmd", {
+      group = api.nvim_create_augroup("dap-readcmds", { clear = true }),
+      pattern = "dap-src://*",
+      ---@param args vim.api.keyset.create_autocmd.callback_args
+      callback = function(args)
+        require("dap._cmds").source(args.buf)
+      end,
+    })
+
     server.client.source = function(self, request)
       self:send_response(request, {
         content = 'foobar',
@@ -786,6 +795,7 @@ describe('request source', function()
             id = 1,
             name = 'stackFrame1',
             line = 1,
+            column = 1,
             source = {
               sourceReference = 1
             }

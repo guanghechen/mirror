@@ -553,7 +553,8 @@ local function source_to_bufnr(session, source)
   if not source then
     return nil
   end
-  if not source.sourceReference or source.sourceReference == 0 then
+  local source_ref = source.sourceReference
+  if not source_ref or source_ref == 0 then
     if not source.path then
       return nil
     end
@@ -564,11 +565,13 @@ local function source_to_bufnr(session, source)
       return vim.uri_to_bufnr(vim.uri_from_fname(source.path))
     end
   end
-  local co = coroutine.running()
-  assert(co, 'Must run in coroutine')
-  session:source(source, coresume(co))
-  local _, bufnr = coroutine.yield()
-  return bufnr
+  local fname = string.format(
+    "dap-src://%d/%d/%s",
+    session.id,
+    source_ref,
+    source.path or ""
+  )
+  return vim.uri_to_bufnr(fname)
 end
 
 
@@ -608,6 +611,7 @@ end
 --- Request a source
 ---@param source dap.Source
 ---@param cb fun(err: dap.ErrorResponse?, buf: integer?) the buffer will have the contents of the source
+---@deprecated Open a buffer named "dap-src://<session-id>/<source-ref>/<source-path>" instead
 function Session:source(source, cb)
   assert(source, 'source is required')
   assert(source.sourceReference, 'sourceReference is required')
