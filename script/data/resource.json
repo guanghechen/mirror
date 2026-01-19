@@ -64,7 +64,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "238f542a118984a88124fc915d5b981680418707"
+    "commit": "c2526f1cde528a66e086ab1668e996d162c75f4f"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -153,7 +153,7 @@
   "nvim@mini.ai": {
     "remote": "https://github.com/nvim-mini/mini.ai",
     "branch": "main",
-    "commit": "bfb26d9072670c3aaefab0f53024b2f3729c8083"
+    "commit": "9eae720f2b20f6ad28cbfa0ddc524e10dc2c3201"
   },
   "nvim@mini.comment": {
     "remote": "https://github.com/nvim-mini/mini.comment",
@@ -189,7 +189,7 @@
   "nvim@mini.surround": {
     "remote": "https://github.com/nvim-mini/mini.surround",
     "branch": "main",
-    "commit": "cc7b9d0a056b5fa6915ffac1cb91f29bf7c96f69"
+    "commit": "f9358544ed06bc10197e698b7fc8dc5963be3f4b"
   },
   "nvim@mini.trailspace": {
     "remote": "https://github.com/nvim-mini/mini.trailspace",
@@ -287,7 +287,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "8aada0e3940c573e38b417a226b43bc8675f8958"
+    "commit": "b9933f0e1386c7b63fe131d9979d9c2613da551a"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -297,7 +297,7 @@
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "main",
-    "commit": "baa6b4ec28c8be5e4a96f9b1b6ae9db85ec422f8"
+    "commit": "4d55f63252e04c5212daed958e4e940915ff16ce"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
