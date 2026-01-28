@@ -253,7 +253,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "419b082102fa813739588dd82e19a8b6b2442855"
+    "commit": "5fef3b4a5f1057553b78d048322782c3a9ae69c6"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -287,7 +287,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "568ede7e79172a0fe7c9d631454a97ad968deaf2"
+    "commit": "f8bbc3177d929dc86e272c41cc15219f0a7aa1ac"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -297,7 +297,7 @@
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "main",
-    "commit": "52bda74e087034408e2d563cb4499c1601038f9d"
+    "commit": "a0e182ae21fda68c59d1f36c9ed45600aef50311"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
@@ -314,12 +314,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "c54380dd4d8d1738b9691a7c349ecad7967ac12e"
+    "commit": "8314d14b9f56306bc876fb3b386f31dc8c5a2711"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "cd9e8c22f6ad2012ac395725080cc5737297d840"
+    "commit": "9afa445602e6191917b4d32f1355e77b4525f905"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
