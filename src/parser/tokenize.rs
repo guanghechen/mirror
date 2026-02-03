@@ -1,7 +1,7 @@
 use std::{
     cell::Cell,
     rc::Rc,
-    simd::{cmp::SimdPartialEq, LaneCount, Simd, SupportedLaneCount},
+    simd::{cmp::SimdPartialEq, Select, Simd},
 };
 
 #[derive(Debug, Clone, Copy, PartialEq)]
@@ -22,10 +22,7 @@ impl CharPos {
 pub fn tokenize<'s, const N: usize>(
     text: &'s str,
     tokens: &'static [u8],
-) -> impl Iterator<Item = CharPos> + 's
-where
-    LaneCount<N>: SupportedLaneCount,
-{
+) -> impl Iterator<Item = CharPos> + 's {
     let none = Simd::<u8, N>::splat(0);
     let new_line = Simd::<u8, N>::splat(b'\n');
     let escape = Simd::<u8, N>::splat(b'\\');
