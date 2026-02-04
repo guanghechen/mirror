@@ -1,3 +1,7 @@
+## [1.9.1](https://github.com/Saghen/blink/compare/v1.9.0...v1.9.1) (2026-02-04)
+
+Minor hotfix updating the `flake.lock` to use the latest rust nightly, fixing the frizbee build for nix users.
+
 ## [1.9.0](https://github.com/Saghen/blink.cmp/compare/v1.8.0...v1.9.0) (2025-11-14)
 
 ### Features
