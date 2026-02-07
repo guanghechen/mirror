@@ -14,7 +14,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "fab799d086fd63fa5b389007f63767b23885ebf8"
+    "commit": "f9e855c4d96e1264f7c818844f5a0166ad48c212"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -30,7 +30,7 @@
   "nvim@blink.pairs": {
     "remote": "https://github.com/Saghen/blink.pairs",
     "branch": "main",
-    "commit": "65978aadaf9b7d6cae59c1c51cf2b366b370546e"
+    "commit": "2a7cb15f2c4bbbbe178ebf9f3fdae19aa6d28d39"
   },
   "nvim@ccc.nvim": {
     "remote": "https://github.com/uga-rosa/ccc.nvim",
@@ -108,7 +108,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "abf82a65f185bd54adc0679f74b7d6e1ada690c9"
+    "commit": "1ce96a464fdbc24208e24c117e2021794259005d"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -189,7 +189,7 @@
   "nvim@mini.surround": {
     "remote": "https://github.com/nvim-mini/mini.surround",
     "branch": "main",
-    "commit": "f9358544ed06bc10197e698b7fc8dc5963be3f4b"
+    "commit": "d648a5601e1c48f175b07d10eba141da338a0a2a"
   },
   "nvim@mini.trailspace": {
     "remote": "https://github.com/nvim-mini/mini.trailspace",
@@ -253,7 +253,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "3f58aeca0c6ece8a9fb8782ea3fcb6024f285be3"
+    "commit": "66fd02ad1c7ea31616d3ca678fa04e6d0b360824"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -287,7 +287,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "4967fa48b0fe7a7f92cee546c76bb4bb61bb14d5"
+    "commit": "92c9b016d16473dabd2bf3760196cf2d928edacc"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -314,12 +314,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "48934b49a2363b49ae1d698ed4cb30fb79d7efe8"
+    "commit": "48b4175dbca8439d30c1f52231cbe5a712c8f9d9"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "9b6a3ab14cecc7da9f3aa4fa0ae2a7390748aca5"
+    "commit": "ff73799fc8df725d51eada87a113581ba4d3717b"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
