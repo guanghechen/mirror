@@ -14,7 +14,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "f9e855c4d96e1264f7c818844f5a0166ad48c212"
+    "commit": "f85eb6252f4c0212be15c6c4213e9af587574cbe"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -287,7 +287,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "92c9b016d16473dabd2bf3760196cf2d928edacc"
+    "commit": "45a07f869b0cffba342276f2c77ba7c116d35db8"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
