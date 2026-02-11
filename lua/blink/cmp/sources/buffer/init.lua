@@ -160,44 +160,42 @@ end
 function buffer:enabled() return not utils.is_command_line() or self:is_search_context() end
 
 function buffer:get_completions(_, callback)
-  vim.schedule(function()
-    local is_search = self:is_search_context()
-    local get_bufnrs = is_search and self.opts.get_search_bufnrs or self.opts.get_bufnrs
-    local bufnrs = dedup(get_bufnrs())
+  local is_search = self:is_search_context()
+  local get_bufnrs = is_search and self.opts.get_search_bufnrs or self.opts.get_bufnrs
+  local bufnrs = dedup(get_bufnrs())
 
-    if #bufnrs == 0 then
-      callback({ is_incomplete_forward = false, is_incomplete_backward = false, items = {} })
-      return
-    end
+  if #bufnrs == 0 then
+    callback({ is_incomplete_forward = false, is_incomplete_backward = false, items = {} })
+    return
+  end
 
-    local selected_bufnrs = buf_utils.retain_buffers(
-      bufnrs,
-      self.opts.max_total_buffer_size,
-      self.opts.max_async_buffer_size,
-      self.opts.retention_order
-    )
+  local selected_bufnrs = buf_utils.retain_buffers(
+    bufnrs,
+    self.opts.max_total_buffer_size,
+    self.opts.max_async_buffer_size,
+    self.opts.retention_order
+  )
 
-    local tasks = vim.tbl_map(function(buf) return self:get_buf_items(buf, not is_search) end, selected_bufnrs)
-    async.task.all(tasks):map(function(words_per_buf)
-      --- @cast words_per_buf string[][]
+  local tasks = vim.tbl_map(function(buf) return self:get_buf_items(buf, not is_search) end, selected_bufnrs)
+  async.task.all(tasks):map(function(words_per_buf)
+    --- @cast words_per_buf string[][]
 
-      local unique = {}
-      local words = {}
-      for _, buf_words in ipairs(words_per_buf) do
-        for _, word in ipairs(buf_words) do
-          if not unique[word] then
-            unique[word] = true
-            table.insert(words, word)
-          end
+    local unique = {}
+    local words = {}
+    for _, buf_words in ipairs(words_per_buf) do
+      for _, word in ipairs(buf_words) do
+        if not unique[word] then
+          unique[word] = true
+          table.insert(words, word)
         end
       end
-      local items = words_to_items(words)
+    end
+    local items = words_to_items(words)
 
-      if self.opts.use_cache then self.cache:cleanup(selected_bufnrs) end
+    if self.opts.use_cache then self.cache:cleanup(selected_bufnrs) end
 
-      ---@diagnostic disable-next-line: missing-return
-      callback({ is_incomplete_forward = false, is_incomplete_backward = false, items = items })
-    end)
+    ---@diagnostic disable-next-line: missing-return
+    callback({ is_incomplete_forward = false, is_incomplete_backward = false, items = items })
   end)
 end
 
