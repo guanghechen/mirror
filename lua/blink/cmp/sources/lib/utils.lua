@@ -21,23 +21,12 @@ end
 --- @return boolean
 function utils.is_command_line(types)
   local mode = vim.api.nvim_get_mode().mode
+  if mode ~= 'c' and vim.fn.win_gettype() ~= 'command' then return false end
 
-  -- If types is nil or empty, just check context
-  if not types or #types == 0 then return mode == 'c' or vim.fn.win_gettype() == 'command' end
+  if not types or #types == 0 then return true end
 
-  -- If in cmdline mode, check type
-  if mode == 'c' then
-    local cmdtype = vim.fn.getcmdtype()
-    return vim.tbl_contains(types, cmdtype)
-  end
-
-  -- If in command-line window, check type
-  if vim.fn.win_gettype() == 'command' then
-    local cmdtype = vim.fn.getcmdwintype()
-    return vim.tbl_contains(types, cmdtype)
-  end
-
-  return false
+  local cmdtype = mode == 'c' and vim.fn.getcmdtype() or vim.fn.getcmdwintype()
+  return vim.tbl_contains(types, cmdtype)
 end
 
 --- Checks if the current command is one of the given Ex commands.
