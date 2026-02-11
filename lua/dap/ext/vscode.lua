@@ -145,7 +145,7 @@ end
 
 
 function M._load_json(jsonstr)
-  local ok, data = pcall(M.json_decode, jsonstr)
+  local ok, data = pcall(M.json_decode, jsonstr, { skip_comments = true })
   if not ok then
     error("Error parsing launch.json: " .. data)
   end
@@ -185,13 +185,23 @@ function M.getconfigs(path)
   if not vim.loop.fs_stat(resolved_path) then
     return {}
   end
-  local lines = {}
-  for line in io.lines(resolved_path) do
-    if not vim.startswith(vim.trim(line), '//') then
-      table.insert(lines, line)
+  local contents
+  if vim.fn.has("nvim-0.12") == 1 then
+    local fp = io.open(resolved_path, "r")
+    if fp then
+      contents = fp:read("*a")
+    else
+      return {}
     end
+  else
+    local lines = {}
+    for line in io.lines(resolved_path) do
+      if not vim.startswith(vim.trim(line), '//') then
+        table.insert(lines, line)
+      end
+    end
+    contents = table.concat(lines, '\n')
   end
-  local contents = table.concat(lines, '\n')
   return M._load_json(contents)
 end
 
