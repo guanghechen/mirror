@@ -29,26 +29,18 @@ function utils.is_command_line(types)
   return vim.tbl_contains(types, cmdtype)
 end
 
---- Checks if the current command is one of the given Ex commands.
---- @param commands table List of command names to check against.
+--- Checks if the current command is one of the given Ex search commands.
 --- @return boolean
-function utils.in_ex_context(commands)
+function utils.in_ex_search_commands()
   if not utils.is_command_line({ ':' }) then return false end
-
-  local line = nil
   local mode = vim.api.nvim_get_mode().mode
-  if mode == 'c' then
-    line = vim.fn.getcmdline()
-  elseif vim.fn.win_gettype() == 'command' then
-    line = vim.api.nvim_get_current_line()
-  end
-
+  local line = mode == 'c' and vim.fn.getcmdline() or vim.api.nvim_get_current_line()
   if not line then return false end
 
   local ok, parsed = pcall(vim.api.nvim_parse_cmd, line, {})
   local cmd = (ok and parsed.cmd) or ''
   local has_args = (ok and parsed.args and #parsed.args > 0) or false
-  return vim.tbl_contains(commands, cmd) and has_args
+  return cmdline_constants.ex_search_commands[cmd] and has_args
 end
 
 ---Get the current completion type.

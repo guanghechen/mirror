@@ -3,7 +3,6 @@
 -- but ensure it doesn't add too much complexity
 
 local async = require('blink.cmp.lib.async')
-local constants = require('blink.cmp.sources.cmdline.constants')
 local parser = require('blink.cmp.sources.buffer.parser')
 local buf_utils = require('blink.cmp.sources.buffer.utils')
 local utils = require('blink.cmp.sources.lib.utils')
@@ -121,7 +120,7 @@ function buffer:is_search_context()
   -- In search mode
   if utils.is_command_line({ '/', '?' }) then return true end
   -- In specific ex commands, if user opts in
-  if self.opts.enable_in_ex_commands and utils.in_ex_context(constants.ex_search_commands) then return true end
+  if self.opts.enable_in_ex_commands and utils.in_ex_search_commands() then return true end
 
   return false
 end
