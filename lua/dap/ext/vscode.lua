@@ -209,6 +209,8 @@ end
 --- Extends dap.configurations with entries read from .vscode/launch.json
 ---@deprecated
 function M.load_launchjs(path, type_to_filetypes)
+  local msg = "dap.ext.vscode.load_launchjs is deprecated as it is no longer needed. ./.vscode/launch.json files are read automatically on-demand. See :help dap-providers"
+  vim.notify_once(msg, vim.log.levels.WARN)
   type_to_filetypes = vim.tbl_extend('keep', type_to_filetypes or {}, M.type_to_filetypes)
   local configurations = M.getconfigs(path)
 
