@@ -14,7 +14,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "f85eb6252f4c0212be15c6c4213e9af587574cbe"
+    "commit": "85666c58d8ed49539794e913fd15f508af2ca8fb"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -108,7 +108,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "1ce96a464fdbc24208e24c117e2021794259005d"
+    "commit": "31217271a7314c343606acb4072a94a039a19fb5"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -228,7 +228,7 @@
   "nvim@nvim-dap": {
     "remote": "https://github.com/mfussenegger/nvim-dap",
     "branch": "master",
-    "commit": "e47878dcf1ccc30136b30d19ab19fe76946d61cd"
+    "commit": "db321947bb289a2d4d76a32e76e4d2bd6103d7df"
   },
   "nvim@nvim-dap-python": {
     "remote": "https://github.com/mfussenegger/nvim-dap-python",
@@ -253,7 +253,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "66fd02ad1c7ea31616d3ca678fa04e6d0b360824"
+    "commit": "44acfe887d4056f704ccc4f17513ed41c9e2b2e6"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -287,7 +287,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "45a07f869b0cffba342276f2c77ba7c116d35db8"
+    "commit": "9f2dad22ef8bb14fd1e0a3aa8859cdc88170668b"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -319,7 +319,7 @@
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "ff73799fc8df725d51eada87a113581ba4d3717b"
+    "commit": "2abb594d69a43c0a48a11b30bb0ef17ad90dceea"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
