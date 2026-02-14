@@ -14,11 +14,16 @@ end
 --- @param bufnr integer
 --- @return integer
 function utils.get_buffer_size(bufnr)
-  local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
-  local size = 0
-  for _, line in ipairs(lines) do
-    size = size + #line + 1
+  local file_name = vim.api.nvim_buf_get_name(bufnr)
+  local size
+  if not vim.bo[bufnr].modified then
+    size = vim.fn.getfsize(file_name)
+    if size >= 0 then return size end
   end
+  local last = vim.api.nvim_buf_line_count(bufnr) - 1 -- 0-indexed
+  size = vim.api.nvim_buf_get_offset(bufnr, last)
+  -- Add size of the last line
+  size = size + #(vim.api.nvim_buf_get_lines(bufnr, last, last + 1, false)[1] or '')
   return size
 end
 
