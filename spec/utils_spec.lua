@@ -123,7 +123,7 @@ describe('utils.splitstr', function ()
   end)
 
   it('escaped quote', function ()
-    assert.are.same({'foo', '"bar'}, utils.splitstr('foo \"bar'))
+    assert.are.same({'foo', '"bar'}, utils.splitstr([[foo \"bar]]))
   end)
 
   it("returns empty list for empty strings", function ()
