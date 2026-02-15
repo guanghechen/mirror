@@ -422,10 +422,11 @@ function M.splitstr(str)
     return {}
   end
 
-  local space = S(" \t\n\r") ^ 1
-  local unquoted = C((1 - space) ^ 0)
-  local element = qtext('"') + qtext("'") + unquoted
-  local p = lpeg.Ct(element * (space * element) ^ 0)
+  local space = S(" \t\n\r")
+  local unquoted = P('\\') * C(P(1)) + C(P(1) - space)
+  local word = qtext('"') + qtext("'") + unquoted
+  local element = lpeg.Cf(word ^ 1, function(acc, val) return acc .. val end)
+  local p = lpeg.Ct(element * (space ^ 1 * element) ^ 0)
   return lpeg.match(p, str)
 end
 

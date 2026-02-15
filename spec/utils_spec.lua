@@ -134,6 +134,10 @@ describe('utils.splitstr', function ()
     assert.are.same({"a"}, utils.splitstr("a   "))
     assert.are.same({"a", "b"}, utils.splitstr("     a       b   "))
   end)
+
+  it("mixed and balanced quotes", function ()
+    assert.are.same({"abc", 'def', 'ghi'}, utils.splitstr([['a'b'c' d"e"f "g"'h'i]]))
+  end)
 end)
 
 describe("trim_procname", function()
