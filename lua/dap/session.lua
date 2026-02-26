@@ -940,14 +940,13 @@ do
     end
   end
 
-  local detach_handlers = {}
-
-  local function remove_breakpoints(_, buf)
+  ---@param args vim.api.keyset.create_autocmd.callback_args
+  local function remove_breakpoints(args)
     local session = dap().session()
     if session then
-      session:set_breakpoints({[buf] = {}})
+      session:set_breakpoints({[args.buf] = {}})
     end
-    detach_handlers[buf] = nil
+    return true
   end
 
   function Session:set_breakpoints(bps, on_done)
@@ -960,9 +959,13 @@ do
     end
     for bufnr, buf_bps in pairs(bps) do
       notify_if_missing_capability(buf_bps, self.capabilities)
-      if non_empty(buf_bps) and not detach_handlers[bufnr] then
-        detach_handlers[bufnr] = true
-        api.nvim_buf_attach(bufnr, false, { on_detach = remove_breakpoints })
+      if non_empty(buf_bps) then
+        local group = "dap-bps-del-" .. tostring(bufnr)
+        api.nvim_create_autocmd("BufWipeout", {
+          group = api.nvim_create_augroup(group, { clear = true }),
+          buffer = bufnr,
+          callback = remove_breakpoints,
+        })
       end
       local path = api.nvim_buf_get_name(bufnr)
       ---@type dap.SetBreakpointsArguments

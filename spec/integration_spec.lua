@@ -1027,6 +1027,7 @@ describe('run_to_cursor', function()
     local expected_bps = {
       [buf1] = {
         {
+          buf = buf1,
           line = 1,
         },
       }
@@ -1079,6 +1080,7 @@ describe('breakpoint events', function()
     local bps = breakpoints.get()
     assert.are.same(1, vim.tbl_count(bps))
     local expected_breakpoint = {
+      buf = buf1,
       line = 1,
       state = {
         id = 1,
@@ -1146,6 +1148,7 @@ describe('breakpoint events', function()
     local expected_breakpoints = {
       [buf2] = {
         [1] = {
+          buf = buf2,
           line = breakpoint_state.line,
           state = breakpoint_state,
         }
