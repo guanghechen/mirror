@@ -129,46 +129,50 @@ function utils.get_completions(pattern, type, completion_type)
   return vim.fn.getcompletion(pattern, type, true)
 end
 
----@param func_str string v:lua function string, e.g. "v:lua.foo.bar"
+---@param func_str string v:lua expression (e.g. "v:lua.foo.bar" or "v:lua.require'bar'.foo")
 ---@param prefix string
 ---@param line string
 ---@param col number
 ---@return boolean success
 ---@return table|string|nil result
 function utils.call_vlua(func_str, prefix, line, col)
-  local parts = vim.split(func_str, '.', { plain = true })
-  if #parts < 2 then return false, nil end
+  local expr = func_str:gsub('^v:lua%.', '')
 
-  local func_name = parts[#parts]
+  -- If the expression only contains valid identifier characters and dots,
+  -- resolve it directly through Lua tables (significantly faster than luaeval).
+  if not expr:find('[^%w_.]') then
+    local parts = vim.split(expr, '.', { plain = true })
+
+    -- Walk _G for all but the last part
+    ---@type table|nil
+    local tbl = _G
+    for i = 1, #parts - 1 do
+      tbl = type(tbl) == 'table' and tbl[parts[i]] or nil
+      if not tbl then break end
+    end
 
   ---@type function|nil
   local fn
 
-  -- Prefer global table lookup, supporting deep module functions (e.g., v:lua.foo.bar.baz)
-  ---@type table|nil
-  local tbl = _G
-  for i = 2, #parts - 1 do
-    if type(tbl) ~= 'table' then
-      tbl = nil
-      break
+    -- For multi-part expressions, if not found in _G try requiring the module.
+    if type(fn) ~= 'function' and #parts > 1 then
+      local module_name = table.concat(parts, '.', 1, #parts - 1)
+      local ok, mod = pcall(require, module_name)
+      if ok and type(mod) == 'table' then fn = mod[parts[#parts]] end
     end
-    tbl = tbl[parts[i]]
-  end
-  if type(tbl) == 'table' then fn = tbl[func_name] end
 
-  -- Fallback to require()
-  if not fn and #parts > 2 then
-    local module_name = table.concat(parts, '.', 2, #parts - 1)
-    local ok, mod = pcall(require, module_name)
-    if ok and type(mod) == 'table' then fn = mod[func_name] end
+    if type(fn) == 'function' then
+      local ok, result = pcall(fn, prefix, line, col)
+      return ok, result
+    end
   end
 
-  if type(fn) == 'function' then
-    local ok, result = pcall(fn, prefix, line, col)
-    return ok, result
-  end
+  -- For complex expressions e.g. require'bar'.foo, defer to vim.fn.luaeval().
+  local ok, fn = pcall(vim.fn.luaeval, expr)
+  if not ok or type(fn) ~= 'function' then return false, nil end
 
-  return false, nil
+  local call_ok, result = pcall(fn, prefix, line, col)
+  return call_ok, result
 end
 
 return utils

@@ -100,7 +100,10 @@ function cmdline:get_completions(context, callback)
               pcall(vim.fn.call, completion_func, { current_arg_prefix, context.get_line(), context.cursor[2] + 1 })
           end
 
-          if success and fn_completions then
+          -- Forward any error catch by pcall
+          if not success then return error(fn_completions) end
+
+          if fn_completions then
             if type(fn_completions) == 'table' then
               completions = fn_completions
             -- `custom,` type returns a string, delimited by newlines
