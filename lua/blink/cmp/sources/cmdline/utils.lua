@@ -151,8 +151,8 @@ function utils.call_vlua(func_str, prefix, line, col)
       if not tbl then break end
     end
 
-  ---@type function|nil
-  local fn
+    ---@type function|nil
+    local fn
 
     -- For multi-part expressions, if not found in _G try requiring the module.
     if type(fn) ~= 'function' and #parts > 1 then
