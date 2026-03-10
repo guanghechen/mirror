@@ -159,6 +159,10 @@ function utils.disable_auto_wrap()
     vim.b.blink_cmp_restore_formatoptions_c = true
     vim.opt.formatoptions:remove('c')
   end
+  if formatoptions.a then
+    vim.b.blink_cmp_restore_formatoptions_a = true
+    vim.opt.formatoptions:remove('a')
+  end
 end
 
 --- Restores auto text wrapping (formatoptions 't' and 'c') previously disabled
@@ -168,6 +172,7 @@ end
 function utils.restore_auto_wrap()
   local restore_t = vim.b.blink_cmp_restore_formatoptions_t
   local restore_c = vim.b.blink_cmp_restore_formatoptions_c
+  local restore_a = vim.b.blink_cmp_restore_formatoptions_a
 
   local success, err = pcall(function()
     if restore_t then
@@ -178,28 +183,13 @@ function utils.restore_auto_wrap()
       vim.opt.formatoptions:append('c')
       vim.b.blink_cmp_restore_formatoptions_c = nil
     end
+    if restore_a then
+      vim.opt.formatoptions:append('a')
+      vim.b.blink_cmp_restore_formatoptions_a = nil
+    end
   end)
 
   if not success then error(err) end
-
-  -- Schedule a check to reformat the line if needed.
-  -- Since 't' or 'c' was disabled during completion, text may have exceeded
-  -- textwidth without triggering auto-wrap. We check after the current
-  -- event loop iteration to ensure any pending input has been processed.
-  if restore_t or restore_c then
-    vim.schedule(function()
-      local textwidth = vim.bo.textwidth
-      if textwidth > 0 and vim.api.nvim_get_mode().mode == 'i' then
-        local current_line = vim.api.nvim_get_current_line()
-        if #current_line > textwidth then
-          -- Trigger reformat of current line using internal formatting
-          vim.cmd('normal! gww')
-          -- Return to insert mode at the end of the line content
-          vim.cmd('startinsert')
-        end
-      end
-    end)
-  end
 end
 
 --- Disable redraw in neovide for the duration of the callback
