@@ -102,7 +102,7 @@ function highlighter.register(config)
     end,
   })
 
-  if config.matchparen.enabled then require('blink.pairs.matchparen').setup(config) end
+  if config.matchparen and config.matchparen.enabled then require('blink.pairs.highlight.matchparen').setup(config) end
 end
 
 return highlighter
