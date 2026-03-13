@@ -874,7 +874,9 @@ You’ll need to configure your highlights (`BlinkCmpKind` or
 <
 
 
-MINI.ICONS ~
+ICONS ~
+
+mini.icons ~
 
 Original discussion <https://github.com/Saghen/blink.cmp/discussions/458>
 
@@ -907,8 +909,7 @@ Original discussion <https://github.com/Saghen/blink.cmp/discussions/458>
     }
 <
 
-
-MINI.ICONS WITH FILE TYPES
+mini.icons with file types ~
 
 Original discussion <https://github.com/saghen/blink.cmp/issues/2366>
 
@@ -959,8 +960,7 @@ Original discussion <https://github.com/saghen/blink.cmp/issues/2366>
     }
 <
 
-
-NVIM-WEB-DEVICONS + LSPKIND ~
+nvim-web-devicons + lspkind ~
 
 Original discussion <https://github.com/Saghen/blink.cmp/discussions/1146>
 
@@ -1004,8 +1004,7 @@ Original discussion <https://github.com/Saghen/blink.cmp/discussions/1146>
     }
 <
 
-
-MINI.ICONS + LSPKIND ~
+mini.icons + lspkind ~
 
 Uses mini.icons <https://github.com/echasnovski/mini.icons> to display icons
 for filetypes and lspkind <https://github.com/onsails/lspkind-nvim> for LSP
