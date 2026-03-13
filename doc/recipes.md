@@ -435,7 +435,9 @@ completion = {
 }
 ```
 
-### `mini.icons`
+### Icons
+
+<details><summary><code>mini.icons</code></summary>
 
 [Original discussion](https://github.com/Saghen/blink.cmp/discussions/458)
 
@@ -468,7 +470,9 @@ completion = {
 }
 ```
 
-#### `mini.icons` with file types
+</details>
+
+<details><summary><code>mini.icons</code> with file types</summary>
 
 [Original discussion](https://github.com/saghen/blink.cmp/issues/2366)
 
@@ -519,7 +523,9 @@ completion = {
 }
 ```
 
-### `nvim-web-devicons` + `lspkind`
+</details>
+
+<details><summary><code>nvim-web-devicons</code> + <code>lspkind</code></summary>
 
 [Original discussion](https://github.com/Saghen/blink.cmp/discussions/1146)
 
@@ -563,7 +569,9 @@ completion = {
 }
 ```
 
-### `mini.icons` + `lspkind`
+</details>
+
+<details><summary><code>mini.icons</code> + <code>lspkind</code></summary>
 
 Uses [mini.icons](https://github.com/echasnovski/mini.icons) to display icons for filetypes and [lspkind](https://github.com/onsails/lspkind-nvim) for LSP kinds.
 
@@ -603,6 +611,8 @@ completion = {
   }
 }
 ```
+
+</details>
 
 ## For writers
 
