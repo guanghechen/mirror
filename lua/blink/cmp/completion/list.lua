@@ -150,10 +150,11 @@ function list.fuzzy(context, items_by_source)
 end
 
 function list.hide()
+  local context = list.context
   list.context = nil
   list.items = {}
   list.selected_item_idx = nil
-  list.hide_emitter:emit({ context = list.context })
+  list.hide_emitter:emit({ context = context })
 end
 
 ---------- Selection ----------
