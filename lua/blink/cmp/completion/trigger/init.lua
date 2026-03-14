@@ -289,12 +289,7 @@ function trigger.show(opts)
     initial_selected_item_idx = opts.initial_selected_item_idx,
   })
 
-  if opts.send_upstream ~= false then
-    -- user made an input, preview is now locked, so clear undo
-    require('blink.cmp.completion.list').preview_undo = nil
-
-    trigger.show_emitter:emit({ context = trigger.context })
-  end
+  if opts.send_upstream ~= false then trigger.show_emitter:emit({ context = trigger.context }) end
   return trigger.context
 end
 

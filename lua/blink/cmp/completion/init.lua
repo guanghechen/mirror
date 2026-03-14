@@ -17,7 +17,12 @@ function completion.setup()
   local list = require('blink.cmp.completion.list')
 
   -- trigger -> sources: request completion items from the sources on show
-  trigger.show_emitter:on(function(event) sources.request_completions(event.context) end)
+  trigger.show_emitter:on(function(event)
+    -- user made an input, preview is now locked, so clear undo
+    list.preview_undo = nil
+
+    sources.request_completions(event.context)
+  end)
   trigger.hide_emitter:on(function()
     sources.cancel_completions()
     list.hide()
