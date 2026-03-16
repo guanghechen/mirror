@@ -118,6 +118,7 @@ local defaults = {
         -- HACK: https://github.com/sst/opencode/issues/445
         env = { OPENCODE_THEME = "system" },
       },
+      pi = { cmd = { "pi" } },
       qwen = { cmd = { "qwen" } },
     },
     --- Add custom context. See `lua/sidekick/context/init.lua`
