@@ -7,8 +7,23 @@ function utils.is_blink_keymap(mapping) return mapping.desc and mapping.desc:mat
 --- @param keys string
 --- @param mode string
 function utils.feedkeys(keys, mode)
+  if keys:find('\128') then return vim.api.nvim_feedkeys(keys, mode, false) end
+
   local replaced = vim.api.nvim_replace_termcodes(keys, true, true, true)
   vim.api.nvim_feedkeys(replaced, mode, false)
+end
+
+--- Evaluate a v:lua expression RHS.
+--- @param mapping vim.api.keyset.get_keymap
+--- @return boolean, string?
+function utils.eval_vlua_expr(mapping)
+  local expr = mapping.rhs:gsub('^v:lua%.', '')
+  local fn_path = expr:match('^(.-)%(')
+  if fn_path and not fn_path:find('[^%w_%.]') then
+    local fn = vim.tbl_get(_G, unpack(vim.split(fn_path, '.', { plain = true })))
+    if type(fn) == 'function' then return pcall(fn, mapping.lhsraw) end
+  end
+  return pcall(vim.fn.luaeval, expr)
 end
 
 --- nvim_buf_get_keymap translates LHS for leaders and space by their literal
