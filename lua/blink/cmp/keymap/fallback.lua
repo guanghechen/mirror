@@ -30,8 +30,21 @@ function fallback.wrap(mode, key)
   local buffer_index = get_non_blink_keymaps(vim.api.nvim_buf_get_keymap(0, mode))
   local global_index = get_non_blink_keymaps(vim.api.nvim_get_keymap(mode))
   local normalized_key = utils.normalize_lhs(key) or key:lower()
+  local normalized_raw = vim.api.nvim_replace_termcodes(key, true, true, true)
 
   return function(mappings_only)
+    -- <Esc> (or <C-[>) can be either a key or a sequence prefix. When treated as a prefix,
+    -- the following bytes must be fed together, otherwise they're read as literal chars.
+    if normalized_raw == '\27' then
+      local pending = {}
+      while true do
+        local char = vim.fn.getcharstr(0)
+        if char == '' then break end
+        pending[#pending + 1] = char
+      end
+      if #pending > 0 then return single_key(normalized_raw .. table.concat(pending)) end
+    end
+
     local mapping = buffer_index[normalized_key] or global_index[normalized_key]
     if mapping then return fallback.run_non_blink_keymap(mapping, key) end
     if not mappings_only then return single_key(key) end
