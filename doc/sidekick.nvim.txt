@@ -637,7 +637,7 @@ which ones are installed.
   amazon_q              Amazon Q      Install guide
                         Developer     
 
-  claude                Claude Code   npm install -g @anthropic-ai/claude-code
+  claude                Claude Code   See Claude Code docs
                         CLI           
 
   codex                 OpenAI Codex  See OpenAI docs
