@@ -98,28 +98,23 @@ local defaults = {
         size = 0.5, -- size of the split (0-1 for percentage)
       },
     },
+    --- Actual cli tool config is loaded from the runtime path `sk/cli/{tool}.lua` and merged with the config below.
+    --- For default configs, see https://github.com/folke/sidekick.nvim/tree/main/sk/cli
+    -- stylua: ignore
     ---@type table<string, sidekick.cli.Config|{}>
     tools = {
-      aider = { cmd = { "aider" } },
-      amazon_q = { cmd = { "q" } },
-      claude = { cmd = { "claude" } },
-      codex = { cmd = { "codex" } },
-      copilot = { cmd = { "copilot", "--banner" } },
-      crush = {
-        cmd = { "crush" },
-        -- crush uses <a-p> for its own functionality, so we override the default
-        keys = { prompt = { "<a-p>", "prompt" } },
-      },
-      cursor = { cmd = { "cursor-agent" } },
-      gemini = { cmd = { "gemini" } },
-      grok = { cmd = { "grok" } },
-      opencode = {
-        cmd = { "opencode" },
-        -- HACK: https://github.com/sst/opencode/issues/445
-        env = { OPENCODE_THEME = "system" },
-      },
-      pi = { cmd = { "pi" } },
-      qwen = { cmd = { "qwen" } },
+      aider    = {},
+      amazon_q = {},
+      claude   = {},
+      codex    = {},
+      copilot  = {},
+      crush    = {},
+      cursor   = {},
+      gemini   = {},
+      grok     = {},
+      opencode = {},
+      pi       = {},
+      qwen     = {},
     },
     --- Add custom context. See `lua/sidekick/context/init.lua`
     ---@type table<string, sidekick.context.Fn>
