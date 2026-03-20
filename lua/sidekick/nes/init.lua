@@ -81,6 +81,17 @@ function M.setup()
   on(Config.nes.trigger.events, Util.debounce(M.update, Config.nes.debounce))
   on({ "BufEnter", "WinEnter" }, Util.debounce(did_focus, 10))
 
+  if Config.nes.diff.show == "cursor" then
+    on(
+      { "CursorMoved" },
+      Util.debounce(function()
+        if M.have() then
+          require("sidekick.nes.ui").update()
+        end
+      end, 50)
+    )
+  end
+
   if Config.nes.clear.esc then
     local ESC = vim.keycode("<Esc>")
     vim.on_key(function(_, typed)
@@ -256,7 +267,7 @@ function M._jump(pos)
       return
     end
     -- add to jump list
-    if Config.jump.jumplist then
+    if Config.nes.jumplist then
       vim.cmd("normal! m'")
     end
     vim.api.nvim_win_set_cursor(win, pos)

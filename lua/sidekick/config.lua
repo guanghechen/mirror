@@ -5,13 +5,6 @@ M.ns = vim.api.nvim_create_namespace("sidekick.ui")
 
 ---@class sidekick.Config
 local defaults = {
-  jump = {
-    jumplist = true, -- add an entry to the jumplist
-  },
-  signs = {
-    enabled = true, -- enable signs by default
-    icon = " ",
-  },
   nes = {
     ---@type boolean|fun(buf:integer):boolean?
     enabled = function(buf)
@@ -29,9 +22,13 @@ local defaults = {
     },
     ---@class sidekick.diff.Opts
     ---@field inline? "words"|"chars"|false Enable inline diffs
+    ---@field show? "always"|"cursor" `cursor` will only show the diff when the cursor is at the edit position.
     diff = {
       inline = "words",
+      show = "always",
     },
+    signs = true, -- show signs for next edit suggestions
+    jumplist = true, -- add an entry to the jumplist
   },
   -- Work with AI cli tools directly from within Neovim
   cli = {
@@ -157,6 +154,7 @@ local defaults = {
   ui = {
     -- stylua: ignore
     icons = {
+      nes               = " ",
       attached          = " ",
       started           = " ",
       installed         = " ",
@@ -222,6 +220,7 @@ function M.setup(opts)
     M.validate("cli.win.layout", { "float", "left", "bottom", "top", "right" })
     M.validate("cli.mux.backend", { "tmux", "zellij" })
     M.validate("cli.mux.create", { "terminal", "window", "split" })
+    M.validate("nes.diff.show", { "always", "cursor" })
   end)
 end
 
