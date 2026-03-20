@@ -157,13 +157,16 @@ function M:start()
   self:open_win()
 
   -- track if we are in normal mode or terminal mode
-  vim.api.nvim_create_autocmd("WinLeave", {
+  vim.api.nvim_create_autocmd({ "TermLeave", "TermEnter" }, {
     group = self.group,
     callback = function()
       if not self:is_focused() then
         return
       end
-      self.normal_mode = vim.fn.mode() ~= "t"
+      -- schedule to make sure we're still in mormal mode and in the terminal window
+      vim.schedule(function()
+        self.normal_mode = vim.fn.mode() ~= "t" and self:is_focused()
+      end)
     end,
   })
 
