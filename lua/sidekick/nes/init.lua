@@ -133,9 +133,15 @@ function M.update()
   params.textDocument.version = vim.lsp.util.buf_versions[buf]
   params.context = { triggerKind = 2 }
 
+  local done = false
   ---@diagnostic disable-next-line: param-type-mismatch
-  local ok, request_id = client:request("textDocument/copilotInlineEdit", params, M._handler)
-  if ok and request_id then
+  local ok, request_id = client:request("textDocument/copilotInlineEdit", params, function(...)
+    done = true
+    M._handler(...)
+  end)
+  -- skip tracking if the request failed
+  -- or is already done (in-process syncronous response)
+  if ok and request_id and not done then
     M._requests[client.id] = request_id
   end
 end
@@ -183,12 +189,15 @@ end
 ---@param res {edits: sidekick.lsp.NesEdit[]}
 ---@type lsp.Handler
 function M._handler(err, res, ctx)
-  M._requests[ctx.client_id] = nil
-
   local client = vim.lsp.get_client_by_id(ctx.client_id)
   if err or not client then
     return
   end
+
+  if M._requests[ctx.client_id] ~= ctx.request_id then
+    return -- stale response from a cancelled request
+  end
+  M._requests[ctx.client_id] = nil
 
   M._edits = {}
 
