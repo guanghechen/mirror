@@ -225,11 +225,15 @@ function M:start()
   local ready_init ---@type integer?
   local ready_lines = 0
 
-  local on_ready = function()
+  local close = function()
     if not ready:is_closing() then
       ready:stop()
       ready:close()
     end
+  end
+
+  local on_ready = function()
+    close()
     vim.schedule(function()
       self:on_ready()
     end)
@@ -241,10 +245,13 @@ function M:start()
     vim.schedule_wrap(function()
       local elapsed = (vim.uv.hrtime() - ready_start) / 1e6 -- ms
       if not self:buf_valid() then
-        return
+        return close()
       end
       if elapsed > READY_MAX_WAIT then
         return on_ready() -- timeout
+      end
+      if not self:win_valid() then
+        return -- wait for the window to be ready
       end
       local lines = vim.api.nvim_buf_get_lines(self.buf, 0, -1, false)
       while #lines > 0 and lines[#lines] == "" do
