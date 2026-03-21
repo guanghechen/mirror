@@ -79,7 +79,7 @@ local function set_keymaps_for_mode(mode, keys_to_commands, command_filter, filt
       vim.api.nvim_buf_set_keymap(0, mode, key, '', {
         callback = apply_callback(mode, key, commands, filter_fn),
         desc = utils.get_description(commands),
-        silent = mode ~= 'c' or key == '<cr>', -- Weird behavior on cmdline <CR>
+        silent = false,
         noremap = true,
         expr = false,
         replace_keycodes = false,
