@@ -163,8 +163,7 @@ function cmp.accept(opts)
   local item = opts.index ~= nil and completion_list.items[opts.index] or completion_list.get_selected_item()
   if item == nil then return false end
 
-  completion_list.accept(opts)
-  return true
+  return completion_list.accept(opts)
 end
 
 --- Select the first completion item, if there's no selection, and accept
@@ -175,12 +174,11 @@ function cmp.select_and_accept(opts)
   if not cmp.is_visible() and not opts.force then return false end
 
   local completion_list = require('blink.cmp.completion.list')
-  completion_list.accept({
+
+  return completion_list.accept({
     index = completion_list.selected_item_idx or 1,
     callback = opts.callback,
   })
-
-  return true
 end
 
 --- Accept the current completion item and feed an enter key to neovim (e.g. to execute the current command in cmdline mode)
