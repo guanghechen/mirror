@@ -14,7 +14,7 @@
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
     "branch": "main",
-    "commit": "ba174a5819b0d1eb4e3bab8c0231a26293f58338"
+    "commit": "62c3d54f7d739ee46f850ea6832383e3b7ca2ee1"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
@@ -253,7 +253,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "dd261ad5266ab5bbec249d21efeceda98ff3e1a6"
+    "commit": "841c6d4139aedb8a3f2baf30cef5327371385b93"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -287,17 +287,17 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "2f5d4c3f3c675962242096bcc8e586d76dd72eb2"
+    "commit": "875515255192864c33981c3ed66ad94e561b904a"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "9a8e39993e3b895601bf8227124a48ea8268149e"
+    "commit": "adf4b6b0420b7be6c717ef0ac7993183d6c201b1"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     "branch": "main",
-    "commit": "4e91b5d0394329a229725b021a8ea217099826ef"
+    "commit": "93d60a475f0b08a8eceb99255863977d3a25f310"
   },
   "nvim@nvim-window-picker": {
     "remote": "https://github.com/s1n7ax/nvim-window-picker",
@@ -319,12 +319,12 @@
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "157fa3f37a3be55ceb375274e2f3ea2d7d2f9ef6"
+    "commit": "cf2b276dc88696b35d55ea4bd55dfaf7d608c9a2"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
     "branch": "main",
-    "commit": "c2bdf8cfcd87a6be5f8b84322c1b5052e78e302e"
+    "commit": "8ad0ede3ff9065878a853e4b037ba6ac88231fb0"
   },
   "nvim@smear-cursor.nvim": {
     "remote": "https://github.com/sphamba/smear-cursor.nvim",
