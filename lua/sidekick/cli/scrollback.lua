@@ -119,6 +119,7 @@ function M:open(win_pos)
   if not text then
     return self:scroll(win_pos)
   end
+  terminal.normal_mode = true
 
   -- proper scrollback support
   text = text:gsub("\n$", "")
