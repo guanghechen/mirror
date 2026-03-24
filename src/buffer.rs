@@ -377,7 +377,7 @@ impl ParsedBuffer {
                     matches
                         .iter()
                         .find(|match_| {
-                            (line_number != matches_line_number || match_.col > col)
+                            (line_number != matches_line_number || match_.col > match_at_pos.col)
                                 && match_at_pos.token == match_.token
                                 && match_at_pos.stack_height == match_.stack_height
                         })
@@ -397,7 +397,7 @@ impl ParsedBuffer {
                         .iter()
                         .rev()
                         .find(|match_| {
-                            (line_number != matches_line_number || match_.col < col)
+                            (line_number != matches_line_number || match_.col < match_at_pos.col)
                                 && match_at_pos.token == match_.token
                                 && match_at_pos.stack_height == match_.stack_height
                         })
