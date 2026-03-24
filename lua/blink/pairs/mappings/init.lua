@@ -22,11 +22,13 @@ function mappings.disable()
 end
 
 function mappings.is_enabled()
+  local mode = vim.api.nvim_get_mode().mode
   return vim.g.pairs ~= false
     and vim.b.pairs ~= false
     and vim.g.blink_pairs ~= false
     and vim.b.blink_pairs ~= false
-    and vim.api.nvim_get_mode().mode:find('R') == nil
+    and mode:find('R') == nil
+    and (mode ~= 'c' or (vim.fn.getcmdtype() ~= '/' and vim.fn.getcmdtype() ~= '?'))
     and not disabled_filetypes_set[vim.bo.filetype]
 end
 
