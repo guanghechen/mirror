@@ -9,8 +9,7 @@ function utils.is_blink_keymap(mapping) return mapping.desc and mapping.desc:mat
 function utils.feedkeys(keys, mode)
   if keys:find('\128') then return vim.api.nvim_feedkeys(keys, mode, false) end
 
-  local replaced = vim.api.nvim_replace_termcodes(keys, true, true, true)
-  vim.api.nvim_feedkeys(replaced, mode, false)
+  vim.api.nvim_feedkeys(vim.keycode(keys), mode, false)
 end
 
 --- Evaluate a v:lua expression RHS.

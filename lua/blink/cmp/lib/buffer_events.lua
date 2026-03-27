@@ -167,7 +167,7 @@ function buffer_events:listen(opts)
   })
 
   -- ctrl+c doesn't trigger InsertLeave so handle it separately
-  local ctrl_c = vim.api.nvim_replace_termcodes('<C-c>', true, true, true)
+  local ctrl_c = vim.keycode('<C-c>')
   vim.on_key(function(key)
     if key == ctrl_c then
       vim.schedule(function()

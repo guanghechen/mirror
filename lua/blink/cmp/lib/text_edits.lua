@@ -396,11 +396,7 @@ function text_edits.write_to_dot_repeat(text_edit)
       vim.api.nvim_set_current_win(curr_win)
 
       -- exit completion mode
-      vim.api.nvim_feedkeys(
-        vim.api.nvim_replace_termcodes('<Plug>BlinkCmpDotRepeatHack', true, true, true),
-        'in',
-        false
-      )
+      vim.api.nvim_feedkeys(vim.keycode('<Plug>BlinkCmpDotRepeatHack'), 'in', false)
     end)
   end)
 end
@@ -411,7 +407,7 @@ function text_edits.move_cursor_in_dot_repeat(amount)
   if amount == 0 then return end
 
   local keys = string.rep('<C-g>U' .. (amount > 0 and '<Right>' or '<Left>'), math.abs(amount))
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(keys, true, true, true), 'in', false)
+  vim.api.nvim_feedkeys(vim.keycode(keys), 'in', false)
 end
 
 return text_edits
