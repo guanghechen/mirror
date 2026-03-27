@@ -22,12 +22,11 @@
 
 --- @class blink.cmp.BufferEventsListener
 --- @field on_char_added fun(char: string, is_ignored: boolean)
---- @field on_cursor_moved fun(event: 'CursorMoved' | 'InsertEnter', is_ignored: boolean, is_backspace: boolean, last_event: string)
+--- @field on_cursor_moved fun(event: 'CursorMoved' | 'InsertEnter', is_ignored: boolean, is_backspace: boolean, last_event: 'accept'|'enter'|nil)
 --- @field on_insert_leave fun()
 --- @field on_complete_changed fun()
 
 --- @type blink.cmp.BufferEvents
---- @diagnostic disable-next-line: missing-fields
 local buffer_events = {}
 
 function buffer_events.new(opts)
@@ -44,7 +43,7 @@ function buffer_events.new(opts)
     last_char = '',
     textchangedi_id = -1,
     backspace_keycodes = backspace_keycodes,
-  }, { __index = buffer_events })
+  }, { __index = buffer_events }) --[[@as blink.cmp.BufferEvents]]
 end
 
 local function make_char_added(self, snippet, on_char_added)
