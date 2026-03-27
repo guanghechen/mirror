@@ -8,7 +8,6 @@ define_matcher!(Nix {
         "{" => "}"
     ],
     line_comment: ["#"],
-    block_comment: ["/*" => "*/"],
-    string: ["\""],
+    block_comment: ["/*" => "*/", "\"" => "\""],
     block_string: ["''" => "''"]
 });
