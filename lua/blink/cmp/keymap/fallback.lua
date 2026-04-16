@@ -14,7 +14,7 @@ local function get_non_blink_keymaps(mappings)
   local index = {}
   for _, mapping in ipairs(mappings) do
     if not utils.is_blink_keymap(mapping) then
-      local lhs = utils.normalize_lhs(mapping.lhs) or mapping.lhs:lower()
+      local lhs = utils.normalize_lhs(mapping.lhs)
       index[lhs] = mapping
     end
   end
@@ -29,7 +29,7 @@ function fallback.wrap(mode, key)
   --- Captures mappings at the moment we load blink.cmp keymaps.
   local buffer_index = get_non_blink_keymaps(vim.api.nvim_buf_get_keymap(0, mode))
   local global_index = get_non_blink_keymaps(vim.api.nvim_get_keymap(mode))
-  local normalized_key = utils.normalize_lhs(key) or key:lower()
+  local normalized_key = utils.normalize_lhs(key)
   local normalized_raw = vim.keycode(key)
 
   return function(mappings_only)

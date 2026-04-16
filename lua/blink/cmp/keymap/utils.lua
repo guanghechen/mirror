@@ -7,9 +7,8 @@ function utils.is_blink_keymap(mapping) return mapping.desc and mapping.desc:mat
 --- @param keys string
 --- @param mode string
 function utils.feedkeys(keys, mode)
-  if keys:find('\128') then return vim.api.nvim_feedkeys(keys, mode, false) end
-
-  vim.api.nvim_feedkeys(vim.keycode(keys), mode, false)
+  local translated_keys = keys:find('\128') and keys or vim.keycode(keys)
+  vim.api.nvim_feedkeys(translated_keys, mode, false)
 end
 
 --- Evaluate a v:lua expression RHS.
@@ -31,17 +30,35 @@ end
 --- @param lhs string
 function utils.normalize_lhs(lhs)
   if not lhs then return lhs end
-  -- Lowercase inside tokens
-  lhs = lhs:gsub('<([^>]+)>', function(inner) return '<' .. inner:lower() .. '>' end)
+
+  -- Normalize Alt to Meta
+  lhs = lhs:gsub('<[aAM]%-', '<m-')
+  -- Convert <m-s-x> to <m-X>
+  lhs = lhs:gsub('<m%-[sS]%-(%a)>', function(k) return '<m-' .. k:upper() .. '>' end)
+  -- Lowercase modifier prefixes (e.g. <C-a>, <M-x>) but preserve key case only
+  -- when it would change the keycode (e.g. <m-H> = <m-S-h> != <m-h>)
+  lhs = lhs:gsub('<([^>]+)>', function(inner)
+    local prefix, key = inner:match('^(.*-)([^-]+)$')
+    if prefix then
+      local original = '<' .. inner .. '>'
+      local lowered = '<' .. prefix:lower() .. key:lower() .. '>'
+      -- If lowercasing changes the keycode, preserve the key case
+      if #key == 1 and vim.keycode(original) ~= vim.keycode(lowered) then return '<' .. prefix:lower() .. key .. '>' end
+      return lowered
+    else
+      return '<' .. inner:lower() .. '>'
+    end
+  end)
   -- Expand leader/localleader
   for _, leader in ipairs({ 'leader', 'localleader' }) do
     local value = vim.b['map' .. leader] or vim.g['map' .. leader] or ''
     lhs = lhs:gsub('<' .. leader .. '>', value)
   end
-  -- Convert <space> as well
+  -- Convert <space>
   lhs = lhs:gsub('<space>', ' ')
-  -- mimic nvim_buf_get_keymap leader translation for ctrl/meta leader combos
+  -- Mimic nvim_buf_get_keymap leader translation for ctrl/shift/meta leader combos
   if lhs:find('<[csm]%-.*leader>') then lhs = vim.fn.keytrans(lhs) end
+
   return lhs
 end
 

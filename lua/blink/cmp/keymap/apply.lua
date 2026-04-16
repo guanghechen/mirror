@@ -48,7 +48,8 @@ local function apply_callback(mode, key, commands, callback)
         local result = command(cmp)
         if type(result) == 'string' then
           if result ~= '' then
-            utils.feedkeys(result, 't') -- 't' allow key composition, e.g. return '<C-n>'
+            -- Allow key composition using mode 't', e.g. '<C-n>'
+            utils.feedkeys(vim.keycode(result), 't')
             return
           end
         elseif result then
