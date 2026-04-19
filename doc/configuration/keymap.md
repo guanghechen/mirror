@@ -93,7 +93,8 @@ Example with conditional logic:
     end
 
     if condition_3 then
-      -- Simulate keypresses
+      -- Returned string is passed to feedkeys() with 't' flag (remap enabled)
+      -- User mappings take precedence over built-in behavior
       -- Doesn't run next action
       return '<CR>'
     end
@@ -142,9 +143,11 @@ keymap = {
   -- Actions with parameters require functions
   ['<C-space>S'] = { function(cmp) return cmp.show({ providers = { 'snippets' } }) end },
 
-  -- Simulate a keypress (triggers other mappings)
+  -- String returns - feedkeys() with 't' flag (remap enabled)
+  -- User mappings take precedence over built-in behavior
   ['<C-n>'] = { 'select_next' },
-  ['<C-j>'] = { function(cmp) return '<C-n>' end }, -- call 'select_next' defined above
+  -- Here, <C-n> triggers 'select_next' command defined above
+  ['<C-j>'] = { function(cmp) return '<C-n>' end },
 }
  ```
 
