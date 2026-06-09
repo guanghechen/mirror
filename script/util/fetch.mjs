@@ -50,8 +50,8 @@ async function ensure_remote(originName, remote) {
 }
 
 /**
- * @param {string}      localBranchName
- * @param {string}      item
+ * @param {string} localBranchName
+ * @param {object} item
  * @return {Promise<void>}
  */
 export async function fetch_repo(localBranchName, item) {
@@ -64,6 +64,11 @@ export async function fetch_repo(localBranchName, item) {
   await reset_branch(localBranchName, `${originName}/${remoteBranchName}`)
 }
 
+/**
+ * @param {string} localBranchName
+ * @param {object} item
+ * @return {Promise<void>}
+ */
 export async function fetch_repo_pinned(localBranchName, item) {
   const remote = `${item.remote}.git`
   const originName = `origin_${localBranchName}`
