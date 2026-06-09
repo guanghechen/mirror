@@ -1,4 +1,5 @@
 import { get_resources } from './data/index.mjs'
+import { resolve_branch_names } from './util/args.mjs'
 import { run_command } from './util/command.mjs'
 
 const resources = get_resources()
@@ -6,7 +7,7 @@ await sync()
 
 /**
  * @param {string}  branchName
- * @param {string}  item
+ * @param {object}  item
  * @return {Promise<void>}
  */
 async function syncItem(branchName, item) {
@@ -18,11 +19,7 @@ async function syncItem(branchName, item) {
  */
 async function sync() {
   const args = process.argv.slice(2)
-
-  let localBranchNames = args.filter(
-    (localBranchName) => Boolean(resources[localBranchName]),
-  )
-  if (localBranchNames.length < 1) localBranchNames = Object.keys(resources)
+  const localBranchNames = resolve_branch_names(args, resources)
 
   for (const localBranchName of localBranchNames) {
     const item = resources[localBranchName]

@@ -1,6 +1,7 @@
 import { set_changelog } from './data/index.mjs'
 import { gen_changelog } from './util/changelog.mjs'
 import { get_changelog_filepath, get_resources } from './data/index.mjs'
+import { resolve_branch_names } from './util/args.mjs'
 import { fetch_repo, fetch_repo_pinned } from './util/fetch.mjs'
 
 await fetch()
@@ -16,10 +17,7 @@ async function fetch() {
   const args = process.argv.slice(2)
   const resources = get_resources()
 
-  let localBranchNames = args.filter(
-    (localBranchName) => Boolean(resources[localBranchName]),
-  )
-  if (localBranchNames.length < 1) localBranchNames = Object.keys(resources)
+  const localBranchNames = resolve_branch_names(args, resources)
 
   for (const localBranchName of localBranchNames) {
     const item = resources[localBranchName]

@@ -1,4 +1,5 @@
 import { get_resources, set_readme, set_resources } from './data/index.mjs'
+import { resolve_branch_names } from './util/args.mjs'
 import { run_command } from './util/command.mjs'
 import { get_full_commit_id } from './util/git.mjs'
 import { gen_readme } from './util/readme.mjs'
@@ -12,7 +13,7 @@ set_readme(readme)
 
 /**
  * @param {string}  branchName
- * @param {string}  item
+ * @param {object}  item
  * @param {boolean} pushOnlyWhenChanged
  * @return {Promise<void>}
  */
@@ -38,10 +39,7 @@ async function push() {
   const pushEvenNotChanged = args.includes('--push-even-not-changed')
   const pushOnlyWhenChanged = !pushEvenNotChanged
 
-  let localBranchNames = args.filter(
-    (localBranchName) => Boolean(resources[localBranchName]),
-  )
-  if (localBranchNames.length < 1) localBranchNames = Object.keys(resources)
+  const localBranchNames = resolve_branch_names(args, resources)
 
   for (const localBranchName of localBranchNames) {
     const item = resources[localBranchName]
