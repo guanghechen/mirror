@@ -47,15 +47,14 @@ export async function get_parent_commit_id(commitId) {
 export async function list_change_commits(remote, fromCommitId, toCommitId) {
   const isFromBranchExist = await check_branch_or_commit_exist(fromCommitId)
   const revRange = isFromBranchExist ? `${fromCommitId}..${toCommitId}` : toCommitId
-  const args = ['git', 'log', '--pretty=format:%h|%ad|%an|%s', '--date=iso', revRange]
+  const args = ['git', 'log', '--pretty=format:%h|%H|%ad|%an|%s', '--date=iso', revRange]
   const commits = await run_command(args, { echo: true, silent: false, quitOnError: true })
   const lines = commits.trim().split(/\n/g).filter(Boolean)
   if (lines.length < 1) return []
 
   const results = []
   for (const line of lines) {
-    const [commitId, commitDate, author, message] = line.split('|')
-    const fullCommitId = await get_full_commit_id(commitId)
+    const [commitId, fullCommitId, commitDate, author, message] = line.split('|')
     results.push({
       hash: commitId,
       date: new Date(commitDate).toISOString(),
