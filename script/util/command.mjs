@@ -1,8 +1,13 @@
 import { execFile } from 'node:child_process'
 
+// Args matching this print unquoted; anything else (spaces, |, ^, %, ...) gets
+// single-quoted so the echoed command can be pasted into a shell and run as-is.
+const SHELL_SAFE_ARG = /^[\w@+=:,./-]+$/
+
 /**
  * Run a command without spawning a shell. The first array element is the
- * executable, the rest are arguments passed verbatim (no shell quoting/escaping).
+ * executable, the rest are arguments passed verbatim to the process. The echoed
+ * string is shell-quoted for display only, so it can be copied into a shell.
  *
  * @param {string[]} args  e.g. ['git', 'push', 'origin', 'main:main']
  * @param {{ echo?: boolean, silent?: boolean, quitOnError?: boolean }} [opts]
@@ -10,7 +15,8 @@ import { execFile } from 'node:child_process'
  */
 export async function run_command(args, opts = {}) {
   const { echo = false, silent = true, quitOnError = false } = opts
-  if (echo) console.log('', args.join(' '))
+  const printable = args.map(shell_quote).join(' ')
+  if (echo) console.log('', printable)
 
   try {
     return await new Promise((resolve, reject) => {
@@ -28,8 +34,18 @@ export async function run_command(args, opts = {}) {
       )
     })
   } catch (error) {
-    if (!silent) console.error('Failed:', args.join(' '), '\n', error.stderr || error)
+    if (!silent) console.error('Failed:', printable, '\n', error.stderr || error)
     if (quitOnError) throw error
     return false
   }
+}
+
+/**
+ * Single-quote an arg for shell copy-paste when it holds metacharacters.
+ * @param {string} arg
+ * @return {string}
+ */
+function shell_quote(arg) {
+  if (SHELL_SAFE_ARG.test(arg)) return arg
+  return `'${arg.replace(/'/g, "'\\''")}'`
 }
