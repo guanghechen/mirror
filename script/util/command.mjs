@@ -1,31 +1,35 @@
-import { exec } from 'node:child_process'
+import { execFile } from 'node:child_process'
 
 /**
- * @param {string}      cmd
- * @param {boolean}     echo
- * @param {boolean}     silent
- * @param {boolean}     quit_on_error
+ * Run a command without spawning a shell. The first array element is the
+ * executable, the rest are arguments passed verbatim (no shell quoting/escaping).
+ *
+ * @param {string[]} args  e.g. ['git', 'push', 'origin', 'main:main']
+ * @param {{ echo?: boolean, silent?: boolean, quitOnError?: boolean }} [opts]
  * @return {Promise<string|false>}
  */
-export async function run_command(cmd, echo, silent, quit_on_error) {
-  if (echo) console.log('', cmd)
+export async function run_command(args, opts = {}) {
+  const { echo = false, silent = true, quitOnError = false } = opts
+  if (echo) console.log('', args.join(' '))
 
   try {
-    const stdout = await new Promise((resolve, reject) => {
-      exec(
-        `${cmd  } 2>/dev/null`,
-        { encoding: 'utf8' },
+    return await new Promise((resolve, reject) => {
+      execFile(
+        args[0],
+        args.slice(1),
+        { encoding: 'utf8', maxBuffer: 1024 * 1024 * 64 },
         (error, stdout, stderr) => {
-          if (error) return reject(error)
-          if (stderr) return reject(stderr)
-          resolve(stdout)
+          if (error) {
+            error.stderr = stderr
+            return reject(error)
+          }
+          resolve(stdout.toString().trim())
         },
       )
     })
-    return stdout.toString().trim()
   } catch (error) {
-    if (!silent) console.error('Failed:', error)
-    if (quit_on_error) throw error
+    if (!silent) console.error('Failed:', args.join(' '), '\n', error.stderr || error)
+    if (quitOnError) throw error
     return false
   }
 }

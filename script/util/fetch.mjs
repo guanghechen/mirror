@@ -6,7 +6,7 @@ import { run_command } from './command.mjs'
  * @return {Promise<string|null>}
  */
 async function get_worktree_path(branchName) {
-  const output = await run_command('git worktree list --porcelain', false, true, false)
+  const output = await run_command(['git', 'worktree', 'list', '--porcelain'], { silent: true })
   if (!output) return null
 
   const lines = output.split('\n')
@@ -30,9 +30,9 @@ async function get_worktree_path(branchName) {
 async function reset_branch(branchName, target) {
   const worktreePath = await get_worktree_path(branchName)
   if (worktreePath) {
-    await run_command(`git -C "${worktreePath}" reset --hard ${target}`, true, true, true)
+    await run_command(['git', '-C', worktreePath, 'reset', '--hard', target], { echo: true, quitOnError: true })
   } else {
-    await run_command(`git branch -f ${branchName} ${target}`, true, true, true)
+    await run_command(['git', 'branch', '-f', branchName, target], { echo: true, quitOnError: true })
   }
 }
 
@@ -46,13 +46,8 @@ export async function fetch_repo(localBranchName, item) {
   const remoteBranchName = item.branch
   const originName = `origin_${localBranchName}`
 
-  const cmds = {
-    add_remote: `git remote add ${originName} ${remote}`,
-    fetch_remote: `git fetch ${originName} ${remoteBranchName}`,
-  }
-
-  await run_command(cmds.add_remote, true, true, false)
-  await run_command(cmds.fetch_remote, true, true, true)
+  await run_command(['git', 'remote', 'add', originName, remote], { echo: true, silent: true })
+  await run_command(['git', 'fetch', originName, remoteBranchName], { echo: true, quitOnError: true })
   await reset_branch(localBranchName, `${originName}/${remoteBranchName}`)
 }
 
@@ -60,12 +55,7 @@ export async function fetch_repo_pinned(localBranchName, item) {
   const remote = `${item.remote}.git`
   const originName = `origin_${localBranchName}`
 
-  const cmds = {
-    add_remote: `git remote add ${originName} ${remote}`,
-    fetch_remote: `git fetch ${originName} ${item.commit}`,
-  }
-
-  await run_command(cmds.add_remote, true, true, false)
-  await run_command(cmds.fetch_remote, true, true, true)
+  await run_command(['git', 'remote', 'add', originName, remote], { echo: true, silent: true })
+  await run_command(['git', 'fetch', originName, item.commit], { echo: true, quitOnError: true })
   await reset_branch(localBranchName, item.commit)
 }

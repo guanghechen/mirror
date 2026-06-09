@@ -10,8 +10,7 @@ await sync()
  * @return {Promise<void>}
  */
 async function syncItem(branchName, item) {
-  const cmd = `git push origin ${item.commit}:${branchName} --force`
-  await run_command(cmd, true, true, true)
+  await run_command(['git', 'push', 'origin', `${item.commit}:${branchName}`, '--force'], { echo: true, quitOnError: true })
 }
 
 /**

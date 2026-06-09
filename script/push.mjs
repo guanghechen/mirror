@@ -19,8 +19,7 @@ set_readme(readme)
 async function pushItem(branchName, item, pushOnlyWhenChanged) {
   const commitId = await get_full_commit_id(branchName)
   if (!pushOnlyWhenChanged || commitId !== item.commit) {
-    const cmd = `git push origin ${branchName}:${branchName}`
-    await run_command(cmd, true, true, true)
+    await run_command(['git', 'push', 'origin', `${branchName}:${branchName}`], { echo: true, quitOnError: true })
   }
 
   next_resources[branchName] = {
