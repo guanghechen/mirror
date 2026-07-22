@@ -13,8 +13,8 @@
   },
   "nvim@blink.cmp": {
     "remote": "https://github.com/Saghen/blink.cmp",
-    "branch": "main",
-    "commit": "0593548ee0b0978abf303d30f449234e07f951d1"
+    "branch": "v1",
+    "commit": "78336bc89ee5365633bcf754d93df01678b5c08f"
   },
   "nvim@blink.compat": {
     "remote": "https://github.com/Saghen/blink.compat",
