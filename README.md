@@ -26,7 +26,7 @@ To backup open source codes.
  [nvim@blink.compat][]                | [main][nvim@blink.compat#main]                      | 1454f14a8d855a578ceeba77c62538fa1459a67c
  [nvim@blink.indent][]                | [main][nvim@blink.indent#main]                      | 8b69b9262891fe81fe728fe6a52fa2a84dd5d5e0
  [nvim@blink.lib][]                   | [main][nvim@blink.lib#main]                         | 5876dd95deeb70aadbe9f1c0b7117a135061cdac
- [nvim@blink.pairs][]                 | [main][nvim@blink.pairs#main]                       | dd57684daf1297e854e46c85511e7875efb4de75
+ [nvim@blink.pairs][]                 | [v0.5.0][nvim@blink.pairs#v0.5.0]                   | 4e43012356d33a26f69eae475f746fbe9f325f44
  [nvim@ccc.nvim][]                    | [main][nvim@ccc.nvim#main]                          | 9d1a256e006decc574789dfc7d628ca11644d4c2
  [nvim@cmp-buffer][]                  | [main][nvim@cmp-buffer#main]                        | b74fab3656eea9de20a9b8116afa3cfc4ec09657
  [nvim@cmp-luasnip][]                 | [master][nvim@cmp-luasnip#master]                   | 98d9cb5c2c38532bd9bdb481067b20fea8f32e90
@@ -158,7 +158,7 @@ To backup open source codes.
 [nvim@blink.compat#main]: https://github.com/Saghen/blink.compat/tree/main
 [nvim@blink.indent#main]: https://github.com/saghen/blink.indent/tree/main
 [nvim@blink.lib#main]: https://github.com/Saghen/blink.lib/tree/main
-[nvim@blink.pairs#main]: https://github.com/Saghen/blink.pairs/tree/main
+[nvim@blink.pairs#v0.5.0]: https://github.com/Saghen/blink.pairs/tree/v0.5.0
 [nvim@ccc.nvim#main]: https://github.com/uga-rosa/ccc.nvim/tree/main
 [nvim@cmp-buffer#main]: https://github.com/hrsh7th/cmp-buffer/tree/main
 [nvim@cmp-luasnip#master]: https://github.com/saadparwaiz1/cmp_luasnip/tree/master

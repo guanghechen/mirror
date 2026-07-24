@@ -34,8 +34,9 @@
   },
   "nvim@blink.pairs": {
     "remote": "https://github.com/Saghen/blink.pairs",
-    "branch": "main",
-    "commit": "dd57684daf1297e854e46c85511e7875efb4de75"
+    "branch": "v0.5.0",
+    "commit": "4e43012356d33a26f69eae475f746fbe9f325f44",
+    "pinned": true
   },
   "nvim@ccc.nvim": {
     "remote": "https://github.com/uga-rosa/ccc.nvim",
