@@ -30,7 +30,7 @@
   "nvim@blink.lib": {
     "remote": "https://github.com/Saghen/blink.lib",
     "branch": "main",
-    "commit": "5876dd95deeb70aadbe9f1c0b7117a135061cdac"
+    "commit": "8b04d0e0acc8565cfa4dd291a89a9212b7262633"
   },
   "nvim@blink.pairs": {
     "remote": "https://github.com/Saghen/blink.pairs",
@@ -185,7 +185,7 @@
   "nvim@mini.pairs": {
     "remote": "https://github.com/nvim-mini/mini.pairs",
     "branch": "main",
-    "commit": "b1fd9df3bb4a41c8f45778a3859ee80ef6b367e3"
+    "commit": "b1c5a726921b7a8c9321e9a7a208aa0571de5810"
   },
   "nvim@mini.splitjoin": {
     "remote": "https://github.com/nvim-mini/mini.splitjoin",
@@ -259,7 +259,7 @@
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "b89138d9af0a96e6048e202a15765fc6b6416bd4"
+    "commit": "43ed3797b266e1ee8d222e491379ad471c9d3146"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -293,12 +293,12 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "7248feaca45e4d944591497964bc19afa89ad1c6"
+    "commit": "3d3321b560a63ff92a8692401f303a5123336b86"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "b311b30818951d01f7b4bf650521b868b3fece16"
+    "commit": "f3061339b8eaf9fda873600bc425b8d2d8502533"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
@@ -325,7 +325,7 @@
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "77fb1b0aa0c7528680bed48687f3dd2c2a6ed111"
+    "commit": "a652fcc01bf03946ab94b815be8c80ee157cbe1a"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
