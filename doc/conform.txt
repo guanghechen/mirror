@@ -337,6 +337,7 @@ FORMATTERS                                                    *conform-formatter
            JavaScript/JSON and markdown.
 `dfmt` - Formatter for D source code.
 `dioxus` - Format `rsx!` snippets in Rust files.
+`djangofmt` - A fast, HTML aware, Django template formatter, written in Rust.
 `djlint` - ✨ HTML Template Linter and Formatter. Django - Jinja - Nunjucks -
          Handlebars - GoLang.
 `docformatter` - docformatter automatically formats docstrings to follow a
