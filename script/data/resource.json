@@ -30,7 +30,7 @@
   "nvim@blink.lib": {
     "remote": "https://github.com/Saghen/blink.lib",
     "branch": "main",
-    "commit": "8b04d0e0acc8565cfa4dd291a89a9212b7262633"
+    "commit": "c8fdc12c8a2fab6cf786dd7141a283f8079f902b"
   },
   "nvim@blink.pairs": {
     "remote": "https://github.com/Saghen/blink.pairs",
@@ -70,7 +70,7 @@
   "nvim@conform.nvim": {
     "remote": "https://github.com/stevearc/conform.nvim",
     "branch": "master",
-    "commit": "619363c30309d29ffa631e67c8183f2a72caa373"
+    "commit": "016802de402556da54c36bd7359b441266b01cdd"
   },
   "nvim@copilot-cmp": {
     "remote": "https://github.com/zbirenbaum/copilot-cmp",
@@ -114,7 +114,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "31d6fb2d618bca1482b9f274751ead5f03461408"
+    "commit": "5be654f2232c10ddcad19c1607a67b6b4b78fc29"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -254,12 +254,12 @@
   "nvim@nvim-lint": {
     "remote": "https://github.com/mfussenegger/nvim-lint",
     "branch": "master",
-    "commit": "a219b2c9e5b4765e5c845aba119dad55806fcaf1"
+    "commit": "0370fe965697aa8f04252a1562441bdc13723cd1"
   },
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "43ed3797b266e1ee8d222e491379ad471c9d3146"
+    "commit": "221c43884319e791519f0d6c94a7f2fbcd653278"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -293,7 +293,7 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "3d3321b560a63ff92a8692401f303a5123336b86"
+    "commit": "074aa4422bf029908338e855d0c0f71470a971bb"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
@@ -320,12 +320,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "f422cb5c6855f150e2ddcfaf44e7157b98b34f6a"
+    "commit": "4663eb3ecd538bd5062628fb6d95bbe6bdca78f6"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "a652fcc01bf03946ab94b815be8c80ee157cbe1a"
+    "commit": "73e89eb3e536a4dd8f991c963bd37189520c9919"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
