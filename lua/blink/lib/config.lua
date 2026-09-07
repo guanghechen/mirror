@@ -205,7 +205,7 @@ function M.validate(schema, tbl, parent_path)
       if not ok then
         local path = parent_path .. key
         if inner_err then
-          error(path .. inner_err)
+          error(path .. '.' .. inner_err)
         else
           error(path .. ': expected ' .. M.utils.describe_type(t) .. ', got ' .. M.utils.describe_value(tbl[key]))
         end
