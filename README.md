@@ -40,7 +40,7 @@ To backup open source codes.
  [nvim@dressing.nvim][]               | [master][nvim@dressing.nvim#master]                 | 3a45525bb182730fe462325c99395529308f431e
  [nvim@flash.nvim][]                  | [main][nvim@flash.nvim#main]                        | 5f0f270fdc7c5b0c21d903ee85b9cb06f2ac636a
  [nvim@friendly-snippets][]           | [main][nvim@friendly-snippets#main]                 | b4d01b0fdf3c9a549961c2f9ffe8dc09be166219
- [nvim@gitsigns.nvim][]               | [main][nvim@gitsigns.nvim#main]                     | 8d79f2410c76e62b92e51c28c82e28c1c5a3daeb
+ [nvim@gitsigns.nvim][]               | [main][nvim@gitsigns.nvim#main]                     | fd780920613e541cbdfac41bf711583ed49f9249
  [nvim@img-clip.nvim][]               | [main][nvim@img-clip.nvim#main]                     | 5ff183655ad98b5fc50c55c66540375bbd62438c
  [nvim@indent-blankline.nvim][]       | [master][nvim@indent-blankline.nvim#master]         | 005b56001b2cb30bfa61b7986bc50657816ba4ba
  [nvim@lazy.nvim][]                   | [main][nvim@lazy.nvim#main]                         | 306a05526ada86a7b30af95c5cc81ffba93fef97
@@ -48,15 +48,15 @@ To backup open source codes.
  [nvim@mason.nvim][]                  | [main][nvim@mason.nvim#main]                        | 2a6940af80375532e5e9e7c1f2fc6319a1b7a69d
  [nvim@mason-lspconfig.nvim][]        | [main][nvim@mason-lspconfig.nvim#main]              | c4c84f4521d62de595c0d0f718a9a40c1890c8ce
  [nvim@mason-nvim-dap][]              | [main][nvim@mason-nvim-dap#main]                    | 09220b99d63d5363f219daa2785242ee5fddba7f
- [nvim@mini.ai][]                     | [main][nvim@mini.ai#main]                           | cb02c5444613475b7edf0c8dc98264c1c857aa6e
+ [nvim@mini.ai][]                     | [main][nvim@mini.ai#main]                           | d0c4987a1ead2bcf4eb22cc9815c662d76677c08
  [nvim@mini.comment][]                | [main][nvim@mini.comment#main]                      | a56581c40c19fa26f2b39da72504398de3173c5a
- [nvim@mini.hipatterns][]             | [main][nvim@mini.hipatterns#main]                   | 7c840c71d6a91f53d734cab2b6fe2290d285ec3b
- [nvim@mini.icons][]                  | [main][nvim@mini.icons#main]                        | 98faae31e9be1cc054ae63485e58ceb185efcad0
- [nvim@mini.indentscope][]            | [main][nvim@mini.indentscope#main]                  | 92fbaf895f83c59575ec599df532b297ebf62b14
- [nvim@mini.pairs][]                  | [main][nvim@mini.pairs#main]                        | b1c5a726921b7a8c9321e9a7a208aa0571de5810
- [nvim@mini.splitjoin][]              | [main][nvim@mini.splitjoin#main]                    | 9301717c7612ccb72e89629df89416585dd54c9b
- [nvim@mini.surround][]               | [main][nvim@mini.surround#main]                     | 8d5d0c5aa92449368ac251e85451d79d8f69d296
- [nvim@mini.trailspace][]             | [main][nvim@mini.trailspace#main]                   | 82c4fb7d4336f8824ca6c97068932886b56326d0
+ [nvim@mini.hipatterns][]             | [main][nvim@mini.hipatterns#main]                   | 8e18b4970f21be0db157104786d2be43058cdd44
+ [nvim@mini.icons][]                  | [main][nvim@mini.icons#main]                        | f916635dc5ae2f479fbb9ab8184bb9444b62e86c
+ [nvim@mini.indentscope][]            | [main][nvim@mini.indentscope#main]                  | 14eecb1cf33d1db35b8ac665b1aab4d3c9b47fe3
+ [nvim@mini.pairs][]                  | [main][nvim@mini.pairs#main]                        | 03eb1f0062a2cee5314d1ac3939246e4bb21352e
+ [nvim@mini.splitjoin][]              | [main][nvim@mini.splitjoin#main]                    | be4536a1b8608a482dfac7aec5ce91b1c2f9bdab
+ [nvim@mini.surround][]               | [main][nvim@mini.surround#main]                     | 59ce0acf79e1d930756ef3a7cb4c2369560cf548
+ [nvim@mini.trailspace][]             | [main][nvim@mini.trailspace#main]                   | 8bcd13b6d54d4c018982fea53e483937247d593b
  [nvim@neo-tree.nvim][]               | [main][nvim@neo-tree.nvim#main]                     | 2ab61f0a4f97e909f80b430f43a1ddae142c548d
  [nvim@noice.nvim][]                  | [main][nvim@noice.nvim#main]                        | 7bfd942445fb63089b59f97ca487d605e715f155
  [nvim@nui.nvim][]                    | [main][nvim@nui.nvim#main]                          | de740991c12411b663994b2860f1a4fd0937c130
@@ -66,20 +66,20 @@ To backup open source codes.
  [nvim@nvim-dap-python][]             | [master][nvim@nvim-dap-python#master]               | 1808458eba2b18f178f990e01376941a42c7f93b
  [nvim@nvim-dap-ui][]                 | [master][nvim@nvim-dap-ui#master]                   | cc9dd33aade7f20bae414d0cba163bc60d4d4b43
  [nvim@nvim-dap-virtual-text][]       | [master][nvim@nvim-dap-virtual-text#master]         | fbdb48c2ed45f4a8293d0d483f7730d24467ccb6
- [nvim@nvim-lint][]                   | [master][nvim@nvim-lint#master]                     | 3d55c8f67c6ae5c15e1042571e107c7a3d5c5f4e
- [nvim@nvim-lspconfig][]              | [master][nvim@nvim-lspconfig#master]                | 98e5981d14057a54cd49a35fb280dfd275ff65f8
+ [nvim@nvim-lint][]                   | [master][nvim@nvim-lint#master]                     | f6230a5c06ba59e6059c14637f1dbe29a7978b9b
+ [nvim@nvim-lspconfig][]              | [master][nvim@nvim-lspconfig#master]                | ac062d0d01c019c0dbdb798968f3e5d8b35c3853
  [nvim@nvim-nio][]                    | [master][nvim@nvim-nio#master]                      | edcc181a875301dd21840189aa2f2f9ad69fc172
  [nvim@nvim-notify][]                 | [master][nvim@nvim-notify#master]                   | a22f5d7ac511c2df2fd3290a9f04c48d5a822e2e
  [nvim@nvim-snippets][]               | [main][nvim@nvim-snippets#main]                     | 56b4052f71220144689caaa2e5b66222ba5661eb
  [nvim@telescope.nvim][]              | [master][nvim@telescope.nvim#master]                | b4da76be54691e854d3e0e02c36b0245f945c2c7
  [nvim@nvim-tmux-navigation][]        | [main][nvim@nvim-tmux-navigation#main]              | 4898c98702954439233fdaf764c39636681e2861
- [nvim@nvim-treesitter][]             | [main][nvim@nvim-treesitter#main]                   | 9a168f6357ed21c3a636e1727bc7d382abc451b8
- [nvim@nvim-treesitter-context][]     | [master][nvim@nvim-treesitter-context#master]       | f3061339b8eaf9fda873600bc425b8d2d8502533
+ [nvim@nvim-treesitter][]             | [main][nvim@nvim-treesitter#main]                   | 1a4f47b03dfe92d28de7d5654c67327ef008c9e6
+ [nvim@nvim-treesitter-context][]     | [master][nvim@nvim-treesitter-context#master]       | 8decd73460d26ef0a0befb745d022dd1fc2c38b8
  [nvim@nvim-treesitter-textobjects][] | [main][nvim@nvim-treesitter-textobjects#main]       | 5c7b0263797dfd1bd6202f2b219f3b53a80b2187
  [nvim@nvim-window-picker][]          | [main][nvim@nvim-window-picker#main]                | 41cfaa428577c53552200a404ae9b3a0b5719706
  [nvim@plenary.nvim][]                | [master][nvim@plenary.nvim#master]                  | b9fd5226c2f76c951fc8ed5923d85e4de065e509
- [nvim@render-markdown.nvim][]        | [main][nvim@render-markdown.nvim#main]              | 640a3ec6d538bad17c328be373c7cad0293d9589
- [nvim@schema-store.nvim][]           | [main][nvim@schema-store.nvim#main]                 | ab094b7f788231fe9b68deac78c3d512302c58a6
+ [nvim@render-markdown.nvim][]        | [main][nvim@render-markdown.nvim#main]              | 8e8795368391036643b622875a6da6a51bcd33f4
+ [nvim@schema-store.nvim][]           | [main][nvim@schema-store.nvim#main]                 | 1c6d5e0b721c877c4c8061d2361f8fc20adaf896
  [nvim@sidekick.nvim][]               | [main][nvim@sidekick.nvim#main]                     | 3d80a47e6375f6d647c9695d3afea6fa1b3275df
  [nvim@smear-cursor.nvim][]           | [main][nvim@smear-cursor.nvim#main]                 | 3879bc2eb4a2a07a8637256fe33cc4484a23a813
  [nvim@trouble.nvim][]                | [main][nvim@trouble.nvim#main]                      | 76030c5542c5d132aeeb467ca0ab370f3f79a697

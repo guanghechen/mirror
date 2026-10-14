@@ -114,7 +114,7 @@
   "nvim@gitsigns.nvim": {
     "remote": "https://github.com/lewis6991/gitsigns.nvim",
     "branch": "main",
-    "commit": "8d79f2410c76e62b92e51c28c82e28c1c5a3daeb"
+    "commit": "fd780920613e541cbdfac41bf711583ed49f9249"
   },
   "nvim@img-clip.nvim": {
     "remote": "https://github.com/HakonHarnes/img-clip.nvim",
@@ -159,7 +159,7 @@
   "nvim@mini.ai": {
     "remote": "https://github.com/nvim-mini/mini.ai",
     "branch": "main",
-    "commit": "cb02c5444613475b7edf0c8dc98264c1c857aa6e"
+    "commit": "d0c4987a1ead2bcf4eb22cc9815c662d76677c08"
   },
   "nvim@mini.comment": {
     "remote": "https://github.com/nvim-mini/mini.comment",
@@ -170,37 +170,37 @@
   "nvim@mini.hipatterns": {
     "remote": "https://github.com/nvim-mini/mini.hipatterns",
     "branch": "main",
-    "commit": "7c840c71d6a91f53d734cab2b6fe2290d285ec3b"
+    "commit": "8e18b4970f21be0db157104786d2be43058cdd44"
   },
   "nvim@mini.icons": {
     "remote": "https://github.com/nvim-mini/mini.icons",
     "branch": "main",
-    "commit": "98faae31e9be1cc054ae63485e58ceb185efcad0"
+    "commit": "f916635dc5ae2f479fbb9ab8184bb9444b62e86c"
   },
   "nvim@mini.indentscope": {
     "remote": "https://github.com/nvim-mini/mini.indentscope",
     "branch": "main",
-    "commit": "92fbaf895f83c59575ec599df532b297ebf62b14"
+    "commit": "14eecb1cf33d1db35b8ac665b1aab4d3c9b47fe3"
   },
   "nvim@mini.pairs": {
     "remote": "https://github.com/nvim-mini/mini.pairs",
     "branch": "main",
-    "commit": "b1c5a726921b7a8c9321e9a7a208aa0571de5810"
+    "commit": "03eb1f0062a2cee5314d1ac3939246e4bb21352e"
   },
   "nvim@mini.splitjoin": {
     "remote": "https://github.com/nvim-mini/mini.splitjoin",
     "branch": "main",
-    "commit": "9301717c7612ccb72e89629df89416585dd54c9b"
+    "commit": "be4536a1b8608a482dfac7aec5ce91b1c2f9bdab"
   },
   "nvim@mini.surround": {
     "remote": "https://github.com/nvim-mini/mini.surround",
     "branch": "main",
-    "commit": "8d5d0c5aa92449368ac251e85451d79d8f69d296"
+    "commit": "59ce0acf79e1d930756ef3a7cb4c2369560cf548"
   },
   "nvim@mini.trailspace": {
     "remote": "https://github.com/nvim-mini/mini.trailspace",
     "branch": "main",
-    "commit": "82c4fb7d4336f8824ca6c97068932886b56326d0"
+    "commit": "8bcd13b6d54d4c018982fea53e483937247d593b"
   },
   "nvim@neo-tree.nvim": {
     "remote": "https://github.com/nvim-neo-tree/neo-tree.nvim",
@@ -254,12 +254,12 @@
   "nvim@nvim-lint": {
     "remote": "https://github.com/mfussenegger/nvim-lint",
     "branch": "master",
-    "commit": "3d55c8f67c6ae5c15e1042571e107c7a3d5c5f4e"
+    "commit": "f6230a5c06ba59e6059c14637f1dbe29a7978b9b"
   },
   "nvim@nvim-lspconfig": {
     "remote": "https://github.com/neovim/nvim-lspconfig",
     "branch": "master",
-    "commit": "98e5981d14057a54cd49a35fb280dfd275ff65f8"
+    "commit": "ac062d0d01c019c0dbdb798968f3e5d8b35c3853"
   },
   "nvim@nvim-nio": {
     "remote": "https://github.com/nvim-neotest/nvim-nio",
@@ -293,12 +293,12 @@
   "nvim@nvim-treesitter": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter",
     "branch": "main",
-    "commit": "9a168f6357ed21c3a636e1727bc7d382abc451b8"
+    "commit": "1a4f47b03dfe92d28de7d5654c67327ef008c9e6"
   },
   "nvim@nvim-treesitter-context": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-context",
     "branch": "master",
-    "commit": "f3061339b8eaf9fda873600bc425b8d2d8502533"
+    "commit": "8decd73460d26ef0a0befb745d022dd1fc2c38b8"
   },
   "nvim@nvim-treesitter-textobjects": {
     "remote": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
@@ -320,12 +320,12 @@
   "nvim@render-markdown.nvim": {
     "remote": "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "branch": "main",
-    "commit": "640a3ec6d538bad17c328be373c7cad0293d9589"
+    "commit": "8e8795368391036643b622875a6da6a51bcd33f4"
   },
   "nvim@schema-store.nvim": {
     "remote": "https://github.com/b0o/SchemaStore.nvim",
     "branch": "main",
-    "commit": "ab094b7f788231fe9b68deac78c3d512302c58a6"
+    "commit": "1c6d5e0b721c877c4c8061d2361f8fc20adaf896"
   },
   "nvim@sidekick.nvim": {
     "remote": "https://github.com/folke/sidekick.nvim",
